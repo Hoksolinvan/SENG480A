@@ -1,5 +1,18 @@
+<script>
+	const now = new Date();
+	const options = {
+		weekday: 'long',
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	};
+	const currentDateTime = now.toLocaleString('en-CA', options);
+</script>
+
 <footer class="footer">
-	<p>&copy; 2024 EasyPath Web App. All rights reserved.</p>
+	<p>&copy; EasyPath</p>
+
+	<p>{currentDateTime}</p>
 </footer>
 
 <style>
