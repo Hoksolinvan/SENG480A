@@ -25,8 +25,65 @@
 		} else {
 			quizComplete = true;
 			console.log('Quiz completed:', answers);
+			postResults();
 		}
 	}
+
+
+	async function postResults(){
+		try{
+			const request = await fetch('http://localhost:2000/quiz_result',
+			{
+				method: 'POST',
+				headers: {
+
+					'Content-Type':'application/json'
+				},
+				body: JSON.stringify({
+
+					answers: answers
+				})
+
+			});
+
+			if (request.ok){
+				const result = await request.json();
+				console.log('Quiz results was successfully posted: ',result);
+			}
+			else{
+				console.error('Error posting quiz results:', response.statusText);
+			}
+
+
+
+			const secondRequest = await fetch('http://localhost:2000/numbers');
+    if (secondRequest.ok) {
+      const numbers = await secondRequest.json();
+      console.log('Numbers received:', numbers);
+    } else {
+      console.error('Error fetching numbers:', secondRequest.statusText);
+    }
+
+		}
+		catch (error) {
+			console.error('Error occurred while posting quiz results:', error);
+		}
+
+			
+			
+			
+
+
+
+		}
+
+
+
+	
+
+
+
+
 </script>
 
 <div class="quiz-wrapper">
