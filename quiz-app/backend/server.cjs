@@ -3,6 +3,7 @@ const app = express();
 const port = process.env.PORT || 2000;
 const cors = require('cors');
 const path = require('path');
+const clientDB= require('./config.js');
 
 // Middleware to enable CORS and parse JSON request bodies
 app.use(cors());
@@ -17,9 +18,11 @@ app.get('/numbers', async (req, res) => {
      res.json(numbers);  // Send the fetched rows as JSON response
    } catch (error) {
      console.error('Error fetching numbers:', error.message);
-     res.status(500).json({ error: 'Error fetching numbers' });
+     res.status(500).json({ error: 'Error fetching numbers lmao' });
    }
  });
+
+
 
 // Endpoint to handle quiz result submission
 app.post('/quiz_result', async (req, res) => {
@@ -37,6 +40,9 @@ app.post('/quiz_result', async (req, res) => {
       res.status(500).json({ error: 'Error saving quiz results' });
    }
 });
+
+
+
 
 // Serve static files (your front-end)
 app.use(express.static('public'));
