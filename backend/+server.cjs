@@ -3,15 +3,15 @@ const app = express();
 const port = process.env.PORT || 2000;
 const cors = require('cors');
 const path = require('path');
-const pgp = require('pg-promise')();
+// const pgp = require('pg-promise')();
 
-const clientDB = pgp({
-   host: "localhost",
-   user: "iamvan",
-   port: 5432,
-   password: "password",
-   database: "postgres"
-})
+// const clientDB = pgp({
+//    host: "localhost",
+//    user: "iamvan",
+//    port: 5432,
+//    password: "password",
+//    database: "postgres"
+// })
 
 // Create a new table if it doesn't exist
 async function createTable() {
