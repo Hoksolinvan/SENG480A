@@ -32,7 +32,7 @@
 
 	async function postResults(){
 		try{
-			const request = await fetch('postgresql://postgres:${process.env.PGPASSWORD}@${process.env.PGHOST}:${process.env.PGPORT}/${process.env.PGDATABASE}/quiz_result',
+			const request = await fetch('https://seng480a-production.up.railway.app/quiz_result',
 			{
 				method: 'POST',
 				headers: {
