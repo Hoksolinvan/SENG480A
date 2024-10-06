@@ -57,6 +57,10 @@
 
 
 		}
+		catch(error) {
+			console.log("Failed to make post request #1\n");
+		}
+	};
 
 
 
