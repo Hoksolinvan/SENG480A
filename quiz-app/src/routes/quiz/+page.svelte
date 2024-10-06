@@ -16,7 +16,7 @@
 	];
 
 	// Function to handle the answer selection
-	// Van --> you may want to store the answers in the database!
+	
 
 	function selectAnswer(option) {
 		answers[questionIndex] = option;
@@ -25,14 +25,14 @@
 		} else {
 			quizComplete = true;
 			console.log('Quiz completed:', answers);
-			postResults();
+			postResults(); //Submit results to database
 		}
 	}
 
 
 	async function postResults(){
 		try{
-			const request = await fetch('http://localhost:2000/quiz_result',
+			const request = await fetch('postgresql://postgres:${process.env.PGPASSWORD}@${process.env.PGHOST}:${process.env.PGPORT}/${process.env.PGDATABASE}/quiz_result',
 			{
 				method: 'POST',
 				headers: {
@@ -56,21 +56,7 @@
 
 
 
-			const secondRequest = await fetch('http://localhost:2000/numbers');
-    if (secondRequest.ok) {
-      const numbers = await secondRequest.json();
-      console.log('Numbers received:', numbers);
-    } else {
-      console.error('Error fetching numbers:', secondRequest.statusText);
-    }
-
-		}
-		catch (error) {
-			console.error('Error occurred while posting quiz results:', error);
-		}
-
-			
-			
+		
 			
 
 

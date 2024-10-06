@@ -9,22 +9,12 @@ const clientDB= require('./config.cjs');
 app.use(cors());
 app.use(express.json()); // This middleware is required to parse JSON data in POST requests
 
-
 app.get('/', (req, res) => {
    res.send('Hello World!');
 });
 
-app.get('/numbers', async (req, res) => {
-   try {
-     const numbers = await clientDB.any('SELECT * FROM number');  // Query the 'number' table
-     res.json(numbers);  // Send the fetched rows as JSON response
-     console.log(numbers);
-     
-   } catch (error) {
-     console.error('Error fetching numbers:', error.message);
-     res.status(500).json({ error: 'Error fetching numbers lmao' `${error.message}` });
-   }
- });
+
+
 
 
 
@@ -44,6 +34,9 @@ app.post('/quiz_result', async (req, res) => {
       res.status(500).json({ error: 'Error saving quiz results' });
    }
 });
+
+
+
 
 
 
