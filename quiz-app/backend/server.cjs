@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 2000;
+const port = process.env.PGPORT || 2000;
 const cors = require('cors');
 const path = require('path');
 const clientDB= require('./config.cjs');
@@ -18,7 +18,7 @@ app.get('/numbers', async (req, res) => {
      res.json(numbers);  // Send the fetched rows as JSON response
    } catch (error) {
      console.error('Error fetching numbers:', error.message);
-     res.status(500).json({ error: 'Error fetching numbers lmao' });
+     res.status(500).json({ error: 'Error fetching numbers lmao' `${error.message}` });
    }
  });
 
