@@ -1,11 +1,96 @@
 <script>
-	let name = '';
-	let email = '';
-	let message = '';
+	let Name = '';
+	let Email = '';
+	let Message = '';
+	
 
 	function handleSubmit() {
-		alert(`Thank you for your feedback, ${name}!`);
+		alert(`Thank you for your feedback, ${Name}!`);
 	}
+
+
+	if(localStorage.getItem("formSubmitted")=="true"){
+
+		document.getElementById("Thankyou_Message").classList.remove("hidden");
+		document.getElementById("Thankyou_Message").classList.add("show");
+		localStorage.removeItem("formSubmitted");
+	}
+	else if(localStorage.getItem("formFailed")=="true"){
+		document.getElementById("Thankyou_Message").textContent = "Form submission failed. Please try again.";
+		document.getElementById("Thankyou_Message").classList.remove("hidden");
+		document.getElementById("Thankyou_Message").classList.add("show","form-failed");
+		localStorage.removeItem("formFailed");
+	}
+
+	
+
+	document.getElementById("ContactForm").addEventListener("submit", (event) =>{
+
+		Name = document.getElementById("name");
+		Email = document.getElementById("email");
+		Message = document.getElementById("message");
+
+
+
+		if(Name.value =="" || Email.value=="" || Message.value==""){
+
+			localStorage.setItem("formFailed","true");
+			window.location.reload();
+			
+		}
+		else{
+		
+			let Form=[Name.value,Email.value,Message.value];
+
+			post_Contact(Form);
+
+
+		}
+
+
+	});
+
+
+	async function post_Contact(Form){
+		try{
+			const request = await fetch('https://seng480a-production.up.railway.app/Contact/Forms',
+			{
+				method: 'POST',
+				headers: {
+
+					'Content-Type':'application/json'
+				},
+				body: JSON.stringify({
+
+					Form: Form
+				})
+
+			});
+
+			if (request.ok){
+				const result = await request.json();
+				console.log('Quiz results was successfully posted: ',result);
+
+				localStorage.setItem("formSubmitted","true");
+
+				window.location.reload();
+			}
+			else{
+				console.error('Error Submitting Form', response.statusText);
+				localStorage.setItem("formFailed", "true");
+				window.location.reload();
+			}
+
+		}
+		catch(error) {
+			console.log("Failed to submit Form\n");
+			localStorage.setItem("formFailed", "true");
+			window.location.reload();
+		}
+	};
+
+
+
 </script>
 
 <main>
@@ -15,7 +100,7 @@
 		please provide us with feedback to help us improve!
 	</p>
 
-	<div class="form-container">
+	<div class="form-container" id="ContactForm">
 		<form on:submit|preventDefault={handleSubmit}>
 			<div>
 				<label for="name">Name:</label>
@@ -34,7 +119,14 @@
 
 			<button type="submit">Submit</button>
 		</form>
+	
+		
+
 	</div>
+
+	<br>
+	<div id="Thankyou_Message" class="hidden"> Thank you for submitting the Form! 🎉</div>
+
 </main>
 
 <style>
@@ -109,4 +201,40 @@
 	button:hover {
 		background-color: #0056b3;
 	}
+
+
+
+	#Thankyou_Message{
+		font-size: 2rem;
+		border: 2px bold #D4F4CC;
+    	border-radius: 25px;
+		background-color: #D4F4CC;
+		font-weight: bold;
+		color: #2C543D;
+    	text-align: center;
+
+	}
+
+
+	
+	.hidden{
+
+		opacity: 0;
+
+	}
+
+
+	.show {
+
+		opacity: 1;
+
+	}
+
+	.form-failed {
+    background-color: #f8d7da;
+    color: #721c24;            
+    border: 2px solid #f5c6cb; 
+}
+
+
 </style>
