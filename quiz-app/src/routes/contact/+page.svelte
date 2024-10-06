@@ -35,7 +35,7 @@
 		if(Name.value =="" || Email.value=="" || Message.value==""){
 
 			localStorage.setItem("formFailed","true");
-			window.location.reload();
+			 //window.location.reload();
 			
 		}
 		else{
