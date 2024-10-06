@@ -109,12 +109,12 @@
 
 			<div>
 				<label for="email">Email:</label>
-				<input type="email" id="email" bind:value={email} required />
+				<input type="email" id="email" bind:value={Email} required />
 			</div>
 
 			<div>
 				<label for="message">Your Feedback:</label>
-				<textarea id="message" bind:value={message} required></textarea>
+				<textarea id="message" bind:value={Message} required></textarea>
 			</div>
 
 			<button type="submit">Submit</button>
