@@ -104,7 +104,7 @@
 		<form on:submit|preventDefault={handleSubmit}>
 			<div>
 				<label for="name">Name:</label>
-				<input type="text" id="name" bind:value={name} required />
+				<input type="text" id="name" bind:value={Name} required />
 			</div>
 
 			<div>
