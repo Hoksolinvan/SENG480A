@@ -73,19 +73,19 @@
 
 				localStorage.setItem("formSubmitted","true");
 
-				window.location.reload();
+				//window.location.reload();
 			}
 			else{
 				console.error('Error Submitting Form', response.statusText);
 				localStorage.setItem("formFailed", "true");
-				window.location.reload();
+				//window.location.reload();
 			}
 
 		}
 		catch(error) {
 			console.log("Failed to submit Form\n");
 			localStorage.setItem("formFailed", "true");
-			window.location.reload();
+			//window.location.reload();
 		}
 	};
 
