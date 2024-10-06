@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PGPORT || 2000;
+const port = process.env.PORT || 2000;
 const cors = require('cors');
 const path = require('path');
 const clientDB= require('./config.cjs');
