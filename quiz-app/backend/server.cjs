@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.PORT || 2000;
 const cors = require('cors');
 const path = require('path');
-//const clientDB= require('./config.js');
+const clientDB= require('./config.cjs');
 
 // Middleware to enable CORS and parse JSON request bodies
 app.use(cors());
