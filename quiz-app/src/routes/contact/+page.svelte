@@ -10,19 +10,19 @@
 		
 		alert(`Thank you for your feedback, ${Name}!`);
 
-		// Name = document.getElementById("name").value;
-    	// Email = document.getElementById("email").value;
-    	// Message = document.getElementById("message").value;
+		Name = document.getElementById("name").value;
+    	Email = document.getElementById("email").value;
+    	Message = document.getElementById("message").value;
 
-		// let Form = {
-		// 	Name: Name,
-		// 	Email: Email,
-		// 	Message: Message
-		// };
+		let Form = {
+			Name: Name,
+			Email: Email,
+			Message: Message
+		};
 
 		
 
-		// post_Contact(Form);
+		post_Contact(Form);
 	
 	}
 
