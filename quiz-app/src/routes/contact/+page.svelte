@@ -24,31 +24,31 @@
 
 	
 
-	// document.getElementById("ContactForm").addEventListener("submit", (event) =>{
+	document.getElementById("ContactForm").addEventListener("submit", (event) =>{
 
-	// 	Name = document.getElementById("name");
-	// 	Email = document.getElementById("email");
-	// 	Message = document.getElementById("message");
+		Name = document.getElementById("name");
+		Email = document.getElementById("email");
+		Message = document.getElementById("message");
 
 
 
-	// 	if(Name.value =="" || Email.value=="" || Message.value==""){
+		if(Name.value ==="" || Email.value==="" || Message.value===""){
 
-	// 		localStorage.setItem("formFailed","true");
-	// 		 //window.location.reload();
+			localStorage.setItem("formFailed","true");
+			 //window.location.reload();
 			
-	// 	}
-	// 	else{
+		}
+		else{
 		
-	// 		let Form=[Name.value,Email.value,Message.value];
+			let Form=[Name.value,Email.value,Message.value];
 
-	// 		post_Contact(Form);
-
-
-	// 	}
+			post_Contact(Form);
 
 
-	// });
+		}
+
+
+	});
 
 
 	async function post_Contact(Form){
