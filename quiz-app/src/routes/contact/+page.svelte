@@ -22,10 +22,10 @@
 		localStorage.removeItem("formFailed");
 	}
 
-	
+	const form=document.getElementById("ContactForm");
 
-	document.getElementById("ContactForm").addEventListener("submit", (event) =>{
-
+	form.addEventListener("submit", (event) =>{
+		event.preventDefault();
 		Name = document.getElementById("name");
 		Email = document.getElementById("email");
 		Message = document.getElementById("message");
