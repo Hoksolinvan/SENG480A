@@ -24,31 +24,25 @@
 
 	const form=document.getElementById("ContactForm");
 
-	form.addEventListener("submit", (event) =>{
-		event.preventDefault();
-		Name = document.getElementById("name");
-		Email = document.getElementById("email");
-		Message = document.getElementById("message");
 
+	function handleSubmit(event) {
+    event.preventDefault();  // Prevent the default form submission behavior
 
+    let Name = document.getElementById("name");
+    let Email = document.getElementById("email");
+    let Message = document.getElementById("message");
 
-		if(Name.value ==="" || Email.value==="" || Message.value===""){
+    if (Name.value === "" || Email.value === "" || Message.value === "") {
+        localStorage.setItem("formFailed", "true");
+        // You can reload or display a message here
+    } else {
+        let Form = [Name.value, Email.value, Message.value];
 
-			localStorage.setItem("formFailed","true");
-			 //window.location.reload();
-			
-		}
-		else{
-		
-			let Form=[Name.value,Email.value,Message.value];
+        post_Contact(Form);  // Assuming this function handles the form data
+    }
+}
 
-			post_Contact(Form);
-
-
-		}
-
-
-	});
+	form.addEventListener("submit", handleSubmit);
 
 
 	async function post_Contact(Form){
