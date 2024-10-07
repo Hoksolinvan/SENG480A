@@ -23,9 +23,9 @@
 		flex-direction: column;
 		min-height: 100vh;
 		padding: 1rem;
-		max-width: 1000px;
+		/* max-width: 1000px; */
 		margin: 2rem auto;
-		width: 100%;
+		width: 400%;
 		background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
@@ -38,10 +38,7 @@
 		margin: 2rem auto;
 		max-width: 1200px;
 		width: 100%;
-		background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
+		
 	}
 
 
