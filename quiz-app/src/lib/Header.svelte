@@ -29,10 +29,12 @@
 		padding: 1rem;
 		background-color: #007bff;
 		color: white;
-		border: none;
 		border-radius: 10px;
 		cursor: pointer;
 		font-weight: bold;
+		border-style: none none solid none;
+		border-width: 5px;
+		border-color: #004a99;
 	}
 
 	.material-icons {
