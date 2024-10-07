@@ -67,6 +67,7 @@
 		border-radius: 10px;
 	}
 
+	/* Code from W3School */
 		/* The container <div> - needed to position the dropdown content */
 	.dropdown {
 		position: relative;
@@ -97,6 +98,8 @@
 	/* Show the dropdown menu on hover */
 	.dropdown:hover .dropdown-content {display: block;}
 
+	/* End of code from W3School */
+	
 	@media (min-width: 768px) {
 		.header-container {
 			flex-direction: row;
