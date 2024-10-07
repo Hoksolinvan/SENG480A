@@ -20,9 +20,7 @@
 			Message: Message
 		};
 
-		console.log(Name);
-		console.log(Email);
-		console.log(Message);
+		
 
 		post_Contact(Form);
 	
@@ -42,38 +40,7 @@
 		localStorage.removeItem("formFailed");
 	}
 
-	const form=document.getElementById("ContactForm");
 
-
-	// form.addEventListener("submit", function(event){
-	// 	event.preventDefault();
-	// 	Name = document.getElementById("name").value;
-	// 	Email = document.getElementById("email").value;
-	// 	Message = document.getElementById("message").value;
-
-
-
-	// 	// if(Name==="" || Email==="" || Message===""){
-
-	// 	// 	localStorage.setItem("formFailed","true");
-	// 	// 	 location.reload();
-			
-	// 	// }
-	// 	// else{
-		
-	// 	// 	let Form={
-	// 	// 		Name: Name,
-	// 	// 		Email: Email,
-	// 	// 		Message: Message
-	// 	// 	};
-
-	// 	// 	post_Contact(Form);
-
-
-	// 	// }
-
-
-	//  });
 
 
 	async function post_Contact(Form){
