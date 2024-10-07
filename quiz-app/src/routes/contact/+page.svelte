@@ -21,7 +21,7 @@
 		};
 
 		
-		console.log(Name, Email,Message);
+		
 
 		post_Contact(Form);
 	

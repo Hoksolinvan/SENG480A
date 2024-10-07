@@ -43,9 +43,11 @@ app.post('/Forms',async (req,res) =>{
       return res.status(400).json({error: 'Something Went Wrong'});
 
    }
+   const { name, email, message } = Forms;
+
    try{
       //Insert the Submission Forms information into the database
-      await clientDB.none('INSERT INTO forms (name,email,message) VALUES ($1, $2, $3)',[Forms[0],Forms[1],Forms[2]]);
+      await clientDB.none('INSERT INTO forms (name,email,message) VALUES ($1, $2, $3)',[name,email,message]);
       res.status(200).json({message: 'Form Successfully Submitted!'})
    }
    catch (error){
