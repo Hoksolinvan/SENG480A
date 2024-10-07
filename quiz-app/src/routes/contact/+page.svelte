@@ -25,7 +25,7 @@
 	const form=document.getElementById("ContactForm");
 
 
-	form.addEventListener("submit", (event) =>{
+	form.addEventListener("submit", function(event){
 		event.preventDefault();
 		Name = document.getElementById("name").value;
 		Email = document.getElementById("email").value;
@@ -33,24 +33,24 @@
 
 
 
-		if(Name.value ==="" || Email.value==="" || Message.value===""){
+		// if(Name.value ==="" || Email.value==="" || Message.value===""){
 
-			localStorage.setItem("formFailed","true");
-			 location.reload();
+		// 	localStorage.setItem("formFailed","true");
+		// 	 location.reload();
 			
-		}
-		else{
+		// }
+		// else{
 		
-			let Form={
-				Name: Name,
-				Email: Email,
-				Message: Message
-			};
+		// 	let Form={
+		// 		Name: Name,
+		// 		Email: Email,
+		// 		Message: Message
+		// 	};
 
-			post_Contact(Form);
+		// 	post_Contact(Form);
 
 
-		}
+		// }
 
 
 	 });
@@ -106,7 +106,7 @@
 	</p>
 
 	<div class="form-container">
-			<form id="ContactForm">
+			<form on:submit|preventDefault={handleSubmit} id="ContactForm">
 			<div>
 				<label for="name">Name:</label>
 				<input type="text" id="name" bind:value={Name} required />
