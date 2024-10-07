@@ -4,23 +4,23 @@
 	let Message = '';
 	
 
-	// function handleSubmit() {
-	// 	alert(`Thank you for your feedback, ${Name}!`);
-	// }
+	function handleSubmit() {
+		alert(`Thank you for your feedback, ${Name}!`);
+	}
 
 
-	// if(localStorage.getItem("formSubmitted")=="true"){
+	if(localStorage.getItem("formSubmitted")=="true"){
 
-	// 	document.getElementById("Thankyou_Message").classList.remove("hidden");
-	// 	document.getElementById("Thankyou_Message").classList.add("show");
-	// 	localStorage.removeItem("formSubmitted");
-	// }
-	// else if(localStorage.getItem("formFailed")=="true"){
-	// 	document.getElementById("Thankyou_Message").textContent = "Form submission failed. Please try again.";
-	// 	document.getElementById("Thankyou_Message").classList.remove("hidden");
-	// 	document.getElementById("Thankyou_Message").classList.add("show","form-failed");
-	// 	localStorage.removeItem("formFailed");
-	// }
+		document.getElementById("Thankyou_Message").classList.remove("hidden");
+		document.getElementById("Thankyou_Message").classList.add("show");
+		localStorage.removeItem("formSubmitted");
+	}
+	else if(localStorage.getItem("formFailed")=="true"){
+		document.getElementById("Thankyou_Message").textContent = "Form submission failed. Please try again.";
+		document.getElementById("Thankyou_Message").classList.remove("hidden");
+		document.getElementById("Thankyou_Message").classList.add("show","form-failed");
+		localStorage.removeItem("formFailed");
+	}
 
 	
 
