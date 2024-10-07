@@ -2,6 +2,7 @@
 	let Name = '';
 	let Email = '';
 	let Message = '';
+	let Form=[];
 	
 
 	function handleSubmit() {
@@ -14,16 +15,12 @@
     	Email = document.getElementById("email").value;
     	Message = document.getElementById("message").value;
 
-		let Form = {
-			Name: Name,
-			Email: Email,
-			Message: Message
-		};
+		Form=[Name,Email,Message];
 
 		
 		
 
-		post_Contact(Form);
+		post_Contact();
 	
 	}
 
@@ -44,7 +41,7 @@
 
 
 
-	async function post_Contact(Form){
+	async function post_Contact(){
 		try{
 			const request = await fetch('https://seng480a-production.up.railway.app/Forms',
 			{
