@@ -4,8 +4,24 @@
 	let Message = '';
 	
 
-	function handleSubmit() {
+	function handleSubmit(event) {
+		event.preventDefault();
+
+		
 		alert(`Thank you for your feedback, ${Name}!`);
+
+		Name = document.getElementById("name").value;
+    	Email = document.getElementById("email").value;
+    	Message = document.getElementById("message").value;
+
+		let Form = {
+			Name: Name,
+			Email: Email,
+			Message: Message
+		};
+
+		post_Contact(Form);
+	
 	}
 
 
@@ -25,35 +41,35 @@
 	const form=document.getElementById("ContactForm");
 
 
-	form.addEventListener("submit", function(event){
-		event.preventDefault();
-		Name = document.getElementById("name").value;
-		Email = document.getElementById("email").value;
-		Message = document.getElementById("message").value;
+	// form.addEventListener("submit", function(event){
+	// 	event.preventDefault();
+	// 	Name = document.getElementById("name").value;
+	// 	Email = document.getElementById("email").value;
+	// 	Message = document.getElementById("message").value;
 
 
 
-		// if(Name.value ==="" || Email.value==="" || Message.value===""){
+	// 	// if(Name==="" || Email==="" || Message===""){
 
-		// 	localStorage.setItem("formFailed","true");
-		// 	 location.reload();
+	// 	// 	localStorage.setItem("formFailed","true");
+	// 	// 	 location.reload();
 			
-		// }
-		// else{
+	// 	// }
+	// 	// else{
 		
-		// 	let Form={
-		// 		Name: Name,
-		// 		Email: Email,
-		// 		Message: Message
-		// 	};
+	// 	// 	let Form={
+	// 	// 		Name: Name,
+	// 	// 		Email: Email,
+	// 	// 		Message: Message
+	// 	// 	};
 
-		// 	post_Contact(Form);
-
-
-		// }
+	// 	// 	post_Contact(Form);
 
 
-	 });
+	// 	// }
+
+
+	//  });
 
 
 	async function post_Contact(Form){
