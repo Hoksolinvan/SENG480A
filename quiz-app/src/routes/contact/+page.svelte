@@ -4,7 +4,7 @@
 	let Message = '';
 	
 
-	function handleSubmit(event) {
+	function handleSubmit() {
 		
 
 		
