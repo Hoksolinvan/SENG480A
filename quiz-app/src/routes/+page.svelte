@@ -4,7 +4,7 @@
 		<div class="hero-text">
 			<h1>Your Future, Your Fit</h1>
 			<h2>Discover Your Perfect Path!</h2>
-			<a href="/quiz" class="quiz-link">Take the Quiz</a>
+			<a href="/quiz" class="quiz-link">TAKE THE QUIZ</a>
 		</div>
 
 		<!-- Right Column (Image) -->
@@ -37,20 +37,32 @@
 		justify-content: center;
 	}
 
-	.hero-text h1,
+	.hero-text h1{
+		margin-bottom: 1rem;
+		font-size: 2rem;
+	}
+
 	.hero-text h2 {
 		margin-bottom: 1rem;
+		font-size: 1.5rem;
 	}
 
 	.quiz-link {
 		margin-top: 1.5rem;
+		margin-left: auto;
+		margin-right: auto;
 		padding: 0.75rem 1.5rem;
 		background-color: #007bff;
 		color: white;
 		text-decoration: none;
-		border-radius: 5px;
+		border-radius: 10px;
 		text-align: center;
 		width: fit-content;
+
+		border-style: none none solid none;
+		border-width: 5px;
+		border-color: #004a99;
+		font-weight: bold;
 	}
 
 	.hero-image img {
