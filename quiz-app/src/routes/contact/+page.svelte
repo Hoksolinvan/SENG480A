@@ -40,21 +40,6 @@ localStorage.removeItem("formFailed");
 	}
 
 
-	// if(localStorage.getItem("formSubmitted")=="true"){
-
-	// 	document.getElementById("Thankyou_Message").classList.remove("hidden");
-	// 	document.getElementById("Thankyou_Message").classList.add("show");
-	// 	localStorage.removeItem("formSubmitted");
-	// }
-	// else if(localStorage.getItem("formFailed")=="true"){
-	// 	document.getElementById("Thankyou_Message").textContent = "Form submission failed. Please try again.";
-	// 	document.getElementById("Thankyou_Message").classList.remove("hidden");
-	// 	document.getElementById("Thankyou_Message").classList.add("show","form-failed");
-	// 	localStorage.removeItem("formFailed");
-	// }
-
-
-
 
 	async function post_Contact(){
 		try{
@@ -78,19 +63,16 @@ localStorage.removeItem("formFailed");
 
 				localStorage.setItem("formSubmitted","true");
 
-				location.reload();
 			}
 			else{
 				console.error('Error Submitting Form', response.statusText);
 				localStorage.setItem("formFailed", "true");
-				location.reload();
 			}
 
 		}
 		catch(error) {
 			console.log("Failed to submit Form\n");
 			localStorage.setItem("formFailed", "true");
-			location.reload();
 		}
 	};
 
