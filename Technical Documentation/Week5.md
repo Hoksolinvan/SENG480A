@@ -6,7 +6,7 @@
 - This Technical Documentation outlines the tools, and technologies used for the purpose of our project up-to-date to October 6, 2024. Detailing progresses, integration and updates towards what is happening with the current software.
 
 ### Target Audience
-- Professors & EasyPath Group Members
+- Professors & nurture Group Members
 
 
 ## System Architecture
