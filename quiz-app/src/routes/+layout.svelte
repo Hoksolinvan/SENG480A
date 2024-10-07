@@ -23,10 +23,9 @@
 		flex-direction: column;
 		min-height: 100vh;
 		padding: 1rem;
-		max-width: 1000px;
-		/* margin: 2rem auto; */
+		max-width: 65%;
 		margin: auto;
-		width: 100%;
+		
 	}
 
 	.main-content {
@@ -35,5 +34,7 @@
 		margin: 2rem auto;
 		max-width: 1200px;
 		width: 100%;
+		
 	}
+
 </style>

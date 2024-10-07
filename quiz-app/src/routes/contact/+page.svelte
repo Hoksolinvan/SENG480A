@@ -1,11 +1,83 @@
 <script>
-	let name = '';
-	let email = '';
-	let message = '';
+	let Name = '';
+	let Email = '';
+	let Message = '';
+	let Form=[];
+	
 
 	function handleSubmit() {
-		alert(`Thank you for your feedback, ${name}!`);
+		
+
+		Name = document.getElementById("name").value;
+    	Email = document.getElementById("email").value;
+    	Message = document.getElementById("message").value;
+
+		Form=[Name,Email,Message];
+		
+		alert(`Thank you for your feedback, ${Name}!`);
+
+		
+
+		
+		
+
+		post_Contact();
+
+
+		if(localStorage.getItem("formSubmitted")=="true"){
+
+document.getElementById("Thankyou_Message").classList.remove("hidden");
+document.getElementById("Thankyou_Message").classList.add("show");
+localStorage.removeItem("formSubmitted");
+}
+else if(localStorage.getItem("formFailed")=="true"){
+document.getElementById("Thankyou_Message").textContent = "Form submission failed. Please try again.";
+document.getElementById("Thankyou_Message").classList.remove("hidden");
+document.getElementById("Thankyou_Message").classList.add("show","form-failed");
+localStorage.removeItem("formFailed");
+}
+	
 	}
+
+
+
+	async function post_Contact(){
+		try{
+			const request = await fetch('https://seng480a-production.up.railway.app/Forms',
+			{
+				method: 'POST',
+				headers: {
+
+					'Content-Type':'application/json'
+				},
+				body: JSON.stringify({
+
+					Forms: Form
+				})
+
+			});
+
+			if (request.ok){
+				const result = await request.json();
+				console.log('Form results was successfully posted: ',result);
+
+				localStorage.setItem("formSubmitted","true");
+
+			}
+			else{
+				console.error('Error Submitting Form', response.statusText);
+				localStorage.setItem("formFailed", "true");
+			}
+
+		}
+		catch(error) {
+			console.log("Failed to submit Form\n");
+			localStorage.setItem("formFailed", "true");
+		}
+	};
+
+
+
 </script>
 
 <main>
@@ -16,25 +88,32 @@
 	</p>
 
 	<div class="form-container">
-		<form on:submit|preventDefault={handleSubmit}>
+		<form on:submit|preventDefault={handleSubmit} id="ContactForm">
 			<div>
 				<label for="name">Name:</label>
-				<input type="text" id="name" bind:value={name} required />
+				<input type="text" id="name" bind:value={Name} required />
 			</div>
 
 			<div>
 				<label for="email">Email:</label>
-				<input type="email" id="email" bind:value={email} required />
+				<input type="email" id="email" bind:value={Email} required />
 			</div>
 
 			<div>
 				<label for="message">Your Feedback:</label>
-				<textarea id="message" bind:value={message} required></textarea>
+				<textarea id="message" bind:value={Message} required></textarea>
 			</div>
 
 			<button type="submit">Submit</button>
 		</form>
+	
+		
+
 	</div>
+
+	<br>
+	<div id="Thankyou_Message" class="hidden"> Thank you for submitting the Form! 🎉</div>
+
 </main>
 
 <style>
@@ -43,6 +122,10 @@
 		max-width: 600px;
 		margin: 0 auto;
 	}
+
+	
+
+
 
 	h1 {
 		font-size: 2.5rem; /* Bigger h1 size */
@@ -109,4 +192,44 @@
 	button:hover {
 		background-color: #0056b3;
 	}
+
+
+
+	#Thankyou_Message{
+		font-size: 2rem;
+		border: 2px bold #D4F4CC;
+    	border-radius: 25px;
+		background-color: #D4F4CC;
+		font-weight: bold;
+		color: #2C543D;
+    	text-align: center;
+
+	}
+
+
+	
+	.hidden{
+
+		opacity: 0;
+
+	}
+
+
+	.show {
+
+		opacity: 1;
+
+	}
+
+	.form-failed {
+    background-color: #f8d7da;
+    color: #721c24;            
+    border: 2px solid #f5c6cb; 
+}
+
+/* Van's CSS*/
+button:hover{
+		cursor: pointer;
+	}
+
 </style>

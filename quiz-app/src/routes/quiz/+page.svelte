@@ -6,13 +6,22 @@
 	// Sample questions -- lets change these later on !
 	const questions = [
 		{
-			question: 'What is your favorite subject?',
+			question: 'What Is Your Favorite Subject?',
 			options: ['Math', 'Science', 'History', 'Art']
 		},
 		{
-			question: 'Which career excites you the most?',
+			question: 'Which Career Excites You The Most?',
 			options: ['Engineer', 'Doctor', 'Artist', 'Entrepreneur']
+		},
+		{
+			question: 'Where would you like to go?',
+			options: ['University of Victoria','University of British Columbia','Simon Fraser University']
+		},
+		{
+			question: 'Pineapple on Pizza?',
+			options: ['Yes!!!!!','NOOOOO']
 		}
+
 	];
 
 	// Function to handle the answer selection
@@ -127,5 +136,11 @@
 
 	.quiz-complete {
 		text-align: center;
+	}
+
+
+	/* Van's CSS*/
+	button:hover{
+		cursor: pointer;
 	}
 </style>

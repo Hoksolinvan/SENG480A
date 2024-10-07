@@ -22,5 +22,6 @@
 		background-color: #f8f9fa;
 		color: #333;
 		margin-bottom: 2rem;
+		
 	}
 </style>
