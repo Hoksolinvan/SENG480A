@@ -42,7 +42,7 @@
     }
 }
 
-	form.addEventListener("submit", handleSubmit);
+	form.addEventListener("submit", handleSubmit(event));
 
 
 	async function post_Contact(Form){
