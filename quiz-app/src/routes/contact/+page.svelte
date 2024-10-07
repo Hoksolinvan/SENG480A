@@ -100,8 +100,8 @@
 		please provide us with feedback to help us improve!
 	</p>
 
-	<div class="form-container" id="ContactForm">
-		<form on:submit|preventDefault={handleSubmit}>
+	<div class="form-container">
+		<form on:submit|preventDefault={handleSubmit} id="ContactForm">
 			<div>
 				<label for="name">Name:</label>
 				<input type="text" id="name" bind:value={Name} required />
