@@ -20,6 +20,10 @@
 			Message: Message
 		};
 
+		console.log(Name);
+		console.log(Email);
+		console.log(Message);
+
 		post_Contact(Form);
 	
 	}
@@ -94,19 +98,19 @@
 
 				localStorage.setItem("formSubmitted","true");
 
-				location.reload();
+				//location.reload();
 			}
 			else{
 				console.error('Error Submitting Form', response.statusText);
 				localStorage.setItem("formFailed", "true");
-				location.reload();
+				//location.reload();
 			}
 
 		}
 		catch(error) {
 			console.log("Failed to submit Form\n");
 			localStorage.setItem("formFailed", "true");
-			location.reload();
+			//location.reload();
 		}
 	};
 
