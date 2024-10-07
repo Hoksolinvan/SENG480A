@@ -8,14 +8,15 @@
 	function handleSubmit() {
 		
 
-		
-		alert(`Thank you for your feedback, ${Name}!`);
-
 		Name = document.getElementById("name").value;
     	Email = document.getElementById("email").value;
     	Message = document.getElementById("message").value;
 
 		Form=[Name,Email,Message];
+		
+		alert(`Thank you for your feedback, ${Name}!`);
+
+		
 
 		
 		
