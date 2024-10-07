@@ -40,7 +40,7 @@ app.post('/quiz_result', async (req, res) => {
 app.post('/Forms',async (req,res) =>{
    const {Forms} = req.body;
    if(!Forms){
-      return res.status(400).json({error: 'Not enough answers provided'});
+      return res.status(400).json({error: 'Something Went Wrong'});
 
    }
    try{

@@ -21,6 +21,7 @@
 		};
 
 		
+		console.log(Name, Email,Message);
 
 		post_Contact(Form);
 	
@@ -61,7 +62,7 @@
 
 			if (request.ok){
 				const result = await request.json();
-				console.log('Quiz results was successfully posted: ',result);
+				console.log('Form results was successfully posted: ',result);
 
 				localStorage.setItem("formSubmitted","true");
 
