@@ -25,24 +25,35 @@
 	const form=document.getElementById("ContactForm");
 
 
-	function handleSubmit(event) {
-    event.preventDefault();  // Prevent the default form submission behavior
+	form.addEventListener("submit", (event) =>{
+		event.preventDefault();
+		Name = document.getElementById("name").value;
+		Email = document.getElementById("email").value;
+		Message = document.getElementById("message").value;
 
-    let Name = document.getElementById("name");
-    let Email = document.getElementById("email");
-    let Message = document.getElementById("message");
 
-    if (Name.value === "" || Email.value === "" || Message.value === "") {
-        localStorage.setItem("formFailed", "true");
-        // You can reload or display a message here
-    } else {
-        let Form = [Name.value, Email.value, Message.value];
 
-        post_Contact(Form);  // Assuming this function handles the form data
-    }
-}
+		if(Name.value ==="" || Email.value==="" || Message.value===""){
 
-	form.addEventListener("submit", handleSubmit(event));
+			localStorage.setItem("formFailed","true");
+			 location.reload();
+			
+		}
+		else{
+		
+			let Form={
+				Name: Name,
+				Email: Email,
+				Message: Message
+			};
+
+			post_Contact(Form);
+
+
+		}
+
+
+	});
 
 
 	async function post_Contact(Form){
@@ -67,19 +78,19 @@
 
 				localStorage.setItem("formSubmitted","true");
 
-				//window.location.reload();
+				location.reload();
 			}
 			else{
 				console.error('Error Submitting Form', response.statusText);
 				localStorage.setItem("formFailed", "true");
-				//window.location.reload();
+				location.reload();
 			}
 
 		}
 		catch(error) {
 			console.log("Failed to submit Form\n");
 			localStorage.setItem("formFailed", "true");
-			//window.location.reload();
+			location.reload();
 		}
 	};
 
