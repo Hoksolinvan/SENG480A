@@ -137,4 +137,10 @@
 	.quiz-complete {
 		text-align: center;
 	}
+
+
+	/* Van's CSS*/
+	button:hover{
+		cursor: pointer;
+	}
 </style>

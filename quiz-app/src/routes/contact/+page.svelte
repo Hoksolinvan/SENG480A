@@ -227,5 +227,9 @@ localStorage.removeItem("formFailed");
     border: 2px solid #f5c6cb; 
 }
 
+/* Van's CSS*/
+button:hover{
+		cursor: pointer;
+	}
 
 </style>
