@@ -45,7 +45,7 @@
 
 	async function post_Contact(Form){
 		try{
-			const request = await fetch('https://seng480a-production.up.railway.app/Contact/Forms',
+			const request = await fetch('https://seng480a-production.up.railway.app/Forms',
 			{
 				method: 'POST',
 				headers: {
@@ -54,7 +54,7 @@
 				},
 				body: JSON.stringify({
 
-					Form: Form
+					Forms: Form
 				})
 
 			});
