@@ -24,7 +24,8 @@
 		min-height: 100vh;
 		padding: 1rem;
 		max-width: 1000px;
-		margin: 2rem auto;
+		/* margin: 2rem auto; */
+		margin: auto;
 		width: 100%;
 	}
 
