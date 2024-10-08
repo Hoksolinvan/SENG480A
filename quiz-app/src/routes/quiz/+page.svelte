@@ -4,6 +4,13 @@
   let quizComplete = false;
   let recommendation = '';
   let applicationDeadline = '';
+  let userEmail = '';
+  let reminderSent = false;
+
+  function sendReminder() {
+    console.log(`Sending reminder to ${userEmail} for ${recommendation} deadline: ${applicationDeadline}`);
+    reminderSent = true;
+  }
 
   const questions = [
     {
@@ -90,6 +97,13 @@
       quizComplete = true;
     }
   }
+
+  // Add delay for reminder section
+  $: if (quizComplete) {
+    setTimeout(() => {
+      document.querySelector('.email-reminder').style.opacity = 1;
+    }, 1000);
+  }
 </script>
 
 <div class="quiz-wrapper">
@@ -115,6 +129,25 @@
           <h3>Application Deadline</h3>
           <p><strong>{applicationDeadline}</strong></p>
         </div>
+      </div>
+      
+      <!-- Show the reminder section only after the quiz is completed and the deadline is shown -->
+      <div class="email-reminder" style="opacity: 0;">
+        <h3>Set Email Reminder</h3>
+        {#if !reminderSent}
+          <p class="reminder-text">Don't miss the deadline! Enter your email to receive a reminder:</p>
+          <form on:submit|preventDefault={sendReminder}>
+            <input 
+              type="email" 
+              bind:value={userEmail} 
+              placeholder="Enter your email" 
+              required
+            />
+            <button type="submit" class="reminder-btn">Send Reminder</button>
+          </form>
+        {:else}
+          <p class="success-message">Reminder set! We'll email you before the deadline.</p>
+        {/if}
       </div>
     {/if}
   </div>
@@ -216,6 +249,44 @@
     color: #333;
   }
 
+  .email-reminder {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #e8f5e9;
+    border-radius: 10px;
+    border: 2px solid #4caf50;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  .reminder-text {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .reminder-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+  }
+
+  .reminder-btn:hover {
+    background-color: #388e3c;
+    transform: translateY(-2px);
+  }
+
+  .success-message {
+    color: #4caf50;
+    font-weight: bold;
+  }
+
   strong {
     color: #007bff;
     font-weight: 600;
@@ -260,5 +331,6 @@
     .deadline-info p {
       font-size: 1.1rem;
     }
+
   }
 </style>
