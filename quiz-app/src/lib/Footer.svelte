@@ -19,7 +19,7 @@
 	.footer {
 		text-align: center;
 		padding: 1rem;
-		background-color: #f8f9fa;
+		background-image: linear-gradient(to right, white, #f8f9fa, white);
 		color: #333;
 		/* margin-bottom: 2rem; */
 		
