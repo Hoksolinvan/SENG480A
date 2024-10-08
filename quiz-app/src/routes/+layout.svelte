@@ -50,7 +50,8 @@
 		min-height: 100vh;
 		/* padding: 1rem; */
 		max-width: 65%;
-		margin: auto;	
+		margin: auto;
+		margin-bottom: 0;	
 	}
 
 	.main-content {
@@ -59,6 +60,7 @@
 		margin: 2rem auto;
 		max-width: 1200px;
 		width: 100%;
+		color: rgb(123, 123, 123);
 	}
 
 </style>
