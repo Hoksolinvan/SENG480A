@@ -6,7 +6,7 @@
 
 <header class="header">
 	<div class="header-container">
-		<img src="/logo-new.png" alt="logo" class="logo" />
+		<img src="/logo.png" alt="logo" class="logo" />
 		
 		<!-- <nav class="nav">
 		<ul>

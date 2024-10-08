@@ -131,6 +131,7 @@ localStorage.removeItem("formFailed");
 		font-size: 2.5rem; /* Bigger h1 size */
 		text-align: center;
 		margin-bottom: 1rem;
+		color: #007bff;
 	}
 
 	p {
