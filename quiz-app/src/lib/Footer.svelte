@@ -10,7 +10,7 @@
 </script>
 
 <footer class="footer">
-	<p>&copy; EasyPath</p>
+	<p>&copy; nurtuRe</p>
 
 	<p>{currentDateTime}</p>
 </footer>
@@ -21,7 +21,7 @@
 		padding: 1rem;
 		background-color: #f8f9fa;
 		color: #333;
-		margin-bottom: 2rem;
+		/* margin-bottom: 2rem; */
 		
 	}
 </style>
