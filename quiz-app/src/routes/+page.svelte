@@ -20,7 +20,6 @@
     justify-content: center;
     min-height: 85vh;
     padding: 2rem 0;
-    background-color: #f0f8ff;
   }
 
   .hero-content {
@@ -42,7 +41,9 @@
   .hero-text h1 {
     margin-bottom: 1rem;
     font-size: 3.2rem; /* Adjusted for better visual balance */
-    color: #1e3a8a;
+    /* color: #1e3a8a; */
+    color:#5603ad;
+    /* color: rgb(123, 123, 123); */
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     animation: fadeInDown 1s ease-out;
@@ -51,7 +52,8 @@
   .hero-text h2 {
     margin-bottom: 1rem;
     font-size: 1.8rem; /* Slightly reduced to fit under h1 */
-    color: #3b82f6;
+    /* color: #3b82f6; */
+    color: #8367c7;
     font-weight: 500;
     animation: fadeInUp 1s ease-out 0.5s;
     animation-fill-mode: both;
@@ -60,7 +62,8 @@
   .quiz-link {
     margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;
-    background-color: #007bff;
+    /* background-color: #007bff; */
+    background-color: #5603ad;
     color: white;
     text-decoration: none;
     border-radius: 10px;
@@ -68,7 +71,8 @@
     width: fit-content;
     border-style: none none solid none;
     border-width: 5px;
-    border-color: #004a99;
+    /* border-color: #004a99; */
+    border-color: #36006f;
     font-weight: bold;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
