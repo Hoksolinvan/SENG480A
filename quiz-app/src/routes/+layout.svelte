@@ -15,7 +15,7 @@
 		let bar = document.getElementById("header-styling");
 		window.onscroll = function() {scrollFunction()};
 		function scrollFunction() {
-			if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+			if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
 				bar.style.borderColor = "#007bff";
 			} else {
 				bar.style.borderColor = "transparent";
@@ -29,38 +29,62 @@
 	</main>
 
 	<!-- Footer Component -->
-	<Footer />
+	<div id="footer-styling">
+		<Footer />
+	</div>
 </div>
 
 
 <style>
 	#header-styling {
+
+		/* Center align the child element, that is the Header */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		/* Stick the header to top of the page */
 		position: sticky;
 		top: 0;
+
 		background-color: white;
-		padding: auto;
 		padding: 0.5rem 0;
 		transition: 0.5s;
-		border-bottom: 2px solid #007bff;
+		border-bottom: 2px solid transparent;
+		z-index: 1;
+		width: 100%;
+	}
+
+	#footer-styling {
+		/* Center align the child element, that is the Footer */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		background-color: #5603ad;
+		width: 100%;
 	}
 
 	.layout-wrapper {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		min-height: 100vh;
 		/* padding: 1rem; */
-		max-width: 65%;
+		/* max-width: 65%; */
 		margin: auto;
 		margin-bottom: 0;	
 	}
 
 	.main-content {
 		flex-grow: 1;
-		padding: 2rem;
-		margin: 2rem auto;
+		/* padding: 2rem;
+		margin: 2rem auto; */
 		max-width: 1200px;
 		width: 100%;
-		color: rgb(123, 123, 123);
+		/* max-width: 65%; */
+		/* color: rgb(123, 123, 123); */
+		
 	}
 
 </style>
