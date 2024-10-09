@@ -10,18 +10,16 @@
 </script>
 
 <footer class="footer">
-	<p>&copy; nurtuRe</p>
+	<p><a href="/about">About Us</a> | <a href="/contact">Contact</a></p>
 
-	<p>{currentDateTime}</p>
+	<p>&copy; nurtuRe {currentDateTime}</p>
 </footer>
 
 <style>
 	.footer {
 		text-align: center;
 		padding: 1rem;
-		background-image: linear-gradient(to right, white, #f8f9fa, white);
-		color: #333;
-		/* margin-bottom: 2rem; */
-		
+		/* background-image: linear-gradient(to right, white, #f8f9fa, white); */
+		color: #8367c7;		
 	}
 </style>
