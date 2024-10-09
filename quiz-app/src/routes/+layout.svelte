@@ -78,8 +78,8 @@
 
 	.main-content {
 		flex-grow: 1;
-		/* padding: 2rem;
-		margin: 2rem auto; */
+		/* padding: 2rem; */
+		margin: 2rem auto;
 		max-width: 1200px;
 		width: 100%;
 		/* max-width: 65%; */
