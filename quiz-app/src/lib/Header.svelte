@@ -12,16 +12,18 @@
 		<ul>
 			<li class = "default-button"><a href="/login">LOG IN</a></li>
 			<li class = "default-button"><a href="/signup">SIGN UP</a></li>
-
-			<li class = "hidden-button"><a href="/">HOME</a></li>
-			<li class = "hidden-button"><a href="/about">ABOUT US</a></li>
-			<li class = "hidden-button"><a href="/contact">CONTACT</a></li> 
 		</ul>
-		</nav> -->
+		</nav>  -->
+		<!-- <li class = "hidden-button"><a href="/">HOME</a></li>
+			<li class = "hidden-button"><a href="/about">ABOUT US</a></li>
+			<li class = "hidden-button"><a href="/contact">CONTACT</a></li>  -->
 	</div>
 </header>
 
 <style>
+	.header {
+		width: 65%;
+	}
 	
 	.default-button {
 		padding: 1rem;
