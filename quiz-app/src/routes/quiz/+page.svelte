@@ -81,7 +81,7 @@
       }
     }
   };
-
+  
   function selectAnswer(option) {
     if (questionIndex === 0) {
       answers.major = option;
@@ -119,6 +119,7 @@
           {/each}
         </ul>
       </div>
+      
     {:else}
       <div class="quiz-complete">
         <h2 class="recommendation-header">Recommendation Based on Your Answers</h2>
@@ -142,6 +143,7 @@
               bind:value={userEmail} 
               placeholder="Enter your email" 
               required
+              id="email-input-field"
             />
             <button type="submit" class="reminder-btn">Send Reminder</button>
           </form>
@@ -151,6 +153,7 @@
       </div>
     {/if}
   </div>
+
 </div>
 
 <style>
@@ -259,6 +262,11 @@
     transition: opacity 1s ease;
   }
 
+  .email-reminder h3 {
+    font-size: 1.3rem;
+    color: #333;
+  }
+
   .reminder-text {
     padding: 0.5rem 0;
     font-size: 1.1rem;
@@ -275,6 +283,12 @@
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin-top: 1rem;
+  }
+
+  #email-input-field {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    width: 70%;
   }
 
   .reminder-btn:hover {
