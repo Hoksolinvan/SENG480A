@@ -80,7 +80,7 @@
 		flex-grow: 1;
 		/* padding: 2rem; */
 		margin: 2rem auto;
-		max-width: 1200px;
+		max-width: 1000px;
 		width: 100%;
 		/* max-width: 65%; */
 		/* color: rgb(123, 123, 123); */

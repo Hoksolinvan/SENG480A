@@ -81,10 +81,9 @@ localStorage.removeItem("formFailed");
 </script>
 
 <main>
-	<h1>Explore Your Future Career Paths with Our App</h1>
+	<h1>Help Us Improve Your Career Planning Experience</h1>
 	<p>
-		If you are a high school student interested in using our app to explore your career prospects,
-		please provide us with feedback to help us improve!
+		We're here to help you plan your academic future. We'd love to hear your feedback or suggestions to make it even better!
 	</p>
 
 	<div class="form-container">
@@ -106,8 +105,6 @@ localStorage.removeItem("formFailed");
 
 			<button type="submit">Submit</button>
 		</form>
-	
-		
 
 	</div>
 
@@ -122,9 +119,6 @@ localStorage.removeItem("formFailed");
 		max-width: 600px;
 		margin: 0 auto;
 	}
-
-	
-
 
 
 	h1 {

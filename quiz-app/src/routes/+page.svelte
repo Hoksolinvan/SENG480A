@@ -2,9 +2,9 @@
   <div class="hero-content">
     <!-- Left Column (Text) -->
     <div class="hero-text">
-      <h1>Find Your Ideal Major Fit</h1>
-      <h2>Start Your Journey to a Bright Future</h2>
-      <a href="/quiz" class="quiz-link">Take the Quiz to Get Started</a>
+      <h1>Find Your Ideal Major</h1>
+      <h2>Plan Your Academic Journey</h2>
+      <a href="/quiz" class="quiz-link">Get Started with Your Personalized Plan</a>
     </div>
     <!-- Right Column (Image) -->
     <div class="hero-image">
