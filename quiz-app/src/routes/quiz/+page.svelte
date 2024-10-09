@@ -231,6 +231,7 @@
     border-radius: 10px;
     margin-top: 1.5rem;
     width: 100%;
+    animation: fadeInUp 1s ease-out;
   }
 
   .deadline-info {
@@ -238,7 +239,8 @@
     padding: 1rem;
     background-color: #e6f3ff;
     border-radius: 10px;
-    animation: fadeInUp 1s ease-out 0.5s;
+    animation: fadeInUp 2s;
+    /* animation: fadeInUp 2s ease-out 0.5s; */
   }
 
   .deadline-info h3 {
