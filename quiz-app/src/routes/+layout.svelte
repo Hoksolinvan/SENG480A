@@ -16,7 +16,9 @@
 		window.onscroll = function() {scrollFunction()};
 		function scrollFunction() {
 			if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-				bar.style.borderColor = "#007bff";
+				bar.style.borderColor = "#8367c7";
+				//bar.style.borderColor = "#007bff";
+				// bar.style.borderColor = "#009900";
 			} else {
 				bar.style.borderColor = "transparent";
 			}
@@ -47,7 +49,7 @@
 		position: sticky;
 		top: 0;
 
-		background-color: white;
+		background-color: rgb(255, 255, 255);
 		padding: 0.5rem 0;
 		transition: 0.5s;
 		border-bottom: 2px solid transparent;
@@ -70,7 +72,7 @@
 		flex-direction: column;
 		align-items: center;
 		min-height: 100vh;
-		/* padding: 1rem; */
+		/* padding: 1rem 0; */
 		/* max-width: 65%; */
 		margin: auto;
 		margin-bottom: 0;	
@@ -78,12 +80,9 @@
 
 	.main-content {
 		flex-grow: 1;
-		/* padding: 2rem; */
+		padding: 2rem 0;
 		margin: 2rem auto;
-		max-width: 1200px;
-		width: 100%;
-		/* max-width: 65%; */
-		/* color: rgb(123, 123, 123); */
+		max-width: 65%;
 		
 	}
 
