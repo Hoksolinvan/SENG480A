@@ -180,7 +180,8 @@
   .quiz-question h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    color: #1e3a8a;
+    /* color: #1e3a8a; */
+    color: #5603ad;
     text-align: center;
   }
 
@@ -198,7 +199,9 @@
     padding: 0.7rem 1.5rem;
     font-size: 1.2rem;
     /* background-color: #007bff; */ 
-    background-color: #5603ad;
+    /* background-color: #5603ad;  Dark purple */
+    background-color: #03ad06; /*Dark green*/
+    /* background-color: #C2F8CB; Lighter green, see palette for the remaining two greens */
     color: white;
     border: none;
     border-radius: 5px;
