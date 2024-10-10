@@ -12,6 +12,8 @@ We are a team of five:
 
 Link to project: https://seng-480-a.vercel.app/
 
+Link to project (alternative): https://seng480a.netlify.app
+
 Link to project's github repository: https://github.com/Hoksolinvan/SENG480A
 
 Link to project's github Wiki: https://github.com/Hoksolinvan/SENG480A/wiki
