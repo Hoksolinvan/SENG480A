@@ -4,26 +4,16 @@
 	let Message = '';
 	let Form=[];
 	
-
 	function handleSubmit() {
-		
 
 		Name = document.getElementById("name").value;
     	Email = document.getElementById("email").value;
     	Message = document.getElementById("message").value;
 
 		Form=[Name,Email,Message];
-		
+
 		alert(`Thank you for your feedback, ${Name}!`);
-
-		
-
-		
-		
-
 		post_Contact();
-
-
 		if(localStorage.getItem("formSubmitted")=="true"){
 
 document.getElementById("Thankyou_Message").classList.remove("hidden");

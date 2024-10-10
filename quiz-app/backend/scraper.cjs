@@ -1,15 +1,11 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-
 masterarray=[]
 
-
 const SFUurl='https://www.sfu.ca/students/deadlines/admission_scholarships.html';
-const UBCurl='https://you.ubc.ca/applying-ubc/dates-deadlines/'
-const UVICurl='https://www.uvic.ca/undergraduate/admissions/application-deadlines/index.php'
-const UFVurl='https://www.ufv.ca/future-students/dates-deadlines/'
-
-
+const UBCurl='https://you.ubc.ca/applying-ubc/dates-deadlines/';
+const UVICurl='https://www.uvic.ca/undergraduate/admissions/application-deadlines/index.php';
+const UFVurl='https://www.ufv.ca/future-students/dates-deadlines/';
 
 //SFU
 const SFU_function = async () => {
@@ -35,24 +31,14 @@ const SFU_function = async () => {
 };
 
 
-
-
-
-
-
-
-
 //UBC
 const UBC_function = async () => {
     try{
 
         const res = await axios.get(UBCurl);
-
         indexlocation = 4;
         const $ = cheerio.load(res.data);
     
-
-
         $('table tr').each((index,element) =>{
 
 
@@ -70,20 +56,16 @@ const UBC_function = async () => {
         console.error("Error fetching data:", error);
     }
 
-
 }
 
 
 //UVIC
 const UVIC_function = async () =>{
     try{
-
         const res = await axios.get(UVICurl);
 
         indexlocation = 10;
         const $ = cheerio.load(res.data);
-
-      
 
         $('ul li').each((index,element) =>{
 
@@ -135,11 +117,8 @@ async function Updater() {
     await UVIC_function();
     await UFV_function();
     
-    
     return masterarray; 
 };
-
-
 
 module.exports = {
     Updater

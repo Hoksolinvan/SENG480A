@@ -4,6 +4,7 @@ const port = process.env.PORT || 2000;
 const cors = require('cors');
 const path = require('path');
 const clientDB= require('./config.cjs');
+const webscrape = require('./scraper.cjs');
 
 // Middleware to enable CORS and parse JSON request bodies
 app.use(cors());
@@ -47,13 +48,36 @@ app.post('/Forms',async (req,res) =>{
       res.status(200).json({message: 'Form Successfully Submitted!'})
    }
    catch (error){
-      console.error('Error submitting Form:',error.message);
+      console.error('Error submitting Form: ',error.message);
       res.status(500).json({error: 'Error saving Form details'});
    }
 
 
 
 
+})
+
+app.get('/webscrape',async (req,res) =>{
+
+   try{
+      let deadlines=[]
+      const processArrayElements = async () => {
+         const data = await Updater();  // {SFU: 0, UBC: 1, UVIC: 2, UFV: 3} Index positioning
+         deadlines=[...data];
+        
+     };
+     
+     setTimeout(() => {
+         processArrayElements();
+     }, 1000);  
+
+     res.status(200).json({deadlines});
+
+   }
+   catch(error){
+      console.error('Error obtaining web-scrape details: ',error.message);
+      res.status(500).json({error: 'Error obtaining web-scrape data'});
+   }
 })
 
 

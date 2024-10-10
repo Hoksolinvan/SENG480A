@@ -1,19 +1,6 @@
 <script>
-import {cheerio} from 'cheerio';
-import {Updater} from '../../../backend/scraper.cjs';
-
-  
-  let deadlines=[0,0,0,0,0]
-
-  const processArrayElements = async () => {
-    const data = await Updater();  // {SFU: 0, UBC: 1, UVIC: 2, UFV: 3} Index positioning
-    deadlines=[...data];
-   
-};
-
-setTimeout(() => {
-    processArrayElements();
-}, 1000);  
+let deadlines=[]
+webscrape();
 
 
   let questionIndex = 0;
@@ -124,8 +111,38 @@ setTimeout(() => {
   }
 
 
+  async function webscrape(){
 
-  
+    try{
+
+      const request = await fetch('https://seng480a-production.up.railway.app/webscrape',
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type':'application/json'
+        },
+        body: JSON.stringify({
+          answers: answers
+          })
+      });
+
+
+      if (request.ok){
+				const result = await request.json();
+				deadlines = result;
+			}
+			else{
+				console.error('Error Submitting webscrape', response.statusText);
+			}
+
+      
+    }
+    catch(error){
+      console.log("Failed to obtain webscrape data\n");
+    }
+
+  }
+
   async function store_quiz(){
     try{
 			const request = await fetch('https://seng480a-production.up.railway.app/quiz_result',
