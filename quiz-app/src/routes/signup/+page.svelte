@@ -76,8 +76,7 @@
 		font-weight: bold;
 	}
 
-	input,
-	textarea {
+	input {
 		padding: 0.75rem;
 		font-size: 1rem;
 		width: 100%;
@@ -86,8 +85,7 @@
 		border-radius: 5px;
 	}
 
-	input:focus,
-	textarea:focus {
+	input:focus {
 		outline: none;
 		border-color: #0056b3;
 		box-shadow: 0 0 5px rgba(0, 91, 187, 0.3);
@@ -108,7 +106,7 @@
 		transform: translateY(-2px);
 	}
 
-	#Thankyou_Message{
+	/* #Thankyou_Message{
 		font-size: 2rem;
 		border: 2px bold #D4F4CC;
     		border-radius: 25px;
@@ -130,5 +128,5 @@
 		background-color: #f8d7da;
 		color: #721c24;            
 		border: 2px solid #f5c6cb; 
-	}
+	} */
 </style>
