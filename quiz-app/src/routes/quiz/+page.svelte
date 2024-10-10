@@ -25,7 +25,6 @@
       options: ['Very Important', 'Somewhat Important', 'Not Important']
     }
   ];
-
   const universityRecommendations = {
     'Social Sciences': {
       'Very Important': {

@@ -14,12 +14,11 @@ app.get('/', (req, res) => {
    res.send('Hello World!');
 });
 
-
 // Endpoint to handle quiz result submission
 app.post('/quiz_result', async (req, res) => {
    const { answers } = req.body;
    if (!answers) {
-      return res.status(400).json({ error: 'Not enough answers provided' });
+      return res.status(400).json({ error: 'Not enough answers provided :(' });
    }
 
    try {
