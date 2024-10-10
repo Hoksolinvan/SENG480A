@@ -14,10 +14,6 @@ app.get('/', (req, res) => {
 });
 
 
-
-
-
-
 // Endpoint to handle quiz result submission
 app.post('/quiz_result', async (req, res) => {
    const { answers } = req.body;
