@@ -5,17 +5,16 @@
 	</p>
 
 	<div class="form-container">
-		<form on:submit|preventDefault={handleSubmit} id="ContactForm">
+		<form on:submit|preventDefault={handleSubmit} id="LogInForm">
 			<div>
 				<label for="email">Email:</label>
-				<input type="text" placeholder="Enter Email Address" />
+				<input type="email" id="email" name="email" placeholder="Enter Email Address" />
 				<!-- <input type="text" id="name" bind:value={Name} required /> -->
 			</div>
 
 			<div>
-				<label for="psw">Password:</label>
-				<!-- <textarea id="message" bind:value={Message} required></textarea> -->
-				<input type="text" placeholder="Enter Password"  />
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" placeholder="Enter Password"  />
 			</div>
 
 			<button type="submit">Log In</button>
@@ -96,16 +95,6 @@
 	button:hover {
 		background-color: #0056b3;
 		transform: translateY(-2px);
-	}
-
-	#Thankyou_Message{
-		font-size: 2rem;
-		border: 2px bold #D4F4CC;
-    		border-radius: 25px;
-		background-color: #D4F4CC;
-		font-weight: bold;
-		color: #2C543D;
-    		text-align: center;
 	}
 
 	.hidden{
