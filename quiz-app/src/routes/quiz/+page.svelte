@@ -98,7 +98,7 @@
       questionIndex++;
     } else {
       quizComplete = true;
-      console.log(answers);
+      
       store_quiz();
 
     }
@@ -114,7 +114,7 @@
   async function webscrape(){
 
     try{
-
+      //
       const request = await fetch('https://seng480a-production.up.railway.app/webscrape',
       {
         method: 'GET',
@@ -144,16 +144,19 @@
   }
 
   async function store_quiz(){
+    
+    
     try{
+      let buffer=[answers.major,answers.ranking];
+      console.log(buffer)
 			const request = await fetch('https://seng480a-production.up.railway.app/quiz_result',
 			{
 				method: 'POST',
 				headers: {
-
 					'Content-Type':'application/json'
 				},
 				body: JSON.stringify({
-					answers: answers
+					answers: buffer
 				})
 
 			});
@@ -163,11 +166,11 @@
 				console.log('Quiz results was successfully posted: ',result);
 			}
 			else{
-				console.error('Error Submitting Quiz', response.statusText);
+				console.error('Error Submitting Quiz', request.statusText);
 			}
 		}
 		catch(error) {
-			console.log("Failed to submit Quiz\n");
+			console.log("Failed to submit Quiz\n",error);
 		}
   }
 
