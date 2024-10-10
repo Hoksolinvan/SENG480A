@@ -116,7 +116,6 @@ setTimeout(() => {
 
     }
   }
-
   // Add delay for reminder section
   $: if (quizComplete) {
     setTimeout(() => {
