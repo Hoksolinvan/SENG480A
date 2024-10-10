@@ -65,8 +65,7 @@
 		font-weight: bold;
 	}
 
-	input,
-	textarea {
+	input {
 		padding: 0.75rem;
 		font-size: 1rem;
 		width: 100%;
@@ -75,8 +74,7 @@
 		border-radius: 5px;
 	}
 
-	input:focus,
-	textarea:focus {
+	input:focus {
 		outline: none;
 		border-color: #0056b3;
 		box-shadow: 0 0 5px rgba(0, 91, 187, 0.3);
@@ -95,14 +93,6 @@
 	button:hover {
 		background-color: #0056b3;
 		transform: translateY(-2px);
-	}
-
-	.hidden{
-		opacity: 0;
-	}
-
-	.show {
-		opacity: 1;
 	}
 
 	.form-failed {
