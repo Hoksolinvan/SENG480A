@@ -1,5 +1,5 @@
 <script>
-import cheerio from 'cheerio';
+const cheerio = require('cheerio');
 import {Updater} from '../../../backend/scraper.cjs';
 
   
