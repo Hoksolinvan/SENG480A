@@ -1,6 +1,5 @@
 <script>
-  
-  import {Updater} from '../../../backend/scraper.cjs';
+  const {Updater}= require('../../../backend/scraper.cjs');
 
   
   let deadlines=[]
