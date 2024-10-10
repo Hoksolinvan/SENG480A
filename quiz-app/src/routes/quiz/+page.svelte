@@ -1,5 +1,6 @@
 <script>
-  const {Updater}= require('../../../backend/scraper.cjs');
+import cheerio from 'cheerio';
+import {Updater} from '../../../backend/scraper.cjs';
 
   
   let deadlines=[]
