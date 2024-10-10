@@ -23,7 +23,7 @@ app.post('/quiz_result', async (req, res) => {
 
    try {
       // Insert the answers into the database
-      await clientDB.none('INSERT INTO quiz_results (answer1, answer2, answer3, answer4) VALUES ($1, $2, $3, $4)', [answers[0], answers[1],answers[2],answers[3]]);
+      await clientDB.none('INSERT INTO quiz_results (answer1, answer2) VALUES ($1, $2)', [answers[0], answers[1]]);
       res.status(200).json({ message: 'Quiz results successfully saved'});
    } catch (error) {
       console.error('Error saving quiz results:', error.message);
