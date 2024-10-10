@@ -6,7 +6,6 @@
 
   const processArrayElements = async () => {
     const data = await Updater();  // {SFU: 0, UBC: 1, UVIC: 2, UFV: 3} Index positioning
-    
     deadlines=[...data];
    
 };
