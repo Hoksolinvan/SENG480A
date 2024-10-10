@@ -1,3 +1,9 @@
+<script>
+	function handleSubmit(){
+		console.log("hello world");
+	}
+</script>
+
 <main>
 	<h1>Welcome Back!</h1>
 	<p>
@@ -19,7 +25,7 @@
 			</div>
 
 			<button type="submit">Log In</button>
-		</form>
+		</form> 
 	</div>
 </main>
 
