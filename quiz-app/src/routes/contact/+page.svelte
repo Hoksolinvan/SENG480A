@@ -4,42 +4,29 @@
 	let Message = '';
 	let Form=[];
 	
-
 	function handleSubmit() {
-		
-
 		Name = document.getElementById("name").value;
-    	Email = document.getElementById("email").value;
-    	Message = document.getElementById("message").value;
+		Email = document.getElementById("email").value;
+		Message = document.getElementById("message").value;
 
 		Form=[Name,Email,Message];
 		
 		alert(`Thank you for your feedback, ${Name}!`);
 
-		
-
-		
-		
-
 		post_Contact();
 
-
 		if(localStorage.getItem("formSubmitted")=="true"){
-
-document.getElementById("Thankyou_Message").classList.remove("hidden");
-document.getElementById("Thankyou_Message").classList.add("show");
-localStorage.removeItem("formSubmitted");
-}
-else if(localStorage.getItem("formFailed")=="true"){
-document.getElementById("Thankyou_Message").textContent = "Form submission failed. Please try again.";
-document.getElementById("Thankyou_Message").classList.remove("hidden");
-document.getElementById("Thankyou_Message").classList.add("show","form-failed");
-localStorage.removeItem("formFailed");
-}
-	
+			document.getElementById("Thankyou_Message").classList.remove("hidden");
+			document.getElementById("Thankyou_Message").classList.add("show");
+			localStorage.removeItem("formSubmitted");
+		}
+		else if(localStorage.getItem("formFailed")=="true"){
+			document.getElementById("Thankyou_Message").textContent = "Form submission failed. Please try again.";
+			document.getElementById("Thankyou_Message").classList.remove("hidden");
+			document.getElementById("Thankyou_Message").classList.add("show","form-failed");
+			localStorage.removeItem("formFailed");
+		}
 	}
-
-
 
 	async function post_Contact(){
 		try{
@@ -47,36 +34,28 @@ localStorage.removeItem("formFailed");
 			{
 				method: 'POST',
 				headers: {
-
 					'Content-Type':'application/json'
 				},
 				body: JSON.stringify({
-
 					Forms: Form
 				})
-
 			});
 
 			if (request.ok){
 				const result = await request.json();
 				console.log('Form results was successfully posted: ',result);
-
 				localStorage.setItem("formSubmitted","true");
-
 			}
 			else{
 				console.error('Error Submitting Form', response.statusText);
 				localStorage.setItem("formFailed", "true");
 			}
-
 		}
 		catch(error) {
 			console.log("Failed to submit Form\n");
 			localStorage.setItem("formFailed", "true");
 		}
 	};
-
-
 
 </script>
 
@@ -105,7 +84,6 @@ localStorage.removeItem("formFailed");
 
 			<button type="submit">Submit</button>
 		</form>
-
 	</div>
 
 	<br>
@@ -119,7 +97,6 @@ localStorage.removeItem("formFailed");
 		max-width: 600px;
 		margin: 0 auto;
 	}
-
 
 	h1 {
 		font-size: 2.5rem; /* Bigger h1 size */
@@ -189,39 +166,29 @@ localStorage.removeItem("formFailed");
 		transform: translateY(-2px);
 	}
 
-
-
 	#Thankyou_Message{
 		font-size: 2rem;
 		border: 2px bold #D4F4CC;
-    	border-radius: 25px;
+    		border-radius: 25px;
 		background-color: #D4F4CC;
 		font-weight: bold;
 		color: #2C543D;
-    	text-align: center;
-
+    		text-align: center;
 	}
 
-
-	
 	.hidden{
-
 		opacity: 0;
-
 	}
-
 
 	.show {
-
 		opacity: 1;
-
 	}
 
 	.form-failed {
-    background-color: #f8d7da;
-    color: #721c24;            
-    border: 2px solid #f5c6cb; 
-}
+		background-color: #f8d7da;
+		color: #721c24;            
+		border: 2px solid #f5c6cb; 
+	}
 
 /* Van's CSS*/
 button:hover{
