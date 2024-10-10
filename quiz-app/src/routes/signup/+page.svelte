@@ -5,29 +5,27 @@
 	</p>
 
 	<div class="form-container">
-		<form on:submit|preventDefault={handleSubmit} id="ContactForm">
+		<form on:submit|preventDefault={handleSubmit} id="RegisterForm">
 			<div>
 				<label for="email">Email:</label>
-				<input type="text" placeholder="Enter Email Address" />
-				<!-- <input type="text" id="name" bind:value={Name} required /> -->
+				<input type="email" id="email" name="email" placeholder="Enter Email Address" />
 			</div>
 
 			<div>
-				<label for="psw">Password:</label>
-				<!-- <textarea id="message" bind:value={Message} required></textarea> -->
-				<input type="text" placeholder="Enter Password"  />
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" placeholder="Enter Password"  />
 			</div>
 
 			<div>
-				<label for="psw">Confirm Password:</label>
-				<!-- <textarea id="message" bind:value={Message} required></textarea> -->
-				<input type="text" placeholder="Confirm Password"  />
+				<label for="confirm-pwd">Confirm Password:</label>
+				<input type="password" id="confirm-pwd" name="confirm-pwd" placeholder="Confirm Password"  />
 			</div>
 
 			<div>
-				<input type="checkbox" checked="checked" name="remember" > 
-				By creating an account you agree to our
-				<a href="#" style="color:dodgerblue">Terms & Privacy</a>
+				<input type="checkbox" checked="checked" name="agree" id="agree" style="width: auto;"> 
+				<label for="agree" style="font-weight: normal;">
+					By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>
+				</label>
 			</div>
 
 			<button type="submit">Create Account</button>
