@@ -1,5 +1,5 @@
 <script>
-import * as cheerio from 'cheerio';
+import {cheerio} from 'cheerio';
 import {Updater} from '../../../backend/scraper.cjs';
 
   
