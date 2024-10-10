@@ -166,7 +166,7 @@
 				console.log('Quiz results was successfully posted: ',result);
 			}
 			else{
-				console.error('Error Submitting Quiz', request.statusText);
+				console.error('Error Submitting Quiz', response.statusText);
 			}
 		}
 		catch(error) {
