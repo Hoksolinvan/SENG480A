@@ -1,19 +1,19 @@
 <script>
   
-//   import {Updater} from '../../../backend/scraper.cjs';
+  import {Updater} from '../../../backend/scraper.cjs';
 
   
-//   let deadlines=[]
+  let deadlines=[]
 
-//   const processArrayElements = async () => {
-//     const data = await Updater();  // {SFU: 0, UBC: 1, UVIC: 2, UFV: 3} Index positioning
-//     deadlines=[...data];
+  const processArrayElements = async () => {
+    const data = await Updater();  // {SFU: 0, UBC: 1, UVIC: 2, UFV: 3} Index positioning
+    deadlines=[...data];
    
-// };
+};
 
-// setTimeout(() => {
-//     processArrayElements();
-// }, 1000);  
+setTimeout(() => {
+    processArrayElements();
+}, 1000);  
 
 
   let questionIndex = 0;
