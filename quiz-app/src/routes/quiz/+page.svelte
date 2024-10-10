@@ -2,6 +2,7 @@
 let deadlines=[]
 webscrape();
 
+console.log(deadlines);
 
   let questionIndex = 0;
   let answers = {};
@@ -135,7 +136,7 @@ webscrape();
 				console.error('Error Submitting webscrape', response.statusText);
 			}
 
-      
+
     }
     catch(error){
       console.log("Failed to obtain webscrape data\n");
