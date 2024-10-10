@@ -1,3 +1,9 @@
+<script>
+	function handleSubmit(){
+		console.log("hello");
+	}
+</script>
+
 <main>
 	<h1>Welcome!</h1>
 	<p>
