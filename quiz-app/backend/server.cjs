@@ -57,28 +57,19 @@ app.post('/Forms',async (req,res) =>{
 
 })
 
-app.get('/webscrape',async (req,res) =>{
 
-   try{
-      let deadlines=[]
-      const processArrayElements = async () => {
-         const data = await Updater();  // {SFU: 0, UBC: 1, UVIC: 2, UFV: 3} Index positioning
-         deadlines=[...data];
-        
-     };
-     
+app.get('/webscrape', async (req, res) => {
+   console.log("Received a request for /webscrape");  // Add this for debugging
+   try {
+     const data = await Updater();  
      setTimeout(() => {
-         processArrayElements();
-     }, 1000);  
-
-     res.status(200).json({deadlines});
-
+      res.status(200).json({ deadlines: data });  // Send the scraped data after the delay
+    }, 1000);
+   } catch (error) {
+     console.error('Error obtaining web-scrape details: ', error.message);
+     res.status(500).json({ error: 'Error obtaining web-scrape data' });
    }
-   catch(error){
-      console.error('Error obtaining web-scrape details: ',error.message);
-      res.status(500).json({error: 'Error obtaining web-scrape data'});
-   }
-})
+ });
 
 
 

@@ -1,26 +1,27 @@
-import {Updater} from '../../../backend/scraper.cjs';
+let deadlines = [];
 
-let SFUData, UBCData, UVICData, UFVData; // Declare globally
+async function webscrape() {
+  try {
+    const request = await fetch('https://seng480a-production.up.railway.app/webscrape', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
 
+    if (request.ok) {
+      const result = await request.json();
+      deadlines = result.deadlines;  // Ensure you assign the correct data
+      console.log(deadlines);        // Print the deadlines after receiving the data
+    } else {
+      console.error('Error submitting webscrape:', request.statusText);  // Updated to request.statusText
+    }
+  } catch (error) {
+    console.error('Failed to obtain webscrape data:', error.message);  // Updated to log the error message
+  }
+}
 
+// Call the function
+webscrape();
 
-const processArrayElements = async () => {
-    const data = await Updater();  // Wait for the array to be filled
-    
-    // Assign specific elements to global variables
-    SFUData = data[0];  // SFU data
-    UBCData = data[1];  // UBC data
-    UVICData = data[2]; // UVIC data
-    UFVData = data[3];  // UFV data
-
-    // Now SFUData, UBCData, etc. are accessible globally
-   
-};
-
-// Run the function to populate the global variables
-processArrayElements();
-
-// You can now use SFUData or other elements elsewhere in the program
-setTimeout(() => {
-    console.log("Using SFUData outside the function:", SFUData, UBCData, UVICData, UFVData);
-}, 1000);  // Wait for async function to complete
+console.log(deadlines)

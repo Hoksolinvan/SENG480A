@@ -1,9 +1,7 @@
 <script>
-let deadlines=[]
-webscrape();
 
-console.log(deadlines);
 
+  let deadlines=[0,0,0,0,0]
   let questionIndex = 0;
   let answers = {};
   let quizComplete = false;
@@ -100,6 +98,7 @@ console.log(deadlines);
       questionIndex++;
     } else {
       quizComplete = true;
+      console.log(answers);
       store_quiz();
 
     }
@@ -154,7 +153,6 @@ console.log(deadlines);
 					'Content-Type':'application/json'
 				},
 				body: JSON.stringify({
-
 					answers: answers
 				})
 
