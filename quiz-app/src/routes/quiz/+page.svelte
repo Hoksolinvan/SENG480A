@@ -128,7 +128,7 @@
       if (request.ok){
 				
 				// deadlines = request;
-        console.log(request);
+        console.log(request.json());
 
 			}
 			else{
