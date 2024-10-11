@@ -1,7 +1,60 @@
 <script>
-	function handleSubmit(){
-		console.log("hello");
+	let Email = "";
+	let Password = "";
+	let Confirm_pwd = "";
+	let Agree = false;
+	let Form = [];
+
+	// Van's test code
+	// function handleSubmit(){
+	// 	console.log("hello");
+	// }
+
+	function handleSubmit() {
+		Email = document.getElementById("email").value;
+		Password = document.getElementById("password").value;
+		Confirm_pwd = document.getElementById("confirm-pwd").value;
+		Agree = document.getElementById("agree").value;
+
+		if (Password != Confirm_pwd) {
+			// Notify the user that password and the confirming password are not the same
+			document.getElementById("regis-fail").textContent = "Passwords do not match. Please check again.";
+			document.getElementById("confirm-pwd").style.borderColor = "red";
+			document.getElementById("password").style.borderColor = "red";
+			document.getElementById("confirm-pwd").style.borderWidth = "2px";
+			document.getElementById("password").style.borderWidth = "2px";
+			document.getElementById("confirm-pwd").style.backgroundColor = "#e6e6e6";
+			document.getElementById("password").style.backgroundColor = "#e6e6e6";
+			Confirm_pwd = "";
+
+		} else {
+
+			Form = [Email, Password, Confirm_pwd, Agree];
+
+			post_Regis();
+
+			if(localStorage.getItem("regisPassed")=="true"){
+				document.getElementById("Thankyou_Message").classList.remove("hidden");
+				document.getElementById("Thankyou_Message").classList.add("show");
+				localStorage.removeItem("regisPassed");
+			}
+			else if(localStorage.getItem("regisFailed")=="true"){
+				document.getElementById("login-fail").textContent = "Incorrect email address or password. Please check and try again.";
+				document.getElementById("email").style.borderColor = "red";
+				document.getElementById("password").style.borderColor = "red";
+				document.getElementById("email").style.borderWidth = "2px";
+				document.getElementById("password").style.borderWidth = "2px";
+				document.getElementById("email").style.backgroundColor = "#e6e6e6";
+				document.getElementById("password").style.backgroundColor = "#e6e6e6";
+				Email = "";
+				Password = "";
+				localStorage.removeItem("regisFailed");
+			}
+		}
 	}
+
+	async function post_Regis() {
+		localStorage.setItem("regisFailed", "true");
 </script>
 
 <main>
@@ -14,25 +67,28 @@
 		<form on:submit|preventDefault={handleSubmit} id="RegisterForm">
 			<div>
 				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" placeholder="Enter Email Address" />
+				<input type="email" id="email" name="email" placeholder="Enter Email Address" bind:value={Email} required/>
 			</div>
 
 			<div>
 				<label for="password">Password:</label>
-				<input type="password" id="password" name="password" placeholder="Enter Password"  />
+				<input type="password" id="password" name="password" placeholder="Enter Password" bind:value={Password} required />
 			</div>
 
 			<div>
 				<label for="confirm-pwd">Confirm Password:</label>
-				<input type="password" id="confirm-pwd" name="confirm-pwd" placeholder="Confirm Password"  />
+				<input type="password" id="confirm-pwd" name="confirm-pwd" placeholder="Confirm Password" bind:value={Confirm_pwd} required  />
 			</div>
 
 			<div>
-				<input type="checkbox" checked="checked" name="agree" id="agree" style="width: auto;"> 
+				<input type="checkbox" checked="checked" name="agree" id="agree" style="width: auto;" bind:value={Agree} required> 
 				<label for="agree" style="font-weight: normal;">
 					By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>
 				</label>
 			</div>
+
+			<p id="regis-fail">
+			</p>
 
 			<button type="submit">Create Account</button>
 		</form>
@@ -135,4 +191,12 @@
 		color: #721c24;            
 		border: 2px solid #f5c6cb; 
 	} */
+
+	#regis-fail {
+		color: #721c24;   
+		margin: 0;
+		text-align: left;
+		font-size: 0.75rem;
+		margin-bottom: 0.5rem;
+	}
 </style>

@@ -1,6 +1,4 @@
 <script>
-
-
 	function handleSubmit() {
 		let Email = document.getElementById("email").value;
 		let Password= document.getElementById("password").value;
