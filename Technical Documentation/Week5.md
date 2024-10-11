@@ -17,3 +17,16 @@
 ### Components Overview
 - *Backend NodeJS API* and *Postgres database* system is served on railway
 - Frontend *Svelte UI* is served on netlify
+
+## Progress
+- Implemented:
+  - Landing page
+  - Mock/Test preference data collection ("quiz")
+  - Result display
+  - Prompt to register for email notification
+  - Contact form
+  - About us page
+ 
+- In progress:
+  - Log in
+  - Account registration

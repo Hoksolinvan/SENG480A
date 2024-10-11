@@ -63,7 +63,8 @@
     margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;
     /* background-color: #007bff; */
-    background-color: #5603ad;
+    /* background-color: #5603ad; */
+    background-color: #3500A5;
     color: white;
     text-decoration: none;
     border-radius: 10px;
