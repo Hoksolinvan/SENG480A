@@ -55,6 +55,7 @@
 
 	async function post_Regis() {
 		localStorage.setItem("regisFailed", "true");
+	}
 </script>
 
 <main>
