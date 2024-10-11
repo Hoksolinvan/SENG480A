@@ -4,6 +4,13 @@
 	import Footer from '$lib/Footer.svelte';
 </script>
 
+<svelte:head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;700&family=Roboto:wght@400&display=swap"
+    rel="stylesheet"
+  />
+</svelte:head>
+
 <div class="layout-wrapper">
 	<!-- Header Component -->
 	<!-- class header-styling is created only for styling convenience, might remove when I 
