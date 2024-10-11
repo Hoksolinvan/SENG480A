@@ -11,29 +11,27 @@
 	</p>
 
 	<div class="form-container">
-		<form on:submit|preventDefault={handleSubmit} id="ContactForm">
+		<form on:submit|preventDefault={handleSubmit} id="RegisterForm">
 			<div>
 				<label for="email">Email:</label>
-				<input type="text" placeholder="Enter Email Address" />
-				<!-- <input type="text" id="name" bind:value={Name} required /> -->
+				<input type="email" id="email" name="email" placeholder="Enter Email Address" />
 			</div>
 
 			<div>
-				<label for="psw">Password:</label>
-				<!-- <textarea id="message" bind:value={Message} required></textarea> -->
-				<input type="text" placeholder="Enter Password"  />
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" placeholder="Enter Password"  />
 			</div>
 
 			<div>
-				<label for="psw">Confirm Password:</label>
-				<!-- <textarea id="message" bind:value={Message} required></textarea> -->
-				<input type="text" placeholder="Confirm Password"  />
+				<label for="confirm-pwd">Confirm Password:</label>
+				<input type="password" id="confirm-pwd" name="confirm-pwd" placeholder="Confirm Password"  />
 			</div>
 
 			<div>
-				<input type="checkbox" checked="checked" name="remember" > 
-				By creating an account you agree to our
-				<a href="#" style="color:dodgerblue">Terms & Privacy</a>
+				<input type="checkbox" checked="checked" name="agree" id="agree" style="width: auto;"> 
+				<label for="agree" style="font-weight: normal;">
+					By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>
+				</label>
 			</div>
 
 			<button type="submit">Create Account</button>
@@ -84,8 +82,7 @@
 		font-weight: bold;
 	}
 
-	input,
-	textarea {
+	input {
 		padding: 0.75rem;
 		font-size: 1rem;
 		width: 100%;
@@ -94,8 +91,7 @@
 		border-radius: 5px;
 	}
 
-	input:focus,
-	textarea:focus {
+	input:focus {
 		outline: none;
 		border-color: #0056b3;
 		box-shadow: 0 0 5px rgba(0, 91, 187, 0.3);
@@ -116,7 +112,7 @@
 		transform: translateY(-2px);
 	}
 
-	#Thankyou_Message{
+	/* #Thankyou_Message{
 		font-size: 2rem;
 		border: 2px bold #D4F4CC;
     		border-radius: 25px;
@@ -138,5 +134,5 @@
 		background-color: #f8d7da;
 		color: #721c24;            
 		border: 2px solid #f5c6cb; 
-	}
+	} */
 </style>
