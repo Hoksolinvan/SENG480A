@@ -300,6 +300,9 @@
           <p class="success-message">Reminder set! We'll email you before the deadline.</p>
         {/if}
       </div>
+
+      <!-- Reload Page. Might need improvements to have a reset mechanism that is more seemless -->
+      <!-- <button onclick="location.reload();" id="reset-button">Reset</button> -->
     {/if}
   </div>
 
@@ -446,6 +449,21 @@
     border-radius: 5px;
     width: 70%;
   }
+
+  /* #reset-button {
+		padding: 0.5rem 1rem;
+    font-size: 1rem;
+		background-color: #007bff;
+		color: white;
+		border-radius: 10px;
+		cursor: pointer;
+		font-weight: bold;
+		border-style: none none solid none;
+		border-width: 5px;
+		border-color: #004a99;
+    margin-top: 1rem;
+	} */
+  
 
   .reminder-btn:hover {
     background-color: #388e3c;
