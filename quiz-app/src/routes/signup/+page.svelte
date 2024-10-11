@@ -98,6 +98,11 @@
 			</script>
 		</form>
 	</div>
+
+	<p style="font-size:1rem;">
+		Already have an account? 
+		<a href="/login" style="color: #007bff">Log in here</a>
+	</p>
 </main>
 
 <style>
