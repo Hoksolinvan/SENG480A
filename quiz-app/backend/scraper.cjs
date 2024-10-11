@@ -233,7 +233,6 @@ async function Updater() {
     
 };
 
-Updater();
 
 
 

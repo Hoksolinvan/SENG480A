@@ -63,7 +63,7 @@ app.post('/Forms',async (req,res) =>{
 app.get('/webscrape', async (req, res) => {
 
      
-   console.log(data);
+   
    try {
 
    const data = await Updater();
