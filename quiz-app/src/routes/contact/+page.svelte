@@ -2,65 +2,62 @@
 	let Name = '';
 	let Email = '';
 	let Message = '';
-	let Form=[];
+	let Form = [];
 	
 	function handleSubmit() {
-
-
 		Name = document.getElementById("name").value;
 		Email = document.getElementById("email").value;
 		Message = document.getElementById("message").value;
 
-		Form=[Name,Email,Message];
+		Form = [Name, Email, Message];
 
-		
-		alert(`Thank you for your feedback, ${Name}!`);
+		//alert(`Thank you for your feedback, ${Name}!`); // Commented out the alert message
 
 		post_Contact();
 
-
-		if(localStorage.getItem("formSubmitted")=="true"){
+		if (localStorage.getItem("formSubmitted") == "true") {
 			document.getElementById("Thankyou_Message").classList.remove("hidden");
 			document.getElementById("Thankyou_Message").classList.add("show");
 			localStorage.removeItem("formSubmitted");
-		}
-		else if(localStorage.getItem("formFailed")=="true"){
-			document.getElementById("Thankyou_Message").textContent = "Form submission failed. Please try again.";
+		} else if (localStorage.getItem("formFailed") == "true") {
+			document.getElementById("Thankyou_Message").textContent =
+				"Form submission failed. Please try again.";
 			document.getElementById("Thankyou_Message").classList.remove("hidden");
-			document.getElementById("Thankyou_Message").classList.add("show","form-failed");
+			document.getElementById("Thankyou_Message").classList.add("show", "form-failed");
 			localStorage.removeItem("formFailed");
 		}
+
+		// Clear the form fields by resetting the bound variables
+		Name = '';
+		Email = '';
+		Message = '';
 	}
 
-	async function post_Contact(){
-		try{
-			const request = await fetch('https://seng480a-production.up.railway.app/Forms',
-			{
+	async function post_Contact() {
+		try {
+			const request = await fetch('https://seng480a-production.up.railway.app/Forms', {
 				method: 'POST',
 				headers: {
-					'Content-Type':'application/json'
+					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
-					Forms: Form
-				})
+					Forms: Form,
+				}),
 			});
 
-			if (request.ok){
+			if (request.ok) {
 				const result = await request.json();
-				console.log('Form results was successfully posted: ',result);
-				localStorage.setItem("formSubmitted","true");
-			}
-			else{
-				console.error('Error Submitting Form', response.statusText);
+				console.log('Form results were successfully posted: ', result);
+				localStorage.setItem("formSubmitted", "true");
+			} else {
+				console.error('Error Submitting Form', request.statusText);
 				localStorage.setItem("formFailed", "true");
 			}
-		}
-		catch(error) {
+		} catch (error) {
 			console.log("Failed to submit Form\n");
 			localStorage.setItem("formFailed", "true");
 		}
-	};
-
+	}
 </script>
 
 <main>
@@ -91,8 +88,7 @@
 	</div>
 
 	<br>
-	<div id="Thankyou_Message" class="hidden"> Thank you for submitting the Form! 🎉</div>
-
+	<div id="Thankyou_Message" class="hidden">Thank you for submitting the form! 🎉</div>
 </main>
 
 <style>
@@ -100,28 +96,31 @@
 		padding: 1rem;
 		max-width: 600px;
 		margin: 0 auto;
+		text-align: left; /* Changed to left-aligned */
 	}
 
 	h1 {
-		font-size: 2.5rem; /* Bigger h1 size */
-		text-align: center;
+		font-size: 2.5rem;
+		color: #5603ad; /* Updated h1 color */
 		margin-bottom: 1rem;
-		color: #007bff;
+		font-family: 'Poppins', sans-serif;
 	}
 
 	p {
-		text-align: center;
 		font-size: 1.2rem;
-		margin-bottom: 2rem; /* Add space after the paragraph */
+		color: #555;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		font-family: 'Roboto', sans-serif;
 	}
 
 	.form-container {
-		border: 2px solid #007bff;
+		border: 2px solid #8367c7; /* Updated border color */
 		padding: 1.5rem;
 		border-radius: 10px;
 		background-color: #f9f9f9;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-		margin-top: 3rem; /* Add space between p and form */
+		margin-top: 3rem;
 	}
 
 	form {
@@ -136,6 +135,9 @@
 	label {
 		margin-bottom: 0.5rem;
 		font-weight: bold;
+		color: #8367c7; /* Updated label color */
+		text-align: left; /* Left-align form labels */
+		display: block; /* Ensures the label takes full width */
 	}
 
 	input,
@@ -144,20 +146,20 @@
 		font-size: 1rem;
 		width: 100%;
 		box-sizing: border-box;
-		border: 1px solid #007bff;
+		border: 1px solid #8367c7; /* Updated input border color */
 		border-radius: 5px;
 	}
 
 	input:focus,
 	textarea:focus {
 		outline: none;
-		border-color: #0056b3;
-		box-shadow: 0 0 5px rgba(0, 91, 187, 0.3);
+		border-color: #674ea7;
+		box-shadow: 0 0 5px rgba(103, 78, 167, 0.3);
 	}
 
 	button {
 		padding: 0.75rem;
-		background-color: #007bff;
+		background-color: #5603ad; /* Updated button color */
 		color: white;
 		border: none;
 		cursor: pointer;
@@ -166,21 +168,22 @@
 	}
 
 	button:hover {
-		background-color: #0056b3;
+		background-color: #8367c7; /* Updated hover color */
 		transform: translateY(-2px);
 	}
 
-	#Thankyou_Message{
-		font-size: 2rem;
-		border: 2px bold #D4F4CC;
-    		border-radius: 25px;
-		background-color: #D4F4CC;
+	#Thankyou_Message {
+		font-size: 1.3rem;
+		font-family: 'Roboto', sans-serif;
+		border: 2px solid #d4f4cc;
+		border-radius: 25px;
+		background-color: #d4f4cc;
 		font-weight: bold;
-		color: #2C543D;
-    		text-align: center;
+		color: #2c543d;
+		text-align: center;
 	}
 
-	.hidden{
+	.hidden {
 		opacity: 0;
 	}
 
@@ -190,13 +193,7 @@
 
 	.form-failed {
 		background-color: #f8d7da;
-		color: #721c24;            
-		border: 2px solid #f5c6cb; 
+		color: #721c24;
+		border: 2px solid #f5c6cb;
 	}
-
-/* Van's CSS*/
-button:hover{
-		cursor: pointer;
-	}
-
 </style>

@@ -2,7 +2,7 @@
 	let Email = "";
 	let Password = "";
 	let Confirm_pwd = "";
-	let Agree = false;
+	// let Agree = false;
 	let Form = [];
 
 	// Van's test code
@@ -14,7 +14,7 @@
 		Email = document.getElementById("email").value;
 		Password = document.getElementById("password").value;
 		Confirm_pwd = document.getElementById("confirm-pwd").value;
-		Agree = document.getElementById("agree").value;
+		// Agree = document.getElementById("agree").value;
 
 		if (Password != Confirm_pwd) {
 			// Notify the user that password and the confirming password are not the same
@@ -29,7 +29,7 @@
 
 		} else {
 
-			Form = [Email, Password, Confirm_pwd, Agree];
+			Form = [Email, Password, Confirm_pwd];
 
 			post_Regis();
 
@@ -39,15 +39,7 @@
 				localStorage.removeItem("regisPassed");
 			}
 			else if(localStorage.getItem("regisFailed")=="true"){
-				document.getElementById("login-fail").textContent = "Incorrect email address or password. Please check and try again.";
-				document.getElementById("email").style.borderColor = "red";
-				document.getElementById("password").style.borderColor = "red";
-				document.getElementById("email").style.borderWidth = "2px";
-				document.getElementById("password").style.borderWidth = "2px";
-				document.getElementById("email").style.backgroundColor = "#e6e6e6";
-				document.getElementById("password").style.backgroundColor = "#e6e6e6";
-				Email = "";
-				Password = "";
+				document.getElementById("regis-fail").textContent = "Something went wrong. Please try again.";
 				localStorage.removeItem("regisFailed");
 			}
 		}
@@ -73,25 +65,37 @@
 
 			<div>
 				<label for="password">Password:</label>
-				<input type="password" id="password" name="password" placeholder="Enter Password" bind:value={Password} required />
+				<input type="password" id="password" name="password" placeholder="Enter Password" minlength="8" bind:value={Password} required />
 			</div>
 
 			<div>
 				<label for="confirm-pwd">Confirm Password:</label>
-				<input type="password" id="confirm-pwd" name="confirm-pwd" placeholder="Confirm Password" bind:value={Confirm_pwd} required  />
+				<input type="password" id="confirm-pwd" name="confirm-pwd" placeholder="Confirm Password" minlength="8" bind:value={Confirm_pwd} required  />
 			</div>
 
 			<div>
-				<input type="checkbox" checked="checked" name="agree" id="agree" style="width: auto;" bind:value={Agree} required> 
+				<input type="checkbox" checked="checked" name="agree" id="agree" style="width: auto;"> 
 				<label for="agree" style="font-weight: normal;">
 					By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>
 				</label>
 			</div>
 
-			<p id="regis-fail">
+			<p id="regis-fail" class="hidden">
+				Congratulations! Your account has been created!
 			</p>
 
-			<button type="submit">Create Account</button>
+			<button type="submit" id="submit-button">Create Account</button>
+
+			<!-- Only allows button to submit when Terms and Conditions checkbos is checked -->
+			<script>
+				const submit_able = document.getElementById("submit-button");
+				const agreed = document.getElementById("agree");
+
+				agreed.addEventListener("change", 
+					(event) => {
+						submit_able.disabled = !event.target.checked;
+					})
+			</script>
 		</form>
 	</div>
 </main>
@@ -169,7 +173,13 @@
 		transform: translateY(-2px);
 	}
 
-	/* #Thankyou_Message{
+	button:disabled {
+		background-color: #7a7a7a;
+		transform: translateY(0px);
+		cursor: auto;
+	}
+
+	#Thankyou_Message{
 		font-size: 2rem;
 		border: 2px bold #D4F4CC;
     		border-radius: 25px;
@@ -187,7 +197,7 @@
 		opacity: 1;
 	}
 
-	.form-failed {
+	/* .form-failed {
 		background-color: #f8d7da;
 		color: #721c24;            
 		border: 2px solid #f5c6cb; 

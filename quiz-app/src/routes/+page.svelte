@@ -2,9 +2,9 @@
   <div class="hero-content">
     <!-- Left Column (Text) -->
     <div class="hero-text">
-      <h1>Find Your Ideal Major</h1>
+      <h1>Find Your Ideal Program</h1>
       <h2>Plan Your Academic Journey</h2>
-      <a href="/quiz" class="quiz-link">Get Started with Your Personalized Plan</a>
+      <a href="/quiz" class="quiz-link">Get Started</a>
     </div>
     <!-- Right Column (Image) -->
     <div class="hero-image">
@@ -42,11 +42,13 @@
     margin-bottom: 1rem;
     font-size: 3.2rem; /* Adjusted for better visual balance */
     /* color: #1e3a8a; */
-    color:#5603ad;
+    color: #5603ad;
     /* color: rgb(123, 123, 123); */
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     animation: fadeInDown 1s ease-out;
+    font-family: 'Poppins', sans-serif;
+    
   }
 
   .hero-text h2 {
@@ -57,6 +59,7 @@
     font-weight: 500;
     animation: fadeInUp 1s ease-out 0.5s;
     animation-fill-mode: both;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .quiz-link {
@@ -76,6 +79,7 @@
     border-color: #36006f;
     font-weight: bold;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Roboto', sans-serif;
   }
 
   .quiz-link:hover {
