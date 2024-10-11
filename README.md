@@ -10,9 +10,9 @@ We are a team of five:
 - Hoksolinvan Chhun (chhunhoksolinvan.prof@gmail.com)
 - Harry Lam (theduonglam@uvic.ca)
 
-Link to project: https://seng-480-a.vercel.app/
+Link to project: https://seng480a.netlify.app
 
-Link to project (alternative): https://seng480a.netlify.app
+Link to project (alternative): https://seng-480-a.vercel.app/
 
 Link to project's github repository: https://github.com/Hoksolinvan/SENG480A
 
