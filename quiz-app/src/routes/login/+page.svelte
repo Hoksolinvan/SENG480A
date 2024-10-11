@@ -1,7 +1,10 @@
 <script>
+	let Email = "";
+	let Password = "";
+
 	function handleSubmit() {
-		let Email = document.getElementById("email").value;
-		let Password= document.getElementById("password").value;
+		Email = document.getElementById("email").value;
+		Password= document.getElementById("password").value;
 
 		Form = [Email, Password];
 
@@ -41,7 +44,7 @@
 	</p>
 
 	<div class="form-container">
-		<!-- <form on:submit| preventDefault={handleSubmit} id="LogInForm">
+		<form on:submit|preventDefault={handleSubmit} id="LogInForm">
 			<div>
 				<label for="email">Email:</label>
 				<input type="email" id="email" name="email" placeholder="Enter Email Address" bind:value={Email} required />
@@ -56,8 +59,12 @@
 			</p>
 
 			<button type="submit">Log In</button>
-		</form>  -->
+		</form> 
 	</div>
+	<p style="font-size:1rem;">
+		Doesn't have an account? 
+		<a href="/signup" style="color: #007bff">Sign up here</a>
+	</p>
 </main>
 
 <style>
