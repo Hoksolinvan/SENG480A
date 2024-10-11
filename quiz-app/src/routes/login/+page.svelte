@@ -1,4 +1,4 @@
-<script lang="ts, js">
+<script>
 
 	function handleSubmit(){
 		console.log("hello world");
@@ -40,7 +40,7 @@
 		localStorage.setItem("loginFailed", "true");
 
 	}
-</script>
+</script  lang="ts, js">
 
 <main>
 	<h1>Welcome Back!</h1>
