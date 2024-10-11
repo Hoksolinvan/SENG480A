@@ -71,7 +71,7 @@ app.get('/webscrape', async (req, res) => {
    }
     catch (error) {
      console.error('Error obtaining web-scrape details: ', error.message);
-     res.status(500).json({ error: 'Error obtaining web-scrape data' });
+     res.status(500).json({ error: 'Error obtaining web-scrape data', error_message: error.message });
    }
 
  });

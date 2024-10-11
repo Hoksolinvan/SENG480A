@@ -52,7 +52,7 @@
       },
       'Not Important': {
         program: 'British Columbia Institute of Technology (BCIT) - Civil Engineering',
-        deadline: 'April 1, 2025'
+        deadline: deadlines[4] //'April 1, 2025'
       }
     },
     'Business': {
@@ -66,13 +66,13 @@
       },
       'Not Important': {
         program: 'Thompson Rivers University (TRU) - Bachelor of Business Administration',
-        deadline: 'March 15, 2025'
+        deadline: deadlines[5]//'March 15, 2025'
       }
     },
     'Arts': {
       'Very Important': {
         program: 'Emily Carr University of Art + Design - Visual Arts',
-        deadline: 'January 31, 2025'
+        deadline: deadlines[6] //'January 31, 2025'
       },
       'Somewhat Important': {
         program: 'University of Victoria (UVic) - Fine Arts',
@@ -80,7 +80,7 @@
       },
       'Not Important': {
         program: 'Capilano University - Bachelor of Design in Visual Communication',
-        deadline: 'March 31, 2025'
+        deadline:  deadlines[7]//'March 31, 2025'
       }
     }
   };
@@ -123,8 +123,8 @@
     try{
   
      
-      const request = await Updater();
-      
+      const request = await fetch('https://seng480a-production.up.railway.app/webscrape');
+      console.log(request);
 
       if (request.ok){
 				const result = await request.json();
