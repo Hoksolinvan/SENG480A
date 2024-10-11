@@ -6,6 +6,8 @@ const path = require('path');
 const clientDB= require('./config.cjs');
 const webscrape = require('./scraper.cjs');
 
+
+
 // Middleware to enable CORS and parse JSON request bodies
 app.use(cors());
 app.use(express.json()); // This middleware is required to parse JSON data in POST requests
@@ -59,20 +61,20 @@ app.post('/Forms',async (req,res) =>{
 
 
 app.get('/webscrape', async (req, res) => {
-   console.log("Received a request for /webscrape");  // Add this for debugging
+
    try {
+
      const data = await Updater();  
-     setTimeout(() => {
-      res.status(200).json({ deadlines: data });  // Send the scraped data after the delay
-    }, 1000);
-   } catch (error) {
+     const rows = await clientDB.any('SELECT * FROM deadlines')
+     const resultArray = rows.map(row => [row.SFU, row.UBC, row.UVIC, row.UFV, row.BCIT, row.TRU, row.ECUAD, row.CAPILANO])
+     res.status(200).json(resultArray);
+   }
+    catch (error) {
      console.error('Error obtaining web-scrape details: ', error.message);
      res.status(500).json({ error: 'Error obtaining web-scrape data' });
    }
+
  });
-
-
-
 
 
 

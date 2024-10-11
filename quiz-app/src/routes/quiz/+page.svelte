@@ -1,7 +1,8 @@
 <script>
+ 
 
 
-  let deadlines=[0,0,0,0,0]
+  let deadlines=[]
   let questionIndex = 0;
   let answers = {};
   let quizComplete = false;
@@ -104,6 +105,13 @@
   }
   // Add delay for reminder section
   $: if (quizComplete) {
+
+    webscrape();
+    console.log("Die");
+
+
+
+
     setTimeout(() => {
       document.querySelector('.email-reminder').style.opacity = 1;
     }, 1000);
@@ -113,25 +121,18 @@
   async function webscrape(){
 
     try{
-      //
-      const request = await fetch('https://seng480a-production.up.railway.app/webscrape',
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type':'application/json'
-        },
-        body: JSON.stringify({
-          answers: answers
-          })
-      });
-
+  
+     
+      const request = await Updater();
+      
 
       if (request.ok){
 				const result = await request.json();
 				deadlines = result;
+
 			}
 			else{
-				console.error('Error Submitting webscrape', response.statusText);
+				console.error('Error Obtaining webscrape', request.statusText);
 			}
 
 
