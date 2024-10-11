@@ -68,8 +68,8 @@ app.get('/webscrape', async (req, res) => {
 
    const data = await Updater();
      const rows = await clientDB.one('SELECT * FROM deadlines')
-     const resultArray = [rows.SFU, rows.UBC, rows.UVIC, rows.UFV, rows.BCIT, rows.TRU, rows.ECUAD, rows.CAPILANO]
-     res.status(200).json(rows);
+     const resultArray = [rows.sfu, rows.ubc, rows.uvic, rows.ufv, rows.bcit, rows.tru, rows.ecuad, rows.capilano]
+     res.status(200).json(resultArray);
    }
     catch (error) {
      console.error('Error obtaining web-scrape details: ', error.message);
