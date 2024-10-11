@@ -10,6 +10,7 @@
   let applicationDeadline = '';
   let userEmail = '';
   let reminderSent = false;
+  let mutexlock=false;
 
   webscrape();
 
@@ -83,12 +84,19 @@
       },
       'Not Important': {
         program: 'Capilano University - Bachelor of Design in Visual Communication',
-        deadline:  deadlines[7]//'March 31, 2025'
+        deadline:  deadlines[7] //'March 31, 2025'
       }
     }
   };
   
   function selectAnswer(option) {
+
+    if(!mutexlock){
+      console.log('initializing');
+      return
+    }
+
+
     if (questionIndex === 0) {
       answers.major = option;
     } else if (questionIndex === 1) {
@@ -117,6 +125,7 @@
   }
 
 
+  
   async function webscrape(){
 
     try{
@@ -128,7 +137,7 @@
       if (request.ok){
 				
         deadlines = await request.json();
-        
+        mutexlock=true;
         console.log(deadlines);
 			}
 			else{
