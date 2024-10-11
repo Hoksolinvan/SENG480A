@@ -4,7 +4,7 @@ const port = process.env.PORT || 2000;
 const cors = require('cors');
 const path = require('path');
 const clientDB= require('./config.cjs');
-const webscrape = require('./scraper.cjs');
+const {Updater}= require('./scraper.cjs');
 
 
 
@@ -64,7 +64,7 @@ app.get('/webscrape', async (req, res) => {
 
    try {
 
-     const data = await webscrape.Updater();  
+     const data = await Updater();  
      const rows = await clientDB.any('SELECT * FROM deadlines')
      const resultArray = rows.map(row => [row.SFU, row.UBC, row.UVIC, row.UFV, row.BCIT, row.TRU, row.ECUAD, row.CAPILANO])
      res.status(200).json(resultArray);
