@@ -1,11 +1,5 @@
 <script>
 
-	function handleSubmit(){
-		console.log("hello world");
-
-	let Email = "";
-	let Password = "";
-	let Form = [];
 
 	function handleSubmit() {
 		Email = document.getElementById("email").value;
@@ -40,7 +34,7 @@
 		localStorage.setItem("loginFailed", "true");
 
 	}
-</script  lang="ts, js">
+</script>
 
 <main>
 	<h1>Welcome Back!</h1>
@@ -49,7 +43,7 @@
 	</p>
 
 	<div class="form-container">
-		<form on:submit|preventDefault={handleSubmit} id="LogInForm">
+		<form on:submit| preventDefault={handleSubmit} id="LogInForm">
 			<div>
 				<label for="email">Email:</label>
 				<input type="email" id="email" name="email" placeholder="Enter Email Address" bind:value={Email} required />
