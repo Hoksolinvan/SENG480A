@@ -4,9 +4,9 @@ Project Description: an education tracking application for (now) post-secondary 
 
 Team:
 We are a team of five: 
-- Sam Oshry
+- Sam Oshry (samjoshry@gmail.com)
 - Karn Dhaliwal
-- Umit Akirmak
+- Umit Akirmak (uakirmak@uvic.ca)
 - Hoksolinvan Chhun
 - Harry Lam (theduonglam@uvic.ca)
 
