@@ -62,14 +62,14 @@ app.post('/Forms',async (req,res) =>{
 
 app.get('/webscrape', async (req, res) => {
 
-   const data = await Updater();  
+     
    console.log(data);
    try {
 
-     
+   const data = await Updater();
      const rows = await clientDB.any('SELECT * FROM deadlines')
      const resultArray = rows.map(row => [row.SFU, row.UBC, row.UVIC, row.UFV, row.BCIT, row.TRU, row.ECUAD, row.CAPILANO])
-     res.status(200).json(resultArray);
+     res.status(200).json(rows);
    }
     catch (error) {
      console.error('Error obtaining web-scrape details: ', error.message);
