@@ -4,7 +4,7 @@ const port = process.env.PORT || 2000;
 const cors = require('cors');
 const path = require('path');
 const clientDB= require('./config.cjs');
-const webscrape = require('./scraper.cjs');
+const {Updater}= require('./scraper.cjs');
 
 
 
@@ -62,16 +62,18 @@ app.post('/Forms',async (req,res) =>{
 
 app.get('/webscrape', async (req, res) => {
 
+     
+   
    try {
 
-     const data = await Updater();  
-     const rows = await clientDB.any('SELECT * FROM deadlines')
-     const resultArray = rows.map(row => [row.SFU, row.UBC, row.UVIC, row.UFV, row.BCIT, row.TRU, row.ECUAD, row.CAPILANO])
+   const data = await Updater();
+     const rows = await clientDB.one('SELECT * FROM deadlines')
+     const resultArray = [rows.sfu, rows.ubc, rows.uvic, rows.ufv, rows.bcit, rows.tru, rows.ecuad, rows.capilano]
      res.status(200).json(resultArray);
    }
     catch (error) {
      console.error('Error obtaining web-scrape details: ', error.message);
-     res.status(500).json({ error: 'Error obtaining web-scrape data' });
+     res.status(500).json({ error: 'Error obtaining web-scrape data', error_message: error.message });
    }
 
  });

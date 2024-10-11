@@ -2,7 +2,7 @@
  
 
 
-  let deadlines=[]
+  var deadlines=[]
   let questionIndex = 0;
   let answers = {};
   let quizComplete = false;
@@ -10,6 +10,9 @@
   let applicationDeadline = '';
   let userEmail = '';
   let reminderSent = false;
+
+  webscrape();
+
 
   function sendReminder() {
     console.log(`Sending reminder to ${userEmail} for ${recommendation} deadline: ${applicationDeadline}`);
@@ -52,7 +55,7 @@
       },
       'Not Important': {
         program: 'British Columbia Institute of Technology (BCIT) - Civil Engineering',
-        deadline: 'April 1, 2025'
+        deadline: deadlines[4] //'April 1, 2025'
       }
     },
     'Business': {
@@ -66,13 +69,13 @@
       },
       'Not Important': {
         program: 'Thompson Rivers University (TRU) - Bachelor of Business Administration',
-        deadline: 'March 15, 2025'
+        deadline: deadlines[5]//'March 15, 2025'
       }
     },
     'Arts': {
       'Very Important': {
         program: 'Emily Carr University of Art + Design - Visual Arts',
-        deadline: 'January 31, 2025'
+        deadline: deadlines[6] //'January 31, 2025'
       },
       'Somewhat Important': {
         program: 'University of Victoria (UVic) - Fine Arts',
@@ -80,7 +83,7 @@
       },
       'Not Important': {
         program: 'Capilano University - Bachelor of Design in Visual Communication',
-        deadline: 'March 31, 2025'
+        deadline:  deadlines[7]//'March 31, 2025'
       }
     }
   };
@@ -106,11 +109,7 @@
   // Add delay for reminder section
   $: if (quizComplete) {
 
-    webscrape();
-    console.log("Die");
-
-
-
+   
 
     setTimeout(() => {
       document.querySelector('.email-reminder').style.opacity = 1;
@@ -123,13 +122,14 @@
     try{
   
      
-      const request = await Updater();
+      const request = await fetch('https://seng480a-production.up.railway.app/webscrape');
       
 
       if (request.ok){
-				const result = await request.json();
-				deadlines = result;
-
+				
+        deadlines = await request.json();
+        
+        console.log(deadlines);
 			}
 			else{
 				console.error('Error Obtaining webscrape', request.statusText);
