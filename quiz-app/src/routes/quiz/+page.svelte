@@ -129,7 +129,7 @@
 				
         deadlines = await request.json();
         
-
+        console.log(deadlines);
 			}
 			else{
 				console.error('Error Obtaining webscrape', request.statusText);
