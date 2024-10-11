@@ -128,7 +128,8 @@
       if (request.ok){
 				
 				// deadlines = request;
-        console.log(request.json());
+        const deadlines = await request.json();
+        console.log(deadlines);
 
 			}
 			else{
