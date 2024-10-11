@@ -1,4 +1,4 @@
-<script >
+<script lang="ts, js">
 
 	function handleSubmit(){
 		console.log("hello world");
