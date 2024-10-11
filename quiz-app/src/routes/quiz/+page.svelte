@@ -11,6 +11,9 @@
   let userEmail = '';
   let reminderSent = false;
 
+  webscrape();
+
+
   function sendReminder() {
     console.log(`Sending reminder to ${userEmail} for ${recommendation} deadline: ${applicationDeadline}`);
     reminderSent = true;
@@ -106,11 +109,7 @@
   // Add delay for reminder section
   $: if (quizComplete) {
 
-    webscrape();
-    console.log("Die");
-
-
-
+   
 
     setTimeout(() => {
       document.querySelector('.email-reminder').style.opacity = 1;
