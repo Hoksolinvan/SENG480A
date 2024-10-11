@@ -1,5 +1,5 @@
 
 ## Value Proposition Canvas
-[Miro]https://miro.com/welcomeonboard/WTZEYjRieTF1bFJ0V3B0dUpGT3ZLbXZ5OWlwRFJJaDdXRGVhaERCNHI4NWFPODIzd0FBVDAybTJ2VDl1bGNzZHwzNDU4NzY0NjAyMzI1OTQ0NTQ4fDI=?share_link_id=358430923874
+https://www.canva.com/design/DAGSecVfBkE/8Jr4H4S-FZyg0d1uQ6HBMw/edit?utm_content=DAGSecVfBkE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-- Hosted on Miro (Work-in-progress)
+
