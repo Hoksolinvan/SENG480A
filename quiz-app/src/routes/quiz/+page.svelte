@@ -123,13 +123,12 @@
   
      
       const request = await fetch('https://seng480a-production.up.railway.app/webscrape');
-      console.log("request");
+      
 
       if (request.ok){
 				
-				// deadlines = request;
-        const deadliness = await request.json();
-        deadlines=[...deadliness];
+        deadlines = await request.json();
+        
 
 			}
 			else{
