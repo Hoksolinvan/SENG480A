@@ -2,7 +2,7 @@
  
 
 
-  let deadlines=[]
+  var deadlines=[]
   let questionIndex = 0;
   let answers = {};
   let quizComplete = false;
@@ -128,8 +128,8 @@
       if (request.ok){
 				
 				// deadlines = request;
-        const deadlines = await request.json();
-        console.log(deadlines);
+        const deadliness = await request.json();
+        deadlines=[...deadliness];
 
 			}
 			else{
