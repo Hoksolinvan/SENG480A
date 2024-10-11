@@ -127,7 +127,8 @@
 
       if (request.ok){
 				
-				deadlines = request;
+				// deadlines = request;
+        console.log(request);
 
 			}
 			else{
