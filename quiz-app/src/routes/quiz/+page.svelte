@@ -126,8 +126,8 @@
       console.log("request");
 
       if (request.ok){
-				const result = request.json();
-				deadlines = result;
+				
+				deadlines = request;
 
 			}
 			else{

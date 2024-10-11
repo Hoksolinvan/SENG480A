@@ -233,33 +233,6 @@ async function Updater() {
     
 };
 
-
-
-
-
-// setTimeout( async ()=> {let data= await Updater(); 
-   
-//     for(let i=0; i<masterarray[0].length;i++){
-//         //console.log(String(masterarray[0][i][1].replace(/\n/g,'')) + "\n\n           " + masterarray[0][i][0]);
-//     }
-
-//    console.log(data);
-    
-    
-// },3000);
-
-
-
-
-
-
-
-
-
-
-
-
-
 module.exports = {
     Updater
 };
