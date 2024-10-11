@@ -64,7 +64,7 @@ app.get('/webscrape', async (req, res) => {
 
    try {
 
-     const data = await Updater();  
+     const data = await webscrape.Updater();  
      const rows = await clientDB.any('SELECT * FROM deadlines')
      const resultArray = rows.map(row => [row.SFU, row.UBC, row.UVIC, row.UFV, row.BCIT, row.TRU, row.ECUAD, row.CAPILANO])
      res.status(200).json(resultArray);
