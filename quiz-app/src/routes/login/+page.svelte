@@ -1,4 +1,8 @@
 <script>
+
+	function handleSubmit(){
+		console.log("hello world");
+
 	let Email = "";
 	let Password = "";
 	let Form = [];
@@ -34,6 +38,7 @@
 
 	async function post_Login() {
 		localStorage.setItem("loginFailed", "true");
+
 	}
 </script>
 
@@ -59,7 +64,7 @@
 			</p>
 
 			<button type="submit">Log In</button>
-		</form>
+		</form> 
 	</div>
 </main>
 
