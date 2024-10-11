@@ -1,7 +1,5 @@
 <script>
-	let Email = "";
-	let Password = "";
-	let Form = [];
+
 
 	function handleSubmit() {
 		Email = document.getElementById("email").value;
@@ -34,6 +32,7 @@
 
 	async function post_Login() {
 		localStorage.setItem("loginFailed", "true");
+
 	}
 </script>
 
@@ -44,7 +43,7 @@
 	</p>
 
 	<div class="form-container">
-		<form on:submit|preventDefault={handleSubmit} id="LogInForm">
+		<form on:submit| preventDefault={handleSubmit} id="LogInForm">
 			<div>
 				<label for="email">Email:</label>
 				<input type="email" id="email" name="email" placeholder="Enter Email Address" bind:value={Email} required />
@@ -59,7 +58,7 @@
 			</p>
 
 			<button type="submit">Log In</button>
-		</form>
+		</form> 
 	</div>
 </main>
 

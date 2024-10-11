@@ -5,6 +5,11 @@
 	let Agree = false;
 	let Form = [];
 
+	// Van's test code
+	// function handleSubmit(){
+	// 	console.log("hello");
+	// }
+
 	function handleSubmit() {
 		Email = document.getElementById("email").value;
 		Password = document.getElementById("password").value;
@@ -50,7 +55,6 @@
 
 	async function post_Regis() {
 		localStorage.setItem("regisFailed", "true");
-	}
 </script>
 
 <main>

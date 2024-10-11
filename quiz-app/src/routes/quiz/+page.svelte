@@ -1,4 +1,8 @@
 <script>
+ 
+
+
+  let deadlines=[]
   let questionIndex = 0;
   let answers = {};
   let quizComplete = false;
@@ -22,30 +26,29 @@
       options: ['Very Important', 'Somewhat Important', 'Not Important']
     }
   ];
-
   const universityRecommendations = {
     'Social Sciences': {
       'Very Important': {
         program: 'University of British Columbia (UBC) - Psychology',
-        deadline: 'January 15, 2025'
+        deadline: deadlines[1] //'January 15, 2025'
       },
       'Somewhat Important': {
         program: 'Simon Fraser University (SFU) - Sociology',
-        deadline: 'February 1, 2025'
+        deadline: deadlines[0] //'February 1, 2025'
       },
       'Not Important': {
         program: 'University of the Fraser Valley (UFV) - Anthropology',
-        deadline: 'March 1, 2025'
+        deadline: deadlines[3] //'March 1, 2025'
       }
     },
     'Engineering': {
       'Very Important': {
         program: 'University of British Columbia (UBC) - Electrical Engineering',
-        deadline: 'January 15, 2025'
+        deadline: deadlines[1] //'January 15, 2025'
       },
       'Somewhat Important': {
         program: 'University of Victoria (UVic) - Mechanical Engineering',
-        deadline: 'February 28, 2025'
+        deadline: deadlines[2] //'February 28, 2025'
       },
       'Not Important': {
         program: 'British Columbia Institute of Technology (BCIT) - Civil Engineering',
@@ -55,11 +58,11 @@
     'Business': {
       'Very Important': {
         program: 'University of British Columbia (UBC) - Sauder School of Business',
-        deadline: 'January 15, 2025'
+        deadline: deadlines[1] //'January 15, 2025'
       },
       'Somewhat Important': {
         program: 'Simon Fraser University (SFU) - Beedie School of Business',
-        deadline: 'February 1, 2025'
+        deadline: deadlines[0] //'February 1, 2025'
       },
       'Not Important': {
         program: 'Thompson Rivers University (TRU) - Bachelor of Business Administration',
@@ -73,7 +76,7 @@
       },
       'Somewhat Important': {
         program: 'University of Victoria (UVic) - Fine Arts',
-        deadline: 'February 28, 2025'
+        deadline: deadlines[2] //'February 28, 2025'
       },
       'Not Important': {
         program: 'Capilano University - Bachelor of Design in Visual Communication',
@@ -95,15 +98,84 @@
       questionIndex++;
     } else {
       quizComplete = true;
+      
+      store_quiz();
+
     }
   }
-
   // Add delay for reminder section
   $: if (quizComplete) {
+
+    webscrape();
+    console.log("Die");
+
+
+
+
     setTimeout(() => {
       document.querySelector('.email-reminder').style.opacity = 1;
     }, 1000);
   }
+
+
+  async function webscrape(){
+
+    try{
+  
+     
+      const request = await Updater();
+      
+
+      if (request.ok){
+				const result = await request.json();
+				deadlines = result;
+
+			}
+			else{
+				console.error('Error Obtaining webscrape', request.statusText);
+			}
+
+
+    }
+    catch(error){
+      console.log("Failed to obtain webscrape data\n");
+    }
+
+  }
+
+  async function store_quiz(){
+    
+    
+    try{
+      let buffer=[answers.major,answers.ranking];
+      console.log(buffer)
+			const request = await fetch('https://seng480a-production.up.railway.app/quiz_result',
+			{
+				method: 'POST',
+				headers: {
+					'Content-Type':'application/json'
+				},
+				body: JSON.stringify({
+					answers: buffer
+				})
+
+			});
+
+			if (request.ok){
+				const result = await request.json();
+				console.log('Quiz results was successfully posted: ',result);
+			}
+			else{
+				console.error('Error Submitting Quiz', response.statusText);
+			}
+		}
+		catch(error) {
+			console.log("Failed to submit Quiz\n",error);
+		}
+  }
+
+
+
 </script>
 
 <div class="quiz-wrapper">
