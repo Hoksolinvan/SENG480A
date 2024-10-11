@@ -30,63 +30,63 @@
       options: ['Very Important', 'Somewhat Important', 'Not Important']
     }
   ];
-  const universityRecommendations = {
-    'Social Sciences': {
-      'Very Important': {
-        program: 'University of British Columbia (UBC) - Psychology',
-        deadline: deadlines[1] //'January 15, 2025'
-      },
-      'Somewhat Important': {
-        program: 'Simon Fraser University (SFU) - Sociology',
-        deadline: deadlines[0] //'February 1, 2025'
-      },
-      'Not Important': {
-        program: 'University of the Fraser Valley (UFV) - Anthropology',
-        deadline: deadlines[3] //'March 1, 2025'
-      }
-    },
-    'Engineering': {
-      'Very Important': {
-        program: 'University of British Columbia (UBC) - Electrical Engineering',
-        deadline: deadlines[1] //'January 15, 2025'
-      },
-      'Somewhat Important': {
-        program: 'University of Victoria (UVic) - Mechanical Engineering',
-        deadline: deadlines[2] //'February 28, 2025'
-      },
-      'Not Important': {
-        program: 'British Columbia Institute of Technology (BCIT) - Civil Engineering',
-        deadline: deadlines[4] //'April 1, 2025'
-      }
-    },
-    'Business': {
-      'Very Important': {
-        program: 'University of British Columbia (UBC) - Sauder School of Business',
-        deadline: deadlines[1] //'January 15, 2025'
-      },
-      'Somewhat Important': {
-        program: 'Simon Fraser University (SFU) - Beedie School of Business',
-        deadline: deadlines[0] //'February 1, 2025'
-      },
-      'Not Important': {
-        program: 'Thompson Rivers University (TRU) - Bachelor of Business Administration',
-        deadline: deadlines[5]//'March 15, 2025'
-      }
-    },
-    'Arts': {
-      'Very Important': {
-        program: 'Emily Carr University of Art + Design - Visual Arts',
-        deadline: deadlines[6] //'January 31, 2025'
-      },
-      'Somewhat Important': {
-        program: 'University of Victoria (UVic) - Fine Arts',
-        deadline: deadlines[2] //'February 28, 2025'
-      },
-      'Not Important': {
-        program: 'Capilano University - Bachelor of Design in Visual Communication',
-        deadline:  deadlines[7] //'March 31, 2025'
-      }
-    }
+  var universityRecommendations = {
+    // 'Social Sciences': {
+    //   'Very Important': {
+    //     program: 'University of British Columbia (UBC) - Psychology',
+    //     deadline: deadlines[1] //'January 15, 2025'
+    //   },
+    //   'Somewhat Important': {
+    //     program: 'Simon Fraser University (SFU) - Sociology',
+    //     deadline: deadlines[0] //'February 1, 2025'
+    //   },
+    //   'Not Important': {
+    //     program: 'University of the Fraser Valley (UFV) - Anthropology',
+    //     deadline: deadlines[3] //'March 1, 2025'
+    //   }
+    // },
+    // 'Engineering': {
+    //   'Very Important': {
+    //     program: 'University of British Columbia (UBC) - Electrical Engineering',
+    //     deadline: deadlines[1] //'January 15, 2025'
+    //   },
+    //   'Somewhat Important': {
+    //     program: 'University of Victoria (UVic) - Mechanical Engineering',
+    //     deadline: deadlines[2] //'February 28, 2025'
+    //   },
+    //   'Not Important': {
+    //     program: 'British Columbia Institute of Technology (BCIT) - Civil Engineering',
+    //     deadline: deadlines[4] //'April 1, 2025'
+    //   }
+    // },
+    // 'Business': {
+    //   'Very Important': {
+    //     program: 'University of British Columbia (UBC) - Sauder School of Business',
+    //     deadline: deadlines[1] //'January 15, 2025'
+    //   },
+    //   'Somewhat Important': {
+    //     program: 'Simon Fraser University (SFU) - Beedie School of Business',
+    //     deadline: deadlines[0] //'February 1, 2025'
+    //   },
+    //   'Not Important': {
+    //     program: 'Thompson Rivers University (TRU) - Bachelor of Business Administration',
+    //     deadline: deadlines[5]//'March 15, 2025'
+    //   }
+    // },
+    // 'Arts': {
+    //   'Very Important': {
+    //     program: 'Emily Carr University of Art + Design - Visual Arts',
+    //     deadline: deadlines[6] //'January 31, 2025'
+    //   },
+    //   'Somewhat Important': {
+    //     program: 'University of Victoria (UVic) - Fine Arts',
+    //     deadline: deadlines[2] //'February 28, 2025'
+    //   },
+    //   'Not Important': {
+    //     program: 'Capilano University - Bachelor of Design in Visual Communication',
+    //     deadline:  deadlines[7] //'March 31, 2025'
+    //   }
+    // }
   };
   
   function selectAnswer(option) {
@@ -139,6 +139,66 @@
         deadlines = await request.json();
         mutexlock=true;
         console.log(deadlines);
+
+
+        universityRecommendations = {
+        'Social Sciences': {
+          'Very Important': {
+            program: 'University of British Columbia (UBC) - Psychology',
+            deadline: deadlines[1]
+          },
+          'Somewhat Important': {
+            program: 'Simon Fraser University (SFU) - Sociology',
+            deadline: deadlines[0]
+          },
+          'Not Important': {
+            program: 'University of the Fraser Valley (UFV) - Anthropology',
+            deadline: deadlines[3]
+          }
+        },
+        'Engineering': {
+          'Very Important': {
+            program: 'University of British Columbia (UBC) - Electrical Engineering',
+            deadline: deadlines[1]
+          },
+          'Somewhat Important': {
+            program: 'University of Victoria (UVic) - Mechanical Engineering',
+            deadline: deadlines[2]
+          },
+          'Not Important': {
+            program: 'British Columbia Institute of Technology (BCIT) - Civil Engineering',
+            deadline: deadlines[4]
+          }
+        },
+        'Business': {
+          'Very Important': {
+            program: 'University of British Columbia (UBC) - Sauder School of Business',
+            deadline: deadlines[1]
+          },
+          'Somewhat Important': {
+            program: 'Simon Fraser University (SFU) - Beedie School of Business',
+            deadline: deadlines[0]
+          },
+          'Not Important': {
+            program: 'Thompson Rivers University (TRU) - Bachelor of Business Administration',
+            deadline: deadlines[5]
+          }
+        },
+        'Arts': {
+          'Very Important': {
+            program: 'Emily Carr University of Art + Design - Visual Arts',
+            deadline: deadlines[6]
+          },
+          'Somewhat Important': {
+            program: 'University of Victoria (UVic) - Fine Arts',
+            deadline: deadlines[2]
+          },
+          'Not Important': {
+            program: 'Capilano University - Bachelor of Design in Visual Communication',
+            deadline: deadlines[7]
+          }
+        }
+      };
 			}
 			else{
 				console.error('Error Obtaining webscrape', request.statusText);
@@ -202,7 +262,9 @@
       </div>
       
     {:else}
+    {#if mutexlock}
       <div class="quiz-complete">
+        
         <h2 class="recommendation-header">Recommendation Based on Your Answers</h2>
         <p class="recommendation">Based on your interest in <strong>{answers.major}</strong>
          and your <strong>{answers.ranking.toLowerCase()}</strong> preference for academic ranking,
@@ -212,6 +274,12 @@
           <p><strong>{applicationDeadline}</strong></p>
         </div>
       </div>
+      {:else}
+      <div class="loading-message">
+        <h2>Loading your recommendation...</h2>
+      </div>
+
+      {/if}
       
       <!-- Show the reminder section only after the quiz is completed and the deadline is shown -->
       <div class="email-reminder" style="opacity: 0;">
