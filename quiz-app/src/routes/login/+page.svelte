@@ -1,3 +1,42 @@
+<script>
+	let Email = "";
+	let Password = "";
+	let Form = [];
+
+	function handleSubmit() {
+		Email = document.getElementById("email").value;
+		Password = document.getElementById("password").value;
+
+		Form = [Email, Password];
+
+		post_Login();
+
+		if(localStorage.getItem("loginPassed")=="true"){
+			localStorage.removeItem("loginPassed");
+			// Enter code to load Profile page here
+			// Testing code. Remove when actual functionality has been implemented
+			document.getElementById("login-fail").textContent = "Log in successful. You will be redirected to your Profile page soon.";
+			// End of testing code
+		}
+		else if(localStorage.getItem("loginFailed")=="true"){
+			document.getElementById("login-fail").textContent = "Incorrect email address or password. Please check and try again.";
+			document.getElementById("email").style.borderColor = "red";
+			document.getElementById("password").style.borderColor = "red";
+			document.getElementById("email").style.borderWidth = "2px";
+			document.getElementById("password").style.borderWidth = "2px";
+			document.getElementById("email").style.backgroundColor = "#e6e6e6";
+			document.getElementById("password").style.backgroundColor = "#e6e6e6";
+			Email = "";
+			Password = "";
+			localStorage.removeItem("loginFailed");
+		}
+	}
+
+	async function post_Login() {
+		localStorage.setItem("loginFailed", "true");
+	}
+</script>
+
 <main>
 	<h1>Welcome Back!</h1>
 	<p>
@@ -8,14 +47,16 @@
 		<form on:submit|preventDefault={handleSubmit} id="LogInForm">
 			<div>
 				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" placeholder="Enter Email Address" />
-				<!-- <input type="text" id="name" bind:value={Name} required /> -->
+				<input type="email" id="email" name="email" placeholder="Enter Email Address" bind:value={Email} required />
 			</div>
 
 			<div>
 				<label for="password">Password:</label>
-				<input type="password" id="password" name="password" placeholder="Enter Password"  />
+				<input type="password" id="password" name="password" placeholder="Enter Password"  bind:value={Password} required />
 			</div>
+
+			<p id="login-fail">
+			</p>
 
 			<button type="submit">Log In</button>
 		</form>
@@ -95,9 +136,11 @@
 		transform: translateY(-2px);
 	}
 
-	.form-failed {
-		background-color: #f8d7da;
-		color: #721c24;            
-		border: 2px solid #f5c6cb; 
+	#login-fail {
+		color: #721c24;   
+		margin: 0;
+		text-align: left;
+		font-size: 0.75rem;
+		margin-bottom: 0.5rem;
 	}
 </style>
