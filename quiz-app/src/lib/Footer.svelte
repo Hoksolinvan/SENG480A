@@ -6,13 +6,13 @@
 		month: 'long',
 		day: 'numeric'
 	};
-	const currentDateTime = now.toLocaleString('en-CA', options);
+	const currentDateTime = now.getFullYear();
 </script>
 
 <footer class="footer">
 	<p><a href="/about">About Us</a> | <a href="/contact">Contact</a></p>
 
-	<p>&copy; nurtuRe {currentDateTime}</p>
+	<p>&copy; EasyPath {currentDateTime}</p>
 </footer>
 
 <style>
@@ -21,7 +21,7 @@
 		padding: 1rem;
 		/* background-image: linear-gradient(to right, white, #f8f9fa, white); */
 		/*  color: #8367c7;		a bit difficult to see this color, I made it a bit lighter */ 
-		color: #c9c9c9;
+		color: #f8f9fa;
 		font-family: 'Poppins', sans-serif;
 	}
 </style>

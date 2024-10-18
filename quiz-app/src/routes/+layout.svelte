@@ -23,8 +23,8 @@
 		window.onscroll = function() {scrollFunction()};
 		function scrollFunction() {
 			if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-				bar.style.borderColor = "#8367c7";
-				//bar.style.borderColor = "#007bff";
+				//bar.style.borderColor = "#8367c7";
+				bar.style.borderColor = "#007bff";
 				// bar.style.borderColor = "#009900";
 			} else {
 				bar.style.borderColor = "transparent";
@@ -70,7 +70,7 @@
 		flex-direction: column;
 		align-items: center;
 
-		background-color: #5603ad;
+		background-color: #007bff;
 		width: 100%;
 	}
 

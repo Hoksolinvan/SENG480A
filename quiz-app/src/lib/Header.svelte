@@ -24,7 +24,7 @@
 
 <style>
 	.header {
-		width: 65%;
+		width: 90%;
 	}
 	
 	.default-button {
