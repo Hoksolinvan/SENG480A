@@ -115,9 +115,11 @@
       {#if filteredPrograms.length > 0}
         <ul>
           {#each filteredPrograms as program}
-            <li class="mb-2 cursor-pointer hover:bg-gray-200 p-2 rounded" on:click={() => selectProgram(program)}>
-              {program.name} at {program.university}
-            </li>
+            {#if searchQuery || filters.location || filters.maxTuition < 100000}
+              <li class="mb-2 cursor-pointer hover:bg-gray-200 p-2 rounded" on:click={() => selectProgram(program)}>
+                {program.name} at {program.university}
+              </li>
+            {/if}
           {/each}
         </ul>
       {:else}
