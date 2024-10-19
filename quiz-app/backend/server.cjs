@@ -60,6 +60,49 @@ app.post('/Forms',async (req,res) =>{
 })
 
 
+
+//sign-up
+app.post('/sign-up', async (req, res) => {
+   const {login_information} = req.body;
+      if (!login_information){
+         return res.status(400).json({error: 'Something went wrong'});
+      }
+
+   try{
+      await clientDB.none('INSERT INTO accounts (username,password) VALUES ($1,$2)',[login_information[0],login_information[1]]);
+    
+   }
+   catch (error){
+      console.error('Error signing up');
+      res.status(500);
+
+   }
+});
+
+app.get('/login',async (req,res) => {
+
+   const {login_information} = req.body;
+
+   if(!login_information){
+      return res.status(400);
+   }
+
+   try{
+
+
+
+
+   }
+   catch (error){
+      res.status(500);
+   }
+
+
+
+
+});
+
+
 app.get('/webscrape', async (req, res) => {
 
    try {
