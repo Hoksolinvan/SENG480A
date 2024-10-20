@@ -1,33 +1,34 @@
 <head>
+	<!-- For triple-bar menu icon -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- For brand font -->
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Comfortaa'>
 </head>
-
-
 
 <header class="header">
 	<div class="header-container">
-		<a href="/">
-			<img src="/logo.png" alt="logo" class="logo" />
+		<a href="/" class="logo">
+			EasyPath
+			<!-- <img src="/logo.png" alt="logo" class="logo" /> -->
 		</a>
 		
-		<!-- <nav class="nav">
+		<nav class="nav">
 		<ul>
-			<li class = "default-button"><a href="/login">LOG IN</a></li>
-			<li class = "default-button"><a href="/signup">SIGN UP</a></li>
+			<li class = "account-button"><a href="/login">LOG IN</a></li>
+			<li class = "account-button"><a href="/signup">SIGN UP</a></li>
+			<li class = "other-button"><a href="/about">ABOUT US</a></li>
+			<li class = "other-button"><a href="/contact">CONTACT</a></li>
 		</ul>
-		</nav>  -->
-		<!-- <li class = "hidden-button"><a href="/">HOME</a></li>
-			<li class = "hidden-button"><a href="/about">ABOUT US</a></li>
-			<li class = "hidden-button"><a href="/contact">CONTACT</a></li>  -->
+		</nav>  
 	</div>
 </header>
 
 <style>
 	.header {
-		width: 90%;
+		width: 80%;
 	}
 	
-	.default-button {
+	.account-button {
 		padding: 1rem;
 		background-color: #007bff;
 		color: white;
@@ -39,6 +40,20 @@
 		border-color: #004a99;
 
 	}
+
+	.other-button {
+		padding: 1rem;
+		background-color: #0ECF0E;
+		color: white;
+		border-radius: 10px;
+		cursor: pointer;
+		font-weight: bold;
+		border-style: none none solid none;
+		border-width: 5px;
+		border-color: #19966E;
+
+	}
+	
 
 	.nav ul {
 		display: flex;
@@ -58,10 +73,14 @@
 	}
 
 	.logo {
-		max-width: 180px;
-		border-radius: 10px;
+		/* max-width: 180px;
+		border-radius: 10px; */
+		font-family: Comfortaa;
+		font-size: 40px;
+		color: #007bff;
 	}
-	
+
+		
 	@media (min-width: 768px) {
 		.header-container {
 			flex-direction: row;
