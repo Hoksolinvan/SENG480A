@@ -52,7 +52,7 @@
 
 <main>
 	<h1>Welcome!</h1>
-	<p>
+	<p style="color: #555">
 		Create an account and let us help you with your journey to your dream universities! It only takes 1 minute, you will not regret it!
 	</p>
 
@@ -75,7 +75,7 @@
 
 			<div>
 				<input type="checkbox" checked="checked" name="agree" id="agree" style="width: auto;"> 
-				<label for="agree" style="font-weight: normal;">
+				<label for="agree" style="font-weight: normal; color: #555; display: inline">
 					By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>
 				</label>
 			</div>
@@ -99,7 +99,7 @@
 		</form>
 	</div>
 
-	<p style="font-size:1rem;">
+	<p style="font-size:1rem; color: #555;">
 		Already have an account? 
 		<a href="/login" style="color: #007bff">Log in here</a>
 	</p>
@@ -146,6 +146,8 @@
 	label {
 		margin-bottom: 0.5rem;
 		font-weight: bold;
+		color: #007bff;
+		display: block;
 	}
 
 	input {
