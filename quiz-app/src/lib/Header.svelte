@@ -16,8 +16,15 @@
 		<ul>
 			<li class = "account-button"><a href="/login">LOG IN</a></li>
 			<li class = "account-button"><a href="/signup">SIGN UP</a></li>
-			<li class = "other-button"><a href="/about">ABOUT US</a></li>
-			<li class = "other-button"><a href="/contact">CONTACT</a></li>
+			<!-- <li class = "other-button"><a href="/about">ABOUT US</a></li>
+			<li class = "other-button"><a href="/contact">CONTACT</a></li> -->
+			<li class = "dropdown">
+				<button><i class = "material-icons" id = "menu-button">menu</i></button>
+				<div class="dropdown-content">
+					<a href="/about" class = "other-button">ABOUT US</a>
+					<a href="/contact" class = "other-button">CONTACT</a>
+				</div>
+			</li>
 		</ul>
 		</nav>  
 	</div>
@@ -42,6 +49,7 @@
 	}
 
 	.other-button {
+		display: block;
 		padding: 1rem;
 		background-color: #0ECF0E;
 		color: white;
@@ -51,7 +59,8 @@
 		border-style: none none solid none;
 		border-width: 5px;
 		border-color: #19966E;
-
+		text-align: center;
+		margin: 0.25rem 0;
 	}
 	
 
@@ -78,6 +87,38 @@
 		font-family: Comfortaa;
 		font-size: 40px;
 		color: #007bff;
+	}
+
+	#menu-button {
+		padding: 1rem;
+		border-color: #007bff;
+		color: #007bff;
+		border-radius: 10px;
+		cursor: pointer;
+		border-width: 3px;
+		transition: 2s;
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+		width: 120px;
+	}
+
+	.dropdown:hover #menu-button {
+		width: 120px;
+		color: #0ECF0E;
+		border-color: #0ECF0E;
 	}
 
 		
