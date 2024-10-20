@@ -49,7 +49,8 @@
 
 h1 {
   font-size: 2.5rem;
-  color: #5603ad;
+  /* color: #5603ad; */
+  color: #007bff;
   margin-bottom: 1rem;
   font-family: 'Poppins', sans-serif;
 }
@@ -63,7 +64,8 @@ h1 {
 
 .section h2 {
   font-size: 1.8rem;
-  color: #8367c7;
+  /* color: #8367c7; */
+  color: #007bff;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 1rem;
 }
@@ -81,7 +83,8 @@ h1 {
 }
 
 .values-list li strong {
-  color: #5603ad;
+  /* color: #5603ad; */
+  color: #1e3a8a;
 }
 
 /* Hover effect for values list */
