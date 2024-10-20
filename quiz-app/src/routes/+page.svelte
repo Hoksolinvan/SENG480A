@@ -186,9 +186,9 @@
             <ul>
               {#each filteredPrograms as program}
                 <li class="border-2 border-easypath-blue mb-2 cursor-pointer hover:bg-gray-200 p-2 rounded-lg" on:click={() => selectProgram(program)} tabindex="0">
-                  <span style="color: #0ecf0e;">{program.name}</span> 
-                  at 
-                  <span style="color: #19966e;">{program.university}</span>
+                  <!-- <span style="color: #0ecf0e;">{program.name}</span>  -->
+                  {program.name} at {program.university}
+                  <!-- <span style="color: #19966e;">{program.university}</span> -->
                 </li>
               {/each}
             </ul>

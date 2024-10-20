@@ -90,6 +90,7 @@
 		flex-grow: 1;
 		padding: 2rem 0;
 		margin: 0 auto;
+		height: auto;
 		/* max-width: 65%; */
 		max-width: 1000px;
 		width: 100%
