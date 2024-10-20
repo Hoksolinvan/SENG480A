@@ -124,24 +124,24 @@
 
   <!-- Adding id to search section for scroll targeting -->
   <section id="search-section" class="mt-20 h-screen">
-    <h3 class="text-3xl font-bold mb-6"> Personalized Program Planner</h3>
+    <h3 class="text-3xl font-bold mb-6 text-easypath-blue"> Personalized Program Planner</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Left Side: Search and Filters -->
-      <div class="bg-gray-100 p-4 rounded-lg overflow-y-auto max-h-screen">
-        <h2 class="text-xl font-semibold mb-4">Search and Filter Programs</h2>
+      <div class="bg-gray-100 border-2 border-easypath-blue p-4 rounded-lg overflow-y-auto max-h-screen">
+        <h2 class="text-xl font-semibold mb-4 text-easypath-blue">Search and Filter Programs</h2>
         <input
           type="text"
           bind:value={searchQuery}
           on:input={handleInteraction}
           placeholder="Search for programs..."
-          class="w-full p-2 border rounded mb-4"
+          class="w-full p-2 border border-easypath-blue rounded mb-4"
         />
         <input
           type="text"
           bind:value={filters.location}
           on:input={handleInteraction}
           placeholder="Filter by location..."
-          class="w-full p-2 border rounded mb-4"
+          class="w-full p-2 border border-easypath-blue rounded mb-4"
         />
         <div class="mb-4">
           <label for="degreeType">Degree Type:</label>
@@ -157,7 +157,7 @@
           {#if filteredPrograms.length > 0}
             <ul>
               {#each filteredPrograms as program}
-                <li class="border-2 border-easypath-blue mb-2 cursor-pointer hover:bg-gray-200 p-2 rounded-lg" on:click={() => selectProgram(program)} tabindex="0">
+                <li class=" mb-2 cursor-pointer bg-white hover:bg-gray-200 p-2 rounded-lg" on:click={() => selectProgram(program)} tabindex="0">
                   <!-- <span style="color: #0ecf0e;">{program.name}</span>  -->
                   {program.name} at {program.university}
                   <!-- <span style="color: #19966e;">{program.university}</span> -->
@@ -171,15 +171,15 @@
       </div>
 
       <!-- Right Side: Show Selected Program -->
-      <div class="bg-gray-100 p-4 rounded-lg h-fit sticky top-0">
-        <h2 class="text-xl font-semibold mb-4">Program Information</h2>
+      <div class="bg-gray-100 border-2 border-easypath-blue p-4 rounded-lg h-fit sticky top-0">
+        <h2 class="text-xl font-semibold mb-4 text-easypath-blue">Program Information</h2>
         {#if selectedProgram}
           <h3>{selectedProgram.name} at {selectedProgram.university}</h3>
-          <p>Location: {selectedProgram.location}</p>
+          <p><strong>Location:</strong> {selectedProgram.location}</p>
           <p><strong>Degree Type:</strong> {selectedProgram.degreeType}</p>
           <p><strong>Application Deadline:</strong> {selectedProgram.deadline}</p>
 
-          <button on:click={saveProgram} class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          <button on:click={saveProgram} class="bg-blue-500 text-white mt-2 px-4 py-2 rounded hover:bg-blue-600">
             Save to My Programs
           </button>
 
@@ -206,12 +206,12 @@
     </div>
 
     <!-- Saved Programs Section -->
-    <div class="mt-8">
-      <h2 class="text-xl font-semibold mb-4">Saved Programs</h2>
+    <div class="bg-gray-100 border-2 border-easypath-blue p-4 rounded-lg h-fit sticky top-0 mt-8">
+      <h2 class="text-xl font-semibold mb-4 text-easypath-blue">Saved Programs</h2>
       {#if savedPrograms.length > 0}
         <ul>
           {#each savedPrograms as program}
-            <li class="mb-2">
+            <li class="mb-2 bg-white hover:bg-gray-200 p-2 rounded-lg">
               {program.name} at {program.university} <br>
               <strong>Deadline:</strong> {program.deadline}
             </li>
@@ -297,7 +297,10 @@
 
 
   #search-section {
-    padding-top: 200px;
+    margin-top: 200px;
+    scroll-margin-top: 150px;
+
+    color: #555;
 
     /*Allow overflow to fix display bug when result list and/or saved programs list is expanded dynamically*/
     /*Display bug: search-section is expanded but footer does not move, causing footer to not stay on screen bottom and to overlay contents*/
