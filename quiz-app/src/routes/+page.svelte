@@ -318,4 +318,29 @@
   #search-section {
     padding-top: 50px;
   }
+
+  .hero-image img {
+  width: 80%; /* Adjust the size as per your preference */
+  border-radius: 50%; /* Make the image rounded */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increased shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition for both transform and shadow */
+  animation: move 3s infinite alternate ease-in-out; /* Subtle moving animation */
+}
+
+.hero-image img:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Add more shadow on hover */
+}
+
+/* Keyframes for moving animation */
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px); /* Adjust the movement distance */
+  }
+}
+
+
 </style>
