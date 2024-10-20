@@ -151,7 +151,7 @@
   </div>
 
   <!-- Adding id to search section for scroll targeting -->
-  <section id="search-section" class="mt-20">
+  <section id="search-section" class="mt-20 h-screen">
     <h3 class="text-3xl font-bold mb-6"> Personalized Program Planner</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Left Side: Search and Filters -->
@@ -185,8 +185,10 @@
           {#if filteredPrograms.length > 0}
             <ul>
               {#each filteredPrograms as program}
-                <li class="mb-2 cursor-pointer hover:bg-gray-200 p-2 rounded" on:click={() => selectProgram(program)} tabindex="0">
-                  {program.name} at {program.university}
+                <li class="border-2 border-easypath-blue mb-2 cursor-pointer hover:bg-gray-200 p-2 rounded-lg" on:click={() => selectProgram(program)} tabindex="0">
+                  <span style="color: #0ecf0e;">{program.name}</span> 
+                  at 
+                  <span style="color: #19966e;">{program.university}</span>
                 </li>
               {/each}
             </ul>
@@ -254,6 +256,7 @@
 </main>
 
 <style>
+
   .hero {
     display: flex;
     align-items: center;
@@ -261,7 +264,8 @@
     min-height: 85vh;
     padding: 2rem 0;
     background-color: #f0f8ff;
-    margin-bottom: 2rem; /* Separation from the section below */
+    /* margin-bottom: 2rem; Separation from the section below */
+    height: 100%;
   }
 
   .hero-content {
@@ -316,31 +320,32 @@
   }
 
   #search-section {
-    padding-top: 50px;
+    padding-top: 200px;
   }
+
 
   .hero-image img {
-  width: 80%; /* Adjust the size as per your preference */
-  border-radius: 50%; /* Make the image rounded */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increased shadow */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition for both transform and shadow */
-  animation: move 3s infinite alternate ease-in-out; /* Subtle moving animation */
-}
-
-.hero-image img:hover {
-  transform: scale(1.05); /* Slightly enlarge the image on hover */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Add more shadow on hover */
-}
-
-/* Keyframes for moving animation */
-@keyframes move {
-  0% {
-    transform: translateY(0);
+    width: 80%; /* Adjust the size as per your preference */
+    border-radius: 50%; /* Make the image rounded */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increased shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition for both transform and shadow */
+    animation: move 3s infinite alternate ease-in-out; /* Subtle moving animation */
   }
-  100% {
-    transform: translateY(-10px); /* Adjust the movement distance */
+
+  .hero-image img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Add more shadow on hover */
   }
-}
+
+  /* Keyframes for moving animation */
+  @keyframes move {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px); /* Adjust the movement distance */
+    }
+  }
 
 
 </style>
