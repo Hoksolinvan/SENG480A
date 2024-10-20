@@ -39,7 +39,7 @@
 
 <main>
 	<h1>Welcome Back!</h1>
-	<p>
+	<p style="color: #555">
 		We have been waiting for you. Log right in and get back to where you left.
 	</p>
 
@@ -61,7 +61,7 @@
 			<button type="submit">Log In</button>
 		</form> 
 	</div>
-	<p style="font-size:1rem;">
+	<p style="font-size:1rem; color: #555">
 		Doesn't have an account? 
 		<a href="/signup" style="color: #007bff">Sign up here</a>
 	</p>
@@ -108,6 +108,8 @@
 	label {
 		margin-bottom: 0.5rem;
 		font-weight: bold;
+		color: #007bff;
+		display: block;
 	}
 
 	input {
