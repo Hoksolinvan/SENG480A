@@ -1,177 +1,321 @@
 <script>
   let searchQuery = '';
   let programs = [
-    { id: 1, name: 'Computer Science', university: 'University of Victoria', location: 'Victoria, BC', tuition: 50000, duration: 4, admissionRate: 25, deadline: '2024-12-01' },
-    { id: 2, name: 'Business Administration', university: 'University of British Columbia', location: 'Vancouver, BC', tuition: 45000, duration: 4, admissionRate: 35, deadline: '2024-11-15' },
-    { id: 3, name: 'Environmental Science', university: 'McGill University', location: 'Montreal, QC', tuition: 40000, duration: 3, admissionRate: 40, deadline: '2024-10-30' },
-    { id: 4, name: 'Mechanical Engineering', university: 'University of Waterloo', location: 'Waterloo, ON', tuition: 55000, duration: 4, admissionRate: 30, deadline: '2024-12-05' },
-    { id: 5, name: 'Psychology', university: 'University of Alberta', location: 'Edmonton, AB', tuition: 35000, duration: 4, admissionRate: 45, deadline: '2024-11-30' },
-    { id: 6, name: 'Law', university: 'University of Toronto', location: 'Toronto, ON', tuition: 60000, duration: 3, admissionRate: 20, deadline: '2024-12-20' },
-    { id: 7, name: 'Biology', university: 'Simon Fraser University', location: 'Burnaby, BC', tuition: 32000, duration: 4, admissionRate: 50, deadline: '2024-11-25' },
-    { id: 8, name: 'Environmental Engineering', university: 'University of Calgary', location: 'Calgary, AB', tuition: 52000, duration: 4, admissionRate: 35, deadline: '2024-12-10' },
-    { id: 9, name: 'Political Science', university: 'University of British Columbia', location: 'Vancouver, BC', tuition: 38000, duration: 4, admissionRate: 30, deadline: '2024-11-20' },
-    { id: 10, name: 'Sociology', university: 'University of Alberta', location: 'Edmonton, AB', tuition: 30000, duration: 4, admissionRate: 55, deadline: '2024-12-05' },
-    { id: 11, name: 'Fine Arts', university: 'Emily Carr University of Art + Design', location: 'Vancouver, BC', tuition: 28000, duration: 4, admissionRate: 60, deadline: '2024-12-01' },
-    { id: 12, name: 'Nursing', university: 'University of Calgary', location: 'Calgary, AB', tuition: 34000, duration: 4, admissionRate: 40, deadline: '2024-11-10' },
-    { id: 13, name: 'Pharmacy', university: 'University of Alberta', location: 'Edmonton, AB', tuition: 46000, duration: 4, admissionRate: 25, deadline: '2024-12-15' },
-    { id: 14, name: 'Architecture', university: 'University of British Columbia', location: 'Vancouver, BC', tuition: 58000, duration: 4, admissionRate: 15, deadline: '2024-12-25' },
-    { id: 15, name: 'Data Science', university: 'Simon Fraser University', location: 'Burnaby, BC', tuition: 49000, duration: 4, admissionRate: 20, deadline: '2024-12-05' },
-    { id: 16, name: 'Economics', university: 'University of Calgary', location: 'Calgary, AB', tuition: 40000, duration: 4, admissionRate: 40, deadline: '2024-12-10' },
-    { id: 17, name: 'Physics', university: 'University of Victoria', location: 'Victoria, BC', tuition: 35000, duration: 4, admissionRate: 50, deadline: '2024-11-20' },
-    { id: 18, name: 'Anthropology', university: 'University of Alberta', location: 'Edmonton, AB', tuition: 31000, duration: 4, admissionRate: 45, deadline: '2024-11-25' },
-    { id: 19, name: 'Mathematics', university: 'Simon Fraser University', location: 'Burnaby, BC', tuition: 37000, duration: 4, admissionRate: 35, deadline: '2024-11-15' },
-    { id: 20, name: 'International Relations', university: 'University of British Columbia', location: 'Vancouver, BC', tuition: 42000, duration: 4, admissionRate: 20, deadline: '2024-11-25' },
-    { id: 21, name: 'Public Health', university: 'University of Calgary', location: 'Calgary, AB', tuition: 52000, duration: 4, admissionRate: 35, deadline: '2024-12-01' },
-    { id: 22, name: 'Philosophy', university: 'University of Victoria', location: 'Victoria, BC', tuition: 31000, duration: 4, admissionRate: 50, deadline: '2024-12-10' },
-    { id: 23, name: 'Chemistry', university: 'University of Alberta', location: 'Edmonton, AB', tuition: 39000, duration: 4, admissionRate: 40, deadline: '2024-12-20' },
-    { id: 24, name: 'Electrical Engineering', university: 'University of British Columbia', location: 'Vancouver, BC', tuition: 57000, duration: 4, admissionRate: 25, deadline: '2024-11-30' },
-    { id: 25, name: 'Marketing', university: 'University of Victoria', location: 'Victoria, BC', tuition: 44000, duration: 4, admissionRate: 30, deadline: '2024-11-25' }
+    { id: 1, name: 'Computer Science', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Bachelor', admissionRate: 25, deadline: '2024-12-01' },
+    { id: 2, name: 'Business Administration', university: 'University of British Columbia', location: 'Vancouver, BC', degreeType: 'Bachelor', admissionRate: 35, deadline: '2024-11-15' },
+    { id: 3, name: 'Environmental Science', university: 'McGill University', location: 'Montreal, QC', degreeType: 'Bachelor', admissionRate: 40, deadline: '2024-10-30' },
+    { id: 4, name: 'Mechanical Engineering', university: 'University of Waterloo', location: 'Waterloo, ON', degreeType: 'Bachelor', admissionRate: 30, deadline: '2024-12-05' },
+    { id: 5, name: 'Psychology', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Bachelor', admissionRate: 45, deadline: '2024-11-30' },
+    { id: 6, name: 'Law', university: 'University of Toronto', location: 'Toronto, ON', degreeType: 'Master', admissionRate: 20, deadline: '2024-12-20' },
+    { id: 7, name: 'Biology', university: 'Simon Fraser University', location: 'Burnaby, BC', degreeType: 'Bachelor', admissionRate: 50, deadline: '2024-11-25' },
+    { id: 8, name: 'Environmental Engineering', university: 'University of Calgary', location: 'Calgary, AB', degreeType: 'Bachelor', admissionRate: 35, deadline: '2024-12-10' },
+    { id: 9, name: 'Nursing', university: 'University of British Columbia', location: 'Vancouver, BC', degreeType: 'Bachelor', admissionRate: 20, deadline: '2024-12-15' },
+    { id: 10, name: 'Finance', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Bachelor', admissionRate: 30, deadline: '2024-11-20' },
+    { id: 11, name: 'Psychology', university: 'Simon Fraser University', location: 'Burnaby, BC', degreeType: 'Master', admissionRate: 25, deadline: '2024-12-05' },
+    { id: 12, name: 'Engineering Physics', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Bachelor', admissionRate: 35, deadline: '2024-11-25' },
+    { id: 13, name: 'Biochemistry', university: 'University of Calgary', location: 'Calgary, AB', degreeType: 'Bachelor', admissionRate: 40, deadline: '2024-12-10' },
+    { id: 14, name: 'Arts and Sciences', university: 'University of British Columbia Okanagan', location: 'Kelowna, BC', degreeType: 'Bachelor', admissionRate: 50, deadline: '2024-11-30' },
+    { id: 15, name: 'Computer Science', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Master', admissionRate: 30, deadline: '2024-12-15' },
+    { id: 16, name: 'Environmental Studies', university: 'Simon Fraser University', location: 'Burnaby, BC', degreeType: 'Bachelor', admissionRate: 45, deadline: '2024-11-20' },
+    { id: 17, name: 'Electrical Engineering', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Bachelor', admissionRate: 25, deadline: '2024-12-05' },
+    { id: 18, name: 'Accounting', university: 'University of Calgary', location: 'Calgary, AB', degreeType: 'Bachelor', admissionRate: 35, deadline: '2024-11-25' },
+    { id: 19, name: 'Kinesiology', university: 'University of British Columbia Okanagan', location: 'Kelowna, BC', degreeType: 'Bachelor', admissionRate: 40, deadline: '2024-12-10' },
+    { id: 20, name: 'Public Health', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Bachelor', admissionRate: 30, deadline: '2024-11-30' },
+    { id: 21, name: 'Political Science', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Bachelor', admissionRate: 45, deadline: '2024-12-15' },
+    { id: 22, name: 'Sociology', university: 'University of Calgary', location: 'Calgary, AB', degreeType: 'Bachelor', admissionRate: 25, deadline: '2024-11-20' },
+    { id: 23, name: 'Mathematics', university: 'University of British Columbia Okanagan', location: 'Kelowna, BC', degreeType: 'Bachelor', admissionRate: 35, deadline: '2024-12-05' },
+    { id: 24, name: 'Economics', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Bachelor', admissionRate: 40, deadline: '2024-11-25' },
+    { id: 25, name: 'English', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Bachelor', admissionRate: 50, deadline: '2024-12-10' },
+    { id: 26, name: 'Environmental Engineering', university: 'University of British Columbia', location: 'Vancouver, BC', degreeType: 'Bachelor', admissionRate: 30, deadline: '2024-11-30' },
+    { id: 27, name: 'Film Studies', university: 'Simon Fraser University', location: 'Burnaby, BC', degreeType: 'Bachelor', admissionRate: 45, deadline: '2024-12-15' },
+    { id: 28, name: 'History', university: 'University of Calgary', location: 'Calgary, AB', degreeType: 'Bachelor', admissionRate: 25, deadline: '2024-11-20' },
+    { id: 29, name: 'Philosophy', university: 'University of British Columbia Okanagan', location: 'Kelowna, BC', degreeType: 'Bachelor', admissionRate: 35, deadline: '2024-12-05' },
+    { id: 30, name: 'Education', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Bachelor', admissionRate: 40, deadline: '2024-11-25' },
+    { id: 31, name: 'Computer Science', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Bachelor', admissionRate: 30, deadline: '2024-12-15' },
+    { id: 32, name: 'Business Administration', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Bachelor', admissionRate: 40, deadline: '2024-11-20' },
+    { id: 33, name: 'Psychology', university: 'Simon Fraser University', location: 'Burnaby, BC', degreeType: 'Master', admissionRate: 35, deadline: '2024-12-05' },
+    { id: 34, name: 'Engineering Physics', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Bachelor', admissionRate: 45, deadline: '2024-11-25' },
+    { id: 35, name: 'Biochemistry', university: 'University of Calgary', location: 'Calgary, AB', degreeType: 'Bachelor', admissionRate: 30, deadline: '2024-12-10' },
+    { id: 36, name: 'Arts and Sciences', university: 'University of British Columbia Okanagan', location: 'Kelowna, BC', degreeType: 'Bachelor', admissionRate: 55, deadline: '2024-11-30' },
+    { id: 37, name: 'Computer Science', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Master', admissionRate: 40, deadline: '2024-12-15' },
+    { id: 38, name: 'Environmental Studies', university: 'Simon Fraser University', location: 'Burnaby, BC', degreeType: 'Bachelor', admissionRate: 35, deadline: '2024-11-20' },
+    { id: 39, name: 'Electrical Engineering', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Bachelor', admissionRate: 30, deadline: '2024-12-05' },
+    { id: 40, name: 'Accounting', university: 'University of Calgary', location: 'Calgary, AB', degreeType: 'Bachelor', admissionRate: 45, deadline: '2024-11-25' },
+    { id: 41, name: 'Kinesiology', university: 'University of British Columbia Okanagan', location: 'Kelowna, BC', degreeType: 'Bachelor', admissionRate: 30, deadline: '2024-12-10' },
+    { id: 42, name: 'Public Health', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Bachelor', admissionRate: 40, deadline: '2024-11-30' },
+    { id: 43, name: 'Political Science', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Bachelor', admissionRate: 35, deadline: '2024-12-15' },
+    { id: 44, name: 'Sociology', university: 'University of Calgary', location: 'Calgary, AB', degreeType: 'Bachelor', admissionRate: 30, deadline: '2024-11-20' },
+    { id: 45, name: 'Mathematics', university: 'University of British Columbia Okanagan', location: 'Kelowna, BC', degreeType: 'Bachelor', admissionRate: 45, deadline: '2024-12-05' },
+    { id: 46, name: 'Economics', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Bachelor', admissionRate: 30, deadline: '2024-11-25' },
+    { id: 47, name: 'English', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Bachelor', admissionRate: 40, deadline: '2024-12-10' },
+    { id: 48, name: 'Environmental Engineering', university: 'University of British Columbia', location: 'Vancouver, BC', degreeType: 'Bachelor', admissionRate: 40, deadline: '2024-11-30' },
+    { id: 49, name: 'Film Studies', university: 'Simon Fraser University', location: 'Burnaby, BC', degreeType: 'Bachelor', admissionRate: 35, deadline: '2024-12-15' },
+    { id: 50, name: 'History', university: 'University of Calgary', location: 'Calgary, AB', degreeType: 'Bachelor', admissionRate: 30, deadline: '2024-11-20' },
+    { id: 51, name: 'Philosophy', university: 'University of British Columbia Okanagan', location: 'Kelowna, BC', degreeType: 'Bachelor', admissionRate: 45, deadline: '2024-12-05' },
+    { id: 52, name: 'Education', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Bachelor', admissionRate: 30, deadline: '2024-11-25' },
+    { id: 53, name: 'Computer Science', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Bachelor', admissionRate: 35, deadline: '2024-12-15' },
+    { id: 54, name: 'Business Administration', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Bachelor', admissionRate: 50, deadline: '2024-11-20' },
+    { id: 55, name: 'Psychology', university: 'Simon Fraser University', location: 'Burnaby, BC', degreeType: 'Master', admissionRate: 45, deadline: '2024-12-05' },
+    { id: 56, name: 'Engineering Physics', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Bachelor', admissionRate: 25, deadline: '2024-11-25' },
+    { id: 57, name: 'Biochemistry', university: 'University of Calgary', location: 'Calgary, AB', degreeType: 'Bachelor', admissionRate: 40, deadline: '2024-12-10' },
+    { id: 58, name: 'Arts and Sciences', university: 'University of British Columbia Okanagan', location: 'Kelowna, BC', degreeType: 'Bachelor', admissionRate: 40, deadline: '2024-11-30' },
+    { id: 59, name: 'Computer Science', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Master', admissionRate: 50, deadline: '2024-12-15' },
+    { id: 60, name: 'Environmental Studies', university: 'Simon Fraser University', location: 'Burnaby, BC', degreeType: 'Bachelor', admissionRate: 45, deadline: '2024-11-20' },
+    { id: 61, name: 'Computer Science', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'PhD', admissionRate: 10, deadline: '2025-03-15' },
+    { id: 62, name: 'Business Administration', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'PhD', admissionRate: 15, deadline: '2025-02-20' },
+    { id: 63, name: 'Psychology', university: 'Simon Fraser University', location: 'Burnaby, BC', degreeType: 'PhD', admissionRate: 12, deadline: '2025-03-05' },
+    { id: 64, name: 'Engineering Physics', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'PhD', admissionRate: 8, deadline: '2025-02-25' },
+    { id: 65, name: 'Biochemistry', university: 'University of Calgary', location: 'Calgary, AB', degreeType: 'PhD', admissionRate: 15, deadline: '2025-03-10' },
+    { id: 66, name: 'Arts and Sciences', university: 'University of British Columbia Okanagan', location: 'Kelowna, BC', degreeType: 'PhD', admissionRate: 18, deadline: '2025-02-30' },
+    { id: 67, name: 'Computer Science', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Master', admissionRate: 20, deadline: '2025-03-15' },
+    { id: 68, name: 'Environmental Studies', university: 'Simon Fraser University', location: 'Burnaby, BC', degreeType: 'Master', admissionRate: 25, deadline: '2025-02-20' },
+    { id: 69, name: 'Electrical Engineering', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Master', admissionRate: 15, deadline: '2025-03-05' },
+    { id: 70, name: 'Accounting', university: 'University of Calgary', location: 'Calgary, AB', degreeType: 'Master', admissionRate: 20, deadline: '2025-02-25' },
+    { id: 71, name: 'Kinesiology', university: 'University of British Columbia Okanagan', location: 'Kelowna, BC', degreeType: 'Master', admissionRate: 25, deadline: '2025-03-10' },
+    { id: 72, name: 'Public Health', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Master', admissionRate: 18, deadline: '2025-02-30' }
   ];
 
   let filters = {
     location: '',
-    maxTuition: 100000,
+    degreeType: '',
   };
 
   let savedPrograms = [];
-  let filteredPrograms = programs;
+  let filteredPrograms = [];
   let selectedProgram = null;
   let email = '';
+  let userInteracted = false;
+  let reminderMessage = ''; // State for the reminder message
 
-  $: filteredPrograms = programs.filter(program => 
-    program.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
-    (filters.location === '' || program.location.toLowerCase().includes(filters.location.toLowerCase())) &&
-    program.tuition <= filters.maxTuition
-  );
+  $: if (userInteracted) {
+    filteredPrograms = programs.filter(program =>
+      program.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+      (filters.location === '' || program.location.toLowerCase().includes(filters.location.toLowerCase())) &&
+      (filters.degreeType === '' || program.degreeType === filters.degreeType)
+    );
+  }
+
+  function handleInteraction() {
+    userInteracted = true;
+  }
+
+  function scrollToSearch() {
+    const searchSection = document.getElementById("search-section");
+    searchSection.scrollIntoView({ behavior: "smooth" });
+  }
 
   function selectProgram(program) {
     selectedProgram = program;
   }
 
-  async function sendReminder() {
-    if (email && selectedProgram) {
-      const reminderData = {
-        email: email,
-        program: selectedProgram
-      };
-
-      try {
-        const response = await fetch('https://example.com/api/reminders', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(reminderData)
-        });
-
-        if (response.ok) {
-          alert(`Reminder set for ${selectedProgram.name}. Email will be sent to ${email}.`);
-        } else {
-          const errorText = await response.text();
-          console.error('Failed to set reminder:', errorText);
-          alert('Failed to set reminder. Please try again later.');
-        }
-      } catch (error) {
-        console.error('Error setting reminder:', error);
-        alert('An error occurred while setting the reminder. Please try again.');
-      }
-
-      email = '';
+  function saveProgram() {
+    if (selectedProgram && !savedPrograms.some(p => p.id === selectedProgram.id)) {
+      savedPrograms = [...savedPrograms, selectedProgram];
+      sortSavedProgramsByDeadline(); // Sort programs after adding a new one
     }
+  }
+
+  function sortSavedProgramsByDeadline() {
+    savedPrograms.sort((a, b) => new Date(a.deadline) - new Date(b.deadline));
+  }
+
+  function sendReminder() {
+    if (email && selectedProgram) {
+      reminderMessage = `Reminder set for ${selectedProgram.name}. An email will be sent to ${email}.`;
+      setTimeout(() => {
+        email = '';
+        reminderMessage = ''; // Clear message after a few seconds
+      }, 5000);
+    }
+  }
+
+  function clearSavedPrograms() {
+    savedPrograms = [];
   }
 </script>
 
 <main class="container mx-auto p-4">
-  <h1 class="text-3xl font-bold mb-6">College Program Planner</h1>
+  <div class="hero">
+    <div class="hero-content">
+      <!-- Left Column (Text) -->
+      <div class="hero-text">
+        <h1>Find Your Future Major</h1>
+        <h2>Discover the Best Academic Path for You</h2>
+        <button class="action-link" on:click={scrollToSearch}>Get Started</button>
+      </div>
+      <!-- Right Column (Image) -->
+      <div class="hero-image">
+        <img src="/hero-img.webp" alt="a green tree depicting educational growth" />
+      </div>
+    </div>
+  </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <!-- Left Side: Search and Filters -->
-    <div class="bg-gray-100 p-4 rounded-lg">
-      <h2 class="text-xl font-semibold mb-4">Search and Filter Programs</h2>
-      <input
-        type="text"
-        bind:value={searchQuery}
-        placeholder="Search for programs..."
-        class="w-full p-2 border rounded mb-4"
-      />
-      <input
-        type="text"
-        bind:value={filters.location}
-        placeholder="Filter by location..."
-        class="w-full p-2 border rounded mb-4"
-      />
-      <div>
-        <label for="maxTuition">Max Tuition: ${filters.maxTuition}</label>
+  <!-- Adding id to search section for scroll targeting -->
+  <section id="search-section" class="mt-20">
+    <h3 class="text-3xl font-bold mb-6"> Personalized Program Planner</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Left Side: Search and Filters -->
+      <div class="bg-gray-100 p-4 rounded-lg overflow-y-auto max-h-screen">
+        <h2 class="text-xl font-semibold mb-4">Search and Filter Programs</h2>
         <input
-          type="range"
-          bind:value={filters.maxTuition}
-          min="0"
-          max="100000"
-          step="1000"
-          class="w-full"
+          type="text"
+          bind:value={searchQuery}
+          on:input={handleInteraction}
+          placeholder="Search for programs..."
+          class="w-full p-2 border rounded mb-4"
         />
+        <input
+          type="text"
+          bind:value={filters.location}
+          on:input={handleInteraction}
+          placeholder="Filter by location..."
+          class="w-full p-2 border rounded mb-4"
+        />
+        <div class="mb-4">
+          <label for="degreeType">Degree Type:</label>
+          <select bind:value={filters.degreeType} on:change={handleInteraction} class="w-full p-2 border rounded">
+            <option value="">All</option>
+            <option value="Bachelor">Bachelor</option>
+            <option value="Master">Master</option>
+            <option value="PhD">PhD</option>
+          </select>
+        </div>
+
+        {#if userInteracted}
+          {#if filteredPrograms.length > 0}
+            <ul>
+              {#each filteredPrograms as program}
+                <li class="mb-2 cursor-pointer hover:bg-gray-200 p-2 rounded" on:click={() => selectProgram(program)} tabindex="0">
+                  {program.name} at {program.university}
+                </li>
+              {/each}
+            </ul>
+          {:else}
+            <p>No programs to display. Please enter a search query or adjust the filters.</p>
+          {/if}
+        {/if}
       </div>
 
-      {#if filteredPrograms.length > 0}
+      <!-- Right Side: Show Selected Program -->
+      <div class="bg-gray-100 p-4 rounded-lg h-fit sticky top-0">
+        <h2 class="text-xl font-semibold mb-4">Program Information</h2>
+        {#if selectedProgram}
+          <h3>{selectedProgram.name} at {selectedProgram.university}</h3>
+          <p>Location: {selectedProgram.location}</p>
+          <p><strong>Degree Type:</strong> {selectedProgram.degreeType}</p>
+          <p><strong>Application Deadline:</strong> {selectedProgram.deadline}</p>
+
+          <button on:click={saveProgram} class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Save to My Programs
+          </button>
+
+          <!-- Send Reminder -->
+          <h4 class="mt-4">Set Reminder</h4>
+          <input
+            type="email"
+            bind:value={email}
+            placeholder="Your email address"
+            class="w-full p-2 border rounded mb-2"
+          />
+          <button on:click={sendReminder} class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+            Set Reminder
+          </button>
+
+          <!-- Display reminder message -->
+          {#if reminderMessage}
+            <p class="mt-2 text-green-600 font-semibold">{reminderMessage}</p>
+          {/if}
+        {:else}
+          <p>Select a program to view details.</p>
+        {/if}
+      </div>
+    </div>
+
+    <!-- Saved Programs Section -->
+    <div class="mt-8">
+      <h2 class="text-xl font-semibold mb-4">Saved Programs</h2>
+      {#if savedPrograms.length > 0}
         <ul>
-          {#each filteredPrograms as program}
-            {#if searchQuery || filters.location || filters.maxTuition < 100000}
-              <li class="mb-2 cursor-pointer hover:bg-gray-200 p-2 rounded" on:click={() => selectProgram(program)}>
-                {program.name} at {program.university}
-              </li>
-            {/if}
+          {#each savedPrograms as program}
+            <li class="mb-2">
+              {program.name} at {program.university} <br>
+              <strong>Deadline:</strong> {program.deadline}
+            </li>
           {/each}
         </ul>
-      {:else}
-        <p>No programs to display. Please enter a search query or adjust the filters.</p>
-      {/if}
-    </div>
-
-    <!-- Right Side: Show Selected Program -->
-    <div class="bg-gray-100 p-4 rounded-lg">
-      <h2 class="text-xl font-semibold mb-4">Program Information</h2>
-      {#if selectedProgram}
-        <h3>{selectedProgram.name} at {selectedProgram.university}</h3>
-        <p>Location: {selectedProgram.location}</p>
-        <p>Tuition: ${selectedProgram.tuition}</p>
-        <p><strong>Application Deadline:</strong> {selectedProgram.deadline}</p>
-
-        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-          Save to My Programs
-        </button>
-
-        <!-- Set Reminder Section -->
-        <h4 class="mt-4">Set Reminder</h4>
-        <input
-          type="email"
-          bind:value={email}
-          placeholder="Your email address"
-          class="w-full p-2 border rounded mb-2"
-        />
-        <button on:click={sendReminder} class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
-          Set Reminder
+        <button on:click={clearSavedPrograms} class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-4">
+          Clear Program List
         </button>
       {:else}
-        <p>Select a program to view details.</p>
+        <p>You haven't saved any programs yet.</p>
       {/if}
     </div>
-  </div>
-
-  <!-- Saved Programs Section -->
-  <div class="mt-8">
-    <h2 class="text-xl font-semibold mb-4">My Saved Programs</h2>
-    {#if savedPrograms.length > 0}
-      <ul>
-        {#each savedPrograms as program}
-          <li class="mb-2">{program.name} at {program.university}</li>
-        {/each}
-      </ul>
-    {:else}
-      <p>You haven't saved any programs yet.</p>
-    {/if}
-  </div>
+  </section>
 </main>
 
 <style>
-  /* Add styles here */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+    padding: 2rem 0;
+    background-color: #f0f8ff;
+    margin-bottom: 2rem; /* Separation from the section below */
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+
+  .hero-text h1 {
+    margin-bottom: 1rem;
+    font-size: 3.2rem;
+    color: #1e3a8a;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    animation: fadeInDown 1s ease-out;
+  }
+
+  .hero-text h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #3b82f6;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.5s;
+    animation-fill-mode: both;
+  }
+
+  .action-link {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .action-link:hover {
+    background-color: #3b82f6;
+  }
+
+  #search-section {
+    padding-top: 50px;
+  }
 </style>
