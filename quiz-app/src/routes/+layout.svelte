@@ -93,8 +93,9 @@
 		height: auto;
 		/* max-width: 65%; */
 		max-width: 1000px;
-		width: 100%
+		width: 100%;
 	}
+
 
 </style>
 

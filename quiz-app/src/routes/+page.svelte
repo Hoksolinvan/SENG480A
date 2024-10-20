@@ -291,9 +291,29 @@
     background-color: #3b82f6;
   }
 
+  .h2 {
+    color: #007bff;
+  }
+
+
   #search-section {
     padding-top: 200px;
-  }
+
+    /*Allow overflow to fix display bug when result list and/or saved programs list is expanded dynamically*/
+    /*Display bug: search-section is expanded but footer does not move, causing footer to not stay on screen bottom and to overlay contents*/
+    overflow: auto;
+  
+    /*From W3School*/
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+	}
+
+  /*From W3School*/
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	#search-section::-webkit-scrollbar {
+	  display: none;
+	}
 
 
   .hero-image img {
