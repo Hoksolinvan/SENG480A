@@ -39,7 +39,7 @@
 
 <main>
 	<h1>Welcome Back!</h1>
-	<p style="color: #555">
+	<p>
 		We have been waiting for you. Log right in and get back to where you left.
 	</p>
 
@@ -61,7 +61,7 @@
 			<button type="submit">Log In</button>
 		</form> 
 	</div>
-	<p style="font-size:1rem; color: #555">
+	<p style="font-size:1rem;">
 		Doesn't have an account? 
 		<a href="/signup" style="color: #007bff">Sign up here</a>
 	</p>
@@ -79,12 +79,15 @@
 		text-align: center;
 		margin-bottom: 1rem;
 		color: #007bff;
+		font-family: 'Poppins', sans-serif;
 	}
 
 	p {
 		text-align: center;
 		font-size: 1.2rem;
 		margin-bottom: 2rem; /* Add space after the paragraph */
+		font-family: 'Roboto', sans-serif;
+		color: #555;
 	}
 
 	.form-container {

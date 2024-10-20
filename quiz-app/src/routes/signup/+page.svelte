@@ -52,7 +52,7 @@
 
 <main>
 	<h1>Welcome!</h1>
-	<p style="color: #555">
+	<p>
 		Create an account and let us help you with your journey to your dream universities! It only takes 1 minute, you will not regret it!
 	</p>
 
@@ -99,7 +99,7 @@
 		</form>
 	</div>
 
-	<p style="font-size:1rem; color: #555;">
+	<p style="font-size:1rem;">
 		Already have an account? 
 		<a href="/login" style="color: #007bff">Log in here</a>
 	</p>
@@ -117,12 +117,15 @@
 		text-align: center;
 		margin-bottom: 1rem;
 		color: #007bff;
+		font-family: 'Poppins', sans-serif;
 	}
 
 	p {
 		text-align: center;
 		font-size: 1.2rem;
 		margin-bottom: 2rem; /* Add space after the paragraph */
+		font-family: 'Roboto', sans-serif;
+		color: #555;
 	}
 
 	.form-container {
