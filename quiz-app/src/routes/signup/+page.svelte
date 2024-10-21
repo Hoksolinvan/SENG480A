@@ -60,7 +60,7 @@
 			Confirm_pwd = "";
 
 
-			registration();
+			
 
 			
 
@@ -121,7 +121,7 @@
 				Congratulations! Your account has been created!
 			</p>
 
-			<button type="submit" id="submit-button">Create Account</button>
+			<button type="submit" id="submit-button" onclick="registration()">Create Account</button>
 
 			<!-- Only allows button to submit when Terms and Conditions checkbos is checked -->
 			<script>
