@@ -7,7 +7,6 @@ const dotenv = require("dotenv").config();
 const SibApiV3Sdk = require('sib-api-v3-sdk');
 const clientDB= require('./config.cjs');
 const {Updater}= require('./scraper.cjs');
-const {sender} = require('./mailer.cjs');
 
 
 const defaultClient = SibApiV3Sdk.ApiClient.instance;
