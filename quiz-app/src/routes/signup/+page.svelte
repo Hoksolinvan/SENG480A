@@ -38,10 +38,6 @@
 	}
 
 
-
-
-
-
 	function handleSubmit() {
 		Email = document.getElementById("email").value;
 		Password = document.getElementById("password").value;
@@ -59,6 +55,7 @@
 			document.getElementById("password").style.backgroundColor = "#e6e6e6";
 			Confirm_pwd = "";
 
+			
 
 			
 
@@ -68,6 +65,7 @@
 
 			Form = [Email, Password, Confirm_pwd];
 
+			
 			post_Regis();
 
 			if(localStorage.getItem("regisPassed")=="true"){
@@ -79,6 +77,8 @@
 				document.getElementById("regis-fail").textContent = "Something went wrong. Please try again.";
 				localStorage.removeItem("regisFailed");
 			}
+
+			registration();
 		}
 	}
 
@@ -121,7 +121,7 @@
 				Congratulations! Your account has been created!
 			</p>
 
-			<button type="submit" id="submit-button" onclick="handleSubmit()">Create Account</button>
+			<button type="submit" id="submit-button">Create Account</button>
 
 			<!-- Only allows button to submit when Terms and Conditions checkbos is checked -->
 			<script>
