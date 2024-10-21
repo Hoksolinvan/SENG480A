@@ -12,6 +12,7 @@
 
 
 	async function registration(){
+
 		try {
 			const request = await fetch('https://seng480a-production.up.railway.app/registration', {
 				method: 'POST',
@@ -19,8 +20,7 @@
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
-					email: Email,
-					password: Password
+					Forms: Form
 				}),
 			});
 
