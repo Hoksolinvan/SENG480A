@@ -104,15 +104,41 @@
     savedPrograms.sort((a, b) => new Date(a.deadline) - new Date(b.deadline));
   }
 
-  function sendReminder() {
-    if (email && selectedProgram) {
-      reminderMessage = `Reminder set for ${selectedProgram.name}. An email will be sent to ${email}.`;
-      setTimeout(() => {
-        email = '';
-        reminderMessage = ''; // Clear message after a few seconds
-      }, 5000);
-    }
-  }
+  // async function sendReminder() {
+  //   if (email && selectedProgram) {
+  //     reminderMessage = `Reminder set for ${selectedProgram.name}. An email will be sent to ${email}.`;
+  //     setTimeout(() => {
+  //       email = '';
+  //       reminderMessage = ''; // Clear message after a few seconds
+  //     }, 5000);
+  //   }
+  // }
+
+  async function sendReminder() {
+		try {
+			const request = await fetch('https://seng480a-production.up.railway.app/send-email', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					Email: email,
+				}),
+			});
+
+			if (request.ok) {
+				const result = await request.json();
+				console.log('Form results were successfully posted: ', result);
+				localStorage.setItem("formSubmitted", "true");
+			} else {
+				console.error('Error Submitting Form', request.statusText);
+				localStorage.setItem("formFailed", "true");
+			}
+		} catch (error) {
+			console.log("Failed to submit Form\n");
+			localStorage.setItem("formFailed", "true");
+		}
+	}
 
   function clearSavedPrograms() {
     savedPrograms = [];
