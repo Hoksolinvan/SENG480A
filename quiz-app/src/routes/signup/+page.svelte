@@ -60,6 +60,7 @@
 			Confirm_pwd = "";
 
 
+			registration();
 
 			
 
