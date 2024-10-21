@@ -129,14 +129,13 @@
 			if (request.ok) {
 				const result = await request.json();
 				console.log('Form results were successfully posted: ', result);
-				localStorage.setItem("formSubmitted", "true");
 			} else {
 				console.error('Error Submitting Form', request.statusText);
-				localStorage.setItem("formFailed", "true");
+        console.error(error);
 			}
 		} catch (error) {
 			console.log("Failed to submit Form\n");
-			localStorage.setItem("formFailed", "true");
+      console.error(error);
 		}
 	}
 
