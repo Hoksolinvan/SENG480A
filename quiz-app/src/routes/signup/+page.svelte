@@ -20,7 +20,7 @@
 				},
 				body: JSON.stringify({
 					email: Email,
-					password: Password,
+					password: Password
 				}),
 			});
 
