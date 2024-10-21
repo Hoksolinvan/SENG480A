@@ -84,7 +84,7 @@ app.get('/webscrape', async (req, res) => {
  });
 
 
- app.post('/send-mail', async (req,res) => {
+ app.post('/send-email', async (req,res) => {
    const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
    const sender = {
 
