@@ -41,7 +41,6 @@ app.post('/quiz_result', async (req, res) => {
 });
 
 
-
 //Endpoint to handle Forms Requests
 app.post('/Forms',async (req,res) =>{
    const {Forms} = req.body;
@@ -85,7 +84,7 @@ app.get('/webscrape', async (req, res) => {
  });
 
 
- app.post('/new-mail', async (req,res) => {
+ app.post('/send-mail', async (req,res) => {
    const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
    const sender = {
 
