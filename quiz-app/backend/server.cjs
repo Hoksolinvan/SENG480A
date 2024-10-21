@@ -142,12 +142,12 @@ app.post("/registration", async (req,res) => {
 
       }
       catch(error){
-         //console.error("Failed");
+         console.error("Failed");
       }
 
    }
 
-   
+
    try{
 
       let hashedpassowrd = await hasher();
