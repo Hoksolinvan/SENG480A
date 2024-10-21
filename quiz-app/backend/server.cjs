@@ -6,6 +6,7 @@ const path = require('path');
 const dotenv = require("dotenv").config();
 const SibApiV3Sdk = require('sib-api-v3-sdk');
 const clientDB= require('./config.cjs');
+const bcrypt = require('bcrypt');
 const {Updater}= require('./scraper.cjs');
 
 
@@ -124,6 +125,42 @@ app.get('/webscrape', async (req, res) => {
    catch(error){
        console.log(error);
    }
+
+});
+
+
+
+app.post("/registration", async (req,res) => {
+
+   async function hasher(){
+
+      try{
+
+         const hashedPassword = await bcrypt.hash(req.body.password,10);
+         return hashedPassword;
+
+
+      }
+      catch(error){
+         //console.error("Failed");
+      }
+
+   }
+
+   
+   try{
+
+      let hashedpassowrd = await hasher();
+
+
+      await clientDB.none('INSERT INTO accounts (email,hash_password) VALUES ($1, $2)',[req.body.email,hashedpassowrd]);
+      res.status(200).send("");
+   }
+   catch(error){
+      console.error("registration failed");
+      res.status(500).send("Registration failed");
+   }
+
 
 });
 

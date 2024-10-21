@@ -10,6 +10,38 @@
 	// 	console.log("hello");
 	// }
 
+
+	async function registration(){
+		try {
+			const request = await fetch('https://seng480a-production.up.railway.app/registration', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					email: Email,
+					password: Password,
+				}),
+			});
+
+			if (request.ok) {
+				const result = await request.json();
+				console.log('Form results were successfully posted: ', result);
+			} else {
+				console.error('Error Submitting Form', request.statusText);
+        console.error(error);
+			}
+		} catch (error) {
+			console.log("Failed to submit Form\n");
+      
+		}
+	}
+
+
+
+
+
+
 	function handleSubmit() {
 		Email = document.getElementById("email").value;
 		Password = document.getElementById("password").value;
@@ -26,6 +58,10 @@
 			document.getElementById("confirm-pwd").style.backgroundColor = "#e6e6e6";
 			document.getElementById("password").style.backgroundColor = "#e6e6e6";
 			Confirm_pwd = "";
+
+
+
+			
 
 		} else {
 
