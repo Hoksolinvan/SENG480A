@@ -33,6 +33,7 @@
 			}
 		} catch (error) {
 			console.log("Failed to submit Form\n");
+			console.log(error);
       
 		}
 	}
