@@ -11,7 +11,7 @@
 	// }
 
 
-	async function registration(){
+	async function registration(Form){
 
 		try {
 			const request = await fetch('https://seng480a-production.up.railway.app/registration', {
@@ -79,7 +79,7 @@
 				localStorage.removeItem("regisFailed");
 			}
 
-			registration();
+			registration(Form);
 		}
 	}
 
