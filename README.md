@@ -1,8 +1,8 @@
-Project: EasyPath
+## Project: EasyPath
 
 Project Description: an education tracking application for (now) post-secondary programs. Deadlines and requirements congregated into one hub, no more messes of keeping track over dozens of websites and pages.
 
-Team:
+## Team:
 We are a team of five: 
 - Sam Oshry (samjoshry@gmail.com)
 - Karn Dhaliwal (karndhaliwal@icloud.com)
