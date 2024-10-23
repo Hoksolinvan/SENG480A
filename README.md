@@ -1,4 +1,4 @@
-Project: nurtuRe
+Project: EasyPath
 
 Project Description: an education tracking application for (now) post-secondary programs. Deadlines and requirements congregated into one hub, no more messes of keeping track over dozens of websites and pages.
 
