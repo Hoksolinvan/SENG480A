@@ -1,12 +1,11 @@
-<!-- DecisionSupport.svelte -->
 <script>
   import TimelineDashboard from './TimelineDashboard.svelte';
-  //export let programs = [];      
   export let savedPrograms = []; // Receive saved programs as a prop
   
   let trackedPrograms = [];
   let currentProgram = null;
-  let newItem = '';
+  let newPro = '';  // Separate state for Pros
+  let newCon = '';  // Separate state for Cons
 
   function toggleTracking(program) {
     const existingIndex = trackedPrograms.findIndex(p => p.id === program.id);
@@ -28,18 +27,18 @@
   }
 
   function addPro() {
-    if (newItem.trim() && currentProgram) {
-      currentProgram.pros = [...(currentProgram.pros || []), newItem];
+    if (newPro.trim() && currentProgram) {
+      currentProgram.pros = [...(currentProgram.pros || []), newPro];
       trackedPrograms = [...trackedPrograms];
-      newItem = '';
+      newPro = '';  // Clear the input field after adding
     }
   }
 
   function addCon() {
-    if (newItem.trim() && currentProgram) {
-      currentProgram.cons = [...(currentProgram.cons || []), newItem];
+    if (newCon.trim() && currentProgram) {
+      currentProgram.cons = [...(currentProgram.cons || []), newCon];
       trackedPrograms = [...trackedPrograms];
-      newItem = '';
+      newCon = '';  // Clear the input field after adding
     }
   }
 
@@ -123,7 +122,7 @@
           <div class="mt-4 flex gap-2">
             <input
               type="text"
-              bind:value={newItem}
+              bind:value={newPro}
               placeholder="Add a pro..."
               class="flex-grow p-2 border rounded-md"
             />
@@ -155,7 +154,7 @@
           <div class="mt-4 flex gap-2">
             <input
               type="text"
-              bind:value={newItem}
+              bind:value={newCon}
               placeholder="Add a con..."
               class="flex-grow p-2 border rounded-md"
             />
@@ -187,8 +186,8 @@
   {/if}
 </div>
 
-<!-- Integrating the TimelineDashboard here -->
+<!-- Integrating the TimelineDashboard for tracked programs -->
 <section>
   <h2>Your Program Timeline</h2>
-  <TimelineDashboard programs={savedPrograms} />
+  <TimelineDashboard programs={trackedPrograms} />
 </section>
