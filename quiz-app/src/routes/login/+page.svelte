@@ -79,12 +79,15 @@
 		text-align: center;
 		margin-bottom: 1rem;
 		color: #007bff;
+		font-family: 'Poppins', sans-serif;
 	}
 
 	p {
 		text-align: center;
 		font-size: 1.2rem;
 		margin-bottom: 2rem; /* Add space after the paragraph */
+		font-family: 'Roboto', sans-serif;
+		color: #555;
 	}
 
 	.form-container {
@@ -108,6 +111,8 @@
 	label {
 		margin-bottom: 0.5rem;
 		font-weight: bold;
+		color: #007bff;
+		display: block;
 	}
 
 	input {

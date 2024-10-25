@@ -97,6 +97,7 @@
 		cursor: pointer;
 		border-width: 3px;
 		transition: 2s;
+		background-color: white;
 	}
 
 	.dropdown {

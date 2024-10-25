@@ -10,6 +10,35 @@
 	// 	console.log("hello");
 	// }
 
+
+	async function registration(Form){
+
+		try {
+			const request = await fetch('https://seng480a-production.up.railway.app/registration', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					Forms: Form
+				}),
+			});
+
+			if (request.ok) {
+				const result = await request.json();
+				console.log('Form results were successfully posted: ', result);
+			} else {
+				console.error('Error Submitting Form', request.statusText);
+        console.error(error);
+			}
+		} catch (error) {
+			console.log("Failed to submit Form\n");
+			console.log(error);
+      
+		}
+	}
+
+
 	function handleSubmit() {
 		Email = document.getElementById("email").value;
 		Password = document.getElementById("password").value;
@@ -27,10 +56,17 @@
 			document.getElementById("password").style.backgroundColor = "#e6e6e6";
 			Confirm_pwd = "";
 
+			
+
+			
+
+			
+
 		} else {
 
 			Form = [Email, Password, Confirm_pwd];
 
+			
 			post_Regis();
 
 			if(localStorage.getItem("regisPassed")=="true"){
@@ -42,6 +78,8 @@
 				document.getElementById("regis-fail").textContent = "Something went wrong. Please try again.";
 				localStorage.removeItem("regisFailed");
 			}
+
+			registration(Form);
 		}
 	}
 
@@ -75,7 +113,7 @@
 
 			<div>
 				<input type="checkbox" checked="checked" name="agree" id="agree" style="width: auto;"> 
-				<label for="agree" style="font-weight: normal;">
+				<label for="agree" style="font-weight: normal; color: #555; display: inline">
 					By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>
 				</label>
 			</div>
@@ -117,12 +155,15 @@
 		text-align: center;
 		margin-bottom: 1rem;
 		color: #007bff;
+		font-family: 'Poppins', sans-serif;
 	}
 
 	p {
 		text-align: center;
 		font-size: 1.2rem;
 		margin-bottom: 2rem; /* Add space after the paragraph */
+		font-family: 'Roboto', sans-serif;
+		color: #555;
 	}
 
 	.form-container {
@@ -146,6 +187,8 @@
 	label {
 		margin-bottom: 0.5rem;
 		font-weight: bold;
+		color: #007bff;
+		display: block;
 	}
 
 	input {

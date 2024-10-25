@@ -56,7 +56,8 @@
 		position: sticky;
 		top: 0;
 
-		background-color: rgb(255, 255, 255);
+		/* background-color: rgb(255, 255, 255); */
+		background-color: #f5f5dc;
 		padding: 0.5rem 0;
 		transition: 0.5s;
 		border-bottom: 2px solid transparent;
@@ -89,10 +90,12 @@
 		flex-grow: 1;
 		padding: 2rem 0;
 		margin: 0 auto;
+		height: auto;
 		/* max-width: 65%; */
 		max-width: 1000px;
-		width: 100%
+		width: 100%;
 	}
+
 
 </style>
 

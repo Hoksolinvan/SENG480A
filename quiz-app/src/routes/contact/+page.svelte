@@ -101,7 +101,8 @@
 
 	h1 {
 		font-size: 2.5rem;
-		color: #5603ad; /* Updated h1 color */
+		/* color: #5603ad; Updated h1 color */
+		color: #007bff;
 		margin-bottom: 1rem;
 		font-family: 'Poppins', sans-serif;
 	}
@@ -115,7 +116,7 @@
 	}
 
 	.form-container {
-		border: 2px solid #8367c7; /* Updated border color */
+		border: 2px solid #007bff;/*#8367c7; /* Updated border color */
 		padding: 1.5rem;
 		border-radius: 10px;
 		background-color: #f9f9f9;
@@ -135,7 +136,8 @@
 	label {
 		margin-bottom: 0.5rem;
 		font-weight: bold;
-		color: #8367c7; /* Updated label color */
+		/* color: #8367c7; Updated label color */
+		color: #007bff;
 		text-align: left; /* Left-align form labels */
 		display: block; /* Ensures the label takes full width */
 	}
@@ -146,20 +148,20 @@
 		font-size: 1rem;
 		width: 100%;
 		box-sizing: border-box;
-		border: 1px solid #8367c7; /* Updated input border color */
+		border: 1px solid #007bff; /* #8367c7; /* Updated input border color */
 		border-radius: 5px;
 	}
 
 	input:focus,
 	textarea:focus {
 		outline: none;
-		border-color: #674ea7;
+		border-color: #0162cb; /* #674ea7;*/
 		box-shadow: 0 0 5px rgba(103, 78, 167, 0.3);
 	}
 
 	button {
 		padding: 0.75rem;
-		background-color: #5603ad; /* Updated button color */
+		background-color: #007bff; /* #5603ad; /* Updated button color */
 		color: white;
 		border: none;
 		cursor: pointer;
@@ -168,7 +170,7 @@
 	}
 
 	button:hover {
-		background-color: #8367c7; /* Updated hover color */
+		background-color: #4aa1ff; /*#8367c7; /* Updated hover color */
 		transform: translateY(-2px);
 	}
 

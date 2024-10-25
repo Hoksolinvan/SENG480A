@@ -43,12 +43,14 @@
 	"dependencies": {
 		"aws-amplify": "^6.6.4",
 		"axios": "^1.7.7",
+		"bcrypt": "^5.1.1",
 		"cheerio": "^1.0.0",
 		"cors": "^2.8.5",
 		"dotenv": "^16.4.5",
 		"express": "^4.21.0",
 		"nodemon": "^3.1.7",
 		"pg-promise": "^11.9.1",
-		"pgp": "^0.1.0"
+		"pgp": "^0.1.0",
+		"sib-api-v3-sdk": "^8.5.0"
 	}
 }
