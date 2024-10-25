@@ -1,4 +1,6 @@
 <script>
+  import DecisionSupport from '$lib/DecisionSupport.svelte';
+
   let searchQuery = '';
   let programs = [
     { id: 1, name: 'Computer Science', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Bachelor', admissionRate: 25, deadline: '2024-12-01' },
@@ -46,6 +48,7 @@
     { id: 43, name: 'Music Composition', university: 'University of Alberta', location: 'Edmonton, AB', degreeType: 'Bachelor', admissionRate: 40, deadline: '2024-11-30' },
     { id: 44, name: 'Linguistics', university: 'University of Victoria', location: 'Victoria, BC', degreeType: 'Bachelor', admissionRate: 35, deadline: '2024-12-10' }
 ];
+//console.log("Programs in +page.svelte:", programs);
 
   let filters = {
     location: '',
@@ -53,6 +56,7 @@
   };
 
   let savedPrograms = [];
+  //console.log("Saved Programs:", savedPrograms);
   let filteredPrograms = [];
   let selectedProgram = null;
   let email = '';
@@ -223,6 +227,16 @@
       {/if}
     </div>
   </section>
+
+<section class="decision-support">
+  {#if savedPrograms.length > 0}
+  <DecisionSupport {savedPrograms} />
+{:else}
+  <div class="mt-8 text-center text-gray-600">
+    Save some programs to start comparing them
+  </div>
+{/if}
+</section>
 </main>
 
 <style>
