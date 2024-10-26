@@ -86,6 +86,7 @@
 		border-radius: 10px; */
 		font-family: Comfortaa;
 		font-size: 40px;
+		font-weight: 800;
 		color: #007bff;
 	}
 
