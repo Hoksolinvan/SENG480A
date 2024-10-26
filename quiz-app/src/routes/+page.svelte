@@ -148,268 +148,277 @@
   }
 </script>
 
-<main class="container mx-auto p-4">
-  <div class="hero">
-    <div class="hero-content">
-      <!-- Left Column (Text) -->
-      <div class="hero-text">
-        <h1>Find Your Future Major</h1>
-        <h2>Discover the Best Academic Path for You</h2>
-        <button class="action-link" on:click={scrollToSearch}>Get Started</button>
+<main class="container mx-auto px-4 py-8 min-h-screen bg-gray-50">
+  <!-- Hero Section -->
+  <div class="min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-blue-50 to-white">
+    <div class="grid md:grid-cols-2 gap-12 max-w-7xl w-full px-6">
+      <!-- Text Content -->
+      <div class="flex flex-col justify-center space-y-6">
+        <h1 class="text-5xl font-bold text-blue-900 leading-tight animate-fade-in">
+          Find Your Future Major
+        </h1>
+        <h2 class="text-2xl text-blue-600 font-medium animate-fade-in-delayed">
+          Discover the Best Academic Path for You
+        </h2>
+        <button 
+          class="w-fit px-8 py-4 bg-blue-900 text-white rounded-lg shadow-lg 
+                 hover:bg-blue-800 transform hover:scale-105 transition-all
+                 duration-300 text-lg font-semibold"
+          on:click={scrollToSearch}
+        >
+          Get Started
+        </button>
       </div>
-      <!-- Right Column (Image) -->
-      <div class="hero-image">
-        <img src="/hero-img.webp" alt="a green tree depicting educational growth" />
+      <!-- Image -->
+      <div class="flex items-center justify-center">
+        <img 
+          src="/hero-img.webp" 
+          alt="Educational growth" 
+          class="w-4/5 rounded-full shadow-2xl transform hover:scale-105 
+                 transition-all duration-500 animate-float"
+        />
       </div>
     </div>
   </div>
 
-  <!-- Adding id to search section for scroll targeting -->
-  <section id="search-section" class="mt-20 h-screen">
-    <h3 class="text-3xl font-bold mb-6 text-easypath-blue"> Personalized Program Planner</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- Left Side: Search and Filters -->
-      <div class="bg-gray-100 border-2 border-easypath-blue p-4 rounded-lg overflow-y-auto max-h-screen">
-        <h2 class="text-xl font-semibold mb-4 text-easypath-blue">Search and Filter Programs</h2>
-        <input
-          type="text"
-          bind:value={searchQuery}
-          on:input={handleInteraction}
-          placeholder="Search for programs..."
-          class="w-full p-2 border border-easypath-blue rounded mb-4"
-        />
-        <input
-          type="text"
-          bind:value={filters.location}
-          on:input={handleInteraction}
-          placeholder="Filter by location..."
-          class="w-full p-2 border border-easypath-blue rounded mb-4"
-        />
-        <div class="mb-4">
-          <label for="degreeType">Degree Type:</label>
-          <select bind:value={filters.degreeType} on:change={handleInteraction} class="w-full p-2 border rounded">
-            <option value="">All</option>
+  <!-- Search Section -->
+  <section id="search-section" class="mt-20 max-w-7xl mx-auto">
+    <h3 class="text-3xl font-bold mb-8 text-blue-900 text-center">
+      Personalized Program Planner
+    </h3>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Search and Filters Panel -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+        <h2 class="text-2xl font-semibold mb-6 text-blue-900">
+          Search and Filter Programs
+        </h2>
+        
+        <!-- Search Input -->
+        <div class="space-y-4 mb-6">
+          <input
+            type="text"
+            bind:value={searchQuery}
+            on:input={handleInteraction}
+            placeholder="Search for programs..."
+            class="w-full px-4 py-3 rounded-lg border-2 border-blue-100 
+                   focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                   transition-all duration-300"
+          />
+          
+          <input
+            type="text"
+            bind:value={filters.location}
+            on:input={handleInteraction}
+            placeholder="Filter by location..."
+            class="w-full px-4 py-3 rounded-lg border-2 border-blue-100 
+                   focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                   transition-all duration-300"
+          />
+        </div>
+
+        <!-- Degree Type Selection -->
+        <div class="mb-6">
+          <label class="block text-gray-700 font-medium mb-2">Degree Type:</label>
+          <select 
+            bind:value={filters.degreeType} 
+            on:change={handleInteraction}
+            class="w-full px-4 py-3 rounded-lg border-2 border-blue-100 
+                   focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+          >
+            <option value="">All Degrees</option>
             <option value="Bachelor">Bachelor</option>
             <option value="Master">Master</option>
             <option value="PhD">PhD</option>
           </select>
-
-
-            <label> <input type="checkbox" bind:checked={computer_science} /> <strong>Computer Science 🖥️</strong> </label>
-            <br>
-            <label> <input type="checkbox" bind:checked={business_administration} /> <strong>Business Administration 📈</strong></label>
-            <br>
-            <label> <input type="checkbox" bind:checked={psychology} /> <strong>Psychology 🧠</strong></label>
-            <br>
-            <label> <input type="checkbox" bind:checked={biology} /> <strong>Biology 🔬</strong></label>
-            <br>
-            <label> <input type="checkbox" bind:checked={law} /> <strong>Law ⚖️</strong></label>
-
-
-          
         </div>
 
+        <!-- Program Type Checkboxes -->
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
+            <input type="checkbox" bind:checked={computer_science} class="w-4 h-4 text-blue-600" />
+            <span class="font-medium">Computer Science 🖥️</span>
+          </div>
+          <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
+            <input type="checkbox" bind:checked={business_administration} class="w-4 h-4 text-blue-600" />
+            <span class="font-medium">Business Administration 📈</span>
+          </div>
+          <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
+            <input type="checkbox" bind:checked={psychology} class="w-4 h-4 text-blue-600" />
+            <span class="font-medium">Psychology 🧠</span>
+          </div>
+          <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
+            <input type="checkbox" bind:checked={biology} class="w-4 h-4 text-blue-600" />
+            <span class="font-medium">Biology 🔬</span>
+          </div>
+          <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
+            <input type="checkbox" bind:checked={law} class="w-4 h-4 text-blue-600" />
+            <span class="font-medium">Law ⚖️</span>
+          </div>
+        </div>
+
+        <!-- Search Results -->
         {#if userInteracted}
           {#if filteredPrograms.length > 0}
-            <ul>
+            <ul class="space-y-2 max-h-96 overflow-y-auto">
               {#each filteredPrograms as program}
-                <li class=" mb-2 cursor-pointer bg-white hover:bg-gray-200 p-2 rounded-lg" on:click={() => selectProgram(program)} tabindex="0">
-                  <!-- <span style="color: #0ecf0e;">{program.name}</span>  -->
-                  {program.name} at {program.university}
-                  <!-- <span style="color: #19966e;">{program.university}</span> -->
+                <li 
+                  class="p-4 rounded-lg bg-gray-50 hover:bg-blue-50 cursor-pointer
+                         transition-colors duration-200 border border-gray-200"
+                  on:click={() => selectProgram(program)}
+                  tabindex="0"
+                >
+                  <div class="font-semibold text-blue-900">{program.name}</div>
+                  <div class="text-gray-600">{program.university}</div>
                 </li>
               {/each}
             </ul>
           {:else}
-            <p>No programs to display. Please enter a search query or adjust the filters.</p>
+            <p class="text-gray-500 text-center py-4">No programs match your criteria.</p>
           {/if}
         {/if}
       </div>
 
-      <!-- Right Side: Show Selected Program -->
-      <div class="bg-gray-100 border-2 border-easypath-blue p-4 rounded-lg h-fit sticky top-0">
-        <h2 class="text-xl font-semibold mb-4 text-easypath-blue">Program Information</h2>
+      <!-- Program Details Panel -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 h-fit sticky top-4">
+        <h2 class="text-2xl font-semibold mb-6 text-blue-900">Program Information</h2>
+        
         {#if selectedProgram}
-          <h3>{selectedProgram.name} at {selectedProgram.university}</h3>
-          <p><strong>Location:</strong> {selectedProgram.location}</p>
-          <p><strong>Degree Type:</strong> {selectedProgram.degreeType}</p>
-          <p><strong>Application Deadline:</strong> {selectedProgram.deadline}</p>
-          <br>
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold text-blue-800">
+              {selectedProgram.name} at {selectedProgram.university}
+            </h3>
+            
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-3 bg-blue-50 rounded-lg">
+                <div class="text-sm text-gray-600">Location</div>
+                <div class="font-medium">{selectedProgram.location}</div>
+              </div>
+              <div class="p-3 bg-blue-50 rounded-lg">
+                <div class="text-sm text-gray-600">Degree Type</div>
+                <div class="font-medium">{selectedProgram.degreeType}</div>
+              </div>
+              <div class="p-3 bg-blue-50 rounded-lg col-span-2">
+                <div class="text-sm text-gray-600">Application Deadline</div>
+                <div class="font-medium">{selectedProgram.deadline}</div>
+              </div>
+            </div>
 
-          <img style="width:200px, height:200px" src={selectedProgram.url}>
-          <br>
-          <button on:click={saveProgram} class="bg-blue-500 text-white mt-2 px-4 py-2 rounded hover:bg-blue-600">
-            Save to My Programs
-          </button>
+            <img 
+              src={selectedProgram.url}
+              alt={selectedProgram.university}
+              class="w-full h-48 object-cover rounded-lg shadow-md"
+            />
 
-          <!-- Send Reminder -->
-          <h4 class="mt-4">Set Reminder</h4>
-          <input
-            type="email"
-            bind:value={email}
-            placeholder="Your email address"
-            class="w-full p-2 border rounded mb-2"
-          />
-          <button on:click={sendReminder} class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
-            Set Reminder
-          </button>
+            <button 
+              on:click={saveProgram}
+              class="w-full py-3 bg-blue-600 text-white rounded-lg font-medium
+                     hover:bg-blue-700 transform hover:scale-105 transition-all duration-200"
+            >
+              Save to My Programs
+            </button>
 
-          <!-- Display reminder message -->
-          {#if reminderMessage}
-            <p class="mt-2 text-green-600 font-semibold">{reminderMessage}</p>
-          {/if}
+            <!-- Reminder Section -->
+            <div class="mt-6 space-y-3">
+              <h4 class="font-semibold text-gray-700">Set Reminder</h4>
+              <input
+                type="email"
+                bind:value={email}
+                placeholder="Your email address"
+                class="w-full px-4 py-3 rounded-lg border-2 border-blue-100 
+                       focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+              />
+              <button 
+                on:click={sendReminder}
+                class="w-full py-3 bg-green-600 text-white rounded-lg font-medium
+                       hover:bg-green-700 transform hover:scale-105 transition-all duration-200"
+              >
+                Set Reminder
+              </button>
+            </div>
+
+            {#if reminderMessage}
+              <div class="mt-3 p-3 bg-green-100 text-green-700 rounded-lg">
+                {reminderMessage}
+              </div>
+            {/if}
+          </div>
         {:else}
-          <p>Select a program to view details.</p>
+          <p class="text-gray-500 text-center py-4">Select a program to view details.</p>
         {/if}
       </div>
     </div>
 
     <!-- Saved Programs Section -->
-    <div class="bg-gray-100 border-2 border-easypath-blue p-4 rounded-lg h-fit sticky top-0 mt-8">
-      <h2 class="text-xl font-semibold mb-4 text-easypath-blue">Saved Programs</h2>
+    <div class="mt-8 bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+      <h2 class="text-2xl font-semibold mb-6 text-blue-900">Saved Programs</h2>
+      
       {#if savedPrograms.length > 0}
-        <ul>
+        <ul class="space-y-3">
           {#each savedPrograms as program}
-            <li class="mb-2 bg-white hover:bg-gray-200 p-2 rounded-lg">
-              {program.name} at {program.university} <br>
-              <strong>Deadline:</strong> {program.deadline}
+            <li class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <div class="font-semibold text-blue-900">{program.name}</div>
+              <div class="text-gray-600">{program.university}</div>
+              <div class="text-sm text-gray-500 mt-1">
+                <strong>Deadline:</strong> {program.deadline}
+              </div>
             </li>
           {/each}
         </ul>
-        <button on:click={clearSavedPrograms} class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mt-4">
+        
+        <button 
+          on:click={clearSavedPrograms}
+          class="mt-6 w-full py-3 bg-red-600 text-white rounded-lg font-medium
+                 hover:bg-red-700 transform hover:scale-105 transition-all duration-200"
+        >
           Clear Program List
         </button>
       {:else}
-        <p>You haven't saved any programs yet.</p>
+        <p class="text-gray-500 text-center py-4">You haven't saved any programs yet.</p>
       {/if}
     </div>
   </section>
 
-<section class="decision-support">
-  {#if savedPrograms.length > 0}
-  <DecisionSupport {savedPrograms} />
-{:else}
-  <div class="mt-8 text-center text-gray-600">
-    Save some programs to start comparing them
-  </div>
-{/if}
-</section>
+  <!-- Decision Support Section -->
+  <section class="mt-8">
+    {#if savedPrograms.length > 0}
+      <DecisionSupport {savedPrograms} />
+    {:else}
+      <div class="text-center text-gray-500 py-8">
+        Save some programs to start comparing them
+      </div>
+    {/if}
+  </section>
 </main>
 
 <style>
-
-  .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 85vh;
-    padding: 2rem 0;
-    background-color: #f0f8ff;
-    /* margin-bottom: 2rem; Separation from the section below */
-    height: 100%;
+  /* Keep only necessary custom styles */
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
-  .hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 2rem;
+  @keyframes fade-in-delayed {
+    0% { opacity: 0; transform: translateY(-20px); }
+    50% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
   }
 
-  .hero-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 1rem;
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
   }
 
-  .hero-text h1 {
-    margin-bottom: 1rem;
-    font-size: 3.2rem;
-    color: #1e3a8a;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    animation: fadeInDown 1s ease-out;
+  .animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
   }
 
-  .hero-text h2 {
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-    color: #3b82f6;
-    font-weight: 500;
-    animation: fadeInUp 1s ease-out 0.5s;
-    animation-fill-mode: both;
+  .animate-fade-in-delayed {
+    animation: fade-in-delayed 2s ease-out forwards;
   }
 
-  .action-link {
-    background-color: #1e3a8a;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    display: inline-block;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
-
-  .action-link:hover {
-    background-color: #3b82f6;
-  }
-
-  .h2 {
-    color: #007bff;
-  }
-
-
-  #search-section {
-    margin-top: 200px;
-    scroll-margin-top: 150px;
-
-    color: #555;
-
-    /*Allow overflow to fix display bug when result list and/or saved programs list is expanded dynamically*/
-    /*Display bug: search-section is expanded but footer does not move, causing footer to not stay on screen bottom and to overlay contents*/
-    overflow: auto;
-  
-    /*From W3School*/
-    /* Hide scrollbar for IE, Edge and Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-	}
-
-  /*From W3School*/
-	/* Hide scrollbar for Chrome, Safari and Opera */
-	#search-section::-webkit-scrollbar {
-	  display: none;
-	}
-
-
-  .hero-image img {
-    width: 80%; /* Adjust the size as per your preference */
-    border-radius: 50%; /* Make the image rounded */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increased shadow */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition for both transform and shadow */
-    animation: move 3s infinite alternate ease-in-out; /* Subtle moving animation */
-  }
-
-  .hero-image img:hover {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Add more shadow on hover */
-  }
-
-  /* Keyframes for moving animation */
-  @keyframes move {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-10px); /* Adjust the movement distance */
-    }
-  }
-
-
 </style>
