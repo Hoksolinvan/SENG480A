@@ -9,9 +9,12 @@
     return daysLeft;
   }
 </script>
-
+{#if programs.length !== 0 }
+<h2 class="text-2xl font-bold mb-6">Your Program Timeline</h2>
 {#each programs as program}
+
   <div class="bg-white p-4 shadow rounded-lg border border-gray-200">
+    
     <h3 class="text-lg font-semibold text-gray-700">{program.name}</h3>
     <p class="text-gray-500">Deadline: {program.deadline}</p>
     <p class="text-gray-600">Days Remaining: {getRemainingTime(program.deadline)}</p>
@@ -25,4 +28,5 @@
     </div>
   </div>
 {/each}
+{/if}
 

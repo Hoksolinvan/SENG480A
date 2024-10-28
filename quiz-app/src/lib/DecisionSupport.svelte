@@ -188,6 +188,6 @@
 
 <!-- Integrating the TimelineDashboard for tracked programs -->
 <section>
-  <h2>Your Program Timeline</h2>
+  
   <TimelineDashboard programs={trackedPrograms} />
 </section>
