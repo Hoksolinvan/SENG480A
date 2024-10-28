@@ -6,16 +6,15 @@
 		Email = document.getElementById("email").value;
 		Password= document.getElementById("password").value;
 
-		Form = [Email, Password];
-
+		// Form = [Email, Password];
 		post_Login();
 
 		if(localStorage.getItem("loginPassed")=="true"){
-			localStorage.removeItem("loginPassed");
 			// Enter code to load Profile page here
 			// Testing code. Remove when actual functionality has been implemented
 			document.getElementById("login-fail").textContent = "Log in successful. You will be redirected to your Profile page soon.";
 			// End of testing code
+			localStorage.removeItem("loginPassed");
 		}
 		else if(localStorage.getItem("loginFailed")=="true"){
 			document.getElementById("login-fail").textContent = "Incorrect email address or password. Please check and try again.";
@@ -32,8 +31,13 @@
 	}
 
 	async function post_Login() {
-		localStorage.setItem("loginFailed", "true");
-
+		// dummy account
+		if (Email == "demo@easypath.ca" & Password == "password") {
+		 	localStorage.setItem("loginPassed", "true");
+		}
+		else{
+			localStorage.setItem("loginFailed", "true");
+		}
 	}
 </script>
 
