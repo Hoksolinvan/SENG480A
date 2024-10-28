@@ -38,6 +38,13 @@
         (law && program.name.toLowerCase() == "law")
       )
     );
+
+    // Empty filteredPrograms when all search input fields are emptied
+    if (searchQuery === "" && filters.location === "" && filters.degreeType === "" && 
+    !computer_science && !business_administration && !psychology && !biology && !law
+    ){
+      filteredPrograms = [];
+    }
   }
 
   function handleInteraction() {
