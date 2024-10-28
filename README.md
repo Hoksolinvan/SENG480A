@@ -22,7 +22,7 @@ Link to Milestone 1 presentation: https://www.canva.com/design/DAGRC0MMUi8/RBngg
 
 Link to Milestone 2 presentation: https://www.canva.com/design/DAGTA_SAHEM/Evjbf56aBUb0IXfSK_wz_A/
 
-License information: TBD
+License information: Copy-righted. All rights reserved by the developers of EasyPath.
 
 Use and Installation: click the link and start right away! There is no need to install anything additional.
 
