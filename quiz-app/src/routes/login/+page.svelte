@@ -39,6 +39,8 @@
 			localStorage.setItem("loginFailed", "true");
 		}
 	}
+
+	
 </script>
 
 <main>
@@ -57,6 +59,21 @@
 			<div>
 				<label for="password">Password:</label>
 				<input type="password" id="password" name="password" placeholder="Enter Password"  bind:value={Password} required />
+				<input type="checkbox" id="show" style="width: auto;" onclick="showPassword()"> 
+				<label for="show" style="font-weight: normal; color: #555; display: inline">
+					Show password
+				</label>
+
+				<script>
+					function showPassword() {
+						var passw = document.getElementById("password");
+						if (passw.type === "password") {
+							passw.type = "text";
+						} else {
+							passw.type = "password";
+						}
+					} 
+				</script>
 			</div>
 
 			<p id="login-fail">
