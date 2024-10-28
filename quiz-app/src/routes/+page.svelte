@@ -52,17 +52,24 @@
   function selectProgram(program) {
   if (!selectedProgram.some(p => p.id === program.id)) {
     // selectedProgram = [...selectedProgram, program];
+
+    // Set the new program to be at the beginning of the list
+    // To ensure proper display in the "Program information" panel
     selectedProgram = [program].concat(selectedProgram);
   }
 }
 
 function saveProgram() {
+  // if (selectedProgram.length > 0) {
+  //   selectedProgram.forEach(program => {
+  //     if (!savedPrograms.some(p => p.id === program.id)) {
+  //       savedPrograms = [...savedPrograms, program];
+  //     }
+  //   });
   if (selectedProgram.length > 0) {
-    selectedProgram.forEach(program => {
-      if (!savedPrograms.some(p => p.id === program.id)) {
-        savedPrograms = [...savedPrograms, program];
+    if (!savedPrograms.some(p => p.id === selectedProgram[0].id)) {
+        savedPrograms = [...savedPrograms, selectedProgram[0]];
       }
-    });
     sortSavedProgramsByDeadline();
   }
 }
