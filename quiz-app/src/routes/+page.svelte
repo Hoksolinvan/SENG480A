@@ -51,7 +51,8 @@
 
   function selectProgram(program) {
   if (!selectedProgram.some(p => p.id === program.id)) {
-    selectedProgram = [...selectedProgram, program];
+    // selectedProgram = [...selectedProgram, program];
+    selectedProgram = [program].concat(selectedProgram);
   }
 }
 
@@ -254,31 +255,32 @@ function saveProgram() {
         <h2 class="text-2xl font-semibold mb-6 text-blue-900">Program Information</h2>
         
         {#if selectedProgram && selectedProgram[0]}
-  <div class="space-y-4">
-    <h3 class="text-xl font-semibold text-blue-800">
-      {selectedProgram[0].name} at {selectedProgram[0].university}
-    </h3>
-    
-    <div class="grid grid-cols-2 gap-4">
-      <div class="p-3 bg-blue-50 rounded-lg">
-        <div class="text-sm text-gray-600">Location</div>
-        <div class="font-medium">{selectedProgram[0].location}</div>
-      </div>
-      <div class="p-3 bg-blue-50 rounded-lg">
-        <div class="text-sm text-gray-600">Degree Type</div>
-        <div class="font-medium">{selectedProgram[0].degreeType}</div>
-      </div>
-      <div class="p-3 bg-blue-50 rounded-lg col-span-2">
-        <div class="text-sm text-gray-600">Application Deadline</div>
-        <div class="font-medium">{selectedProgram[0].deadline}</div>
-      </div>
-    </div>
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-blue-800">
+            {selectedProgram[0].name} at {selectedProgram[0].university}
+          </h3>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-3 bg-blue-50 rounded-lg">
+              <div class="text-sm text-gray-600">Location</div>
+              <div class="font-medium">{selectedProgram[0].location}</div>
+            </div>
+            <div class="p-3 bg-blue-50 rounded-lg">
+              <div class="text-sm text-gray-600">Degree Type</div>
+              <div class="font-medium">{selectedProgram[0].degreeType}</div>
+            </div>
+            <div class="p-3 bg-blue-50 rounded-lg col-span-2">
+              <div class="text-sm text-gray-600">Application Deadline</div>
+              <div class="font-medium">{selectedProgram[0].deadline}</div>
+            </div>
+          </div>
 
-    <img 
-    src={selectedProgram[0].url}
-    alt={selectedProgram[0].university}
-    class="w-full h-48 object-cover rounded-lg shadow-md"
-  />
+          <img 
+          src={selectedProgram[0].url}
+          alt={selectedProgram[0].university}
+          class="w-full h-48 object-cover rounded-lg shadow-md"
+        />
+
 
             <button 
               on:click={saveProgram}
