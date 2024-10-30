@@ -9,7 +9,7 @@
 
   // Function to toggle the visibility of the program list
   function toggleProgramList() {
-    showPrograms = true;
+    showPrograms = searchQuery.trim().length > 0 || filters.location.trim().length > 0;
   }
 
   let searchQuery = '';
@@ -34,6 +34,14 @@
   let showSavedPrograms = false;
 
   $: {
+  filteredPrograms = programs.filter(program =>
+    (searchQuery.trim() !== '' || filters.location.trim() !== '') && // display if either field has content
+    (searchQuery.trim() === '' || program.name.toLowerCase().includes(searchQuery.toLowerCase())) &&
+    (filters.location.trim() === '' || program.location.toLowerCase().includes(filters.location.toLowerCase()))
+  );
+}
+
+  /* $: {
     filteredPrograms = programs.filter(program =>
       program.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
       (filters.location === '' || program.location.toLowerCase().includes(filters.location.toLowerCase())) &&
@@ -46,7 +54,7 @@
         (law && program.name.toLowerCase() === "law")
       )
     );
-  }
+  } */
 
   function selectProgram(program) {
     if (!selectedProgram.some(p => p.id === program.id)) {
