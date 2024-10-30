@@ -49,9 +49,15 @@
   }
 
   function selectProgram(program) {
-    if (!selectedProgram.some(p => p.id === program.id)) {
-      selectedProgram = [program].concat(selectedProgram);
+    // remove program from selectedProgram if it is already in there
+    // will add it back again at index 0
+    if (selectedProgram.some(p => p.id === program.id)) {
+      let i = selectedProgram.indexOf(program);
+      selectedProgram.splice(i, i+1);
     }
+    // add program to index 0
+    //selectedProgram.unshift(program);  does not work for some reason
+    selectedProgram = [program].concat(selectedProgram);
   }
 
   function saveProgram() {
