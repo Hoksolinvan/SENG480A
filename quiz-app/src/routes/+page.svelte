@@ -9,7 +9,7 @@
     quote: "EasyPath made finding the right program so simple and stress-free!"
   },
   {
-    name: "Kiran Patel",
+    name: "John Patel",
     role: "Grade 12 Student",
     image: "./s1.png",
     quote: "All my application deadlines in one place—no more stress!"
