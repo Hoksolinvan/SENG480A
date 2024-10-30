@@ -246,9 +246,8 @@
             </div>
 
             <button 
-              on:click={saveProgram}
-              class="w-full py-3 bg-blue-600 text-white rounded-lg font-medium
-                     hover:bg-blue-700 transform hover:scale-105 transition-all duration-200"
+                on:click={saveProgram}
+                class="w-full py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-900 transform hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out"
             >
               Save Program
             </button>
