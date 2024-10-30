@@ -10,7 +10,7 @@
   }
 </script>
 {#if programs.length !== 0 }
-<h2 class="text-2xl font-bold mb-6">Your Program Timeline</h2>
+<h2 class="text-2xl font-bold mb-6 text-blue-900">Application Deadlines</h2>
 {#each programs as program}
 
   <div class="bg-white p-4 shadow rounded-lg border border-gray-200">
