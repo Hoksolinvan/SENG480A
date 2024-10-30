@@ -5,19 +5,19 @@
     {
       name: "Sarah Chen",
       role: "Computer Science Graduate",
-      image: "/testimonial1.webp",
+      image: "./s2.png",
       quote: "This platform helped me find the perfect Computer Science program. The comparison tools were invaluable in my decision-making process."
     },
     {
       name: "Michael Rodriguez",
       role: "Business School Student",
-      image: "/testimonial2.webp",
+      image: "./s1.png",
       quote: "The program finder made my graduate school search so much easier. I found my dream Business Administration program in just a few clicks!"
     },
     {
-      name: "Emily Parker",
+      name: "Ryan Parker",
       role: "Psychology Major",
-      image: "/testimonial3.webp",
+      image: "./s3.png",
       quote: "The detailed program comparisons and deadline reminders helped me stay organized throughout my application process."
     }
   ];
@@ -69,20 +69,25 @@
       <h2 class="text-3xl font-bold text-blue-900 text-center mb-12">Why Choose Our Platform</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="p-6 bg-blue-50 rounded-xl">
-          <div class="text-blue-600 text-4xl mb-4">🔍</div>
-          <h3 class="text-xl font-semibold text-blue-900 mb-2">Smart Search</h3>
-          <p class="text-gray-600">Find programs that match your interests and criteria with our advanced filtering system.</p>
+          <div class="text-blue-600 text-4xl mb-4">⏰</div>
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">Deadline Tracking</h3>
+          <p class="text-gray-600">Never miss an application deadline with our reminder system.</p>
         </div>
+
         <div class="p-6 bg-blue-50 rounded-xl">
           <div class="text-blue-600 text-4xl mb-4">📊</div>
           <h3 class="text-xl font-semibold text-blue-900 mb-2">Easy Comparison</h3>
           <p class="text-gray-600">Compare different programs side by side to make informed decisions.</p>
         </div>
+
         <div class="p-6 bg-blue-50 rounded-xl">
-          <div class="text-blue-600 text-4xl mb-4">⏰</div>
-          <h3 class="text-xl font-semibold text-blue-900 mb-2">Deadline Tracking</h3>
-          <p class="text-gray-600">Never miss an application deadline with our reminder system.</p>
+          
+          <div class="text-blue-600 text-4xl mb-4">🔍</div>
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">Smart Search</h3>
+          <p class="text-gray-600">Find programs that match your interests and criteria with our advanced filtering system.</p>
         </div>
+        
+        
       </div>
     </div>
   </section>
@@ -90,27 +95,30 @@
   <!-- Testimonials Section -->
   <section class="py-20 bg-blue-50">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-blue-900 text-center mb-12">What Our Users Say</h2>
+      <h2 class="text-3xl font-bold text-blue-900 text-center mb-12">What Students Say About EasyPath</h2>
       <div class="grid md:grid-cols-3 gap-8">
         {#each testimonials as testimonial}
-          <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-duration-300">
+          <div class="bg-gradient-to-br from-blue-100 to-white p-8 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 relative">
             <img 
               src={testimonial.image} 
               alt={testimonial.name}
-              class="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+              class="w-20 h-20 rounded-full mb-4 object-cover float-left mr-4"
             />
-            <p class="text-gray-600 italic mb-4">{testimonial.quote}</p>
-            <div class="text-center">
-              <h4 class="font-semibold text-blue-900">{testimonial.name}</h4>
-              <p class="text-sm text-blue-600">{testimonial.role}</p>
-            </div>
+  
+            <p class="text-gray-600 italic mb-6 pl-2">{testimonial.quote}</p>
+  
+            <!-- Right-aligned name at the bottom -->
+            <p class="text-blue-900 font-semibold text-right mt-8">{testimonial.name}</p>
           </div>
         {/each}
       </div>
     </div>
   </section>
+  
+  
+  
 
-  <!-- CTA Section -->
+  <!-- call to action section -->
   <section class="py-20 bg-blue-900 text-white">
     <div class="max-w-4xl mx-auto text-center px-6">
       <h2 class="text-3xl font-bold mb-6">Ready to Find Your Perfect Program?</h2>
