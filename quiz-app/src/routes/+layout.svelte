@@ -60,7 +60,7 @@
 		background-color: #ffffff;
 		padding: 0.5rem 0;
 		transition: 0.5s;
-		border-bottom: 2px solid transparent;
+		/* border-bottom: 2px solid transparent; */
 		z-index: 1;
 		width: 100%;
 	}
