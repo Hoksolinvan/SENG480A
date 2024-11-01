@@ -15,7 +15,7 @@
     quote: "All my application deadlines in one place—no more stress!"
   },
   {
-    name: "Janelle Nguyen",
+    name: "Marcus Brown",
     role: "Future Arts Major",
     image: "./s3.png",
     quote: "EasyPath's reminders kept me organized and focused. Loved it!"
