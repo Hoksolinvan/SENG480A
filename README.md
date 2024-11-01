@@ -29,11 +29,11 @@ Initial Pitch presentation: https://github.com/Hoksolinvan/SENG480A/blob/main/Pr
 
 Milestone 1 presentation: https://github.com/Hoksolinvan/SENG480A/blob/main/Presentations/Milestone%201.pdf
 
-Milestone 2 presentation:
+Milestone 2 presentation: https://github.com/Hoksolinvan/SENG480A/blob/main/Presentations/Milestone%202%20(1).pdf
 
 ## Copyright
 
-License information: Copy-righted. All rights reserved by the developers of EasyPath.
+License information: Copy-righted. All rights reserved by the developers of EasyPath. 
 
 
 -- Built for a class project in the Startup Programming class, Fall 2024, University of Victoria.
