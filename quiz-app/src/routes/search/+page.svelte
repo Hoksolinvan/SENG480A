@@ -9,7 +9,7 @@
 
   // Function to toggle the visibility of the program list
   function toggleProgramList() {
-    showPrograms = true;
+    showPrograms = searchQuery.trim().length > 0 || filters.location.trim().length > 0;
   }
 
   let searchQuery = '';
@@ -34,6 +34,14 @@
   let showSavedPrograms = false;
 
   $: {
+  filteredPrograms = programs.filter(program =>
+    (searchQuery.trim() !== '' || filters.location.trim() !== '') && // display if either field has content
+    (searchQuery.trim() === '' || program.name.toLowerCase().includes(searchQuery.toLowerCase())) &&
+    (filters.location.trim() === '' || program.location.toLowerCase().includes(filters.location.toLowerCase()))
+  );
+}
+
+  /* $: {
     filteredPrograms = programs.filter(program =>
       program.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
       (filters.location === '' || program.location.toLowerCase().includes(filters.location.toLowerCase())) &&
@@ -46,7 +54,7 @@
         (law && program.name.toLowerCase() === "law")
       )
     );
-  }
+  } */
 
   function selectProgram(program) {
     // remove program from selectedProgram if it is already in there
@@ -244,9 +252,8 @@
             </div>
 
             <button 
-              on:click={saveProgram}
-              class="w-full py-3 bg-blue-600 text-white rounded-lg font-medium
-                     hover:bg-blue-700 transform hover:scale-105 transition-all duration-200"
+                on:click={saveProgram}
+                class="w-full py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-900 transform hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out"
             >
               Save Program
             </button>

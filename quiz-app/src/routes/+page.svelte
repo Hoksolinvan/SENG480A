@@ -2,25 +2,25 @@
   import { goto } from '$app/navigation';
 
   const testimonials = [
-    {
-      name: "Sarah Chen",
-      role: "Computer Science Graduate",
-      image: "./s2.png",
-      quote: "This platform helped me find the perfect Computer Science program. The comparison tools were invaluable in my decision-making process."
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "Business School Student",
-      image: "./s1.png",
-      quote: "The program finder made my graduate school search so much easier. I found my dream Business Administration program in just a few clicks!"
-    },
-    {
-      name: "Ryan Parker",
-      role: "Psychology Major",
-      image: "./s3.png",
-      quote: "The detailed program comparisons and deadline reminders helped me stay organized throughout my application process."
-    }
-  ];
+  {
+    name: "Avery Thompson",
+    role: "High School Senior",
+    image: "./s2.png",
+    quote: "EasyPath made finding the right program so simple and stress-free!"
+  },
+  {
+    name: "John Patel",
+    role: "Grade 12 Student",
+    image: "./s1.png",
+    quote: "All my application deadlines in one place—no more stress!"
+  },
+  {
+    name: "Marcus Brown",
+    role: "Future Arts Major",
+    image: "./s3.png",
+    quote: "EasyPath's reminders kept me organized and focused. Loved it!"
+  }
+];
 
   function navigateToSearch() {
     goto('/search');
