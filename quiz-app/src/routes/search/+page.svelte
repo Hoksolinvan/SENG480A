@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import DecisionSupport from '$lib/DecisionSupport.svelte';
+  import Housing from '$lib/Housing.svelte';
   import ProgramComparison from '$lib/ProgramComparison.svelte';
   import ProgramList from '$lib/ProgramList.js';
   
@@ -11,6 +12,26 @@
   function toggleProgramList() {
     showPrograms = searchQuery.trim().length > 0 || filters.location.trim().length > 0;
   }
+
+  var items=[];
+  let newItem='';
+  onMount(() => {
+        // Retrieve value from localStorage
+        const storedValue = localStorage.getItem('myArray');
+        items = storedItemsString ? JSON.parse(storedItemsString) : [];
+    });
+
+    function addItem() {
+    
+
+        items = savedPrograms; // Add the new item to the array
+        
+        localStorage.setItem('myArray', JSON.stringify(items));
+        
+        newItem = '';
+  
+}
+
 
   let searchQuery = '';
   let computer_science = false;
@@ -66,6 +87,7 @@
     if (selectedProgram.length > 0) {
       if (!savedPrograms.some(p => p.id === selectedProgram[0].id)) {
         savedPrograms = [...savedPrograms, selectedProgram[0]];
+                addItem();
       }
       sortSavedProgramsByDeadline();
     }
@@ -101,6 +123,7 @@
   function clearSavedPrograms() {
     savedPrograms = [];
     selectedProgram = [];
+    localStorage.clear();
   }
 
   function toggleComparison() {
@@ -324,6 +347,7 @@
         {#if showComparison}
           <div class="mt-6">
             <ProgramComparison {selectedProgram} />
+            <Housing />
           </div>
         {/if}
       </div>

@@ -57,8 +57,15 @@
               </td>
             {/each}
           </tr>
-          <!-- Deadline Row -->
+          <!-- Grade Requirement -->
           <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Grade Requirement </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                69%
+            </td>
+          </tr>
+          <!-- Deadline Row -->
+          <tr class="bg-gray-50">
             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Application Deadline</td>
             {#each selectedProgram as program}
               <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -67,7 +74,7 @@
             {/each}
           </tr>
           <!-- Cost Row -->
-          <tr class="bg-gray-50">
+          <tr>
             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Cost</td>
             {#each selectedProgram as program}
               <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -90,7 +97,9 @@
           </tr>
         </tbody>
       </table>
+
     </div>
+
   {:else}
     <div class="text-center py-8 text-gray-500">
       <p>Select programs to compare them side by side.</p>
