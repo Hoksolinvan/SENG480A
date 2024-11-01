@@ -11,6 +11,7 @@
 		
 		<nav class="nav">
 			<ul>
+				<!-- <li><a href="/scholarships" class="nav-link">SCHOLARSHIPS </a></li> -->
 				<li><a href="/about" class="nav-link">ABOUT US</a></li>
 				<li><a href="/contact" class="nav-link">CONTACT</a></li>
 				<li><a href="/login" class="nav-button">LOG IN</a></li>
