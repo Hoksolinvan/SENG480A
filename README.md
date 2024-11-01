@@ -10,21 +10,31 @@ We are a team of five:
 - Hoksolinvan Chhun (chhunhoksolinvan.prof@gmail.com)
 - Harry Lam (theduonglam@uvic.ca)
 
+## App Access
 Link to project: https://seng480a.netlify.app
 
 Link to project (alternative): https://seng-480-a.vercel.app/
+
+Use and Installation: click the link and start right away! There is no need to install anything additional.
+
+## Github Repository and other Documentations
 
 Link to project's github repository: https://github.com/Hoksolinvan/SENG480A
 
 Link to project's github Wiki: https://github.com/Hoksolinvan/SENG480A/wiki
 
-Link to Milestone 1 presentation: https://www.canva.com/design/DAGRC0MMUi8/RBnggOOEV9mTH9cMydqFNg/
+## Presentations
 
-Link to Milestone 2 presentation: https://www.canva.com/design/DAGTA_SAHEM/Evjbf56aBUb0IXfSK_wz_A/
+Initial Pitch presentation: https://github.com/Hoksolinvan/SENG480A/blob/main/Presentations/COM%20450%20Pitch%20%231.pdf
+
+Milestone 1 presentation: https://github.com/Hoksolinvan/SENG480A/blob/main/Presentations/Milestone%201.pdf
+
+Milestone 2 presentation:
+
+## Copyright
 
 License information: Copy-righted. All rights reserved by the developers of EasyPath.
 
-Use and Installation: click the link and start right away! There is no need to install anything additional.
 
 -- Built for a class project in the Startup Programming class, Fall 2024, University of Victoria.
 
