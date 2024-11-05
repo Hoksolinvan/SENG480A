@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from 'svelte';
+  //import { onMount } from 'svelte';
   import DecisionSupport from '$lib/DecisionSupport.svelte';
   import Housing from '$lib/Housing.svelte';
   import ProgramComparison from '$lib/ProgramComparison.svelte';
@@ -13,24 +13,24 @@
     showPrograms = searchQuery.trim().length > 0 || filters.location.trim().length > 0;
   }
 
-  var items=[];
-  let newItem='';
-  onMount(() => {
+  //var items=[];
+  //let newItem='';
+  //onMount(() => {
         // Retrieve value from localStorage
-        const storedValue = localStorage.getItem('myArray');
-        items = storedItemsString ? JSON.parse(storedItemsString) : [];
-    });
+        //const storedValue = localStorage.getItem('myArray');
+        //items = storedItemsString ? JSON.parse(storedItemsString) : [];
+    //});
 
-    function addItem() {
+    //function addItem() {
     
 
-        items = savedPrograms; // Add the new item to the array
+       // items = savedPrograms; // Add the new item to the array
         
-        localStorage.setItem('myArray', JSON.stringify(items));
+       // localStorage.setItem('myArray', JSON.stringify(items));
         
-        newItem = '';
+      //  newItem = '';
   
-}
+//}
 
 
   let searchQuery = '';
@@ -93,7 +93,7 @@
     if (selectedProgram.length > 0) {
       if (!savedPrograms.some(p => p.id === selectedProgram[0].id)) {
         savedPrograms = [...savedPrograms, selectedProgram[0]];
-                addItem();
+                //addItem();
       }
       sortSavedProgramsByDeadline();
     }
