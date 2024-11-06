@@ -482,7 +482,7 @@ const ProgramList = [
 		deadline: '2024-12-10',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
 		cost: 22000 // Moderate cost for Bachelor's in Victoria, BC
-	}
+	},
 	
 
 	//Van's pseudo data
