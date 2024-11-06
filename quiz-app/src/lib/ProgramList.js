@@ -1222,7 +1222,7 @@ const ProgramList = [
 		deadline: "2025-02-01",
 		url: "https://www.macewan.ca/education/apply.png",
 		cost: 11000
-	}
+	},
 	{
 		id: 112,
 		name: "Business Administration",
