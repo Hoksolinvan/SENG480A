@@ -55,12 +55,14 @@
   let showSavedPrograms = false;
 
   $: {
-  filteredPrograms = programs.filter(program =>
-    (searchQuery.trim() !== '' || filters.location.trim() !== '') && // display if either field has content
-    (searchQuery.trim() === '' || program.name.toLowerCase().includes(searchQuery.toLowerCase())) &&
-    (filters.location.trim() === '' || program.location.toLowerCase().includes(filters.location.toLowerCase()))
-  );
-}
+    filteredPrograms = programs.filter(program =>
+      (searchQuery.trim() || filters.location.trim()) && // display if either field has content
+      (searchQuery.trim() === '' || program.name.toLowerCase().includes(searchQuery.toLowerCase())) &&
+      (filters.location.trim() === '' || program.location.toLowerCase().includes(filters.location.toLowerCase()))
+    );
+    // Ensure program list visibility based on current filters
+    showPrograms = filteredPrograms.length > 0;
+  }
 
   /* $: {
     filteredPrograms = programs.filter(program =>
@@ -166,7 +168,7 @@
                    focus:outline-none transition-all duration-300"
           />
           
-          <select 
+          <!-- <select 
             bind:value={filters.degreeType}
             class="px-4 py-3 rounded-2xl shadow-lg focus:ring-4 focus:ring-blue-300 
                    focus:outline-none transition-all duration-300 bg-white"
@@ -175,7 +177,7 @@
             <option value="Bachelor">Bachelor</option>
             <option value="Master">Master</option>
             <option value="PhD">PhD</option>
-          </select>
+          </select> -->
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+// costofliving ? https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=Canada&country2=Canada&city1=Victoria%2C+BC&city2=Vancouver%2C+BC&tracking=getDispatchComparison
+
 const ProgramList = [
 	{
 		id: 1,
