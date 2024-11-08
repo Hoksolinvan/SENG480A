@@ -167,7 +167,69 @@
             class="px-4 py-3 rounded-2xl shadow-lg focus:ring-4 focus:ring-blue-300 
                    focus:outline-none transition-all duration-300"
           />
-          
+
+          <!-- Location filter displayed in list checkbox form -->
+
+          <!-- <div style="position: relative; display: inline-block;">
+            <button onclick="myFunction()" id="dropbtn" class="bg-white px-4 py-3 rounded-2xl shadow-lg focus:ring-4 focus:ring-blue-300 
+            focus:outline-none transition-all duration-300 w-full text-gray-400 text-lg">Location</button>
+            <div id="myDropdown" class="locationList">
+              {#each [["BC", ['Vancouver, BC', 'Victoria, BC', "Kelowna, BC"]], ["AB", ["Calgary", "Edmonton"]]] as location}
+               <label class="locationBox">
+                <input type="checkbox" value={location[0]} bind:group={filters.location} class="locBoxinput"> {location[0]}
+                  {#each location[1] as city}
+                    <label class="locationBox">
+                      <input type="checkbox" value={city} bind:group={filters.location} class="locBoxinput"> {city}
+                    </label>
+                  {/each}
+               </label>
+              {/each}
+            </div>
+          </div> 
+
+          <style>
+            .locationList {
+              display: none;
+              position: absolute;
+              min-width: 160px;
+              z-index: 1;
+            }
+
+            .locationBox {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+              background-color: #f1f1f1;
+            }
+
+            .show {display:block;} 
+          </style>
+
+          <script>
+            /* When the user clicks on the button,
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+
+            // Close the dropdown menu if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.locBoxinput, .locationBox, #dropbtn')) {
+                var dropdowns = document.getElementsByClassName("locationList");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            } 
+          </script> -->
+
+          <!-- End of list checkbox location field code -->
+
           <!-- <select 
             bind:value={filters.degreeType}
             class="px-4 py-3 rounded-2xl shadow-lg focus:ring-4 focus:ring-blue-300 
