@@ -4,6 +4,7 @@
   import Housing from '$lib/Housing.svelte';
   import ProgramComparison from '$lib/ProgramComparison.svelte';
   import ProgramList from '$lib/ProgramList.js';
+  import "./search_css.css";
   
   // Flag to control program list visibility
   let showPrograms = false;
@@ -42,7 +43,11 @@
   let programs = ProgramList;
 
   let filters = {
-    location: '',
+    // initialization for text-input based location search
+    // location: '',
+
+    // initialization for check-box based location search
+    location: [],
     degreeType: '',
   };
 
@@ -54,11 +59,25 @@
   let showComparison = false;
   let showSavedPrograms = false;
 
+
+  // Input parsing for text-input based location search
+  // $: {
+  //   filteredPrograms = programs.filter(program =>
+  //     (searchQuery.trim() || filters.location.trim()) && // display if either field has content
+  //     (searchQuery.trim() === '' || program.name.toLowerCase().includes(searchQuery.toLowerCase())) &&
+  //     (filters.location.trim() === '' || program.location.toLowerCase().includes(filters.location.toLowerCase()))
+  //   );
+  //   // Ensure program list visibility based on current filters
+  //   showPrograms = filteredPrograms.length > 0;
+  // }
+
+
+  // Input parsing for check-box based location search
   $: {
     filteredPrograms = programs.filter(program =>
-      (searchQuery.trim() || filters.location.trim()) && // display if either field has content
+      (searchQuery.trim() || filters.location[0]) && // display if either field has content
       (searchQuery.trim() === '' || program.name.toLowerCase().includes(searchQuery.toLowerCase())) &&
-      (filters.location.trim() === '' || program.location.toLowerCase().includes(filters.location.toLowerCase()))
+      (filters.location[0] === '' || program.location.toLowerCase().includes(filters.location[0].toLowerCase()))
     );
     // Ensure program list visibility based on current filters
     showPrograms = filteredPrograms.length > 0;
@@ -173,40 +192,6 @@
         />
         </div>
         
-
-
-        <style>
-          #mainInputContainer{
-            position: relative;
-            display: inline-block;
-          }
-          .autocomplete-items {
-            /* position: absolute; */
-            border: 1px solid #d4d4d4;
-            border-bottom: none;
-            border-top: none;
-            z-index: 99;
-            /*position the autocomplete items to be the same width as the container:*/
-            top: 100%;
-            left: 0;
-            right: 0;
-          }
-          .autocomplete-items div {
-            padding: 10px;
-            cursor: pointer;
-            background-color: #fff;
-            border-bottom: 1px solid #d4d4d4;
-          }
-          .autocomplete-items div:hover {
-            /*when hovering an item:*/
-            background-color: #e9e9e9;
-          }
-          .autocomplete-active {
-            /*when navigating through the items using the arrow keys:*/
-            background-color: DodgerBlue !important;
-            color: #ffffff;
-          }
-        </style>
         <script>
           function autocomplete(inp, arr) {
         /*the autocomplete function takes two arguments,
@@ -314,21 +299,25 @@
         
         <!-- Filters Row -->
         <div class="grid md:grid-cols-2 gap-4">
-          <input
+
+          <!-- Location filter displayed in text-input form -->
+
+          <!-- <input
             type="text"
             bind:value={filters.location}
             placeholder="Location..."
             class="px-4 py-3 rounded-2xl shadow-lg focus:ring-4 focus:ring-blue-300 
                    focus:outline-none transition-all duration-300"
-          />
+          /> -->
 
           <!-- Location filter displayed in list checkbox form -->
 
-          <!-- <div style="position: relative; display: inline-block;">
+          <div style="position: relative; display: inline-block;">
             <button onclick="myFunction()" id="dropbtn" class="bg-white px-4 py-3 rounded-2xl shadow-lg focus:ring-4 focus:ring-blue-300 
             focus:outline-none transition-all duration-300 w-full text-gray-400 text-lg">Location</button>
             <div id="myDropdown" class="locationList">
-              {#each [["BC", ['Vancouver, BC', 'Victoria, BC', "Kelowna, BC"]], ["AB", ["Calgary", "Edmonton"]]] as location}
+              <!-- To-do: update full location list and move to upper script section, or more ideally to a separate file -->
+              {#each [["BC", ['Vancouver, BC', 'Victoria, BC', "Kelowna, BC"]], ["AB", ["Calgary, AB", "Edmonton, AB"]]] as location}
                <label class="locationBox">
                 <input type="checkbox" value={location[0]} bind:group={filters.location} class="locBoxinput"> {location[0]}
                   {#each location[1] as city}
@@ -340,25 +329,6 @@
               {/each}
             </div>
           </div> 
-
-          <style>
-            .locationList {
-              display: none;
-              position: absolute;
-              min-width: 160px;
-              z-index: 1;
-            }
-
-            .locationBox {
-              color: black;
-              padding: 12px 16px;
-              text-decoration: none;
-              display: block;
-              background-color: #f1f1f1;
-            }
-
-            .show {display:block;} 
-          </style>
 
           <script>
             /* When the user clicks on the button,
@@ -380,7 +350,7 @@
                 }
               }
             } 
-          </script> -->
+          </script>
 
           <!-- End of list checkbox location field code -->
 
