@@ -183,6 +183,12 @@ app.get("/scholarships", async (req,res) => {
 
 });
 
+
+
+
+
+
+
 // Start the server
 app.listen(port, () => {
    console.log(`Server is up at port ${port}`);
