@@ -164,6 +164,31 @@ app.post("/registration", async (req,res) => {
 
 });
 
+
+
+
+app.get("/scholarships", async (req,res) => {
+
+   try{
+
+      temp_result = await clientDB.any('SELECT * FROM scholarships');
+      res.json(temp_result);
+      
+   }
+   catch (error){
+      console.error(error);
+      res.status(500).send('There was an issue handling the GET request!');
+   }
+
+
+});
+
+
+
+
+
+
+
 // Start the server
 app.listen(port, () => {
    console.log(`Server is up at port ${port}`);
