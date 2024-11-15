@@ -64,7 +64,8 @@
                  transform hover:scale-[1.02]"
         />
 
-        <!-- Uncomment and use below for check-box based location search -->
+        <!-- Uncomment to use below for check-box based location search  BUT need to remove the 
+         text based filter-->
         <!--
         <div style="position: relative; display: inline-block;">
           <button onclick="myFunction()" id="dropbtn" class="bg-white px-4 py-3 rounded-2xl shadow-lg focus:ring-4 focus:ring-blue-300 

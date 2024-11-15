@@ -89,7 +89,7 @@
 
 	/* My Programs Button Styling */
 	.my-programs {
-		background: linear-gradient(45deg, #28a745, #218838); /* Green gradient */
+		background: linear-gradient(45deg, #218838, #6ddb87); /* Green gradient */
 		color: white;
 		padding: 0.5rem 1rem;
 		border-radius: 20px;
@@ -97,7 +97,7 @@
 	}
 
 	.my-programs:hover {
-		background: linear-gradient(45deg, #218838, #1c7430); /* Darker green on hover */
+		background: linear-gradient(45deg, #218838, #268d3e); /* Darker green on hover */
 		color: white;
 	}
 
