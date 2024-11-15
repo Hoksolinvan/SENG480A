@@ -44,10 +44,10 @@
 
   let filters = {
     // initialization for text-input based location search
-    // location: '',
+    location: '',
 
     // initialization for check-box based location search
-    location: [],
+    //location: [],
     degreeType: '',
   };
 
@@ -61,19 +61,19 @@
 
 
   // Input parsing for text-input based location search
-  // $: {
-  //   filteredPrograms = programs.filter(program =>
-  //     (searchQuery.trim() || filters.location.trim()) && // display if either field has content
-  //     (searchQuery.trim() === '' || program.name.toLowerCase().includes(searchQuery.toLowerCase())) &&
-  //     (filters.location.trim() === '' || program.location.toLowerCase().includes(filters.location.toLowerCase()))
-  //   );
-  //   // Ensure program list visibility based on current filters
-  //   showPrograms = filteredPrograms.length > 0;
-  // }
+  $: {
+    filteredPrograms = programs.filter(program =>
+      (searchQuery.trim() || filters.location.trim()) && // display if either field has content
+      (searchQuery.trim() === '' || program.name.toLowerCase().includes(searchQuery.toLowerCase())) &&
+      (filters.location.trim() === '' || program.location.toLowerCase().includes(filters.location.toLowerCase()))
+    );
+    // Ensure program list visibility based on current filters
+    showPrograms = filteredPrograms.length > 0;
+  }
 
 
   // Input parsing for check-box based location search
-  $: {
+  /*$: {
     filteredPrograms = programs.filter(program =>
       (searchQuery.trim() || filters.location[0]) && // display if either field has content
       (searchQuery.trim() === '' || program.name.toLowerCase().includes(searchQuery.toLowerCase())) &&
@@ -81,7 +81,7 @@
     );
     // Ensure program list visibility based on current filters
     showPrograms = filteredPrograms.length > 0;
-  }
+  }*/
 
   /* $: {
     filteredPrograms = programs.filter(program =>
@@ -302,22 +302,22 @@
 
           <!-- Location filter displayed in text-input form -->
 
-          <!-- <input
+          <input
             type="text"
             bind:value={filters.location}
             placeholder="Location..."
             class="px-4 py-3 rounded-2xl shadow-lg focus:ring-4 focus:ring-blue-300 
                    focus:outline-none transition-all duration-300"
-          /> -->
+          /> 
 
           <!-- Location filter displayed in list checkbox form -->
 
-          <div style="position: relative; display: inline-block;">
+          <!-- <div style="position: relative; display: inline-block;">
             <button onclick="myFunction()" id="dropbtn" class="bg-white px-4 py-3 rounded-2xl shadow-lg focus:ring-4 focus:ring-blue-300 
             focus:outline-none transition-all duration-300 w-full text-gray-400 text-lg">Location</button>
             <div id="myDropdown" class="locationList">
-              <!-- To-do: update full location list and move to upper script section, or more ideally to a separate file -->
-              {#each [["BC", ['Vancouver, BC', 'Victoria, BC', "Kelowna, BC"]], ["AB", ["Calgary, AB", "Edmonton, AB"]]] as location}
+              To-do: update full location list and move to upper script section, or more ideally to a separate file -->
+              <!-- {#each [["BC", ['Vancouver, BC', 'Victoria, BC', "Kelowna, BC"]], ["AB", ["Calgary, AB", "Edmonton, AB"]]] as location}
                <label class="locationBox">
                 <input type="checkbox" value={location[0]} bind:group={filters.location} class="locBoxinput"> {location[0]}
                   {#each location[1] as city}
@@ -350,7 +350,7 @@
                 }
               }
             } 
-          </script>
+          </script> --> 
 
           <!-- End of list checkbox location field code -->
 
