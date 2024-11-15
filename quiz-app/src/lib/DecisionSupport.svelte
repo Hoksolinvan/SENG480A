@@ -4,11 +4,39 @@
   let currentProgram = null;
 
   function getRemainingTime(deadline) {
-    const now = new Date();
-    const timeLeft = new Date(deadline) - now;
-    const daysLeft = Math.ceil(timeLeft / (1000 * 60 * 60 * 24));
+    // Start of today in user's timezone
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    
+    // Start of deadline day in user's timezone
+    const deadlineDate = new Date(deadline);
+    deadlineDate.setHours(0, 0, 0, 0);
+    
+    // Add one day if deadline has passed to show correct count
+    const timeLeft = deadlineDate - today;
+    let daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    
+    // If deadline has passed (negative days), adjust to 1
+    if (daysLeft < 0) {
+        daysLeft = 1;
+    }
+    
     return daysLeft;
-  }
+}
+
+// Helper function to get the display status
+function getDeadlineStatus(daysLeft) {
+    if (daysLeft === 1) {
+        return {
+            days: 0,
+            status: "Deadline Passed"
+        };
+    }
+    return {
+        days: daysLeft,
+        status: daysLeft === 0 ? "Due Today" : "On Track"
+    };
+}
 
   function getStatus(daysLeft) {
     if (daysLeft <= 0) {
