@@ -59,10 +59,10 @@
       </div>
 
       <!-- DecisionSupport component with savedPrograms prop -->
-      <div class="mt-12" in:fly={{ y: 20, duration: 600, delay: 600 }}>
+       <div class="mt-12" in:fly={{ y: 20, duration: 600, delay: 600 }}>
         <DecisionSupport {savedPrograms} />
       </div>
-      
+       
       <div class="mt-12 max-w-xl mx-auto" in:fly={{ y: 20, duration: 600, delay: 1000 }}>
         <!-- Reminder Section -->
         <h2 class="text-xl font-bold text-gray-700 mb-4">Send Reminder</h2>
