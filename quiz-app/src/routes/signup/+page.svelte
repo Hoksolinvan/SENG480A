@@ -1,4 +1,6 @@
 <script>
+	import profileList from "../profile/profileList";
+
 	let Email = "";
 	let Password = "";
 	let Confirm_pwd = "";
@@ -11,7 +13,7 @@
 	// }
 
 
-	async function registration(Form){
+	/*async function registration(Form){
 
 		try {
 			const request = await fetch('https://seng480a-production.up.railway.app/registration', {
@@ -36,7 +38,7 @@
 			console.log(error);
       
 		}
-	}
+	}*/
 
 
 	function handleSubmit() {
@@ -48,6 +50,7 @@
 		if (Password != Confirm_pwd) {
 			// Notify the user that password and the confirming password are not the same
 			document.getElementById("regis-fail").textContent = "Passwords do not match. Please check again.";
+			regisFailToggle();
 			document.getElementById("confirm-pwd").style.borderColor = "red";
 			document.getElementById("password").style.borderColor = "red";
 			document.getElementById("confirm-pwd").style.borderWidth = "2px";
@@ -55,12 +58,6 @@
 			document.getElementById("confirm-pwd").style.backgroundColor = "#e6e6e6";
 			document.getElementById("password").style.backgroundColor = "#e6e6e6";
 			Confirm_pwd = "";
-
-			
-
-			
-
-			
 
 		} else {
 
@@ -70,12 +67,14 @@
 			post_Regis();
 
 			if(localStorage.getItem("regisPassed")=="true"){
-				document.getElementById("Thankyou_Message").classList.remove("hidden");
-				document.getElementById("Thankyou_Message").classList.add("show");
+				// document.getElementById("Thankyou_Message").classList.remove("hidden");
+				// document.getElementById("Thankyou_Message").classList.add("show");
 				localStorage.removeItem("regisPassed");
+				window.location.href = "./profile";
 			}
 			else if(localStorage.getItem("regisFailed")=="true"){
-				document.getElementById("regis-fail").textContent = "Something went wrong. Please try again.";
+				regisFailToggle();
+				document.getElementById("regis-fail").textContent = "Something went wrong and/or this email is already registered. Please try again.";
 				localStorage.removeItem("regisFailed");
 			}
 
@@ -83,8 +82,18 @@
 		}
 	}
 
+	function regisFailToggle() {
+		document.getElementById("regis-fail").classList.remove("hidden");
+		document.getElementById("regis-fail").classList.add("show");
+	}
+
 	async function post_Regis() {
-		localStorage.setItem("regisFailed", "true");
+		if (profileList.filter(pf => pf.email.includes(Email))){
+			localStorage.setItem("regisFailed", "true");
+		}
+		else{
+			localStorage.setItem("regisPassed", "true");
+		}
 	}
 </script>
 
