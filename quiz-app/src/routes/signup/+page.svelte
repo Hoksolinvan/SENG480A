@@ -12,7 +12,6 @@
 	// 	console.log("hello");
 	// }
 
-
 	/*async function registration(Form){
 
 		try {
@@ -121,7 +120,7 @@
 			</div>
 
 			<div>
-				<input type="checkbox" checked="checked" name="agree" id="agree" style="width: auto;"> 
+				<input type="checkbox" onClick="disableCheckbox()" name="agree" id="agree" style="width: auto;"> 
 				<label for="agree" style="font-weight: normal; color: #555; display: inline">
 					By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>
 				</label>
@@ -131,17 +130,13 @@
 				Congratulations! Your account has been created!
 			</p>
 
-			<button type="submit" id="submit-button">Create Account</button>
+			<button type="submit" id="submit-button" disabled>Create Account</button>
 
-			<!-- Only allows button to submit when Terms and Conditions checkbos is checked -->
+			<!-- Only allows button to submit when Terms and Conditions checkbox is checked -->
 			<script>
-				const submit_able = document.getElementById("submit-button");
-				const agreed = document.getElementById("agree");
-
-				agreed.addEventListener("change", 
-					(event) => {
-						submit_able.disabled = !event.target.checked;
-					})
+				function disableCheckbox() {
+					document.getElementById("submit-button").disabled = !document.getElementById("agree").checked;
+				}
 			</script>
 		</form>
 	</div>
