@@ -13,8 +13,6 @@
 
 		// Form = [Email, Password];
 		post_Login();
-		// simple, hard-coded user log-in validation and set up 1/2
-		//sessionStorage.setItem("username", "not_logged_in");
 
 		if(localStorage.getItem("loginPassed")=="true"){
 			// Enter code to load Profile page here
@@ -25,8 +23,8 @@
 			// End of testing code
 			localStorage.removeItem("loginPassed");
 
-			// simple, hard-coded user log-in validation and set up 2/2
-			//sessionStorage.setItem("username", Email);
+			// simple, hard-coded user log-in validation and set up 
+			localStorage.setItem("ezpathUsername", JSON.stringify(Email));
 		}
 		else if(localStorage.getItem("loginFailed")=="true"){
 			document.getElementById("login-fail").textContent = "Incorrect email address or password. Please check and try again.";

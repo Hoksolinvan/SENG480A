@@ -1,4 +1,6 @@
-let profileList = [
+// Convoluted, hard-coded profile database for demo
+
+let profileDetailList = [
         {
                 email: "demo@easypath.ca",
                 first_name: "Avery",
@@ -15,4 +17,4 @@ let profileList = [
         }
 ];
 
-export default profileList;
+export default profileDetailList;

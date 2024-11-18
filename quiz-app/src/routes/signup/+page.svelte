@@ -1,5 +1,5 @@
 <script>
-	import profileList from "../profile/profileList";
+	import profileDetailList from "../profile/profileList";
 
 	let Email = "";
 	let Password = "";
@@ -87,7 +87,7 @@
 	}
 
 	async function post_Regis() {
-		if (profileList.filter(pf => pf.email.includes(Email))){
+		if (profileDetailList.filter(pf => pf.email.includes(Email))){
 			localStorage.setItem("regisFailed", "true");
 		}
 		else{
