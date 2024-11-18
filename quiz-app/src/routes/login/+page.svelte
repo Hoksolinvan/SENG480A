@@ -1,6 +1,11 @@
 <script>
-	let Email = "";
-	let Password = "";
+	// let Email = "";
+	// let Password = "";
+
+	// default pre-filled values for dummy account log-in
+	// to be deleted in product soft-release
+	let Email = "demo@easypath.ca";
+	let Password = "password";
 
 	function handleSubmit() {
 		Email = document.getElementById("email").value;
