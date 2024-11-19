@@ -13,6 +13,7 @@
 			<ul>
 				<li><a href="/about" class="nav-link">ABOUT US</a></li>
 				<li><a href="/contact" class="nav-link">CONTACT</a></li>
+				<li><a href="/search" class="nav-link">SEARCH</a></li>
 				<li><a href="/login" class="nav-button">LOG IN</a></li>
 				<li><a href="/saved" class="nav-button my-programs">MY PROGRAMS</a></li>
 				<li><a href="/signup" class="nav-button signup">SIGN UP</a></li>
