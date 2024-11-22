@@ -10,7 +10,16 @@
   onMount(() => {
     // Load saved programs from localStorage
     savedPrograms = JSON.parse(localStorage.getItem('savedPrograms')) || [];
+
+    // Temporary measure for demo:
+		// check if localstorage has expathUsername
+		// as the item only exists when a user is logged in
+		// if no then redirect to log in page
+		if (localStorage.getItem('ezpathUsername')===null){
+			window.location.href = "./login";
+		}
   });
+  
 
   function clearSavedPrograms() {
     savedPrograms = [];

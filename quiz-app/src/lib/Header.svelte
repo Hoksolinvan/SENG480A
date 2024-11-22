@@ -1,3 +1,16 @@
+<script>
+	import { onMount } from 'svelte';
+	let pf = "";
+
+	onMount(() => {
+                // Temporary measure for demo:
+		// check if localstorage has expathUsername
+		// as the item only exists when a user is logged in
+		// if yes then redirect to profile page
+		pf = JSON.parse(localStorage.getItem('ezpathUsername'));
+        });
+</script>
+
 <head>
 	<!-- For triple-bar menu icon -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -14,9 +27,21 @@
 				<li><a href="/about" class="nav-link">ABOUT US</a></li>
 				<li><a href="/contact" class="nav-link">CONTACT</a></li>
 				<li><a href="/search" class="nav-link">SEARCH</a></li>
+
+				{#if pf === null}
 				<li><a href="/login" class="nav-button">LOG IN</a></li>
+				{:else}
+				<!-- On click, ezpathUsername item will be removed from localStorage, meaning the user is no longer
+				considered logged in 
+				the user is redirected to main page -->
+				<li><a href="#" class="nav-link" onclick="localStorage.removeItem('ezpathUsername'); window.location.href = '.';">LOG OUT</a></li>
+				{/if}
+
 				<li><a href="/saved" class="nav-button my-programs">MY PROGRAMS</a></li>
+
+				{#if pf === null}
 				<li><a href="/signup" class="nav-button signup">SIGN UP</a></li>
+				{/if}
 			</ul>
 		</nav>  
 	</div>

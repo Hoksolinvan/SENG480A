@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte';
 	// let Email = "";
 	// let Password = "";
 
@@ -6,6 +7,16 @@
 	// to be deleted in product soft-release
 	let Email = "demo@easypath.ca";
 	let Password = "password";
+
+	onMount(() => {
+                // Temporary measure for demo:
+		// check if localstorage has expathUsername
+		// as the item only exists when a user is logged in
+		// if yes then redirect to profile page
+		if (localStorage.getItem('ezpathUsername')){
+			window.location.href = "./profile";
+		}
+        });
 
 	function handleSubmit() {
 		Email = document.getElementById("email").value;

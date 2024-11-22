@@ -1,11 +1,22 @@
 <script>
 	import profileDetailList from "../profile/profileList";
+	import { onMount } from 'svelte';
 
 	let Email = "";
 	let Password = "";
 	let Confirm_pwd = "";
 	// let Agree = false;
 	let Form = [];
+
+	onMount(() => {
+                // Temporary measure for demo:
+		// check if localstorage has expathUsername
+		// as the item only exists when a user is logged in
+		// if yes then redirect to profile page
+		if (localStorage.getItem('ezpathUsername')){
+			window.location.href = "./profile";
+		}
+        });
 
 	// Van's test code
 	// function handleSubmit(){
