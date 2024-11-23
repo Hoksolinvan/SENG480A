@@ -27,7 +27,8 @@
 
 <header class="header">
 	<div class="header-container">
-		<a href="/" class="logo">EasyPath</a>
+		
+		<a href="/" class="logo"> <span style="display:flex; flex-direction:row;"><img src="/Updated_Logo.png" style="width:50px; height:50px; left:50px;">&nbsp;EasyPath</span></a>
 		
 		<nav class="nav">
 			<ul>
@@ -35,7 +36,7 @@
 				<!-- commented out for minimalistic view
 				<li><a href="/about" class="nav-link">ABOUT US</a></li>
 				<li><a href="/contact" class="nav-link">CONTACT</a></li> -->
-				<li><a href="/search" class="nav-link">SEARCH</a></li>
+				<li><a href="/search" class="nav-link"><b>SEARCH</b></a></li>
 
 				<!-- commented out as the login is not functional 
 				{#if pf === null}
@@ -54,7 +55,7 @@
 				<li><a href="/signup" class="nav-button signup">SIGN UP</a></li>
 				{/if} -->
 				<!-- This does not look like it is fully working -- need to be fixed-->
-				<li><a href="/scholarships" class="nav-link">SCHOLARSHIPS</a></li> 
+				<li><a href="/scholarships" class="nav-link"><b>SCHOLARSHIPS</b></a></li> 
 
 				{#if pf != null}
 				<li><a href="/dashboard" class="nav-button my-programs">MY PROGRAMS</a></li>
@@ -142,6 +143,10 @@
 		font-weight: 600;
 		color: #007bff;
 		letter-spacing: 1px;
+	}
+
+	.logo:hover{
+		cursor: pointer;
 	}
 
 	/* Navigation List Styling */
