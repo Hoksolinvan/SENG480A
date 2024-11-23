@@ -3,9 +3,9 @@
 
   // Subscribe to saved programs
   let programs = [];
-  savedPrograms.subscribe((value) => {
-    programs = value.sort((a, b) => new Date(a.deadline) - new Date(b.deadline)); // Sort by deadline
-  });
+  // savedPrograms.subscribe((value) => {
+  //   programs = value.sort((a, b) => new Date(a.deadline) - new Date(b.deadline)); // Sort by deadline
+  // });
 
   // Selected program and animation state
   let selectedProgram = programs[0];

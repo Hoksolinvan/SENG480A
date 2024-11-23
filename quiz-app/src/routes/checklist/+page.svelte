@@ -5,9 +5,10 @@
   let programs = [];
 
   // Subscribe to the savedPrograms store
-  savedPrograms.subscribe((value) => {
-    programs = value;
-  });
+  //Van's Notes (Commented out because savedPrograms.subscribe is not a function which is causing the deployment error)
+  // savedPrograms.subscribe((value) => {
+  //   programs = value;
+  // });
 
   // Updated dynamic prerequisites dictionary
   const prerequisiteDictionary = {
