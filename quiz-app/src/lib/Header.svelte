@@ -82,7 +82,7 @@
 						  
 							<!-- Profile and Settings links -->
 							<div><a href="/profile"><b>Profile</b></a></div>
-							<div><a href="/saved">My Programs</a></div>
+							<div><a href="/saved"><b>My Programs</b></a></div>
 							<div><a href="/settings"><b>Settings</b></a></div>
 				  
 							<!-- Log out link -->
