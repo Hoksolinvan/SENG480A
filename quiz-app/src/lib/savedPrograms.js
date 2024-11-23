@@ -1,7 +1,11 @@
 import { writable } from 'svelte/store';
+const { LocalStorage } = require('node-localstorage');
+
 
 function createSavedProgramsStore() {
 	// Initialize from localStorage or empty array
+	const localStorage = new LocalStorage('./scratch');
+	
 	const storedPrograms = localStorage.getItem('savedPrograms');
 	const initialPrograms = storedPrograms ? JSON.parse(storedPrograms) : [];
 	const { subscribe, set, update } = writable(initialPrograms);
@@ -32,4 +36,4 @@ function createSavedProgramsStore() {
 	};
 }
 
-export const savedPrograms = createSavedProgramsStore();
+export const savedPrograms = () => createSavedProgramsStore();
