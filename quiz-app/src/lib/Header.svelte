@@ -37,10 +37,11 @@
 				<!-- On click, ezpathUsername item will be removed from localStorage, meaning the user is no longer
 				considered logged in 
 				the user is redirected to main page -->
-				<li><a href="#" class="nav-link" onclick="localStorage.removeItem('ezpathUsername'); window.location.href = '.';">LOG OUT</a></li>
+				<!-- not fully functional 
+				<li><a href="#" class="nav-link" onclick="localStorage.removeItem('ezpathUsername'); window.location.href = '.';">LOG OUT</a></li>-->
 				<!-- {/if} -->
 
-				<li><a href="/saved" class="nav-button my-programs">MY PROGRAMS</a></li>
+				<!--<li><a href="/saved" class="nav-button my-programs">MY PROGRAMS</a></li> -->
 <!-- this is not fully functional 
 				{#if pf === null}
 				<li><a href="/signup" class="nav-button signup">SIGN UP</a></li>
