@@ -56,14 +56,17 @@
 				<!-- This does not look like it is fully working -- need to be fixed-->
 				<li><a href="/scholarships" class="nav-link">SCHOLARSHIPS</a></li> 
 
+				{#if pf != null}
 				<li><a href="/dashboard" class="nav-button my-programs">MY PROGRAMS</a></li>
+				{/if}
 				<!-- commented out as it is not fully functional
 				<li><a href="/login" class="nav-button">LOG IN</a></li> -->
 
 				<!-- commented out to focus core functionality
 				<li><a href="/saved" class="nav-button my-programs">MY PROGRAMS</a></li> -->
+
 				<!-- can be commented out as it is not fully functional -->
-				<li><a href="/signup" class="nav-button signup">SIGN UP</a></li> 
+				<!-- <li><a href="/signup" class="nav-button signup">SIGN UP</a></li>  -->
 
 
 				<li>
@@ -79,6 +82,7 @@
 						  
 							<!-- Profile and Settings links -->
 							<div><a href="/profile"><b>Profile</b></a></div>
+							<div><a href="/saved">My Programs</a></div>
 							<div><a href="/settings"><b>Settings</b></a></div>
 				  
 							<!-- Log out link -->
