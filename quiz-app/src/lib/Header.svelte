@@ -67,30 +67,30 @@
 
 
 				<li>
-					<img src="/FontAwesome-User-icon.png" class="profile" style="width:30px; height:30px" on:click={toggleDisplay}>
+					<img src="/FontAwesome-User-icon.png" class="profile {current_toggle ? "active":" "}" style="width:30px; height:30px" on:click={toggleDisplay}>
 				  
 					<!-- Dropdown menu box -->
 					{#if current_toggle}
 					  <div class="dropdown-menu">
 						{#if pf === null}
-						  <div><a href="/login">LOG IN</a></div>
-						  <div><a href="/signup">SIGN UP</a></div>
+						  <div><a href="/login"><b>Log In</b></a></div>
+						  <div><a href="/signup"><b>Sign Up</b></a></div>
 						{:else}
-						  <ul>
+						  
 							<!-- Profile and Settings links -->
-							<li><a href="/profile">Profile</a></li>
-							<li><a href="/settings">Settings</a></li>
+							<div><a href="/profile"><b>Profile</b></a></div>
+							<div><a href="/settings"><b>Settings</b></a></div>
 				  
 							<!-- Log out link -->
-							<li>
+							<div>
 							  <a href="#" on:click={() => { 
 								localStorage.removeItem('ezpathUsername'); 
 								window.location.href = '.'; 
 							  }}>
-								LOG OUT
+								<b>Log Out</b>
 							  </a>
-							</li>
-						  </ul>
+							</div>
+						  
 						{/if}
 					  </div>
 					{/if}
@@ -224,6 +224,10 @@
 		transition: filter 0.2s ease;
 	}
 
+	.profile.active{
+		filter: invert(30%) sepia(100%) saturate(1000%) hue-rotate(200deg);
+	}
+
 
 	/* Dropdown menu */
 
@@ -246,15 +250,13 @@
     min-width: 150px;
 }
 
-.dropdown-menu li{
-	margin: 0;
-	padding-top: 100px;
-	background-color:green;
-	padding-bottom: 20px;
-	border: 1px solid red;
-	box-sizing: border-box;
+.dropdown-menu div{
 
+	padding: 20px;
+	
 }
+
+
 
 .dropdown-menu a {
     text-decoration: none;
@@ -264,7 +266,7 @@
     border-radius: 3px;
   }
 
-  .dropdown-menu a:hover {
+  .dropdown-menu div:hover {
     background-color: #f0f0f0;
   }
 
