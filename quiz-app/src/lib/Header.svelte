@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	let pf = "";
+	let current_toggle = false;
 
 	onMount(() => {
                 // Temporary measure for demo:
@@ -9,6 +10,12 @@
 		// if yes then redirect to profile page
 		pf = JSON.parse(localStorage.getItem('ezpathUsername'));
         });
+
+		function toggleDisplay(){
+		current_toggle=!current_toggle;
+
+	};
+
 </script>
 
 <head>
@@ -57,9 +64,52 @@
 				<li><a href="/saved" class="nav-button my-programs">MY PROGRAMS</a></li> -->
 				<!-- can be commented out as it is not fully functional -->
 				<li><a href="/signup" class="nav-button signup">SIGN UP</a></li> 
+
+
+				<li>
+					<img src="/FontAwesome-User-icon.png" class="profile" style="width:30px; height:30px" on:click={toggleDisplay}>
+				  
+					<!-- Dropdown menu box -->
+					{#if current_toggle}
+					  <div class="dropdown-menu">
+						{#if pf === null}
+						  <div><a href="/login">LOG IN</a></div>
+						  <div><a href="/signup">SIGN UP</a></div>
+						{:else}
+						  <ul>
+							<!-- Profile and Settings links -->
+							<li><a href="/profile">Profile</a></li>
+							<li><a href="/settings">Settings</a></li>
+				  
+							<!-- Log out link -->
+							<li>
+							  <a href="#" on:click={() => { 
+								localStorage.removeItem('ezpathUsername'); 
+								window.location.href = '.'; 
+							  }}>
+								LOG OUT
+							  </a>
+							</li>
+						  </ul>
+						{/if}
+					  </div>
+					{/if}
+				  </li>
+				  
+
 			</ul>
 		</nav>  
+
+
+
+
 	</div>
+
+
+
+	
+
+	
 </header>
 
 <style>
@@ -162,4 +212,62 @@
 			flex-direction: row;
 		}
 	}
+
+
+
+	/* Image hover Style to turn to blue*/
+	
+	
+	.profile:hover{
+		filter: invert(30%) sepia(100%) saturate(1000%) hue-rotate(200deg);
+		cursor: pointer;
+		transition: filter 0.2s ease;
+	}
+
+
+	/* Dropdown menu */
+
+
+
+.dropdown-menu{
+	position:absolute;
+	display: flex;
+	flex-direction: column;
+	top:70px;
+	right:70px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    margin: 0;
+    
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.dropdown-menu li{
+	margin: 0;
+	padding-top: 100px;
+	background-color:green;
+	padding-bottom: 20px;
+	border: 1px solid red;
+	box-sizing: border-box;
+
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    
+    border-radius: 3px;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #f0f0f0;
+  }
+
+
+
 </style>
