@@ -1,48 +1,11 @@
 <script>
   import { savedPrograms } from '$lib/savedPrograms';
 
-  // Subscribe to the store
+  // Automatically subscribe to the store
   $: programs = $savedPrograms;
 
-  // Updated dynamic prerequisites dictionary
-  const prerequisiteDictionary = {
-    STEM: ['Math 12', 'Physics 12', 'English 12', 'Computer Science 11'],
-    Engineering: ['Math 12', 'Physics 12', 'Chemistry 12'],
-    Science: ['Math 12', 'Biology 12', 'Chemistry 12'],
-    Business: ['Economics 12', 'English 12', 'Math 11'],
-    Arts: ['History 12', 'English 12', 'Art 11'],
-    default: ['English 12', 'Math 11', 'Social Studies 12'],
-  };
-
-  // Get prerequisites dynamically based on program category
-  function getDynamicPrerequisites(program) {
-    let category = 'default';
-    if (program.name.includes('Engineering')) category = 'Engineering';
-    else if (program.name.includes('Science')) category = 'Science';
-    else if (program.name.includes('Business')) category = 'Business';
-    else if (program.name.includes('Arts')) category = 'Arts';
-    else if (program.category) category = program.category;
-
-    const prerequisites = prerequisiteDictionary[category] || prerequisiteDictionary.default;
-
-    return prerequisites.map((name, index) => ({
-      id: index + 1,
-      name,
-      completed: false,
-      required: true,
-    }));
-  }
-
-  // Ensure programs have prerequisites dynamically assigned
-  $: programs = programs.map((program) => {
-    if (!program.prerequisites || program.prerequisites.length === 0) {
-      return {
-        ...program,
-        prerequisites: getDynamicPrerequisites(program),
-      };
-    }
-    return program;
-  });
+  // Call the store's `updatePrerequisites` method once on mount
+  savedPrograms.updatePrerequisites();
 
   // Toggle prerequisite completion
   function togglePrerequisite(programId, prereqId) {
@@ -50,7 +13,9 @@
       currentPrograms.map((program) => {
         if (program.id === programId) {
           const updatedPrerequisites = program.prerequisites.map((prereq) =>
-            prereq.id === prereqId ? { ...prereq, completed: !prereq.completed } : prereq
+            prereq.id === prereqId
+              ? { ...prereq, completed: !prereq.completed }
+              : prereq
           );
           return { ...program, prerequisites: updatedPrerequisites };
         }
@@ -62,7 +27,7 @@
   // Calculate total cost dynamically
   function getTotalCost(programs) {
     return programs.reduce((total, program) => {
-      const applicationFee = program.applicationFee || 100; // Default application fee
+      const applicationFee = program.applicationFee || 100;
       return total + (program.estimatedCost || 0) + applicationFee;
     }, 0);
   }
@@ -108,9 +73,9 @@
             <!-- Prerequisites Section -->
             <section>
               <h4 class="text-lg font-semibold text-gray-700 mb-4">Prerequisites</h4>
-              {#if program.prerequisites && program.prerequisites.length > 0}
+              {#if program.prerequisites?.length > 0}
                 <div class="space-y-3">
-                  {#each program.prerequisites as prereq}
+                  {#each program.prerequisites as prereq (prereq.id)}
                     <label class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition cursor-pointer">
                       <input
                         type="checkbox"
@@ -123,10 +88,11 @@
                   {/each}
                 </div>
                 <p class="mt-4 text-sm font-medium" class:text-green-600={allPrerequisitesCompleted(program.prerequisites)} class:text-yellow-600={!allPrerequisitesCompleted(program.prerequisites)}>
-                  {allPrerequisitesCompleted(program.prerequisites) 
-                    ? `Congratulations! You meet all the prerequisites for ${program.name}.`
-                    : `You still need to complete some prerequisites for ${program.name}.`
-                  }
+                  {#if allPrerequisitesCompleted(program.prerequisites)}
+                    Congratulations! You meet all the prerequisites for {program.name}.
+                  {:else}
+                    You still need to complete some prerequisites for {program.name}.
+                  {/if}
                 </p>
               {:else}
                 <p class="text-sm text-gray-500">No prerequisites listed for this program.</p>

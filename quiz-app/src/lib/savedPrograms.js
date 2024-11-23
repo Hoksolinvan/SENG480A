@@ -18,6 +18,34 @@ function createSavedProgramsStore() {
 		});
 	}
 
+	// Function to get prerequisites dynamically
+	function getDynamicPrerequisites(program) {
+		const prerequisiteDictionary = {
+			STEM: ['Math 12', 'Physics 12', 'English 12', 'Computer Science 11'],
+			Engineering: ['Math 12', 'Physics 12', 'Chemistry 12'],
+			Science: ['Math 12', 'Biology 12', 'Chemistry 12'],
+			Business: ['Economics 12', 'English 12', 'Math 11'],
+			Arts: ['History 12', 'English 12', 'Art 11'],
+			default: ['English 12', 'Math 11', 'Social Studies 12']
+		};
+
+		let category = 'default';
+		if (program.name.includes('Engineering')) category = 'Engineering';
+		else if (program.name.includes('Science')) category = 'Science';
+		else if (program.name.includes('Business')) category = 'Business';
+		else if (program.name.includes('Arts')) category = 'Arts';
+		else if (program.category) category = program.category;
+
+		const prerequisites = prerequisiteDictionary[category] || prerequisiteDictionary.default;
+
+		return prerequisites.map((name, index) => ({
+			id: index + 1,
+			name,
+			completed: false,
+			required: true
+		}));
+	}
+
 	return {
 		subscribe,
 		add: (program) => {
@@ -46,6 +74,16 @@ function createSavedProgramsStore() {
 				localStorage.removeItem('savedPrograms');
 			}
 			set([]);
+		},
+		updatePrerequisites: () => {
+			update((programs) =>
+				programs.map((program) => ({
+					...program,
+					prerequisites: program.prerequisites?.length
+						? program.prerequisites
+						: getDynamicPrerequisites(program)
+				}))
+			);
 		}
 	};
 }
