@@ -1,8 +1,11 @@
 <script>
   import { fade, fly } from 'svelte/transition';
   import { goto } from '$app/navigation';
+  import { savedPrograms } from '$lib/savedPrograms';
   import ProgramList from '$lib/ProgramList.js';
   
+
+
   let searchQuery = '';
   let filters = {
     location: '',
@@ -24,16 +27,16 @@
     selectedProgram = program;
   }
   
+  
+  
+
   async function saveProgram() {
     if (selectedProgram) {
-      const savedPrograms = JSON.parse(localStorage.getItem('savedPrograms') || '[]');
-      if (!savedPrograms.some(p => p.id === selectedProgram.id)) {
-        savedPrograms.push(selectedProgram);
-        localStorage.setItem('savedPrograms', JSON.stringify(savedPrograms));
-      }
-      window.location.href = '/saved';
+        savedPrograms.add(selectedProgram);
+        
     }
-  }
+}
+
 </script>
 
 <div class="min-h-screen bg-gray-50" in:fade={{ duration: 300 }}>

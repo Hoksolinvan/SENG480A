@@ -24,24 +24,38 @@
 		
 		<nav class="nav">
 			<ul>
+
+				<!-- commented out for minimalistic view
 				<li><a href="/about" class="nav-link">ABOUT US</a></li>
-				<li><a href="/contact" class="nav-link">CONTACT</a></li>
+				<li><a href="/contact" class="nav-link">CONTACT</a></li> -->
 				<li><a href="/search" class="nav-link">SEARCH</a></li>
 
+				<!-- commented out as the login is not functional 
 				{#if pf === null}
 				<li><a href="/login" class="nav-button">LOG IN</a></li>
-				{:else}
+				{:else} -->
 				<!-- On click, ezpathUsername item will be removed from localStorage, meaning the user is no longer
 				considered logged in 
 				the user is redirected to main page -->
 				<li><a href="#" class="nav-link" onclick="localStorage.removeItem('ezpathUsername'); window.location.href = '.';">LOG OUT</a></li>
-				{/if}
+				<!-- {/if} -->
 
 				<li><a href="/saved" class="nav-button my-programs">MY PROGRAMS</a></li>
-
+<!-- this is not fully functional 
 				{#if pf === null}
 				<li><a href="/signup" class="nav-button signup">SIGN UP</a></li>
-				{/if}
+				{/if} -->
+				<!-- This does not look like it is fully working -- need to be fixed-->
+				<li><a href="/scholarships" class="nav-link">SCHOLARSHIPS</a></li> 
+
+				<li><a href="/dashboard" class="nav-button my-programs">MY PROGRAMS</a></li>
+				<!-- commented out as it is not fully functional
+				<li><a href="/login" class="nav-button">LOG IN</a></li> -->
+
+				<!-- commented out to focus core functionality
+				<li><a href="/saved" class="nav-button my-programs">MY PROGRAMS</a></li> -->
+				<!-- commented out as it is not fully functional
+				<li><a href="/signup" class="nav-button signup">SIGN UP</a></li> -->
 			</ul>
 		</nav>  
 	</div>
