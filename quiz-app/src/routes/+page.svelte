@@ -25,6 +25,10 @@
   function navigateToSearch() {
     goto('/search');
   }
+
+  function navigateToDashboard() {
+    goto('/dashboard');
+  }
 </script>
 
 <main class="min-h-screen bg-gray-50">
@@ -34,23 +38,23 @@
       <!-- Text Content -->
       <div class="flex flex-col justify-center space-y-6">
         <h1 class="text-5xl font-bold text-blue-900 leading-tight animate-fade-in">
-          Find Your Future Major
+          Plan Your Post-Secondary Path
         </h1>
         <h2 class="text-2xl text-blue-600 font-medium animate-fade-in-delayed">
-          Discover the Best Academic Path for You
+          Reduce the stress of post-secondary planning with an all in one tool
         </h2>
         <p class="text-gray-600 text-lg">
-          Compare programs, track deadlines, and make informed decisions about your academic future.
+          Search programs, track deadlines, and manage scholarship opportunities to make informed decisions about your academic future
         </p>
         <button 
           class="w-fit px-8 py-4 bg-blue-900 text-white rounded-lg shadow-lg 
                  hover:bg-blue-800 transform hover:scale-105 transition-all
                  duration-300 text-lg font-semibold"
-          on:click={navigateToSearch}
+          on:click={navigateToDashboard}
         >
           Get Started
         </button>
-        <p class="text-gray-600 text-lg font-hand pt-8">Explore our features below to simplify your academic journey.</p>
+        
       </div>
       <!-- Image -->
       <div class="flex items-center justify-center">
@@ -67,7 +71,7 @@
   <!-- Features Section -->
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-blue-900 text-center mb-12">Why Choose Our Platform</h2>
+      <h2 class="text-3xl font-bold text-blue-900 text-center mb-12">What EasyPath Offers</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300 relative">
           <div class="text-blue-600 text-4xl mb-4">⏰</div>
@@ -123,8 +127,8 @@
   <!-- Call to Action Section -->
   <section class="py-20 bg-blue-900 text-white">
     <div class="max-w-4xl mx-auto text-center px-6">
-      <h2 class="text-3xl font-bold mb-6">Ready to Find Your Perfect Program?</h2>
-      <p class="text-lg mb-8 text-blue-100">Start your academic journey today with our comprehensive program finder.</p>
+      <h2 class="text-3xl font-bold mb-6">Ready to Plan Your Path to Success?</h2>
+      <p class="text-lg mb-8 text-blue-100">Take control of your academic journey with our personalized planning and program search tool</p>
       <button 
         class="px-8 py-4 bg-white text-blue-900 rounded-lg shadow-lg 
                hover:bg-blue-50 transform hover:scale-105 transition-all
