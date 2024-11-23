@@ -1,38 +1,53 @@
 import { writable } from 'svelte/store';
 
-
 function createSavedProgramsStore() {
-	// Initialize from localStorage or empty array
-	const localStorage = new LocalStorage('./scratch');
-	
-	const storedPrograms = localStorage.getItem('savedPrograms');
-	const initialPrograms = storedPrograms ? JSON.parse(storedPrograms) : [];
+	const isBrowser = typeof window !== 'undefined'; // Check if running in the browser
+
+	// Initialize the store with data from localStorage or an empty array
+	const initialPrograms = isBrowser
+		? JSON.parse(localStorage.getItem('savedPrograms') || '[]')
+		: [];
+
+	// Create the writable store
 	const { subscribe, set, update } = writable(initialPrograms);
+
+	// Sync changes to localStorage (only in the browser)
+	if (isBrowser) {
+		subscribe((programs) => {
+			localStorage.setItem('savedPrograms', JSON.stringify(programs));
+		});
+	}
 
 	return {
 		subscribe,
 		add: (program) => {
 			update((programs) => {
 				if (!programs.some((p) => p.id === program.id)) {
-					const newPrograms = [...programs, program];
-					localStorage.setItem('savedPrograms', JSON.stringify(newPrograms));
-					return newPrograms;
+					const updatedPrograms = [...programs, program];
+					if (isBrowser) {
+						localStorage.setItem('savedPrograms', JSON.stringify(updatedPrograms));
+					}
+					return updatedPrograms;
 				}
 				return programs;
 			});
 		},
 		remove: (programId) => {
 			update((programs) => {
-				const newPrograms = programs.filter((p) => p.id !== programId);
-				localStorage.setItem('savedPrograms', JSON.stringify(newPrograms));
-				return newPrograms;
+				const updatedPrograms = programs.filter((p) => p.id !== programId);
+				if (isBrowser) {
+					localStorage.setItem('savedPrograms', JSON.stringify(updatedPrograms));
+				}
+				return updatedPrograms;
 			});
 		},
 		clear: () => {
-			localStorage.removeItem('savedPrograms');
+			if (isBrowser) {
+				localStorage.removeItem('savedPrograms');
+			}
 			set([]);
 		}
 	};
 }
 
-export const savedPrograms = () => createSavedProgramsStore();
+export const savedPrograms = createSavedProgramsStore();

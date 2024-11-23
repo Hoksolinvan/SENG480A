@@ -12,9 +12,9 @@
   // Subscribe to saved programs
   
    let programs;
-//   savedPrograms.subscribe((value) => {
-//     programs = value;
-//   });
+   savedPrograms.subscribe((value) => {
+    programs = value;
+    });
   
   function navigateTo(route) {
       goto(route);

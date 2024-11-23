@@ -1,14 +1,8 @@
 <script>
   import { savedPrograms } from '$lib/savedPrograms';
 
-  // Reactive variable for saved programs
-  let programs = [];
-
-  // Subscribe to the savedPrograms store
-  //Van's Notes (Commented out because savedPrograms.subscribe is not a function which is causing the deployment error)
-  // savedPrograms.subscribe((value) => {
-  //   programs = value;
-  // });
+  // Subscribe to the store
+  $: programs = $savedPrograms;
 
   // Updated dynamic prerequisites dictionary
   const prerequisiteDictionary = {
@@ -20,11 +14,9 @@
     default: ['English 12', 'Math 11', 'Social Studies 12'],
   };
 
-  // Match program names to categories dynamically
+  // Get prerequisites dynamically based on program category
   function getDynamicPrerequisites(program) {
     let category = 'default';
-
-    // Simple keyword matching to determine category
     if (program.name.includes('Engineering')) category = 'Engineering';
     else if (program.name.includes('Science')) category = 'Science';
     else if (program.name.includes('Business')) category = 'Business';
@@ -42,23 +34,25 @@
   }
 
   // Ensure programs have prerequisites dynamically assigned
-  $: programs.forEach((program) => {
+  $: programs = programs.map((program) => {
     if (!program.prerequisites || program.prerequisites.length === 0) {
-      program.prerequisites = getDynamicPrerequisites(program);
+      return {
+        ...program,
+        prerequisites: getDynamicPrerequisites(program),
+      };
     }
+    return program;
   });
 
   // Toggle prerequisite completion
   function togglePrerequisite(programId, prereqId) {
-    savedPrograms.update((programs) =>
-      programs.map((program) => {
+    savedPrograms.update((currentPrograms) =>
+      currentPrograms.map((program) => {
         if (program.id === programId) {
-          return {
-            ...program,
-            prerequisites: program.prerequisites.map((prereq) =>
-              prereq.id === prereqId ? { ...prereq, completed: !prereq.completed } : prereq
-            ),
-          };
+          const updatedPrerequisites = program.prerequisites.map((prereq) =>
+            prereq.id === prereqId ? { ...prereq, completed: !prereq.completed } : prereq
+          );
+          return { ...program, prerequisites: updatedPrerequisites };
         }
         return program;
       })
@@ -75,21 +69,13 @@
 
   // Check if all prerequisites are completed
   function allPrerequisitesCompleted(prerequisites) {
-    return prerequisites.every((prereq) => prereq.completed);
-  }
-
-  // Eligibility message for prerequisites
-  function getEligibilityMessage(program) {
-    if (allPrerequisitesCompleted(program.prerequisites)) {
-      return `Congratulations! You meet all the prerequisites for ${program.name}.`;
-    }
-    return `You still need to complete some prerequisites for ${program.name}.`;
+    return prerequisites?.every((prereq) => prereq.completed) || false;
   }
 </script>
 
 <div class="container mx-auto px-4 py-8 max-w-5xl">
   <div class="flex justify-between items-center mb-8">
-    <h1 class="text-4xl font-extrabold text-gray-900">Your Application Path</h1>
+    <h1 class="text-4xl font-extrabold text-gray-900">Application Checklist</h1>
     <div class="text-sm text-gray-500 flex flex-col items-end">
       <div>Total Programs: {programs.length}</div>
       <div class="font-bold text-green-600">
@@ -116,16 +102,6 @@
                 {program.university}
               </p>
             </div>
-            <!-- Commented Out Remove Button -->
-            <!-- {
-            <button 
-              on:click={() => removeProgram(program.id)}
-              class="text-red-500 hover:text-red-700 transition-colors p-2 rounded-full hover:bg-red-50 focus:outline-none"
-              aria-label="Remove Program"
-            >
-              Remove
-            </button>
-            } -->
           </div>
 
           <div class="p-6">
@@ -138,7 +114,7 @@
                     <label class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition cursor-pointer">
                       <input
                         type="checkbox"
-                        checked={prereq.completed}
+                        bind:checked={prereq.completed}
                         on:change={() => togglePrerequisite(program.id, prereq.id)}
                         class="form-checkbox h-5 w-5 text-blue-600 rounded focus:ring-blue-500"
                       />
@@ -146,7 +122,12 @@
                     </label>
                   {/each}
                 </div>
-                <p class="mt-4 text-sm text-gray-700 font-medium">{getEligibilityMessage(program)}</p>
+                <p class="mt-4 text-sm font-medium" class:text-green-600={allPrerequisitesCompleted(program.prerequisites)} class:text-yellow-600={!allPrerequisitesCompleted(program.prerequisites)}>
+                  {allPrerequisitesCompleted(program.prerequisites) 
+                    ? `Congratulations! You meet all the prerequisites for ${program.name}.`
+                    : `You still need to complete some prerequisites for ${program.name}.`
+                  }
+                </p>
               {:else}
                 <p class="text-sm text-gray-500">No prerequisites listed for this program.</p>
               {/if}
