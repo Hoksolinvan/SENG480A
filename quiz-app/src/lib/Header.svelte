@@ -55,8 +55,8 @@
 
 				<!-- commented out to focus core functionality
 				<li><a href="/saved" class="nav-button my-programs">MY PROGRAMS</a></li> -->
-				<!-- commented out as it is not fully functional
-				<li><a href="/signup" class="nav-button signup">SIGN UP</a></li> -->
+				<!-- can be commented out as it is not fully functional -->
+				<li><a href="/signup" class="nav-button signup">SIGN UP</a></li> 
 			</ul>
 		</nav>  
 	</div>
