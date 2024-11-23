@@ -1,5 +1,4 @@
 import { writable } from 'svelte/store';
-const { LocalStorage } = require('node-localstorage');
 
 
 function createSavedProgramsStore() {
