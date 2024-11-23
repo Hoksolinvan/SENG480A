@@ -56,6 +56,7 @@
 				{/if} -->
 				<!-- This does not look like it is fully working -- need to be fixed-->
 				<li><a href="/scholarships" class="nav-link"><b>SCHOLARSHIPS</b></a></li> 
+				<li><a href="/about" class="nav-link"><b>ABOUT US</b></a></li>
 
 				{#if pf != null}
 				<li><a href="/dashboard" class="nav-button my-programs">MY PROGRAMS</a></li>
@@ -82,7 +83,7 @@
 						{:else}
 						  
 							<!-- Profile and Settings links -->
-							<div><a href="/profile"><b>Profile</b></a></div>
+							<div><a href="/dashboard"><b>My Dashboard</b></a></div>
 							<div><a href="/saved"><b>My Programs</b></a></div>
 							<div><a href="/settings"><b>Settings</b></a></div>
 				  

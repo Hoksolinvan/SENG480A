@@ -67,7 +67,7 @@
   }
 </script>
 
-<div class="container mx-auto py-8 grid md:grid-cols-2 gap-6">
+<div class="container mx-auto py-8 grid md:grid-cols-3 gap-6">
   <!-- Programs List -->
   <div class="bg-white border rounded-lg shadow-md p-6">
     <h2 class="text-lg font-medium mb-4 text-gray-800">Programs</h2>
@@ -85,6 +85,21 @@
         {/each}
       {:else}
         <p class="text-sm text-gray-500">No programs available. Please add some programs.</p>
+      {/if}
+    </div>
+  </div>
+
+  <div class="bg-white border rounded-lg shadow-md p-6">
+    <h2 class="text-lg font-medium mb-4 text-gray-800">Scholarship</h2>
+    <div class="space-y-2">
+      {#if programs && programs.length > 0}
+        {#each programs as program (program.id)}
+          
+
+
+        {/each}
+      {:else}
+        <p class="text-sm text-gray-500">No scholarships available. Please add some scholarships.</p>
       {/if}
     </div>
   </div>
