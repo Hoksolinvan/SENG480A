@@ -71,12 +71,12 @@
         </tr>
   
         <!-- Grade Requirement (new row) -->
-        <tr class="bg-gray-50">
+        <!-- <tr class="bg-gray-50">
           <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Grade Requirement</td> 
           {#each savedPrograms as program}
             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{program.gradeRequirement || ''}</td>
           {/each}
-        </tr>
+        </tr> -->
   
         <!-- Application Deadline -->
         <tr>
