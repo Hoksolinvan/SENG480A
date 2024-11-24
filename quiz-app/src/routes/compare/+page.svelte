@@ -111,7 +111,7 @@
 </div>
 
 <!-- Housing Options Carousel -->
-<div class="mt-8 bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+<!-- <div class="mt-8 bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
   <h2 class="text-2xl font-semibold mb-6 text-blue-900">Housing Options</h2>
 
   <div class="sc-carousel__carousel-container overflow-x-auto flex space-x-4">
@@ -134,7 +134,7 @@
       </div>
     {/each}
   </div>
-</div>
+</div> -->
 
 <style>
   .sc-carousel__carousel-container {
