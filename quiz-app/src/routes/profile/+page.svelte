@@ -1,144 +1,154 @@
 <script>
-        import profileDetailList from "./profileList";
         import { onMount } from 'svelte';
-
-        let pf = "";
-        let loginAcc = "";
-        let savedPrograms = [];
-
+    
+        let profile = {
+            firstName: "",
+            lastName: "",
+            email: "",
+            education: {
+                highSchool: "",
+                graduationYear: "",
+                academicInterests: []
+            },
+            location: "",
+            bio: "",
+            languages: [],
+            joinDate: "",
+            achievements: []
+        };
+    
         onMount(() => {
-                // Load which account is logged in from localStorage
-                // null if none is logged in
-                pf = JSON.parse(localStorage.getItem('ezpathUsername'));
-                savedPrograms = JSON.parse(localStorage.getItem('savedPrograms')) || [];
-                loginAcc = profileDetailList.filter(profile => profile.email === pf)[0];
+            // Simulated profile data
+            profile = {
+                firstName: "Avery",
+                lastName: "Thompson",
+                email: "demo@easypath.ca",
+                education: {
+                    highSchool: "Central High School",
+                    graduationYear: "2024",
+                    academicInterests: ["Computer Science", "Mathematics", "Physics"]
+                },
+                location: "Victoria, British Columbia",
+                bio: "Dedicated high school senior with a strong foundation in STEM subjects.",
+                languages: ["English", "French"],
+                achievements: [
+                    "National Math Competition Finalist 2023",
+                    "Science Fair Gold Medalist",
+                    "Computer Science Club President"
+                ],
+                joinDate: "January 2024"
+            };
         });
-
-        // Copy-paste from DecisionSupport.svelte because it's easier to do this than
-        // trying to debug import-export between files at 1AM
-        function getRemainingTime(deadline) {
-                // Start of today in user's timezone
-                const today = new Date();
-                today.setHours(0, 0, 0, 0);
-                
-                // Start of deadline day in user's timezone
-                const deadlineDate = new Date(deadline);
-                deadlineDate.setHours(0, 0, 0, 0);
-                
-                // Add one day if deadline has passed to show correct count
-                const timeLeft = deadlineDate - today;
-                let daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                
-                // If deadline has passed (negative days), adjust to 1
-                if (daysLeft < 0) {
-                        daysLeft = 1;
-                }
-                
-                return daysLeft;
-        }
-
-        // Copy-paste from DecisionSupport.svelte because it's easier to do this than
-        // trying to debug import-export between files at 1AM
-        function getStatus(daysLeft) {
-                if (daysLeft <= 0) {
-                return { label: 'Deadline Passed', color: 'text-red-600' };
-                } else if (daysLeft <= 7) {
-                return { label: `Due Soon (${daysLeft} days left)`, color: 'text-yellow-600' };
-                } else {
-                return { label: `On Track (${daysLeft} days left)`, color: 'text-green-600' };
-                }
-        }
-</script>
-
-<main>
-        {#if pf===null}
-                <h1>
-                        You aren't logged in at the moment. Please log in to continue to your destination!
-                </h1>
-        {:else if profileDetailList.filter(profile => profile.email === pf)}
-                <div class="grid md:grid-cols-3 gap-8">
-                        <div class="profile-container">
-                                <h1 >Your Profile</h1>
-                                <img 
-                                        src={loginAcc.PFP} 
-                                        alt={loginAcc.first_name}
-                                        class="w-40 h-40 rounded-8 mb-4 object-cover m-auto"
-                                />
-                                <p>Name: {loginAcc.first_name + " " + loginAcc.last_name}</p>
-                                <p>Email: {loginAcc.email}</p>
-                        </div>
-                        <div class="md:col-span-2">
-                                <h1 >Deadlines</h1>
-
-
-                                <!-- Copy-paste from DecisionSupport.svelte -->
-                                {#each savedPrograms as program}
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div class="col-span-1 md:col-span-2 bg-gray-50 p-6 rounded-lg shadow-md">
-                                          <h3 class="font-semibold text-lg text-blue-900 mb-4">
-                                            {program.name} - {program.university} 
-                                          </h3>
-                                          <div class="grid grid-cols-1 gap-4 text-sm text-gray-600">
-                                            <div class="bg-gray-100 p-3 rounded-lg flex items-center gap-2">
-                                              <i class="fas fa-calendar-alt"></i>
-                                              <span class="font-medium text-gray-800">
-                                                Application Deadline: {new Date(program.deadline).toLocaleDateString()}
-                                              </span>
-                                            </div>
-                                            <div class="bg-gray-100 p-3 rounded-lg flex items-center gap-2">
-                                              <i class="fas fa-clock"></i>
-                                              <span class="font-medium text-gray-800">Days Remaining:</span>
-                                              <span class={getStatus(getRemainingTime(program.deadline)).color}>
-                                                {getRemainingTime(program.deadline)}
-                                              </span>
-                                            </div>
-                                            <div
-                                              class="bg-gray-100 p-3 rounded-lg flex items-center gap-2 font-medium 
-                                              {getStatus(getRemainingTime(program.deadline)).color}"
-                                            >
-                                              {getStatus(getRemainingTime(program.deadline)).label}
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                     
-                                {/each}
-                        </div>
-                </div>
-        {/if}
-
-<!-- 
-        <div class="grid md:grid-cols-3 gap-8">
-                <div class="profile-container">
-                        <h1 >Your Profile</h1>
+    </script>
+    
+    <div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100">
+                <!-- Header Section -->
+                <div class="px-8 pt-8 pb-6 border-b border-gray-100">
+                    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <!-- Profile Picture -->
                         <img 
-                                src={pf.PFP} 
-                                alt={pf.first_name}
-                                class="w-40 h-40 rounded-8 mb-4 object-cover m-auto"
+                            src="s2.png"
+                            alt="Profile"
+                            class="w-32 h-32 rounded-xl object-cover shadow-sm border-2 border-gray-50"
                         />
-                        <p>Name: {pf.first_name + " " + pf.last_name}</p>
-                        <p>Email: {pf.email}</p>
+                        
+                        <!-- Basic Info -->
+                        <div class="flex-1 text-center sm:text-left">
+                            <h1 class="text-2xl font-bold text-gray-900 mb-1">
+                                {profile.firstName} {profile.lastName}
+                            </h1>
+                            <p class="text-gray-500 mb-3">{profile.email}</p>
+                            <p class="text-gray-600 max-w-2xl text-sm">{profile.bio}</p>
+                            
+                            <!-- Quick Info Pills -->
+                            <div class="flex flex-wrap gap-2 mt-4 justify-center sm:justify-start">
+                                
+                                <span class="py-1 bg-gray-50 text-gray-600 rounded-full text-sm">
+                                   <span class="font-bold"> Location:   </span>  
+                                    {profile.location}
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <!-- Edit Button -->
+                        <button 
+                            class="w-fit px-4 py-2 bg-blue-900 text-white rounded-lg shadow-lg 
+                 hover:bg-blue-800 transform hover:scale-105 transition-all
+                 duration-300text-sm font-medium border border-gray-200"
+                        >
+                            Edit Profile
+                        </button>
+                    </div>
                 </div>
-                <div class="md:col-span-2">
-                        <h1 >Deadlines</h1>
+                
+                <!-- Details Section -->
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Education Section -->
+                        <div>
+                            <h2 class="text-lg font-semibold text-gray-900 mb-4">Education</h2>
+                            <div class="space-y-3">
+                                <div>
+                                    <h3 class="font-medium text-gray-900">{profile.education.highSchool}</h3>
+                                    <p class="text-sm text-gray-500">Expected Graduation {profile.education.graduationYear}</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-700 mb-2">Academic Interests</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        {#each profile.education.academicInterests as interest}
+                                            <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded text-sm">
+                                                {interest}
+                                            </span>
+                                        {/each}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Achievements Section -->
+                        <div>
+                            <h2 class="text-lg font-semibold text-gray-900 mb-4">Achievements</h2>
+                            <ul class="space-y-2">
+                                {#each profile.achievements as achievement}
+                                    <li class="flex items-start gap-2 text-gray-600">
+                                        
+                                        <span class="text-sm">- {achievement}</span>
+                                    </li>
+                                {/each}
+                            </ul>
+                        </div>
+                        
+                        <!-- Additional Info -->
+                        <div class="space-y-6">
+                            <div>
+                                <h2 class="text-lg font-semibold text-gray-900 mb-2">Languages</h2>
+                                <div class="flex gap-2">
+                                    {#each profile.languages as language}
+                                        <span class=" py-1 bg-gray-50 text-gray-600 rounded text-sm">
+                                            {language}
+                                        </span>
+                                    {/each}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Join Date -->
+                        <div>
+                            <h2 class="text-lg font-semibold text-gray-900 mb-2">Account Details</h2>
+                            <p class="text-sm text-gray-600">
+                                Member since {profile.joinDate}
+                            </p>
+                        </div>
+                    </div>
                 </div>
-        </div> -->
-</main>
-
-<style>
-        h1 {
-		font-size: 1.5rem; /* Bigger h1 size */
-		text-align: center;
-		margin-bottom: 1rem;
-		color: #007bff;
-		font-family: 'Poppins', sans-serif;
-	}
-
-        .profile-container {
-		border: 2px solid #007bff;
-		padding: 1.5rem;
-		border-radius: 10px;
-		background-color: #f9f9f9;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	} 
-</style>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        :global(body) {
+            background-color: #f9fafb;
+        }
+    </style>

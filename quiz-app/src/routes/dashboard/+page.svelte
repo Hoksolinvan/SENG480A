@@ -34,26 +34,29 @@
   }
   </script>
   
-  <div class="container mx-auto py-8 grid md:grid-cols-3 gap-6">
+  <div class="col-span-2 rounded-lg p-6 w-[75%] max-w-4xl mx-auto">
+
+
+
       <!-- Profile Section -->
-      <div class="col-span-1 bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+      <!-- <div class="col-span-1 bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
           <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-gray-200 mb-4">
               <img
-                  src="https://ui-avatars.com/api/?name=Alex+Johnson&background=random"
+                  src="https://ui-avatars.com/api/?name=Avery+Thompson&background=random"
                   alt="Profile Picture"
                   class="w-32 h-32 rounded-full object-cover"
               />
           </div>
           <h2 class="text-xl font-semibold text-gray-800">{user.name}</h2>
-          <p class="text-sm text-gray-600">{user.email}</p>
-          <!-- commented out for now
+            
+          commented out for now
           <button
               class="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300"
               on:click={() => navigateTo('#')}
           >
               Edit Profile
-          </button> -->
-      </div>
+          </button> 
+      </div> -->
   
       <!-- Interactive Elements -->
       <div class="col-span-2 bg-white shadow-md rounded-lg p-6">
