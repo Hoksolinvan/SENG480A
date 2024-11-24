@@ -33,7 +33,7 @@ const ProgramList = [
 		degreeType: 'Bachelor',
 		admissionRate: 40,
 		deadline: '2024-10-30',
-		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
+		url: 'https://kamloops.me/wp-content/uploads/2019/04/thompson-rivers-university-4-scaled.jpg',
 		cost: 20000, // Lower living costs in Kamloops, BC (Bachelor's)
 		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
 	},
@@ -807,7 +807,7 @@ const ProgramList = [
 		degreeType: 'Bachelor',
 		admissionRate: 30,
 		deadline: '2024-10-30',
-		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
+		url: 'https://kamloops.me/wp-content/uploads/2019/04/thompson-rivers-university-4-scaled.jpg',
 		cost: 27000, // Lower living costs in Kamloops, BC (Bachelor's)
 		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
 
@@ -820,7 +820,7 @@ const ProgramList = [
 		degreeType: 'Bachelor',
 		admissionRate: 45,
 		deadline: '2024-10-30',
-		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
+		url: 'https://kamloops.me/wp-content/uploads/2019/04/thompson-rivers-university-4-scaled.jpg',
 		cost: 30000, // Lower living costs in Kamloops, BC (Bachelor's)
 		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
 
@@ -833,7 +833,7 @@ const ProgramList = [
 		degreeType: 'Bachelor',
 		admissionRate: 30,
 		deadline: '2024-10-30',
-		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
+		url: 'https://kamloops.me/wp-content/uploads/2019/04/thompson-rivers-university-4-scaled.jpg',
 		cost: 28000, // Lower living costs in Kamloops, BC (Bachelor's)
 		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
 
@@ -846,7 +846,7 @@ const ProgramList = [
 		degreeType: 'Bachelor',
 		admissionRate: 35,
 		deadline: '2024-10-30',
-		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
+		url: 'https://kamloops.me/wp-content/uploads/2019/04/thompson-rivers-university-4-scaled.jpg',
 		cost: 26000, // Lower living costs in Kamloops, BC (Bachelor's)
 		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
 
@@ -859,7 +859,7 @@ const ProgramList = [
 		degreeType: 'Bachelor',
 		admissionRate: 20,
 		deadline: '2024-10-30',
-		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
+		url: 'https://kamloops.me/wp-content/uploads/2019/04/thompson-rivers-university-4-scaled.jpg',
 		cost: 32000, // Lower living costs in Kamloops, BC (Bachelor's)
 		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
 
@@ -872,7 +872,7 @@ const ProgramList = [
 		degreeType: 'Bachelor',
 		admissionRate: 29,
 		deadline: '2024-10-30',
-		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
+		url: 'https://kamloops.me/wp-content/uploads/2019/04/thompson-rivers-university-4-scaled.jpg',
 		cost: 28000, // Lower living costs in Kamloops, BC (Bachelor's)
 		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
 
@@ -885,7 +885,7 @@ const ProgramList = [
 		degreeType: 'Bachelor',
 		admissionRate: 35,
 		deadline: '2024-10-30',
-		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
+		url: 'https://kamloops.me/wp-content/uploads/2019/04/thompson-rivers-university-4-scaled.jpg',
 		cost: 28000, // Lower living costs in Kamloops, BC (Bachelor's)
 		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
 
@@ -898,7 +898,7 @@ const ProgramList = [
 		degreeType: 'Bachelor',
 		admissionRate: 29,
 		deadline: '2024-10-30',
-		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
+		url: 'https://kamloops.me/wp-content/uploads/2019/04/thompson-rivers-university-4-scaled.jpg',
 		cost: 18000, // Lower living costs in Kamloops, BC (Bachelor's)
 		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
 
