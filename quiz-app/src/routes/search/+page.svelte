@@ -44,7 +44,7 @@
   <div class="bg-gradient-to-br from-blue-900 to-blue-500 py-16">
     <div class="max-w-7xl mx-auto px-4" in:fly={{ y: 20, duration: 600 }}>
       <h1 class="text-4xl font-bold text-white text-center mb-8">
-        Find Your Perfect Program
+        Search Programs
       </h1>
       
       <div class="max-w-4xl mx-auto space-y-6">
