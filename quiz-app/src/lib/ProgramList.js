@@ -11,7 +11,7 @@ const ProgramList = [
 		deadline: '2024-12-01',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
 		cost: 22000, // Tuition + living costs for Victoria, BC (Bachelor's)
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner:'/UVIC_UPDATED.png'
 	},
 	{
 		id: 2,
@@ -134,7 +134,7 @@ const ProgramList = [
 		deadline: '2024-11-25',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
 		cost: 23000, // Higher for engineering program in Victoria, BC
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner:'/UVIC_UPDATED.png'
 
 	},
 	{
@@ -197,7 +197,7 @@ const ProgramList = [
 		deadline: '2024-12-15',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
 		cost: 22000, // Victoria, BC, moderate cost
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner:'/UVIC_UPDATED.png'
 
 	},
 	{
@@ -327,7 +327,7 @@ const ProgramList = [
 		deadline: '2024-12-05',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
 		cost: 22000, // Victoria, BC, moderate cost
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner:'/UVIC_UPDATED.png'
 
 	},
 	{
@@ -340,7 +340,7 @@ const ProgramList = [
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
 		cost: 20000, // Prince George, BC, lower cost
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner: 'data:image/png;base64,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'
 
 	},
 	{
@@ -461,7 +461,7 @@ const ProgramList = [
 		deadline: '2024-12-10',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
 		cost: 20000, // Lower cost for Bachelor's in Prince George, BC
-		banner: 'https://www.cclmportal.ca/sites/default/files/images/2020-04/organization_unbc_logo_green_905x156.gif'
+		banner: 'data:image/png;base64,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'
 	},
 	{
 		id: 38,
@@ -547,7 +547,7 @@ const ProgramList = [
 		deadline: '2024-12-10',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
 		cost: 22000, // Moderate cost for Bachelor's in Victoria, BC
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner:'/UVIC_UPDATED.png'
 
 	},
 	
@@ -719,7 +719,7 @@ const ProgramList = [
 		deadline: '2024-12-17',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
 		cost: 28000, // Tuition + living costs for Victoria, BC (Bachelor's)
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner:'/UVIC_UPDATED.png'
 
 	},
 	{
@@ -732,7 +732,7 @@ const ProgramList = [
 		deadline: '2024-12-23',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
 		cost: 26000, // Tuition + living costs for Victoria, BC (Bachelor's)
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner:'/UVIC_UPDATED.png'
 
 	},
 	{
@@ -745,7 +745,7 @@ const ProgramList = [
 		deadline: '2024-12-15',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
 		cost: 26000, // Tuition + living costs for Victoria, BC (Bachelor's)
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner:'/UVIC_UPDATED.png'
 
 	},
 	{
@@ -758,7 +758,7 @@ const ProgramList = [
 		deadline: '2024-12-17',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
 		cost: 32000, // Tuition + living costs for Victoria, BC (Bachelor's)
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner:'/UVIC_UPDATED.png'
 
 	},
 	{
@@ -771,7 +771,7 @@ const ProgramList = [
 		deadline: '2024-12-17',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
 		cost: 35000, // Tuition + living costs for Victoria, BC (Bachelor's)
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner:'/UVIC_UPDATED.png'
 
 	},
 	{
@@ -784,8 +784,7 @@ const ProgramList = [
 		deadline: '2024-12-10',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
 		cost: 24000, // Tuition + living costs for Victoria, BC (Bachelor's)
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
-
+		banner:'/UVIC_UPDATED.png'
 	},
 	{
 		id: 63,
@@ -797,7 +796,7 @@ const ProgramList = [
 		deadline: '2024-12-17',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
 		cost: 28000, // Tuition + living costs for Victoria, BC (Bachelor's)
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner:'/UVIC_UPDATED.png'
 
 	},
 	{
@@ -914,7 +913,7 @@ const ProgramList = [
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
 		cost: 20000, // Prince George, BC, lower cost
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner: 'data:image/png;base64,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'
 
 	},
 	{
@@ -927,8 +926,7 @@ const ProgramList = [
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
 		cost: 20000, // Prince George, BC, lower cost
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
-
+		banner: 'data:image/png;base64,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'
 	},
 	{
 		id: 74,
@@ -940,7 +938,7 @@ const ProgramList = [
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
 		cost: 32000, // Prince George, BC, lower cost
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner: 'data:image/png;base64,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'
 
 	},
 	{
@@ -953,7 +951,7 @@ const ProgramList = [
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
 		cost: 27000, // Prince George, BC, lower cost
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner: 'data:image/png;base64,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'
 
 	},
 	{
@@ -966,7 +964,7 @@ const ProgramList = [
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
 		cost: 27000, // Prince George, BC, lower cost
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner: 'data:image/png;base64,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'
 
 	},
 	{
@@ -979,7 +977,7 @@ const ProgramList = [
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
 		cost: 22000, // Prince George, BC, lower cost
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner: 'data:image/png;base64,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'
 
 	},
 	{
@@ -992,7 +990,7 @@ const ProgramList = [
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
 		cost: 30000, // Prince George, BC, lower cost
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner: 'data:image/png;base64,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'
 
 	},
 	{
@@ -1005,7 +1003,7 @@ const ProgramList = [
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
 		cost: 28000, // Prince George, BC, lower cost
-		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+		banner: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAh0AAABdCAMAAAA2eSSQAAAAwFBMVEX///8DVkIASTEATDUARi0AVD8ATjgATzlPhXcAUTwARCoAWUQAQymivLX09/bb5uMVYE7R3dp1npO7zciatq6zwbyKqJ/l7evi6+kAYU3x9vWzy8VKfG6ApZzs8/FskYbE1NBJemxdjYDW4N2TsakybFzC0846eGhmi4AAPiKasaoZZlMSXEk1cWF4mI5VgHNZi34ucWA8cGFQe26En5YaaVZghnsEZlNvkIaVta2EqZ8pY1Jtm48AOBhEgHEAMw40EaoEAAAblklEQVR4nO1de0PqOhKHpA/a0hcgxSKlPH1QVDzqXsXjfv9vtZm0SSYV9Nzde1c9t78/zhGatmkzmfcMrdZfjmu7LeCc//WXb/CtsTUldVjDz55Mg6+FwGor6jj57Nk0+FqIDUUdXvzZs2nwtTCgkjjMffrZs2nwtYCV0tlnT6bB10Lww1FqR++zZ9Pga2EUKZOF9D97Ng2+FmKldrSd8LNn0+BrwUdK6Sr77Nk0+FqYK7XDufjsyTT4Ylg1ntIGx5AUSCkdf/ZsGnwtrBVxtI1G7WigwVdRFtP77Mk0+GLAntLOZ0+mwRfDDimlV589mQZfCwH2hTWe0gYaUPjeLBZ/xRWDNIyTRr39ZAQxwuL4IcjYSEMEbegTDt+zz1l4CMmvTChd9CedTcEuZLbNu4Y+PhVjYkrY86OHnH+xL5ZeJNHWyKOulA7RSIXVxUdCJ1hf33nUcsxSjXFu/tqHbfAnMUQJf1TXJ3vokD1lX7w6ilzoMxqphe+H7PMZGongGNPgnbnE9x6xTeQ5sZ7fGd3gb0dwo9a1rk/iQxQyRRWDgAwftM5a+D5n0sFDS6yBnh1LGwv6O8uunQbXavB5SDZoQUxNMRjt0SHIFE0MvHI4dxSH7z0mckJtpAbr5fBE+jPLeTv6/6p2BMF7jO3vPPmrIiSIOCLtUIxWy9yzdRpTvHB0qYbi8D0okr42Ugc9ZNKMbskB2tD4E8PAF+QbjAcL+Nf3xYh4ANGdkT9g/6hx7JxBzmbuK6xb6PNYkt/o6nG3O7tel5/yQV8/y/dHvp+rB/Z9PLFkMJ2xk0V8KUSnfev86wF2VOhKKV5i56ylqyiMDDZqKArf23+wz1Msg2qwrw/Mwjx4gn2vjYovPaEKh97PGP6lbl5983oJkWG/67GFvuxKETnosnNGp9QQuGREHdjU6AIMQm9L8noyXKaDG4SU7+DmctJKTZeNJxY/t9tunRun6qp0reaVTdhxaruEbEqqvHKJvN23jkjOsW7hHz1kTdgXj/r2tpTVgsL3nKX8OMAIFFXVWXA2tw6rKbUJDYjkJTG12J+x3ZZmlmcBRcz56hqSryUrwohmYZk9gRc264VRPA+enp4Gk5lD4claQ+INw9Eonzk8wJw8GP3WiI8/cwr+/7LVt4y8vGpuWmhm4R0pejk7+daxt3yCc+tc3m/0XyzKl8EdWhdb54JI0+SZoumDvobKY66F79c1jcWhlGqcwajppeH2mBwiuhC6JlPx54Ds2L9LappF+fozwp1wHgHt+VQqN0MSsbv5fLQCIrOtAwwhdkhF6lsK/Cq0ZZx5SETYKLujJdtLNu5EXSz1yK46eUjJE/x/avwe7uIQkYC51+g8wbQA+uqI6GvnnItXrIXvyz2tRt2Ox/49NkYMnQhz8yijsbSB6cyQO7ZDYBFfyTKq2MSY3MEQl+vKHauq4w3LBOg50aXZVH3u0Qc4wRDMpncJFMjISTzbOZH61RMpuOTYESSCgxnpSGZ4Y/1gfydd7y9xF3861tie1V1PfayUbkEprVFHmwpqwuF70EawxlLmp48xR8jxbeL2MeO37bxqExp5hnzpe25hR3Y+pKUysCS3MGeyh/UTX7Z6hJPJShdR6YzIz68UVpraYk7jHkiWF8mlmIoiiTkz+XnXBrbKfVKoTbUksMPGxvb3cPFeoXW09SqUK6SDOqBqTqza6tGnaij2lMLL1p'
 
 	},
 	{
