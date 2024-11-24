@@ -4,8 +4,8 @@
   
   // User profile data
   let user = {
-      name: "Alex Johnson",
-      email: "alex.johnson@email.com",
+      name: "Avery Thompson",
+      email: "avery.thompson@email.com",
       profilePic: "/static/default-profile-pic.png",
   };
   
