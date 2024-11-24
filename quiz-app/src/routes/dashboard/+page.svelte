@@ -5,7 +5,7 @@
   // User profile data
   let user = {
       name: "Avery Thompson",
-      email: "avery.thompson@email.com",
+      email: "demo@easypath.ca",
       profilePic: "/static/default-profile-pic.png",
   };
   
