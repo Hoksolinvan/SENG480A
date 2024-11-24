@@ -46,12 +46,13 @@
           </div>
           <h2 class="text-xl font-semibold text-gray-800">{user.name}</h2>
           <p class="text-sm text-gray-600">{user.email}</p>
+          <!-- commented out for now
           <button
               class="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300"
               on:click={() => navigateTo('#')}
           >
               Edit Profile
-          </button>
+          </button> -->
       </div>
   
       <!-- Interactive Elements -->
