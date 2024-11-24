@@ -125,7 +125,7 @@
 		<div class="max-w-7xl mx-auto px-4">
 		  <div class="max-w-4xl mx-auto space-y-6">
 			<h1 class="text-4xl font-bold text-white text-center mb-8">
-			  Find your Scholarships
+			  Find Scholarships
 			</h1>
 			<div class="flex items-center space-x-4 relative">
 			  <!-- Search Input -->
