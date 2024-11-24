@@ -1,4 +1,7 @@
 <script>
+    import { savedPrograms } from '$lib/savedScholarships';
+
+
     let searchQuery = '';
     let DropDown = {};
     let programCollection = []; // Array to hold added scholarships
@@ -191,7 +194,10 @@
                                 <p><b>Value:</b> {scholarship.value}</p>
                                 <p><b>Classification:</b> {scholarship.classification}</p>
                                 <p><b>University:</b> {scholarship.university}</p>
-                                <div class="mt-2 text-blue-800 font-semibold underline cursor-pointer"
+                                <br>
+                                <div class="w-60 py-3 bg-blue-600 text-white rounded-lg font-medium 
+                                hover:bg-blue-700 transform hover:scale-105 active:scale-95 
+                                transition-all duration-200 ease-in-out text-center"
                                     on:click={() => ProgramCollectionHandler(scholarship)}>
                                     Add to Collection
                                 </div>
