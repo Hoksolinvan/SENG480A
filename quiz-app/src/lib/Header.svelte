@@ -1,7 +1,13 @@
 <script>
 	import { onMount } from 'svelte';
+	import { browser } from "$app/environment";
 	let pf = "";
 	let current_toggle = false;
+	var history_length = 0;
+	let history_counter = 0;
+	let navigationStack = ['Home']; // Start with the 'Home' page
+  	let forwardStack = []; // Empty forward stack
+
 
 	onMount(() => {
                 // Temporary measure for demo:
@@ -9,12 +15,21 @@
 		// as the item only exists when a user is logged in
 		// if yes then redirect to profile page
 		pf = JSON.parse(localStorage.getItem('ezpathUsername'));
+
+
+	
+	
         });
 
+		
+  
 		function toggleDisplay(){
 		current_toggle=!current_toggle;
 
 	};
+
+	
+
 
 </script>
 
@@ -101,7 +116,15 @@
 						{/if}
 					  </div>
 					{/if}
-				  </li>
+				</li>
+
+				{#if navigationStack.length > 1}
+				<li>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:30px; height:30px" class="profile" on:click={handleBack}><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M11.5 280.6l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2zm256 0l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2z"/></svg>
+				</li>
+				{/if}
+				
+		
 				  
 
 			</ul>
@@ -239,6 +262,10 @@
 		filter: invert(30%) sepia(100%) saturate(1000%) hue-rotate(200deg);
 	}
 
+	.backimage {
+		background-color:white;
+	}
+	
 
 	/* Dropdown menu */
 

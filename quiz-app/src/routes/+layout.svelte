@@ -33,9 +33,13 @@
 	</script>
 	
 	<!-- Main Content Area -->
+	
 	<main class="main-content">
 		<slot />
+		
+		
 	</main>
+	
 
 	<!-- Footer Component -->
 	<div id="footer-styling">
@@ -95,6 +99,8 @@
 		max-width: 1000px;
 		width: 100%;
 	}
+
+	
 
 
 </style>
