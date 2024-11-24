@@ -47,7 +47,7 @@
 		
 		<nav class="nav">
 			<ul>
-
+				<li><a href="/about" class="nav-link"><b>ABOUT US</b></a></li>
 				<!-- commented out for minimalistic view
 				<li><a href="/about" class="nav-link">ABOUT US</a></li>
 				<li><a href="/contact" class="nav-link">CONTACT</a></li> -->
@@ -71,7 +71,7 @@
 				{/if} -->
 				<!-- This does not look like it is fully working -- need to be fixed-->
 				<li><a href="/scholarships" class="nav-link"><b>SCHOLARSHIPS</b></a></li> 
-				<li><a href="/about" class="nav-link"><b>ABOUT US</b></a></li>
+				
 
 				{#if pf != null}
 				<li><a href="/dashboard" class="nav-button my-programs">MY PROGRAMS</a></li>
