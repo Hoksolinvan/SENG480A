@@ -3,16 +3,16 @@
 
   const testimonials = [
     {
-      name: "Avery Thompson",
+      name: "Emma Carter",
       role: "High School Senior",
       image: "./s2.png",
-      quote: "EasyPath made finding the right program so simple and stress-free!"
+      quote: "EasyPath helped me find programs I never knew about. Amazing!"
     },
     {
       name: "John Patel",
       role: "Grade 12 Student",
       image: "./s1.png",
-      quote: "All my application deadlines in one place—no more stress!"
+      quote: "All my application deadlines in one place. No more stress!"
     },
     {
       name: "Marcus Brown",
@@ -107,7 +107,7 @@
           <h3 class="text-xl font-semibold text-blue-900 mb-2">Scholarship Catalog</h3>
           <p class="text-gray-600">Explore the scholarships available in our database.</p>
           <div class="absolute top-0 left-0 w-full h-full bg-blue-100 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <img src="/searchpic.webp
+            <img src="/scholarships.webp
             " alt="Smart Search" class="w-40 h-40" />
           </div>
         </div>
