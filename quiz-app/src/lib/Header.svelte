@@ -36,7 +36,7 @@
 				<!-- commented out for minimalistic view
 				<li><a href="/about" class="nav-link">ABOUT US</a></li>
 				<li><a href="/contact" class="nav-link">CONTACT</a></li> -->
-				<li><a href="/saved" class="nav-link"><b>SEARCH</b></a></li>
+				<li><a href="/search" class="nav-link"><b>SEARCH</b></a></li>
 
 				<!-- commented out as the login is not functional 
 				{#if pf === null}

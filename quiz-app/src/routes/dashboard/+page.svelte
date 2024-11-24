@@ -60,9 +60,9 @@
           <div class="grid grid-cols-2 gap-4 mb-8">
               <button
                   class="bg-blue-600 text-white py-3 px-6 rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300"
-                  on:click={() => navigateTo('search')}
+                  on:click={() => navigateTo('saved')}
               >
-                  Search Programs
+                  Compare Programs
               </button>
               <button
                   class="bg-green-500 text-white py-3 px-6 rounded-lg shadow hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-300"
