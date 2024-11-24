@@ -50,7 +50,7 @@
           class="w-fit px-8 py-4 bg-blue-900 text-white rounded-lg shadow-lg 
                  hover:bg-blue-800 transform hover:scale-105 transition-all
                  duration-300 text-lg font-semibold"
-          on:click={search}
+          on:click={navigateToSearch} 
         >
           Get Started
         </button>
@@ -72,7 +72,7 @@
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-bold text-blue-900 text-center mb-12">What EasyPath Offers</h2>
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-4 gap-8">
         <div class="p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300 relative">
           <div class="text-blue-600 text-4xl mb-4">⏰</div>
           <h3 class="text-xl font-semibold text-blue-900 mb-2">Deadline Tracking</h3>
@@ -100,7 +100,21 @@
             " alt="Smart Search" class="w-40 h-40" />
           </div>
         </div>
+
+
+        <div class="p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300 relative">
+          <div class="text-blue-600 text-4xl mb-4">🎓</div>
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">Scholarship Catalog</h3>
+          <p class="text-gray-600">Explore the scholarships available in our database.</p>
+          <div class="absolute top-0 left-0 w-full h-full bg-blue-100 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <img src="/searchpic.webp
+            " alt="Smart Search" class="w-40 h-40" />
+          </div>
+        </div>
       </div>
+
+
+      
     </div>
   </section>
 
