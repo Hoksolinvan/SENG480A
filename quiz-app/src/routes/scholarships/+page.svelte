@@ -107,6 +107,15 @@
     contentArray[key] = !contentArray[key]; // Update the object based on checkbox state
   }
 
+
+  async function saveScholarship() {
+    if (selectedProgram) {
+        savedPrograms.add(selectedProgram);
+        
+    }
+}
+
+
     // Fetch scholarships on load
     get_scholarships();
 </script>
