@@ -9,7 +9,7 @@ function createSavedScholarshipsStore() {
 		: [];
 
 	// Create the writable store
-	const { subscribe, set, update } = writable(initialPrograms);
+	const { subscribe, set, update } = writable(initialScholarships);
 
 	// Sync changes to localStorage (only in the browser)
 	if (isBrowser) {
