@@ -5,7 +5,7 @@
   import ProgramList from '$lib/ProgramList.js';
   
 
-
+  let showSaveMessage = false;
   let searchQuery = '';
   let filters = {
     location: '',
@@ -33,7 +33,10 @@
   async function saveProgram() {
     if (selectedProgram) {
         savedPrograms.add(selectedProgram);
-        
+        showSaveMessage = true;
+        setTimeout(() => {
+            showSaveMessage = false;
+        }, 3000); // Hide message after 3 seconds
     }
 }
 
@@ -306,17 +309,62 @@
               </div>
             </div>
 
-            <button 
-              on:click={saveProgram}
-              class="w-full py-3 bg-blue-600 text-white rounded-lg font-medium 
-                     hover:bg-blue-700 transform hover:scale-105 active:scale-95 
-                     transition-all duration-200 ease-in-out"
-            >
-              Save Program
-            </button>
+            <div class="relative">
+              <button 
+                  on:click={saveProgram}
+                  class="w-full py-3 bg-blue-600 text-white rounded-lg font-medium 
+                         hover:bg-blue-700 transform hover:scale-105 active:scale-95 
+                         transition-all duration-200 ease-in-out
+                         {showSaveMessage ? 'animate-bounce' : ''}"
+              >
+                  Save Program
+              </button>
+              
+              {#if showSaveMessage}
+                  <div 
+                      class="absolute -top-12 left-0 right-0 text-center p-2 bg-green-100 
+                             text-green-700 rounded-lg transform transition-all duration-300 
+                             animate-fade-in-down"
+                      in:fly={{ y: -20, duration: 300 }}
+                      out:fade
+                  >
+                      Program saved successfully!
+                  </div>
+              {/if}
+          </div>
           </div>
         </div>
       {/if}
     </div>
   </div>
 </div>
+
+<style>
+  @keyframes fade-in-down {
+      0% {
+          opacity: 0;
+          transform: translateY(-10px);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  :global(.animate-fade-in-down) {
+      animation: fade-in-down 0.3s ease-out;
+  }
+
+  :global(.animate-bounce) {
+      animation: bounce 0.5s ease-in-out;
+  }
+
+  @keyframes bounce {
+      0%, 100% {
+          transform: scale(1);
+      }
+      50% {
+          transform: scale(1.1);
+      }
+  }
+</style>
