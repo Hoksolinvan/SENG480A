@@ -14,17 +14,17 @@
   });
 </script>
 
-<div class="mt-8 bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+<div class="mt-8 bg-white rounded-2xl shadow-lg p-6 border border-gray-200 w-full">
   <h2 class="text-2xl font-semibold mb-6 text-blue-900">Program Comparison</h2> 
 
-  <div class="overflow-x-auto">
-    <table class="min-w-full divide-y divide-gray-200">
+  <div class="overflow-x-auto w-full">
+    <table class="min-w-full divide-y divide-gray-200 table-auto border-collapse">
       <thead class="bg-gray-50">
         <tr>
 
           <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">University Banner</th> 
           {#each savedPrograms as program}
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"><img src={program.banner} style="width:300px; height:70px;"></th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"><img src={program.banner} style="width:400px; height:100px;"></th>
           {/each}
         </tr>
         

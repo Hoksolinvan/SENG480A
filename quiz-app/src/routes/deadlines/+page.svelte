@@ -89,20 +89,7 @@
     </div>
   </div>
 
-  <div class="bg-white border rounded-lg shadow-md p-6">
-    <h2 class="text-lg font-medium mb-4 text-gray-800">Scholarship</h2>
-    <div class="space-y-2">
-      {#if programs && programs.length > 0}
-        {#each programs as program (program.id)}
-          
-
-
-        {/each}
-      {:else}
-        <p class="text-sm text-gray-500">No scholarships available. Please add some scholarships.</p>
-      {/if}
-    </div>
-  </div>
+  
 
   <!-- Deadline Details -->
   <div class="bg-white border rounded-lg shadow-md p-6">
