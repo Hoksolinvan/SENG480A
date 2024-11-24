@@ -10,7 +10,8 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: '2024-12-01',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
-		cost: 22000 // Tuition + living costs for Victoria, BC (Bachelor's)
+		cost: 22000, // Tuition + living costs for Victoria, BC (Bachelor's)
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
 	},
 	{
 		id: 2,
@@ -21,7 +22,8 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: '2024-11-15',
 		url: 'https://www.ubc.ca/_assets/img/aerial-main-mall-800x253.jpg',
-		cost: 25000 // Vancouver has higher living costs (Bachelor's)
+		cost: 25000, // Vancouver has higher living costs (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
 	},
 	{
 		id: 3,
@@ -32,7 +34,8 @@ const ProgramList = [
 		admissionRate: 40,
 		deadline: '2024-10-30',
 		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
-		cost: 20000 // Lower living costs in Kamloops, BC (Bachelor's)
+		cost: 20000, // Lower living costs in Kamloops, BC (Bachelor's)
+		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
 	},
 	{
 		id: 4,
@@ -43,7 +46,8 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-12-05',
 		url: 'https://ucalgary.ca/sites/default/files/styles/ucws_hero_cta_desktop/public/2019-10/mainCampus-hero_1.jpg?itok=NfR3C6Ba',
-		cost: 23000 // Moderate costs for Calgary, AB (Bachelor's)
+		cost: 23000, // Moderate costs for Calgary, AB (Bachelor's)
+		banner: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/UCalgary_Horizontal_logo_colour.jpg?itok=fTDRxDlp'
 	},
 	{
 		id: 5,
@@ -54,7 +58,8 @@ const ProgramList = [
 		admissionRate: 45,
 		deadline: '2024-11-30',
 		url: 'https://images.shiksha.com/mediadata/images/1533646004phpFUNLK4.jpeg',
-		cost: 22000 // Moderate costs for Edmonton, AB (Bachelor's)
+		cost: 22000, // Moderate costs for Edmonton, AB (Bachelor's)
+		banner: 'https://cdn.worldvectorlogo.com/logos/university-of-alberta-3.svg'
 	},
 	/*  { 
                 id: 6, 
@@ -76,7 +81,8 @@ const ProgramList = [
 		admissionRate: 50,
 		deadline: '2024-11-25',
 		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi_rwTmM_uiGLg5DXBmRPXg72gqQ8FpEq8Ig&s',
-		cost: 24000 // Burnaby, BC, moderate cost (Bachelor's)
+		cost: 24000, // Burnaby, BC, moderate cost (Bachelor's)
+		banner: 'https://www.sfu.ca/content/sfu/communicators-toolkit/brand/guidelines/logos/logo-usage-guidelines/jcr:content/main_content/image_672850327.img.640.medium.png/1685743328658.png'
 	},
 	{
 		id: 8,
@@ -87,7 +93,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: '2024-12-10',
 		url: 'https://ucalgary.ca/sites/default/files/styles/ucws_hero_cta_desktop/public/2019-10/mainCampus-hero_1.jpg?itok=NfR3C6Ba',
-		cost: 23000 // Calgary, AB (Bachelor's)
+		cost: 23000, // Calgary, AB (Bachelor's)
+		banner: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/UCalgary_Horizontal_logo_colour.jpg?itok=fTDRxDlp'
+
 	},
 	{
 		id: 9,
@@ -98,7 +106,9 @@ const ProgramList = [
 		admissionRate: 20,
 		deadline: '2024-12-15',
 		url: 'https://www.ubc.ca/_assets/img/aerial-main-mall-800x253.jpg',
-		cost: 27000 // Nursing costs slightly higher in Vancouver, BC (Bachelor's)
+		cost: 27000, // Nursing costs slightly higher in Vancouver, BC (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 10,
@@ -109,7 +119,10 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-11-20',
 		url: 'https://images.shiksha.com/mediadata/images/1533646004phpFUNLK4.jpeg',
-		cost: 22000 // Moderate costs for Edmonton, AB (Bachelor's)
+		cost: 22000, // Moderate costs for Edmonton, AB (Bachelor's)
+		banner: 'https://cdn.worldvectorlogo.com/logos/university-of-alberta-3.svg'
+
+		
 	},
 	{
 		id: 11,
@@ -120,7 +133,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: '2024-11-25',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
-		cost: 23000 // Higher for engineering program in Victoria, BC
+		cost: 23000, // Higher for engineering program in Victoria, BC
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 12,
@@ -131,7 +146,9 @@ const ProgramList = [
 		admissionRate: 40,
 		deadline: '2024-12-10',
 		url: 'https://ucalgary.ca/sites/default/files/styles/ucws_hero_cta_desktop/public/2019-10/mainCampus-hero_1.jpg?itok=NfR3C6Ba',
-		cost: 23000 // Calgary, AB (Bachelor's)
+		cost: 23000, // Calgary, AB (Bachelor's)
+		banner: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/UCalgary_Horizontal_logo_colour.jpg?itok=fTDRxDlp'
+
 	},
 	{
 		id: 13,
@@ -142,7 +159,9 @@ const ProgramList = [
 		admissionRate: 50,
 		deadline: '2024-11-30',
 		url: 'https://www.ubc.ca/_assets/img/our-campuses/ubco-aerials-our-campus_1920x700.jpg',
-		cost: 21000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 21000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	/* { 
                 id: 14, 
@@ -164,7 +183,9 @@ const ProgramList = [
 		admissionRate: 45,
 		deadline: '2024-11-20',
 		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi_rwTmM_uiGLg5DXBmRPXg72gqQ8FpEq8Ig&s',
-		cost: 24000 // Burnaby, BC, moderate cost
+		cost: 24000, // Burnaby, BC, moderate cost
+		banner: 'https://www.sfu.ca/content/sfu/communicators-toolkit/brand/guidelines/logos/logo-usage-guidelines/jcr:content/main_content/image_672850327.img.640.medium.png/1685743328658.png'
+
 	},
 	{
 		id: 16,
@@ -175,7 +196,9 @@ const ProgramList = [
 		admissionRate: 45,
 		deadline: '2024-12-15',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
-		cost: 22000 // Victoria, BC, moderate cost
+		cost: 22000, // Victoria, BC, moderate cost
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 17,
@@ -186,7 +209,9 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: '2024-11-20',
 		url: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_hero_cta_desktop/public/2019-10/mainCampus-hero_1.jpg?itok=NfR3C6Ba',
-		cost: 23000 // Calgary, AB, moderate cost
+		cost: 23000, // Calgary, AB, moderate cost
+		banner: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/UCalgary_Horizontal_logo_colour.jpg?itok=fTDRxDlp'
+
 	},
 	{
 		id: 18,
@@ -197,7 +222,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: '2024-12-05',
 		url: 'https://www.ubc.ca/_assets/img/our-campuses/ubco-aerials-our-campus_1920x700.jpg',
-		cost: 21000 // Kelowna, BC, slightly lower cost
+		cost: 21000, // Kelowna, BC, slightly lower cost
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 19,
@@ -208,7 +235,9 @@ const ProgramList = [
 		admissionRate: 40,
 		deadline: '2024-11-25',
 		url: 'https://images.shiksha.com/mediadata/images/1533646004phpFUNLK4.jpeg',
-		cost: 22000 // Edmonton, AB, moderate cost
+		cost: 22000,
+		banner: 'https://cdn.worldvectorlogo.com/logos/university-of-alberta-3.svg'
+		// Edmonton, AB, moderate cost
 	},
 	{
 		id: 20,
@@ -219,7 +248,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-11-30',
 		url: 'https://www.ubc.ca/_assets/img/aerial-main-mall-800x253.jpg',
-		cost: 27000 // Vancouver, BC, higher cost
+		cost: 27000, // Vancouver, BC, higher cost
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 21,
@@ -230,7 +261,9 @@ const ProgramList = [
 		admissionRate: 45,
 		deadline: '2024-12-15',
 		url: 'https://www.sfu.ca/content/sfu/sfucommunity/woodwards/photo-gallery/jcr:content/main_content/image_0.img.960.auto.jpg/1634310628497.jpg',
-		cost: 24000 // Burnaby, BC, moderate cost
+		cost: 24000, // Burnaby, BC, moderate cost
+		banner: 'https://www.sfu.ca/content/sfu/communicators-toolkit/brand/guidelines/logos/logo-usage-guidelines/jcr:content/main_content/image_672850327.img.640.medium.png/1685743328658.png'
+
 	},
 	{
 		id: 22,
@@ -241,7 +274,9 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: '2024-11-20',
 		url: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_hero_cta_desktop/public/2019-10/mainCampus-hero_1.jpg?itok=NfR3C6Ba',
-		cost: 23000 // Calgary, AB, moderate cost
+		cost: 23000, // Calgary, AB, moderate cost
+		banner: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/UCalgary_Horizontal_logo_colour.jpg?itok=fTDRxDlp'
+
 	},
 	{
 		id: 23,
@@ -252,7 +287,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: '2024-12-05',
 		url: 'https://www.ubc.ca/_assets/img/our-campuses/ubco-aerials-our-campus_1920x700.jpg',
-		cost: 21000 // Kelowna, BC, slightly lower cost
+		cost: 21000, // Kelowna, BC, slightly lower cost
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 24,
@@ -263,7 +300,9 @@ const ProgramList = [
 		admissionRate: 40,
 		deadline: '2024-11-25',
 		url: 'https://images.shiksha.com/mediadata/images/1533646004phpFUNLK4.jpeg',
-		cost: 22000 // Edmonton, AB, moderate cost
+		cost: 22000, // Edmonton, AB, moderate cost
+		banner: 'https://cdn.worldvectorlogo.com/logos/university-of-alberta-3.svg'
+
 	},
 	{
 		id: 25,
@@ -274,7 +313,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-11-30',
 		url: 'https://www.ubc.ca/_assets/img/aerial-main-mall-800x253.jpg',
-		cost: 27000 // Vancouver, BC, higher cost
+		cost: 27000, // Vancouver, BC, higher cost
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 26,
@@ -285,7 +326,9 @@ const ProgramList = [
 		admissionRate: 40,
 		deadline: '2024-12-05',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
-		cost: 22000 // Victoria, BC, moderate cost
+		cost: 22000, // Victoria, BC, moderate cost
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 27,
@@ -296,7 +339,9 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
-		cost: 20000 // Prince George, BC, lower cost
+		cost: 20000, // Prince George, BC, lower cost
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 28,
@@ -307,7 +352,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: '2024-12-05',
 		url: 'https://www.ubc.ca/_assets/img/our-campuses/ubco-aerials-our-campus_1920x700.jpg',
-		cost: 21000 // Kelowna, BC, slightly lower cost
+		cost: 21000, // Kelowna, BC, slightly lower cost
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 29,
@@ -318,7 +365,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-12-01',
 		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi_rwTmM_uiGLg5DXBmRPXg72gqQ8FpEq8Ig&s',
-		cost: 24000 // Burnaby, BC, moderate cost
+		cost: 24000, // Burnaby, BC, moderate cost
+		banner: 'https://www.sfu.ca/content/sfu/communicators-toolkit/brand/guidelines/logos/logo-usage-guidelines/jcr:content/main_content/image_672850327.img.640.medium.png/1685743328658.png'
+
 	},
 	{
 		id: 30,
@@ -329,7 +378,9 @@ const ProgramList = [
 		admissionRate: 45,
 		deadline: '2024-11-25',
 		url: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_hero_cta_desktop/public/2019-10/mainCampus-hero_1.jpg?itok=NfR3C6Ba',
-		cost: 23000 // Calgary, AB, moderate cost
+		cost: 23000, // Calgary, AB, moderate cost
+		banner: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/UCalgary_Horizontal_logo_colour.jpg?itok=fTDRxDlp'
+
 	},
 	/* { 
                 id: 31, 
@@ -351,7 +402,9 @@ const ProgramList = [
 		admissionRate: 40,
 		deadline: '2024-12-05',
 		url: 'https://images.shiksha.com/mediadata/images/1533646004phpFUNLK4.jpeg',
-		cost: 22000 // Moderate cost for Bachelor's in Edmonton, AB
+		cost: 22000, // Moderate cost for Bachelor's in Edmonton, AB
+		banner: 'https://cdn.worldvectorlogo.com/logos/university-of-alberta-3.svg'
+
 	},
 	/* { 
                 id: 33, 
@@ -384,7 +437,8 @@ const ProgramList = [
 		admissionRate: 50,
 		deadline: '2024-11-30',
 		url: 'https://cdn.prod.website-files.com/667c59abb9df9789d17407a6/667dd6863400fe779b562af4_UNIVERSITY-GUIDEBOOK-2022-ROYAL-ROADS-01-1.jpeg',
-		cost: 21000 // Lower cost for Bachelor's in Victoria, BC
+		cost: 21000, // Lower cost for Bachelor's in Victoria, BC
+		banner: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr-uFGzPGqVPorT1XtyBVtssH5UjZIsLSU1w&s'
 	},
 	/* { 
                 id: 36, 
@@ -406,7 +460,8 @@ const ProgramList = [
 		admissionRate: 40,
 		deadline: '2024-12-10',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
-		cost: 20000 // Lower cost for Bachelor's in Prince George, BC
+		cost: 20000, // Lower cost for Bachelor's in Prince George, BC
+		banner: 'https://www.cclmportal.ca/sites/default/files/images/2020-04/organization_unbc_logo_green_905x156.gif'
 	},
 	{
 		id: 38,
@@ -417,7 +472,8 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-11-15',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
-		cost: 23000 // Moderate cost for Nursing Bachelor's in Calgary, AB
+		cost: 23000, // Moderate cost for Nursing Bachelor's in Calgary, AB
+		banner: 'https://www.mtroyal.ca/AboutMountRoyal/MarketingCommunications/_image/MRU_1c_logo_Outline_pms539.png'
 	},
 	{
 		id: 39,
@@ -428,7 +484,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: '2024-12-01',
 		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi_rwTmM_uiGLg5DXBmRPXg72gqQ8FpEq8Ig&s',
-		cost: 24000 // Moderate cost for Bachelor's in Burnaby, BC
+		cost: 24000, // Moderate cost for Bachelor's in Burnaby, BC
+		banner: 'https://www.sfu.ca/content/sfu/communicators-toolkit/brand/guidelines/logos/logo-usage-guidelines/jcr:content/main_content/image_672850327.img.640.medium.png/1685743328658.png'
+
 	},
 	/* { 
                 id: 40, 
@@ -450,7 +508,9 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: '2024-11-20',
 		url: 'https://www.ubc.ca/_assets/img/aerial-main-mall-800x253.jpg',
-		cost: 27000 // Higher cost for Bachelor's in Vancouver, BC
+		cost: 27000, // Higher cost for Bachelor's in Vancouver, BC
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 42,
@@ -461,7 +521,8 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-12-01',
 		url: 'https://dsai.ca/wp-content/uploads/Emily-Carr-Hero.jpg',
-		cost: 26000 // Moderate cost for Bachelor's in Vancouver, BC
+		cost: 26000, // Moderate cost for Bachelor's in Vancouver, BC
+		banner: 'https://www.globalheroes.com/wp-content/uploads/2024/05/ECUAD_Logo_Primary_Master_RGB_ECUAD_Logo_Primary_Colour_Black_RGB.png'
 	},
 	{
 		id: 43,
@@ -472,7 +533,9 @@ const ProgramList = [
 		admissionRate: 40,
 		deadline: '2024-11-30',
 		url: 'https://images.shiksha.com/mediadata/images/1533646004phpFUNLK4.jpeg',
-		cost: 22000 // Moderate cost for Bachelor's in Edmonton, AB
+		cost: 22000, // Moderate cost for Bachelor's in Edmonton, AB
+		banner: 'https://cdn.worldvectorlogo.com/logos/university-of-alberta-3.svg'
+
 	},
 	{
 		id: 44,
@@ -483,7 +546,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: '2024-12-10',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
-		cost: 22000 // Moderate cost for Bachelor's in Victoria, BC
+		cost: 22000, // Moderate cost for Bachelor's in Victoria, BC
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	
 
@@ -497,7 +562,9 @@ const ProgramList = [
 		admissionRate: 20,
 		deadline: '2024-11-15',
 		url: 'https://www.ubc.ca/_assets/img/aerial-main-mall-800x253.jpg',
-		cost: 30000 // Vancouver has higher living costs (Bachelor's)
+		cost: 30000, // Vancouver has higher living costs (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 46,
@@ -508,7 +575,9 @@ const ProgramList = [
 		admissionRate: 50,
 		deadline: '2024-10-20',
 		url: 'https://www.ubc.ca/_assets/img/aerial-main-mall-800x253.jpg',
-		cost: 27000 // Vancouver has higher living costs (Bachelor's)
+		cost: 27000, // Vancouver has higher living costs (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 47,
@@ -519,7 +588,9 @@ const ProgramList = [
 		admissionRate: 40,
 		deadline: '2024-11-20',
 		url: 'https://www.ubc.ca/_assets/img/aerial-main-mall-800x253.jpg',
-		cost: 27000 // Vancouver has higher living costs (Bachelor's)
+		cost: 27000, // Vancouver has higher living costs (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 48,
@@ -530,7 +601,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: '2024-11-15',
 		url: 'https://www.ubc.ca/_assets/img/aerial-main-mall-800x253.jpg',
-		cost: 30000 // Vancouver has higher living costs (Bachelor's)
+		cost: 30000, // Vancouver has higher living costs (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 49,
@@ -541,7 +614,9 @@ const ProgramList = [
 		admissionRate: 40,
 		deadline: '2024-12-00',
 		url: 'https://www.ubc.ca/_assets/img/aerial-main-mall-800x253.jpg',
-		cost: 18000 // Vancouver has higher living costs (Bachelor's)
+		cost: 18000, // Vancouver has higher living costs (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 50,
@@ -552,7 +627,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-11-21',
 		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi_rwTmM_uiGLg5DXBmRPXg72gqQ8FpEq8Ig&s',
-		cost: 28000 // Burnaby, BC, moderate cost (Bachelor's)
+		cost: 28000, // Burnaby, BC, moderate cost (Bachelor's)
+		banner: 'https://www.sfu.ca/content/sfu/communicators-toolkit/brand/guidelines/logos/logo-usage-guidelines/jcr:content/main_content/image_672850327.img.640.medium.png/1685743328658.png'
+
 	},
 	{
 		id: 51,
@@ -563,7 +640,9 @@ const ProgramList = [
 		admissionRate: 50,
 		deadline: '2024-11-25',
 		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi_rwTmM_uiGLg5DXBmRPXg72gqQ8FpEq8Ig&s',
-		cost: 60000 // Burnaby, BC, moderate cost (Bachelor's)
+		cost: 60000, // Burnaby, BC, moderate cost (Bachelor's)
+		banner: 'https://www.sfu.ca/content/sfu/communicators-toolkit/brand/guidelines/logos/logo-usage-guidelines/jcr:content/main_content/image_672850327.img.640.medium.png/1685743328658.png'
+
 	},
 	{
 		id: 52,
@@ -574,7 +653,9 @@ const ProgramList = [
 		admissionRate: 41,
 		deadline: '2024-11-25',
 		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi_rwTmM_uiGLg5DXBmRPXg72gqQ8FpEq8Ig&s',
-		cost: 24820 // Burnaby, BC, moderate cost (Bachelor's)
+		cost: 24820, // Burnaby, BC, moderate cost (Bachelor's)
+		banner: 'https://www.sfu.ca/content/sfu/communicators-toolkit/brand/guidelines/logos/logo-usage-guidelines/jcr:content/main_content/image_672850327.img.640.medium.png/1685743328658.png'
+
 	},
 	{
 		id: 53,
@@ -585,7 +666,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: '2024-11-25',
 		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi_rwTmM_uiGLg5DXBmRPXg72gqQ8FpEq8Ig&s',
-		cost: 28000 // Burnaby, BC, moderate cost (Bachelor's)
+		cost: 28000, // Burnaby, BC, moderate cost (Bachelor's)
+		banner: 'https://www.sfu.ca/content/sfu/communicators-toolkit/brand/guidelines/logos/logo-usage-guidelines/jcr:content/main_content/image_672850327.img.640.medium.png/1685743328658.png'
+
 	},
 	{
 		id: 54,
@@ -596,7 +679,9 @@ const ProgramList = [
 		admissionRate: 41,
 		deadline: '2024-11-25',
 		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi_rwTmM_uiGLg5DXBmRPXg72gqQ8FpEq8Ig&s',
-		cost: 28000 // Burnaby, BC, moderate cost (Bachelor's)
+		cost: 28000, // Burnaby, BC, moderate cost (Bachelor's)
+		banner: 'https://www.sfu.ca/content/sfu/communicators-toolkit/brand/guidelines/logos/logo-usage-guidelines/jcr:content/main_content/image_672850327.img.640.medium.png/1685743328658.png'
+
 	},
 	{
 		id: 55,
@@ -607,7 +692,9 @@ const ProgramList = [
 		admissionRate: 50,
 		deadline: '2024-11-25',
 		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi_rwTmM_uiGLg5DXBmRPXg72gqQ8FpEq8Ig&s',
-		cost: 30000 // Burnaby, BC, moderate cost (Bachelor's)
+		cost: 30000, // Burnaby, BC, moderate cost (Bachelor's)
+		banner: 'https://www.sfu.ca/content/sfu/communicators-toolkit/brand/guidelines/logos/logo-usage-guidelines/jcr:content/main_content/image_672850327.img.640.medium.png/1685743328658.png'
+
 	},
 	{
 		id: 56,
@@ -618,7 +705,9 @@ const ProgramList = [
 		admissionRate: 45,
 		deadline: '2024-11-25',
 		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi_rwTmM_uiGLg5DXBmRPXg72gqQ8FpEq8Ig&s',
-		cost: 18000 // Burnaby, BC, moderate cost (Bachelor's)
+		cost: 18000, // Burnaby, BC, moderate cost (Bachelor's)
+		banner: 'https://www.sfu.ca/content/sfu/communicators-toolkit/brand/guidelines/logos/logo-usage-guidelines/jcr:content/main_content/image_672850327.img.640.medium.png/1685743328658.png'
+
 	},
 	{
 		id: 57,
@@ -629,7 +718,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-12-17',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
-		cost: 28000 // Tuition + living costs for Victoria, BC (Bachelor's)
+		cost: 28000, // Tuition + living costs for Victoria, BC (Bachelor's)
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 58,
@@ -640,7 +731,9 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: '2024-12-23',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
-		cost: 26000 // Tuition + living costs for Victoria, BC (Bachelor's)
+		cost: 26000, // Tuition + living costs for Victoria, BC (Bachelor's)
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 59,
@@ -651,7 +744,9 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: '2024-12-15',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
-		cost: 26000 // Tuition + living costs for Victoria, BC (Bachelor's)
+		cost: 26000, // Tuition + living costs for Victoria, BC (Bachelor's)
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 60,
@@ -662,7 +757,9 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: '2024-12-17',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
-		cost: 32000 // Tuition + living costs for Victoria, BC (Bachelor's)
+		cost: 32000, // Tuition + living costs for Victoria, BC (Bachelor's)
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 61,
@@ -673,7 +770,9 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: '2024-12-17',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
-		cost: 35000 // Tuition + living costs for Victoria, BC (Bachelor's)
+		cost: 35000, // Tuition + living costs for Victoria, BC (Bachelor's)
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 62,
@@ -684,7 +783,9 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: '2024-12-10',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
-		cost: 24000 // Tuition + living costs for Victoria, BC (Bachelor's)
+		cost: 24000, // Tuition + living costs for Victoria, BC (Bachelor's)
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 63,
@@ -695,7 +796,9 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: '2024-12-17',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
-		cost: 28000 // Tuition + living costs for Victoria, BC (Bachelor's)
+		cost: 28000, // Tuition + living costs for Victoria, BC (Bachelor's)
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 64,
@@ -706,7 +809,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-10-30',
 		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
-		cost: 27000 // Lower living costs in Kamloops, BC (Bachelor's)
+		cost: 27000, // Lower living costs in Kamloops, BC (Bachelor's)
+		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
+
 	},
 	{
 		id: 65,
@@ -717,7 +822,9 @@ const ProgramList = [
 		admissionRate: 45,
 		deadline: '2024-10-30',
 		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
-		cost: 30000 // Lower living costs in Kamloops, BC (Bachelor's)
+		cost: 30000, // Lower living costs in Kamloops, BC (Bachelor's)
+		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
+
 	},
 	{
 		id: 66,
@@ -728,7 +835,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-10-30',
 		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
-		cost: 28000 // Lower living costs in Kamloops, BC (Bachelor's)
+		cost: 28000, // Lower living costs in Kamloops, BC (Bachelor's)
+		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
+
 	},
 	{
 		id: 67,
@@ -739,7 +848,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: '2024-10-30',
 		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
-		cost: 26000 // Lower living costs in Kamloops, BC (Bachelor's)
+		cost: 26000, // Lower living costs in Kamloops, BC (Bachelor's)
+		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
+
 	},
 	{
 		id: 68,
@@ -750,7 +861,9 @@ const ProgramList = [
 		admissionRate: 20,
 		deadline: '2024-10-30',
 		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
-		cost: 32000 // Lower living costs in Kamloops, BC (Bachelor's)
+		cost: 32000, // Lower living costs in Kamloops, BC (Bachelor's)
+		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
+
 	},
 	{
 		id: 69,
@@ -761,7 +874,9 @@ const ProgramList = [
 		admissionRate: 29,
 		deadline: '2024-10-30',
 		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
-		cost: 28000 // Lower living costs in Kamloops, BC (Bachelor's)
+		cost: 28000, // Lower living costs in Kamloops, BC (Bachelor's)
+		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
+
 	},
 	{
 		id: 70,
@@ -772,7 +887,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: '2024-10-30',
 		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
-		cost: 28000 // Lower living costs in Kamloops, BC (Bachelor's)
+		cost: 28000, // Lower living costs in Kamloops, BC (Bachelor's)
+		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
+
 	},
 	{
 		id: 71,
@@ -783,7 +900,9 @@ const ProgramList = [
 		admissionRate: 29,
 		deadline: '2024-10-30',
 		url: 'https://universitystudy.ca/wp-content/uploads/2013/08/Thompson-Rivers_banner_web-960x.jpg',
-		cost: 18000 // Lower living costs in Kamloops, BC (Bachelor's)
+		cost: 18000, // Lower living costs in Kamloops, BC (Bachelor's)
+		banner: 'https://lh4.googleusercontent.com/yGM3o6kPEEQPFiOthXkAiiZwMdnSgBNkvyXeuNlUK7HPJF3QjDTDw-cJmEzmPCqTqSLHvb_G-3JSbFy4moRLGkC_WJ8YadhjWwcTfsJRvFXe72rK1m0C_bLjNU9T5kfY_PwI95V5'
+
 	},
 	{
 		id: 72,
@@ -794,7 +913,9 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
-		cost: 20000 // Prince George, BC, lower cost
+		cost: 20000, // Prince George, BC, lower cost
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 73,
@@ -805,7 +926,9 @@ const ProgramList = [
 		admissionRate: 28,
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
-		cost: 20000 // Prince George, BC, lower cost
+		cost: 20000, // Prince George, BC, lower cost
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 74,
@@ -816,7 +939,9 @@ const ProgramList = [
 		admissionRate: 20,
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
-		cost: 32000 // Prince George, BC, lower cost
+		cost: 32000, // Prince George, BC, lower cost
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 75,
@@ -827,7 +952,9 @@ const ProgramList = [
 		admissionRate: 40,
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
-		cost: 27000 // Prince George, BC, lower cost
+		cost: 27000, // Prince George, BC, lower cost
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 76,
@@ -838,7 +965,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
-		cost: 27000 // Prince George, BC, lower cost
+		cost: 27000, // Prince George, BC, lower cost
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 77,
@@ -849,7 +978,9 @@ const ProgramList = [
 		admissionRate: 20,
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
-		cost: 22000 // Prince George, BC, lower cost
+		cost: 22000, // Prince George, BC, lower cost
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 78,
@@ -860,7 +991,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
-		cost: 30000 // Prince George, BC, lower cost
+		cost: 30000, // Prince George, BC, lower cost
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 79,
@@ -871,7 +1004,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-12-01',
 		url: 'https://www.unbc.ca/sites/default/files/styles/listed_image/public/featured-link/dsc2878crop.jpg.webp?itok=rzZEleNT',
-		cost: 28000 // Prince George, BC, lower cost
+		cost: 28000, // Prince George, BC, lower cost
+		banner:'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.cengn.ca/wp-content/uploads/2021/08/509px-University_of_Victoria_Logo_and_Wordmark.svg_.png'
+
 	},
 	{
 		id: 80,
@@ -882,7 +1017,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-11-30',
 		url: 'https://cdn.prod.website-files.com/667c59abb9df9789d17407a6/667dd6863400fe779b562af4_UNIVERSITY-GUIDEBOOK-2022-ROYAL-ROADS-01-1.jpeg',
-		cost: 28000 // Lower cost for Bachelor's in Victoria, BC
+		cost: 28000, // Lower cost for Bachelor's in Victoria, BC
+		banner: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr-uFGzPGqVPorT1XtyBVtssH5UjZIsLSU1w&s'
+
 	},
 	{
 		id: 81,
@@ -893,7 +1030,9 @@ const ProgramList = [
 		admissionRate: 20,
 		deadline: '2024-11-30',
 		url: 'https://cdn.prod.website-files.com/667c59abb9df9789d17407a6/667dd6863400fe779b562af4_UNIVERSITY-GUIDEBOOK-2022-ROYAL-ROADS-01-1.jpeg',
-		cost: 31000 // Lower cost for Bachelor's in Victoria, BC
+		cost: 31000, // Lower cost for Bachelor's in Victoria, BC
+		banner: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr-uFGzPGqVPorT1XtyBVtssH5UjZIsLSU1w&s'
+
 	},
 	{
 		id: 82,
@@ -904,7 +1043,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-11-30',
 		url: 'https://cdn.prod.website-files.com/667c59abb9df9789d17407a6/667dd6863400fe779b562af4_UNIVERSITY-GUIDEBOOK-2022-ROYAL-ROADS-01-1.jpeg',
-		cost: 27000 // Lower cost for Bachelor's in Victoria, BC
+		cost: 27000, // Lower cost for Bachelor's in Victoria, BC
+		banner: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr-uFGzPGqVPorT1XtyBVtssH5UjZIsLSU1w&s'
+
 	},
 	{
 		id: 83,
@@ -915,7 +1056,9 @@ const ProgramList = [
 		admissionRate: 50,
 		deadline: '2024-11-30',
 		url: 'https://cdn.prod.website-files.com/667c59abb9df9789d17407a6/667dd6863400fe779b562af4_UNIVERSITY-GUIDEBOOK-2022-ROYAL-ROADS-01-1.jpeg',
-		cost: 28000 // Lower cost for Bachelor's in Victoria, BC
+		cost: 28000, // Lower cost for Bachelor's in Victoria, BC
+		banner: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr-uFGzPGqVPorT1XtyBVtssH5UjZIsLSU1w&s'
+
 	},
 	{
 		id: 84,
@@ -926,7 +1069,9 @@ const ProgramList = [
 		admissionRate: 52,
 		deadline: '2024-11-30',
 		url: 'https://cdn.prod.website-files.com/667c59abb9df9789d17407a6/667dd6863400fe779b562af4_UNIVERSITY-GUIDEBOOK-2022-ROYAL-ROADS-01-1.jpeg',
-		cost: 24000 // Lower cost for Bachelor's in Victoria, BC
+		cost: 24000, // Lower cost for Bachelor's in Victoria, BC
+		banner: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr-uFGzPGqVPorT1XtyBVtssH5UjZIsLSU1w&s'
+
 	},
 	{
 		id: 85,
@@ -937,7 +1082,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-11-30',
 		url: 'https://cdn.prod.website-files.com/667c59abb9df9789d17407a6/667dd6863400fe779b562af4_UNIVERSITY-GUIDEBOOK-2022-ROYAL-ROADS-01-1.jpeg',
-		cost: 27000 // Lower cost for Bachelor's in Victoria, BC
+		cost: 27000, // Lower cost for Bachelor's in Victoria, BC
+		banner: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr-uFGzPGqVPorT1XtyBVtssH5UjZIsLSU1w&s'
+
 	},
 	{
 		id: 86,
@@ -948,7 +1095,9 @@ const ProgramList = [
 		admissionRate: 20,
 		deadline: '2024-11-30',
 		url: 'https://cdn.prod.website-files.com/667c59abb9df9789d17407a6/667dd6863400fe779b562af4_UNIVERSITY-GUIDEBOOK-2022-ROYAL-ROADS-01-1.jpeg',
-		cost: 31000 // Lower cost for Bachelor's in Victoria, BC
+		cost: 31000, // Lower cost for Bachelor's in Victoria, BC
+		banner: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr-uFGzPGqVPorT1XtyBVtssH5UjZIsLSU1w&s'
+
 	},
 	{
 		id: 87,
@@ -959,7 +1108,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-11-30',
 		url: 'https://cdn.prod.website-files.com/667c59abb9df9789d17407a6/667dd6863400fe779b562af4_UNIVERSITY-GUIDEBOOK-2022-ROYAL-ROADS-01-1.jpeg',
-		cost: 19000 // Lower cost for Bachelor's in Victoria, BC
+		cost: 19000, // Lower cost for Bachelor's in Victoria, BC
+		banner: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr-uFGzPGqVPorT1XtyBVtssH5UjZIsLSU1w&s'
+
 	},
 	{
 		id: 88,
@@ -970,7 +1121,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: '2024-11-30',
 		url: 'https://images.shiksha.com/mediadata/images/1533646004phpFUNLK4.jpeg',
-		cost: 22000 // Moderate costs for Edmonton, AB (Bachelor's)
+		cost: 22000, // Moderate costs for Edmonton, AB (Bachelor's)
+		banner: 'https://cdn.worldvectorlogo.com/logos/university-of-alberta-3.svg'
+
 	},
 	{
 		id: 89,
@@ -981,7 +1134,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-12-30',
 		url: 'https://www.ubc.ca/_assets/img/our-campuses/ubco-aerials-our-campus_1920x700.jpg',
-		cost: 27000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 27000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 90,
@@ -992,7 +1147,9 @@ const ProgramList = [
 		admissionRate: 45,
 		deadline: '2024-11-30',
 		url: 'https://www.ubc.ca/_assets/img/our-campuses/ubco-aerials-our-campus_1920x700.jpg',
-		cost: 29000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 29000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 91,
@@ -1003,7 +1160,9 @@ const ProgramList = [
 		admissionRate: 20,
 		deadline: '2024-11-17',
 		url: 'https://www.ubc.ca/_assets/img/our-campuses/ubco-aerials-our-campus_1920x700.jpg',
-		cost: 30000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 30000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 92,
@@ -1014,7 +1173,9 @@ const ProgramList = [
 		admissionRate: 20,
 		deadline: '2024-11-30',
 		url: 'https://www.ubc.ca/_assets/img/our-campuses/ubco-aerials-our-campus_1920x700.jpg',
-		cost: 24000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 24000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 93,
@@ -1025,7 +1186,9 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: '2024-11-30',
 		url: 'https://www.ubc.ca/_assets/img/our-campuses/ubco-aerials-our-campus_1920x700.jpg',
-		cost: 29000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 29000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 94,
@@ -1036,7 +1199,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: '2024-11-30',
 		url: 'https://www.ubc.ca/_assets/img/our-campuses/ubco-aerials-our-campus_1920x700.jpg',
-		cost: 27000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 27000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 95,
@@ -1047,7 +1212,9 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: '2024-11-30',
 		url: 'https://www.ubc.ca/_assets/img/our-campuses/ubco-aerials-our-campus_1920x700.jpg',
-		cost: 24000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 24000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 96,
@@ -1058,7 +1225,9 @@ const ProgramList = [
 		admissionRate: 31,
 		deadline: '2024-11-30',
 		url: 'https://www.ubc.ca/_assets/img/our-campuses/ubco-aerials-our-campus_1920x700.jpg',
-		cost: 24000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 24000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png'
+
 	},
 	{
 		id: 97,
@@ -1069,7 +1238,9 @@ const ProgramList = [
 		admissionRate: 33,
 		deadline: '2024-11-30',
 		url: 'https://www.kpu.ca/sites/default/files/Summer_2024_reg.png',
-		cost: 35000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 35000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://www.collegesinstitutes.ca/wp-content/uploads/2022/10/1_member_logo_kwantlen.jpg'
+
 	},
 	{
 		id: 98,
@@ -1080,7 +1251,8 @@ const ProgramList = [
 		admissionRate: 33,
 		deadline: '2024-12-30',
 		url: 'https://www.kpu.ca/sites/default/files/Summer_2024_reg.png',
-		cost: 32000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 32000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://www.collegesinstitutes.ca/wp-content/uploads/2022/10/1_member_logo_kwantlen.jpg'
 	},
 	{
 		id: 99,
@@ -1091,7 +1263,9 @@ const ProgramList = [
 		admissionRate: 20,
 		deadline: '2024-11-30',
 		url: 'https://www.kpu.ca/sites/default/files/Summer_2024_reg.png',
-		cost: 30000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 30000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://www.collegesinstitutes.ca/wp-content/uploads/2022/10/1_member_logo_kwantlen.jpg'
+
 	},
 	{
 		id: 100,
@@ -1102,7 +1276,9 @@ const ProgramList = [
 		admissionRate: 33,
 		deadline: '2024-11-30',
 		url: 'https://www.kpu.ca/sites/default/files/Summer_2024_reg.png',
-		cost: 32000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 32000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://www.collegesinstitutes.ca/wp-content/uploads/2022/10/1_member_logo_kwantlen.jpg'
+
 	},
 	{
 		id: 101,
@@ -1113,7 +1289,9 @@ const ProgramList = [
 		admissionRate: 33,
 		deadline: '2024-11-30',
 		url: 'https://www.kpu.ca/sites/default/files/Summer_2024_reg.png',
-		cost: 35000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 35000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://www.collegesinstitutes.ca/wp-content/uploads/2022/10/1_member_logo_kwantlen.jpg'
+
 	},
 	{
 		id: 102,
@@ -1124,7 +1302,9 @@ const ProgramList = [
 		admissionRate: 33,
 		deadline: '2024-11-30',
 		url: 'https://www.kpu.ca/sites/default/files/Summer_2024_reg.png',
-		cost: 37000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 37000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://www.collegesinstitutes.ca/wp-content/uploads/2022/10/1_member_logo_kwantlen.jpg'
+
 	},
 	{
 		id: 103,
@@ -1135,7 +1315,9 @@ const ProgramList = [
 		admissionRate: 33,
 		deadline: '2024-11-29',
 		url: 'https://www.kpu.ca/sites/default/files/Summer_2024_reg.png',
-		cost: 10000 // Kelowna is slightly cheaper (Bachelor's)
+		cost: 10000, // Kelowna is slightly cheaper (Bachelor's)
+		banner: 'https://www.collegesinstitutes.ca/wp-content/uploads/2022/10/1_member_logo_kwantlen.jpg'
+
 	},
 	{
 		id: 104,
@@ -1146,7 +1328,8 @@ const ProgramList = [
 		admissionRate: 33,
 		deadline: "2024-11-29",
 		url: "https://www.macewan.ca/business-administration/apply.png",
-		cost: 10000
+		cost: 10000,
+		banner: 'https://upload.wikimedia.org/wikipedia/commons/7/75/MacEwanU-Logo.svg'
 	},
 	{
 		id: 105,
@@ -1157,7 +1340,9 @@ const ProgramList = [
 		admissionRate: 20,
 		deadline: "2024-12-15",
 		url: "https://www.macewan.ca/nursing/apply.png",
-		cost: 11000
+		cost: 11000,
+		banner: 'https://upload.wikimedia.org/wikipedia/commons/7/75/MacEwanU-Logo.svg'
+
 	},
 	{
 		id: 106,
@@ -1168,7 +1353,9 @@ const ProgramList = [
 		admissionRate: 45,
 		deadline: "2024-11-30",
 		url: "https://www.macewan.ca/computerscience/admissions.png",
-		cost: 12000
+		cost: 12000,
+		banner: 'https://upload.wikimedia.org/wikipedia/commons/7/75/MacEwanU-Logo.svg'
+
 	},
 	{
 		id: 107,
@@ -1179,7 +1366,9 @@ const ProgramList = [
 		admissionRate: 50,
 		deadline: "2025-01-20",
 		url: "https://www.macewan.ca/psychology/apply.png",
-		cost: 9000
+		cost: 9000,
+		banner: 'https://upload.wikimedia.org/wikipedia/commons/7/75/MacEwanU-Logo.svg'
+
 	},
 	{
 		id: 108,
@@ -1190,7 +1379,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: "2024-12-10",
 		url: "https://www.macewan.ca/biology/admissions.png",
-		cost: 10500
+		cost: 10500,
+		banner: 'https://upload.wikimedia.org/wikipedia/commons/7/75/MacEwanU-Logo.svg'
+
 	},
 	{
 		id: 109,
@@ -1201,7 +1392,9 @@ const ProgramList = [
 		admissionRate: 25,
 		deadline: "2025-01-05",
 		url: "https://www.macewan.ca/engineering/apply.png",
-		cost: 13000
+		cost: 13000,
+		banner: 'https://upload.wikimedia.org/wikipedia/commons/7/75/MacEwanU-Logo.svg'
+
 	},
 	{
 		id: 110,
@@ -1212,7 +1405,9 @@ const ProgramList = [
 		admissionRate: 40,
 		deadline: "2024-11-25",
 		url: "https://www.macewan.ca/economics/admissions.png",
-		cost: 9500
+		cost: 9500,
+		banner: 'https://upload.wikimedia.org/wikipedia/commons/7/75/MacEwanU-Logo.svg'
+
 	},
 	{
 		id: 111,
@@ -1223,7 +1418,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: "2025-02-01",
 		url: "https://www.macewan.ca/education/apply.png",
-		cost: 11000
+		cost: 11000,
+		banner: 'https://upload.wikimedia.org/wikipedia/commons/7/75/MacEwanU-Logo.svg'
+
 	},
 	{
 		id: 112,
@@ -1234,7 +1431,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: "2024-12-15",
 		url: "https://ucalgary.ca/sites/default/files/business-admin.jpg",
-		cost: 22000
+		cost: 22000,
+		banner: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/UCalgary_Horizontal_logo_colour.jpg?itok=fTDRxDlp'
+
 	},
 	{
 		id: 113,
@@ -1245,7 +1444,9 @@ const ProgramList = [
 		admissionRate: 28,
 		deadline: "2025-01-10",
 		url: "https://ucalgary.ca/sites/default/files/nursing.jpg",
-		cost: 23000
+		cost: 23000,
+		banner: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/UCalgary_Horizontal_logo_colour.jpg?itok=fTDRxDlp'
+
 	},
 	{
 		id: 114,
@@ -1256,7 +1457,9 @@ const ProgramList = [
 		admissionRate: 35,
 		deadline: "2024-12-25",
 		url: "https://ucalgary.ca/sites/default/files/computer-science.jpg",
-		cost: 24000
+		cost: 24000,
+		banner: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/UCalgary_Horizontal_logo_colour.jpg?itok=fTDRxDlp'
+
 	},
 	{
 		id: 115,
@@ -1267,7 +1470,9 @@ const ProgramList = [
 		admissionRate: 32,
 		deadline: "2025-01-20",
 		url: "https://ucalgary.ca/sites/default/files/psychology.jpg",
-		cost: 21000
+		cost: 21000,
+		banner: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/UCalgary_Horizontal_logo_colour.jpg?itok=fTDRxDlp'
+
 	},
 	{
 		id: 116,
@@ -1278,7 +1483,9 @@ const ProgramList = [
 		admissionRate: 27,
 		deadline: "2025-01-05",
 		url: "https://ucalgary.ca/sites/default/files/biology.jpg",
-		cost: 22000
+		cost: 22000,
+		banner: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/UCalgary_Horizontal_logo_colour.jpg?itok=fTDRxDlp'
+
 	},
 	{
 		id: 117,
@@ -1289,7 +1496,9 @@ const ProgramList = [
 		admissionRate: 29,
 		deadline: "2024-12-18",
 		url: "https://ucalgary.ca/sites/default/files/economics.jpg",
-		cost: 22500
+		cost: 22500,
+		banner: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/UCalgary_Horizontal_logo_colour.jpg?itok=fTDRxDlp'
+
 	},
 	{
 		id: 118,
@@ -1300,7 +1509,9 @@ const ProgramList = [
 		admissionRate: 30,
 		deadline: "2025-02-01",
 		url: "https://ucalgary.ca/sites/default/files/education.jpg",
-		cost: 21500
+		cost: 21500,
+		banner: 'https://www.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/UCalgary_Horizontal_logo_colour.jpg?itok=fTDRxDlp'
+
 	}
 	
 
