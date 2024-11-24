@@ -56,19 +56,19 @@
   
         <!-- Degree Type -->
         <tr class="bg-gray-50">
-          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Degree Type</td> 
+          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Degree</td> 
           {#each savedPrograms as program}
             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{program.degreeType}</td>
           {/each}
         </tr>
   
         <!-- Admission Rate -->
-        <tr>
+        <!-- <tr>
           <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Admission Rate</td> 
           {#each savedPrograms as program}
             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{program.admissionRate}%</td>
           {/each}
-        </tr>
+        </tr> -->
   
         <!-- Grade Requirement (new row) -->
         <!-- <tr class="bg-gray-50">
