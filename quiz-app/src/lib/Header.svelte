@@ -85,6 +85,7 @@
 							<!-- Profile and Settings links -->
 							<!-- <div><a href="/dashboard"><b>My Dashboard</b></a></div>
 							<div><a href="/saved"><b>My Programs</b></a></div> -->
+							<div><a href="#"><b>Edit Profile</b></a></div>
 							<div><a href="/settings"><b>Settings</b></a></div>
 				  
 							<!-- Log out link -->
