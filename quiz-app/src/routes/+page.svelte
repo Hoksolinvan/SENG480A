@@ -50,7 +50,7 @@
           class="w-fit px-8 py-4 bg-blue-900 text-white rounded-lg shadow-lg 
                  hover:bg-blue-800 transform hover:scale-105 transition-all
                  duration-300 text-lg font-semibold"
-          on:click={navigateToDashboard}
+          on:click={search}
         >
           Get Started
         </button>
