@@ -14,6 +14,15 @@
   });
 </script>
 
+<button 
+  class="w-fit px-4 py-2 bg-blue-900 text-white rounded-lg shadow-sm 
+  hover:bg-blue-800 transform hover:scale-105 transition-all
+  duration-300text-sm font-medium border border-gray-200"
+  onclick="window.location.href = './dashboard';"
+>
+  Back
+</button>
+
 <div class="mt-8 bg-white rounded-2xl shadow-lg p-6 border border-gray-200 w-full">
   <h2 class="text-2xl font-semibold mb-6 text-blue-900">Program Comparison</h2> 
 
