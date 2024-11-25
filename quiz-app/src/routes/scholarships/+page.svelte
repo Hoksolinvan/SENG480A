@@ -1,6 +1,6 @@
 <script>
     import { savedPrograms } from '$lib/savedScholarships';
-
+    import { onMount } from 'svelte';
 
     let searchQuery = '';
     let DropDown = {};
@@ -8,6 +8,8 @@
     let scholarshipsData = []; // All scholarships data fetched from the server
     let isOpen = false;
     let isLoading = true; // Loading state for scholarships
+    let pf = "";
+    let showSaveMessage = false;
     let contentArray = {
 
 		"High school" : false,
@@ -31,8 +33,12 @@
 
 	};
 
-
-
+  onMount(() => {
+    // Temporary measure for demo:
+		// check if localstorage has expathUsername
+		// as the item only exists when a user is logged in
+		pf = localStorage.getItem('ezpathUsername');
+  });
 
     // Toggle DropDown
     const handleDropDown = (id) => {
@@ -47,6 +53,11 @@
         if (!programCollection.includes(scholarship_param)) { 
             programCollection = [...programCollection, scholarship_param];
         }
+
+        showSaveMessage = true;
+        setTimeout(() => {
+            showSaveMessage = false;
+        }, 3000); // Hide message after 3 seconds
     };
 
    
@@ -204,11 +215,37 @@
                                 <p><b>Classification:</b> {scholarship.classification}</p>
                                 <p><b>University:</b> {scholarship.university}</p>
                                 <br>
-                                <div class="w-60 py-3 bg-blue-600 text-white rounded-lg font-medium 
-                                hover:bg-blue-700 transform hover:scale-105 active:scale-95 
-                                transition-all duration-200 ease-in-out text-center"
-                                    on:click={() => ProgramCollectionHandler(scholarship)}>
-                                    Add to Collection
+                                <div class="relative">
+                                  <div class="w-60 py-3 bg-blue-600 text-white rounded-lg font-medium 
+                                    hover:bg-blue-700 transform hover:scale-105 active:scale-95 
+                                    transition-all duration-200 ease-in-out text-center"
+                                        on:click={() => ProgramCollectionHandler(scholarship)}>
+                                        Add to Collection
+                                    </div>
+
+                                    {#if showSaveMessage}
+                                      {#if pf}
+                                        <div 
+                                        class="absolute w-60 -top-12 left-0 right-0 text-center p-2 bg-green-100 
+                                              text-green-700 rounded-lg transform transition-all duration-300 
+                                              animate-fade-in-down"
+                                        in:fly={{ y: -20, duration: 300 }}
+                                        out:fade
+                                        >
+                                          Added to Collection!
+                                        </div>
+                                      {:else if pf === null}
+                                        <div 
+                                        class="absolute w-60 -top-12 left-0 right-0 text-center p-2 bg-red-100 
+                                              text-red-700 rounded-lg transform transition-all duration-300 
+                                              animate-fade-in-down"
+                                        in:fly={{ y: -20, duration: 300 }}
+                                        out:fade
+                                        >
+                                          You need to <a href="./login" class="text-blue-700">log in</a> first!
+                                        </div>
+                                      {/if}
+                                    {/if}
                                 </div>
                             </div>
                         {/if}
