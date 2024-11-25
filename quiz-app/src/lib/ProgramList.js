@@ -8,9 +8,9 @@ const ProgramList = [
 		location: 'Victoria, BC',
 		degreeType: 'Bachelor',
 		admissionRate: 25,
-		deadline: '2024-12-01',
+		deadline: '2025-03-31',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
-		cost: 22000, // Tuition + living costs for Victoria, BC (Bachelor's)
+		cost: 43640, // Tuition + living costs for Victoria, BC (Bachelor's)
 		banner:'/UVIC_UPDATED.png'
 	},
 	{
@@ -711,14 +711,14 @@ const ProgramList = [
 	},
 	{
 		id: 57,
-		name: 'Business Administration',
+		name: 'Business',
 		university: 'University of Victoria',
 		location: 'Victoria, BC',
 		degreeType: 'Bachelor',
 		admissionRate: 30,
-		deadline: '2024-12-17',
+		deadline: '2025-01-31',
 		url: 'https://cms.macleans.ca/wp-content/uploads/2018/04/MACU01_BC_VICTORIA02.jpg',
-		cost: 28000, // Tuition + living costs for Victoria, BC (Bachelor's)
+		cost: 36330, // Tuition + living costs for Victoria, BC (Bachelor's)
 		banner:'/UVIC_UPDATED.png'
 
 	},
