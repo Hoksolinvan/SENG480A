@@ -169,7 +169,8 @@
 		font-size: 2.5rem; /* Bigger h1 size */
 		text-align: center;
 		margin-bottom: 1rem;
-		color: #007bff;
+		/* color: #007bff; */
+		color: rgb(30 58 138);
 		font-family: 'Poppins', sans-serif;
 	}
 
@@ -181,13 +182,22 @@
 		color: #555;
 	}
 
-	.form-container {
-		border: 2px solid #007bff;
+	/* .form-container {
 		padding: 1.5rem;
 		border-radius: 10px;
-		background-color: #f9f9f9;
+		background-color: rgb(239 246 255);
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-		margin-top: 3rem; /* Add space between p and form */
+		margin-top: 3rem; /* Add space between p and form 
+	} */
+
+	/* bg-white rounded-2xl shadow-sm border border-gray-100 */
+	.form-container {
+		border: 1px solid rgb(243 244 246);
+		padding: 1.5rem;
+		border-radius: 10px;
+		box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+		/* Add space between p and form */
+		margin-top: 3rem; 
 	}
 
 	form {
@@ -202,7 +212,8 @@
 	label {
 		margin-bottom: 0.5rem;
 		font-weight: bold;
-		color: #007bff;
+		/* color: #007bff; */
+		color: rgb(30 58 138);
 		display: block;
 	}
 
@@ -211,7 +222,9 @@
 		font-size: 1rem;
 		width: 100%;
 		box-sizing: border-box;
-		border: 1px solid #007bff;
+		/* border: 1px solid #007bff; */
+		border: 1px solid rgb(243 244 246);
+		box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 		border-radius: 5px;
 	}
 
@@ -223,7 +236,7 @@
 
 	button {
 		padding: 0.75rem;
-		background-color: #007bff;
+		background-color: rgb(30 58 138);
 		color: white;
 		border: none;
 		cursor: pointer;

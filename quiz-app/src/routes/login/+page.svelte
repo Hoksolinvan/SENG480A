@@ -109,7 +109,7 @@
 	</p>
 	<button type="button" class="login-with-google-btn" >
 		Sign in with Google
-	  </button>
+	</button>
 	  
 </main>
 
@@ -119,7 +119,7 @@
 		max-width: 600px;
 		margin: 0 auto;
 		justify-content: center; /* Center horizontally */
-        align-items: center; 
+        	align-items: center; 
 		align-content: center;
 		display: flex;
 		flex-direction: column;
@@ -130,7 +130,8 @@
 		font-size: 2.5rem; /* Bigger h1 size */
 		text-align: center;
 		margin-bottom: 1rem;
-		color: #007bff;
+		/* color: #007bff; */
+		color: rgb(30 58 138);
 		font-family: 'Poppins', sans-serif;
 	}
 
@@ -145,12 +146,13 @@
 
 	.form-container {
 		width: 600px;
-		border: 2px solid #007bff;
+		/* border: 2px solid #007bff; */
 		padding: 1.5rem;
 		border-radius: 10px;
-		background-color: #f9f9f9;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-		margin-top: 3rem; /* Add space between p and form */
+		/* background-color: #f9f9f9; */
+		margin-top: 2rem; /* Add space between p and form */
+		border: 1px solid rgb(243 244 246);
+		box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 	}
 
 	form {
@@ -165,7 +167,8 @@
 	label {
 		margin-bottom: 0.5rem;
 		font-weight: bold;
-		color: #007bff;
+		color: rgb(30 58 138);
+		/* color: #007bff; */
 		display: block;
 	}
 
@@ -174,8 +177,10 @@
 		font-size: 1rem;
 		width: 100%;
 		box-sizing: border-box;
-		border: 1px solid #007bff;
+		/* border: 1px solid #007bff; */
 		border-radius: 5px;
+		border: 1px solid rgb(243 244 246);
+		box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 	}
 
 	input:focus {
@@ -186,7 +191,7 @@
 
 	button {
 		padding: 0.75rem;
-		background-color: #007bff;
+		background-color: rgb(30 58 138);
 		color: white;
 		border: none;
 		cursor: pointer;

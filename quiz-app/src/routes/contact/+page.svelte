@@ -102,7 +102,7 @@
 	h1 {
 		font-size: 2.5rem;
 		/* color: #5603ad; Updated h1 color */
-		color: #007bff;
+		color: rgb(30 58 138);
 		margin-bottom: 1rem;
 		font-family: 'Poppins', sans-serif;
 	}
@@ -116,12 +116,11 @@
 	}
 
 	.form-container {
-		border: 2px solid #007bff;/*#8367c7; /* Updated border color */
 		padding: 1.5rem;
 		border-radius: 10px;
-		background-color: #f9f9f9;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		margin-top: 3rem;
+		border: 1px solid rgb(243 244 246);
+		box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 	}
 
 	form {
@@ -137,7 +136,7 @@
 		margin-bottom: 0.5rem;
 		font-weight: bold;
 		/* color: #8367c7; Updated label color */
-		color: #007bff;
+		color: rgb(30 58 138);
 		text-align: left; /* Left-align form labels */
 		display: block; /* Ensures the label takes full width */
 	}
@@ -148,8 +147,9 @@
 		font-size: 1rem;
 		width: 100%;
 		box-sizing: border-box;
-		border: 1px solid #007bff; /* #8367c7; /* Updated input border color */
 		border-radius: 5px;
+		border: 1px solid rgb(243 244 246);
+		box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 	}
 
 	input:focus,
@@ -161,7 +161,7 @@
 
 	button {
 		padding: 0.75rem;
-		background-color: #007bff; /* #5603ad; /* Updated button color */
+		background-color: rgb(30 58 138); /* #5603ad; /* Updated button color */
 		color: white;
 		border: none;
 		cursor: pointer;
