@@ -3,8 +3,8 @@
   import { goto } from '$app/navigation';
   import { savedPrograms } from '$lib/savedPrograms';
   import ProgramList from '$lib/ProgramList.js';
+  import { onMount } from 'svelte';
   
-
   let showSaveMessage = false;
   let searchQuery = '';
   let universityQuery = '';
@@ -15,6 +15,8 @@
 
   let filteredPrograms = [];
   let selectedProgram = null;
+
+  let pf = "";
   
   $: {
     filteredPrograms = ProgramList.filter(program =>
@@ -24,17 +26,24 @@
       (filters.location.trim() === '' || program.location.toLowerCase().includes(filters.location.toLowerCase()))
     );
   }
+
+  onMount(() => {
+    // Temporary measure for demo:
+		// check if localstorage has expathUsername
+		// as the item only exists when a user is logged in
+		pf = localStorage.getItem('ezpathUsername');
+  });
   
   function handleProgramSelect(program) {
     selectedProgram = program;
   }
   
-  
-  
-
   async function saveProgram() {
     if (selectedProgram) {
-        savedPrograms.add(selectedProgram);
+        // only saves program when user is logged in
+        if (pf) {
+          savedPrograms.add(selectedProgram);
+        }
         showSaveMessage = true;
         setTimeout(() => {
             showSaveMessage = false;
@@ -332,15 +341,27 @@
               </button>
               
               {#if showSaveMessage}
-                  <div 
-                      class="absolute -top-12 left-0 right-0 text-center p-2 bg-green-100 
-                             text-green-700 rounded-lg transform transition-all duration-300 
-                             animate-fade-in-down"
-                      in:fly={{ y: -20, duration: 300 }}
-                      out:fade
-                  >
+                  {#if pf}
+                    <div 
+                    class="absolute -top-12 left-0 right-0 text-center p-2 bg-green-100 
+                          text-green-700 rounded-lg transform transition-all duration-300 
+                          animate-fade-in-down"
+                    in:fly={{ y: -20, duration: 300 }}
+                    out:fade
+                    >
                       Program saved successfully!
-                  </div>
+                    </div>
+                  {:else if pf === null}
+                    <div 
+                    class="absolute -top-12 left-0 right-0 text-center p-2 bg-red-100 
+                          text-red-700 rounded-lg transform transition-all duration-300 
+                          animate-fade-in-down"
+                    in:fly={{ y: -20, duration: 300 }}
+                    out:fade
+                    >
+                      You need to <a href="./login" class="text-blue-700">log in</a> first!
+                    </div>
+                  {/if}
               {/if}
           </div>
           </div>
