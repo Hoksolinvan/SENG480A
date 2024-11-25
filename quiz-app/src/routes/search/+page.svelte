@@ -7,6 +7,7 @@
 
   let showSaveMessage = false;
   let searchQuery = '';
+  let universityQuery = '';
   let filters = {
     location: '',
     degreeType: ''
@@ -17,8 +18,9 @@
   
   $: {
     filteredPrograms = ProgramList.filter(program =>
-      (searchQuery.trim() || filters.location.trim()) &&
+      (searchQuery.trim() || filters.location.trim() || universityQuery.trim()) &&
       (searchQuery.trim() === '' || program.name.toLowerCase().includes(searchQuery.toLowerCase())) &&
+      (universityQuery.trim() === '' || program.university.toLowerCase().includes(universityQuery.toLowerCase())) &&
       (filters.location.trim() === '' || program.location.toLowerCase().includes(filters.location.toLowerCase()))
     );
   }
@@ -55,6 +57,15 @@
           type="text"
           bind:value={searchQuery}
           placeholder="Search for programs..."
+          class="w-full px-6 py-4 text-lg rounded-2xl shadow-2xl focus:ring-4 
+                 focus:ring-blue-300 focus:outline-none transition-all duration-300
+                 transform hover:scale-[1.02]"
+        />
+
+        <input
+          type="text"
+          bind:value={universityQuery}
+          placeholder="Search for universities..."
           class="w-full px-6 py-4 text-lg rounded-2xl shadow-2xl focus:ring-4 
                  focus:ring-blue-300 focus:outline-none transition-all duration-300
                  transform hover:scale-[1.02]"
