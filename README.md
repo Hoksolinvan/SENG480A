@@ -1,8 +1,12 @@
 ## Project: EasyPath
 
-Project Description: an education tracking application for (now) post-secondary programs. Deadlines and requirements congregated into one hub, no more messes of keeping track over dozens of websites and pages.
+We provide Canadian high school students and their parents with an all-in-one platform to organize and plan post-secondary paths. We help students and parents search and compare programs, stay on top of deadlines and program requirements, and discover scholarship opportunities. Our mission is simple: we want to help reduce the stress of applying for post-secondary.
+
+Our app is designed to be your go-to planning assistant for navigating the difficulties of post-secondary applications. We are here to simplify the planning process and make you feel confident with your plan.
 
 ## Team:
+We are a team of diverse UVic students passionate about making a positive impact on young Canadians. Whether you're interested in social sciences, engineering, or business, we want to reduce the stress of the planning process, as we were all there once!
+
 We are a team of five: 
 - Sam Oshry (samjoshry@gmail.com)
 - Karn Dhaliwal (karndhaliwal@icloud.com)
