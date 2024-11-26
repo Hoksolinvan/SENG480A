@@ -47,6 +47,7 @@
 		
 		<nav class="nav">
 			<ul>
+				<li><a href="/about" class="nav-link"><b>ABOUT US</b></a></li>
 				<!-- commented out for minimalistic view
 				<li><a href="/about" class="nav-link">ABOUT US</a></li>
 				<li><a href="/contact" class="nav-link">CONTACT</a></li> -->
@@ -104,10 +105,12 @@
 				  
 							<!-- Log out link -->
 							<div>
+
 							  <a href="#" on:click={() => { 
 								localStorage.removeItem('ezpathUsername'); 
 								window.location.href = '.'; 
 							  }}>
+
 								<b>Log Out</b>
 							  </a>
 							</div>
