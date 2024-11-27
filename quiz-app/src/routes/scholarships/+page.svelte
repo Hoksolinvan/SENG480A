@@ -91,7 +91,7 @@
 
     async function post_scholarship(scholarship) {
 		try {
-			const request = await fetch('https://seng480a-production.up.railway.app/insert_temp_scholarship', {
+			const request = await fetch('https://seng480a-production.up.railway.app/insert_temp_scholarships', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
