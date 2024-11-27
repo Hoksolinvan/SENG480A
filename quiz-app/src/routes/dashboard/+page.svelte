@@ -50,6 +50,7 @@
                 const result = await request.json();
                 scholarshipsData = result; // Assign fetched data directly
                 initializeDropdownStates(result);
+                console.log('success');
             } else {
                 console.error('Error Fetching Scholarships', request.statusText);
             }
