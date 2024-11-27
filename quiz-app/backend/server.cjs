@@ -184,8 +184,8 @@ app.get("/temp_scholarships", async (req,res) => {
 app.post("/insert_temp_scholarships", async (req,res) => {
 
    try{
-      const [{ scholarship_name, value, description, amount, university, classification }] = req.body;
-      console.log(req.body);
+      const { Forms } = req.body; // Extract Forms from the request body
+      const { scholarship_name, value, description, amount, university, classification } = Forms;
       temp_result = await clientDB.any('INSERT INTO temp_scholarship (scholarship_name,value,description,amount,university,classification) VALUES ($1,$2,$3,$4,$5,$6)',[scholarship_name, value, description, amount, university, classification]);
       res.json(temp_result);
 
