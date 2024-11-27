@@ -168,7 +168,7 @@ app.post("/registration", async (req,res) => {
 app.get("/temp_scholarships", async (req,res) => {
 
    try{
-      temp_result = await clientDB.any('SELECT * from temp_table');
+      temp_result = await clientDB.any('SELECT * from temp_scholarship;');
       res.json(temp_result);
 
    }
