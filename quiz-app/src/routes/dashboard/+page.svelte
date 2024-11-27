@@ -9,7 +9,7 @@
       profilePic: "/static/default-profile-pic.png",
   };
 
-
+  //scholarship data
   let scholarshipsData=[];
   
   // Subscribe to saved programs
@@ -61,6 +61,7 @@
     }
 
 
+    get_scholarships();
   </script>
   
   <div class="col-span-2 rounded-lg p-6 w-[75%] max-w-4xl mx-auto">
