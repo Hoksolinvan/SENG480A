@@ -199,6 +199,25 @@ app.post("/insert_temp_scholarships", async (req,res) => {
 });
 
 
+app.get("/delete_scholarships",async (req, res) => {
+
+   try{
+      const {id} = req.body;
+      await clientDB.none('DELETE FROM temp_scholarship WHERE id=($1);',id); 
+
+      res.status(200).send('success!');
+
+
+   }
+   catch (error){
+      console.error(error);
+      res.status(470).send('There was an issue deleting the entries');
+   }
+
+
+});
+
+
 app.get("/scholarships", async (req,res) => {
 
    try{

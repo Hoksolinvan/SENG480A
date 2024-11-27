@@ -43,7 +43,7 @@
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
-                }
+                },
             });
 
             if (request.ok) {
@@ -56,6 +56,33 @@
         } catch (error) {
             console.log("Failed to fetch scholarships");
         } 
+    }
+
+
+    async function delete_scholarship(scholarship_id){
+        try {
+            const request = await fetch('https://seng480a-production.up.railway.app/delete_scholarships', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+					id: scholarship_id,
+				})
+            });
+
+            if (request.ok) {
+                const result = await request.json();
+                scholarshipsData = result; // Assign fetched data directly
+                console.log('success');
+            } else {
+                console.error('Error Fetching Scholarships', response.statusText, response.status, request.statusText);
+            }
+        } catch (error) {
+            console.log("Failed to fetch scholarships");
+        } 
+
+
     }
 
 
@@ -182,7 +209,7 @@
                             <div class="flex flex-col gap-2">
                                 <button
                                       class="text-red-500 hover:text-red-700 text-sm"
-                                      on:click={() => console.log('thingamabob')}
+                                      on:click={() => delete_scholarship(scholarship.id)}
                                   >
                                       Remove
                                   </button>
