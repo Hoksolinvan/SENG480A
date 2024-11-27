@@ -186,7 +186,7 @@ app.post("/insert_temp_scholarships", async (req,res) => {
    try{
       const { scholarship_name, value, description, amount, university, classification } = req.body;
       temp_result = await clientDB.any('INSERT INTO temp_scholarship (scholarship_name,value,description,amount,university,classification) VALUES ($1,$2,$3,$4,$5,$6)',[scholarship_name, value, description, amount, university, classification]);
-      res.json(temp_result);
+      res.json(req.body,temp_result);
 
    }
    catch (error){
