@@ -175,9 +175,17 @@
                     <div class="p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition">
                         <div class="flex justify-between items-center">
                             <div class="flex gap-4">
-                                
+                                <h3 class="text-lg font-semibold text-gray-800">{scholarship.scholarship_name}</h3>
+                                <p class="text-sm text-gray-600">{scholarship.university}</p>
+                                <p class="text-sm text-gray-600">$ {scholarship.value}</p>
                             </div>
                             <div class="flex flex-col gap-2">
+                                <button
+                                      class="text-red-500 hover:text-red-700 text-sm"
+                                      on:click={() => console.log('thingamabob')}
+                                  >
+                                      Remove
+                                  </button>
                                 
                                 <!-- we can implement a separate route for rendering university/program info
                                 <button
