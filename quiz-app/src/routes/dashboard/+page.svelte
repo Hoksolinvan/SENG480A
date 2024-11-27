@@ -172,20 +172,15 @@
 
           <h2 class="text-2xl font-bold text-gray-800 mb-4">Saved Scholarship</h2>
           <div class="space-y-4">
-            {#if programs && programs.length > 0}
-                {#each programs as program (program.id)}
+            {#if scholarshipsData && scholarshipsData.length > 0}
+                {#each scholarshipsData as scholarship}
                     <div class="p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition">
                         <div class="flex justify-between items-center">
                             <div class="flex gap-4">
                                 
                             </div>
                             <div class="flex flex-col gap-2">
-                                <button
-                                    class="text-red-500 hover:text-red-700 text-sm"
-                                    on:click={() => removeProgram(program.id)}
-                                >
-                                    Remove
-                                </button>
+                                
                                 <!-- we can implement a separate route for rendering university/program info
                                 <button
                                     class="text-blue-500 hover:text-blue-700 text-sm"
