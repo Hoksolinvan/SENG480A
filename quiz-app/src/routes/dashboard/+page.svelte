@@ -58,7 +58,6 @@
         } 
 
 
-        get_scholarships();
     }
 
 
@@ -73,14 +72,15 @@
 
         if (request.ok) {
             const result = await request.json();
-            scholarshipsData = result; // Assign fetched data directly if applicable
-            console.log('Success');
+            
         } else {
             console.error('Error Deleting Scholarship', request.statusText, request.status);
         }
     } catch (error) {
         console.log("Failed to delete scholarship", error);
     }
+    get_scholarships();
+
 }
 
 
