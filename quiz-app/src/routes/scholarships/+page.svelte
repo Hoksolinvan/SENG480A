@@ -90,7 +90,7 @@
 
 
     async function post_scholarship(scholarship) {
-      let 
+      
 		try {
 			const request = await fetch('https://seng480a-production.up.railway.app/insert_temp_scholarships', {
 				method: 'POST',
@@ -253,7 +253,7 @@
                                   <div class="w-60 py-3 bg-blue-600 text-white rounded-lg font-medium 
                                     hover:bg-blue-700 transform hover:scale-105 active:scale-95 
                                     transition-all duration-200 ease-in-out text-center"
-                                        on:click={() => {ProgramCollectionHandler(scholarship);  post_scholarship(scholarship); console.log(scholarship);}}>
+                                        on:click={() => { ProgramCollectionHandler(scholarship);  post_scholarship(scholarship); console.log(scholarship);}}>
                                         
                                         Add to Collection
                                     </div>
