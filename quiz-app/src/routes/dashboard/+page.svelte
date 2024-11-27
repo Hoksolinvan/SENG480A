@@ -162,7 +162,7 @@
                   {/each}
               {:else}
                   <div class="text-center py-8 text-gray-500">
-                      No saved programs yet. Start by searching for programs!
+                      No saved programs yet. Start by searching for <a class="text-blue-500 underline hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300" href="/search"> programs!</a>
                   </div>
               {/if}
           </div>
@@ -198,7 +198,7 @@
                 {/each}
             {:else}
                 <div class="text-center py-8 text-gray-500">
-                    No saved scholarships yet. Start by searching for scholarships!
+                    No saved scholarships yet. Start by searching for <a class="text-blue-500 underline hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300" href="/scholarships"> scholarships!</a>
                 </div>
             {/if}
         </div>
