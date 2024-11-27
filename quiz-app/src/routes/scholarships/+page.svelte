@@ -90,7 +90,7 @@
 
 
     async function post_scholarship(scholarship) {
-      
+      let temp_scholarship = scholarship;
 		try {
 			const request = await fetch('https://seng480a-production.up.railway.app/insert_temp_scholarships', {
 				method: 'POST',
@@ -98,7 +98,7 @@
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
-					Forms: scholarship,
+					Forms: temp_scholarship,
 				}),
 			});
 
