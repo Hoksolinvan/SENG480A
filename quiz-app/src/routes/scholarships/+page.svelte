@@ -100,7 +100,7 @@
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
-					Forms: temp_scholarship,
+					Forms: scholarship,
 				}),
 			});
 
