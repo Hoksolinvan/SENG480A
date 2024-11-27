@@ -8,6 +8,9 @@
       email: "demo@easypath.ca",
       profilePic: "/static/default-profile-pic.png",
   };
+
+
+  let scholarshipsData=[];
   
   // Subscribe to saved programs
   
@@ -32,6 +35,32 @@
           day: 'numeric'
       });
   }
+
+
+  async function get_scholarships() {
+        try {
+            const request = await fetch('https://seng480a-production.up.railway.app/temp_scholarships', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+
+            if (request.ok) {
+                const result = await request.json();
+                scholarshipsData = result; // Assign fetched data directly
+                initializeDropdownStates(result);
+            } else {
+                console.error('Error Fetching Scholarships', request.statusText);
+            }
+        } catch (error) {
+            console.log("Failed to fetch scholarships");
+        } finally {
+            isLoading = false; // Ensure UI knows loading is complete
+        }
+    }
+
+
   </script>
   
   <div class="col-span-2 rounded-lg p-6 w-[75%] max-w-4xl mx-auto">
@@ -137,6 +166,42 @@
                   </div>
               {/if}
           </div>
+
+
+
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Saved Scholarship</h2>
+          <div class="space-y-4">
+            {#if programs && programs.length > 0}
+                {#each programs as program (program.id)}
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition">
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-4">
+                                
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <button
+                                    class="text-red-500 hover:text-red-700 text-sm"
+                                    on:click={() => removeProgram(program.id)}
+                                >
+                                    Remove
+                                </button>
+                                <!-- we can implement a separate route for rendering university/program info
+                                <button
+                                    class="text-blue-500 hover:text-blue-700 text-sm"
+                                    on:click={() => navigateTo(`/programs/${program.id}`)}
+                                >
+                                    View Details
+                                </button> -->
+                            </div>
+                        </div>
+                    </div>
+                {/each}
+            {:else}
+                <div class="text-center py-8 text-gray-500">
+                    No saved scholarships yet. Start by searching for scholarships!
+                </div>
+            {/if}
+        </div>
       </div>
   </div>
   

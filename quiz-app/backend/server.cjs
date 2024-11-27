@@ -165,6 +165,36 @@ app.post("/registration", async (req,res) => {
 });
 
 
+app.get("/temp_scholarships", async (req,res) => {
+
+   try{
+      temp_result = await clientDB.any('SELECT * from temp_table');
+      res.json(temp_result);
+
+   }
+   catch (error){
+      console.error(error);
+      res.status(500).send('There was an issue accessing the database');
+   }
+
+
+});
+
+
+app.post("/insert_temp_scholarships", async (req,res) => {
+
+   try{
+      temp_result = await clientDB.any('INSERT INTO temp_table (scholarship_name,value,description,amount,university,classification) temp_table');
+      res.json(temp_result);
+
+   }
+   catch (error){
+      console.error(error);
+      res.status(500).send('There was an issue accessing the database');
+   }
+
+
+});
 
 
 app.get("/scholarships", async (req,res) => {

@@ -2,6 +2,7 @@
     import { savedPrograms } from '$lib/savedScholarships';
     import { onMount } from 'svelte';
 
+    let scholarships =[];
     let searchQuery = '';
     let DropDown = {};
     let programCollection = []; // Array to hold added scholarships
@@ -86,6 +87,37 @@
         }
     }
 
+
+
+    async function post_scholarship(scholarship) {
+		try {
+			const request = await fetch('https://seng480a-production.up.railway.app/insert_temp_scholarship', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					Forms: scholarship,
+				}),
+			});
+
+			if (request.ok) {
+				const result = await request.json();
+				console.log('Form results were successfully posted: ', result);
+				localStorage.setItem("formSubmitted", "true");
+			} else {
+				console.error('Error Submitting Form', request.statusText);
+				localStorage.setItem("formFailed", "true");
+			}
+		} catch (error) {
+			console.log("Failed to submit Form\n");
+			localStorage.setItem("formFailed", "true");
+		}
+	}
+
+
+    
+
     function initializeDropdownStates(data) {
         DropDown = data.reduce((acc, scholarship) => {
             acc[scholarship.id] = false; 
@@ -151,6 +183,7 @@
 			  <img
 				src="/filter.png"
 				class="w-10 cursor-pointer hover:scale-[1.02]"
+        style="filter:  invert(100%) brightness(100%);"
 				on:click={toggleMode}
 			  />
 	  
@@ -219,7 +252,7 @@
                                   <div class="w-60 py-3 bg-blue-600 text-white rounded-lg font-medium 
                                     hover:bg-blue-700 transform hover:scale-105 active:scale-95 
                                     transition-all duration-200 ease-in-out text-center"
-                                        on:click={() => ProgramCollectionHandler(scholarship)}>
+                                        on:click={() => {ProgramCollectionHandler(scholarship);  post_scholarship(scholarship);}}>
                                         Add to Collection
                                     </div>
 
@@ -255,3 +288,13 @@
         {/if}
     </div>
 </main>
+
+<style>
+
+.filter-image{
+  filter: brightness(100%) saturate(0%);
+
+}
+
+
+</style>
