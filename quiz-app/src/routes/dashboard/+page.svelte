@@ -49,10 +49,9 @@
             if (request.ok) {
                 const result = await request.json();
                 scholarshipsData = result; // Assign fetched data directly
-                initializeDropdownStates(result);
                 console.log('success');
             } else {
-                console.error('Error Fetching Scholarships', request.statusText);
+                console.error('Error Fetching Scholarships', response.statusText, response.status, request.statusText);
             }
         } catch (error) {
             console.log("Failed to fetch scholarships");
