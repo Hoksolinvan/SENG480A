@@ -15,21 +15,10 @@
 		// as the item only exists when a user is logged in
 		// if yes then redirect to profile page
 		pf = JSON.parse(localStorage.getItem('ezpathUsername'));
-
-
-	
-	
-        });
-
-		
-  
+	});
 		function toggleDisplay(){
 		current_toggle=!current_toggle;
-
 	};
-
-	
-
 
 </script>
 
@@ -49,42 +38,13 @@
 			<ul>
 				<li><a href="/about" class="nav-link"><b>ABOUT US</b></a></li>
 				<!-- commented out for minimalistic view
-				<li><a href="/about" class="nav-link">ABOUT US</a></li>
 				<li><a href="/contact" class="nav-link">CONTACT</a></li> -->
 				<li><a href="/search" class="nav-link"><b>SEARCH</b></a></li>
-
-				<!-- commented out as the login is not functional 
-				{#if pf === null}
-				<li><a href="/login" class="nav-button">LOG IN</a></li>
-				{:else} -->
-				<!-- On click, ezpathUsername item will be removed from localStorage, meaning the user is no longer
-				considered logged in 
-				the user is redirected to main page -->
-				<!-- not fully functional 
-				<li><a href="#" class="nav-link" onclick="localStorage.removeItem('ezpathUsername'); window.location.href = '.';">LOG OUT</a></li>-->
-				<!-- {/if} -->
-
-				<!--<li><a href="/saved" class="nav-button my-programs">MY PROGRAMS</a></li> -->
-<!-- this is not fully functional 
-				{#if pf === null}
-				<li><a href="/signup" class="nav-button signup">SIGN UP</a></li>
-				{/if} -->
-				<!-- This does not look like it is fully working -- need to be fixed-->
 				<li><a href="/scholarships" class="nav-link"><b>SCHOLARSHIPS</b></a></li> 
 				
-
 				{#if pf != null}
 				<li><a href="/dashboard" class="nav-button my-programs">MY PATH</a></li>
 				{/if}
-				<!-- commented out as it is not fully functional
-				<li><a href="/login" class="nav-button">LOG IN</a></li> -->
-
-				<!-- commented out to focus core functionality
-				<li><a href="/saved" class="nav-button my-programs">MY PROGRAMS</a></li> -->
-
-				<!-- can be commented out as it is not fully functional -->
-				<!-- <li><a href="/signup" class="nav-button signup">SIGN UP</a></li>  -->
-
 
 				<li>
 					<img src="/FontAwesome-User-icon.png" class="profile {current_toggle ? "active":" "}" style="width:30px; height:30px" on:click={toggleDisplay}>
@@ -110,7 +70,6 @@
 								localStorage.removeItem('ezpathUsername'); 
 								window.location.href = '.'; 
 							  }}>
-
 								<b>Log Out</b>
 							  </a>
 							</div>
@@ -125,22 +84,9 @@
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:30px; height:30px" class="profile" on:click={handleBack}><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M11.5 280.6l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2zm256 0l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2z"/></svg>
 				</li>
 				{/if}
-				
-		
-				  
-
 			</ul>
 		</nav>  
-
-
-
-
 	</div>
-
-
-
-	
-
 	
 </header>
 
@@ -249,10 +195,7 @@
 		}
 	}
 
-
-
 	/* Image hover Style to turn to blue*/
-	
 	
 	.profile:hover{
 		filter: invert(30%) sepia(100%) saturate(1000%) hue-rotate(200deg);
@@ -268,48 +211,38 @@
 		background-color:white;
 	}
 	
-
 	/* Dropdown menu */
+	.dropdown-menu{
+		position:absolute;
+		display: flex;
+		flex-direction: column;
+		top:70px;
+		right:70px;
+		background-color: white;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+		list-style: none;
+		margin: 0;
+		
+		z-index: 1000;
+		min-width: 150px;
+	}
 
+	.dropdown-menu div{
+		padding: 20px;
+	}
 
+	.dropdown-menu a {
+		text-decoration: none;
+		color: #333;
+		display: block;
+		
+		border-radius: 3px;
+	}
 
-.dropdown-menu{
-	position:absolute;
-	display: flex;
-	flex-direction: column;
-	top:70px;
-	right:70px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    margin: 0;
-    
-    z-index: 1000;
-    min-width: 150px;
-}
-
-.dropdown-menu div{
-
-	padding: 20px;
-	
-}
-
-
-
-.dropdown-menu a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    
-    border-radius: 3px;
-  }
-
-  .dropdown-menu div:hover {
-    background-color: #f0f0f0;
-  }
-
-
+	.dropdown-menu div:hover {
+		background-color: #f0f0f0;	
+	}
 
 </style>
