@@ -38,6 +38,15 @@
   }
 </script>
 
+<button 
+  class="w-fit px-4 py-2 bg-blue-900 text-white rounded-lg shadow-sm 
+  hover:bg-blue-800 transform hover:scale-105 transition-all
+  duration-300text-sm font-medium border border-gray-200"
+  onclick="window.location.href = './dashboard';"
+>
+  Back
+</button>
+
 <div class="container mx-auto px-4 py-8 max-w-5xl">
   <div class="flex justify-between items-center mb-8">
     <h1 class="text-4xl font-extrabold text-gray-900">Application Checklist</h1>

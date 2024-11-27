@@ -61,6 +61,15 @@
   ];
 </script>
 
+<button 
+  class="w-fit px-4 py-2 bg-blue-900 text-white rounded-lg shadow-sm 
+  hover:bg-blue-800 transform hover:scale-105 transition-all
+  duration-300text-sm font-medium border border-gray-200"
+  onclick="window.location.href = './dashboard';"
+>
+  Back
+</button>
+
 <div class="space-y-8 max-w-4xl mx-auto p-6">
   <h1 class="text-3xl font-bold">Document Management</h1>
   
