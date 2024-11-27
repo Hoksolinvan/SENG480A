@@ -55,9 +55,7 @@
             }
         } catch (error) {
             console.log("Failed to fetch scholarships");
-        } finally {
-            isLoading = false; // Ensure UI knows loading is complete
-        }
+        } 
     }
 
 
