@@ -66,16 +66,16 @@
   }
 </script>
 
-<button 
-  class="w-fit px-4 py-2 bg-blue-900 text-white rounded-lg shadow-sm 
-  hover:bg-blue-800 transform hover:scale-105 transition-all
-  duration-300text-sm font-medium border border-gray-200"
-  onclick="window.location.href = './dashboard';"
->
-  Back
-</button>
-
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <button 
+    class="w-fit px-4 py-2 bg-blue-900 text-white rounded-lg shadow-sm 
+    hover:bg-blue-800 transform hover:scale-105 transition-all
+    duration-300text-sm font-medium border border-gray-200 mb-8"
+    onclick="window.location.href = './dashboard';"
+  >
+    Back
+  </button>
+
   <div class="grid md:grid-cols-2 gap-8 items-start">
     <!-- Programs List -->
     <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
