@@ -56,6 +56,9 @@
         } catch (error) {
             console.log("Failed to fetch scholarships");
         } 
+
+
+        get_scholarships();
     }
 
 
