@@ -199,22 +199,16 @@ app.post("/insert_temp_scholarships", async (req,res) => {
 });
 
 
-app.get("/delete_scholarships",async (req, res) => {
+app.delete("/delete_scholarships/:id", async (req, res) => {
+   try {
+       const { id } = req.params;
+       await clientDB.none('DELETE FROM temp_scholarship WHERE id=$1;', [id]);
 
-   try{
-      const {id} = req.body;
-      await clientDB.none('DELETE FROM temp_scholarship WHERE id=($1);',id); 
-
-      res.status(200).send('success!');
-
-
+       res.status(200).send({ message: 'Success!' });
+   } catch (error) {
+       console.error(error);
+       res.status(500).send({ error: 'There was an issue deleting the entries' });
    }
-   catch (error){
-      console.error(error);
-      res.status(470).send('There was an issue deleting the entries');
-   }
-
-
 });
 
 

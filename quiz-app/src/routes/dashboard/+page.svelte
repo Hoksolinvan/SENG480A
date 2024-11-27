@@ -59,31 +59,26 @@
     }
 
 
-    async function delete_scholarship(scholarship_id){
-        try {
-            const request = await fetch('https://seng480a-production.up.railway.app/delete_scholarships', {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-					id: scholarship_id,
-				})
-            });
-
-            if (request.ok) {
-                const result = await request.json();
-                scholarshipsData = result; // Assign fetched data directly
-                console.log('success');
-            } else {
-                console.error('Error Fetching Scholarships', response.statusText, response.status, request.statusText);
+    async function delete_scholarship(scholarship_id) {
+    try {
+        const request = await fetch(`https://seng480a-production.up.railway.app/delete_scholarships/${scholarship_id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
             }
-        } catch (error) {
-            console.log("Failed to fetch scholarships");
-        } 
+        });
 
-
+        if (request.ok) {
+            const result = await request.json();
+            scholarshipsData = result; // Assign fetched data directly if applicable
+            console.log('Success');
+        } else {
+            console.error('Error Deleting Scholarship', request.statusText, request.status);
+        }
+    } catch (error) {
+        console.log("Failed to delete scholarship", error);
     }
+}
 
 
     get_scholarships();
