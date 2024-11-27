@@ -23,8 +23,33 @@ function createSavedProgramsStore() {
 		const prerequisiteDictionary = {
 			STEM: ['Math 12', 'Physics 12', 'English 12', 'Computer Science 11'],
 			Engineering: ['Math 12', 'Physics 12', 'Chemistry 12'],
-			Science: ['Approved English 11', 'Pre-calculus 11', 'Approved science 11', 'Approved social studies 11/12','English Studies 12 or English First Peoples 12 (minimum 67%)','Pre‑calculus 12 (minimum 73%)','Approved science 12','Approved academic 12'],  //Original: 'Math 12', 'Biology 12', 'Chemistry 12'
-			Business: ['Approved English 11', 'Pre-calculus 11', 'Approved science 11', 'Approved social studies 11/12','English Studies 12 or English First Peoples 12 (minimum 67%)','Pre‑calculus 12 (minimum 73%)'], //Original: 'Economics 12', 'English 12', 'Math 11'
+			Science: [
+				'Approved English 11',
+				'Pre-calculus 11',
+				'Approved science 11',
+				'Approved social studies 11/12',
+				'English Studies 12 or English First Peoples 12 (minimum 67%)',
+				'Pre‑calculus 12 (minimum 73%)',
+				'Approved science 12',
+				'Approved academic 12'
+			], //Original: 'Math 12', 'Biology 12', 'Chemistry 12'
+			'Business Administration': [
+				'Approved English 11',
+				'Pre-calculus 11',
+				'Approved science 11',
+				'Approved social studies 11/12',
+				'English Studies 12 or English First Peoples 12 (minimum 67%)',
+				'Pre‑calculus 12 (minimum 73%)'
+			],
+
+			Commerce: [
+				'Approved English 11',
+				'Pre-calculus 11',
+				'Approved science 11',
+				'Approved social studies 11/12',
+				'English Studies 12 or English First Peoples 12 (minimum 67%)',
+				'Pre‑calculus 12 (minimum 73%)'
+			], //Original: 'Economics 12', 'English 12', 'Math 11'
 			Arts: ['History 12', 'English 12', 'Art 11'],
 			default: ['English 12', 'Math 11', 'Social Studies 12']
 		};
