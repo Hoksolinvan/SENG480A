@@ -68,8 +68,8 @@
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
   <button 
-    class="w-fit px-4 py-2 bg-blue-900 text-white rounded-lg shadow-sm 
-    hover:bg-blue-800 transform hover:scale-105 transition-all
+    class="w-fit px-4 py-2 bg-darkgreen text-white rounded-lg shadow-sm 
+    hover:bg-green-800 transform hover:scale-105 transition-all
     duration-300text-sm font-medium border border-gray-200 mb-8"
     onclick="window.location.href = './dashboard';"
   >
@@ -89,9 +89,9 @@
             <button
               on:click={() => selectProgram(program)}
               class="w-full text-left px-6 py-4 transition-colors
-                {selectedProgram === program ? 'bg-blue-50 hover:bg-blue-100' : 'hover:bg-gray-50'}"
+                {selectedProgram === program ? 'bg-green-50 hover:bg-green-100' : 'hover:bg-gray-50'}"
             >
-              <h3 class="text-base font-medium {selectedProgram === program ? 'text-blue-700' : 'text-gray-900'}">
+              <h3 class="text-base font-medium {selectedProgram === program ? 'text-midgreen' : 'text-gray-900'}">
                 {program.name}
               </h3>
               <p class="text-sm text-gray-500 mt-1">{program.university}</p>
@@ -149,11 +149,11 @@
                 type="email"
                 bind:value={email}
                 placeholder="your.email@example.com"
-                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
               />
               <select
                 bind:value={notificationPreference}
-                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
               >
                 <option value="2weeks">2 weeks before</option>
                 <option value="1week">1 week before</option>
@@ -163,14 +163,14 @@
 
             <button
               on:click={setReminder}
-              class="w-full flex justify-center py-2.5 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              class="w-full flex justify-center py-2.5 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-midgreen hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
             >
               Set Reminder
             </button>
           </div>
 
           {#if confirmationMessage}
-            <div class="text-sm text-green-700 bg-green-50 rounded-md p-4 border border-green-200">
+            <div class="text-sm text-midgreen bg-green-50 rounded-md p-4 border border-green-200">
               {confirmationMessage}
             </div>
           {/if}
