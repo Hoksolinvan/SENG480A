@@ -74,8 +74,8 @@
                         
                         <!-- Edit Button -->
                         <button 
-                            class="w-fit px-4 py-2 bg-blue-900 text-white rounded-lg shadow-lg 
-                 hover:bg-blue-800 transform hover:scale-105 transition-all
+                            class="w-fit px-4 py-2 bg-darkgreen text-white rounded-lg shadow-lg 
+                 hover:bg-green-800 transform hover:scale-105 transition-all
                  duration-300text-sm font-medium border border-gray-200"
                         >
                             Edit Profile
@@ -98,7 +98,7 @@
                                     <h4 class="text-sm font-medium text-gray-700 mb-2">Academic Interests</h4>
                                     <div class="flex flex-wrap gap-2">
                                         {#each profile.education.academicInterests as interest}
-                                            <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded text-sm">
+                                            <span class="px-2 py-1 bg-green-50 text-midgreen rounded text-sm">
                                                 {interest}
                                             </span>
                                         {/each}
