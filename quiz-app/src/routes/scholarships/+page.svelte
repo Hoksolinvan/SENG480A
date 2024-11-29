@@ -167,7 +167,7 @@
 </script>
 
 <main class="min-h-screen bg-gray-50">
-    <div class="bg-gradient-to-br from-blue-900 to-blue-500 py-16">
+    <div class="bg-gradient-to-br from-green-900 to-green-500 py-16">
 		<div class="max-w-7xl mx-auto px-4">
 		  <div class="max-w-4xl mx-auto space-y-6">
 			<h1 class="text-4xl font-bold text-white text-center mb-8">
@@ -226,16 +226,16 @@
         {:else if filteredScholarships.length === 0}
             <div>No scholarships found.</div>
         {:else}
-            <h2 class="text-2xl font-bold text-blue-900 mb-4">Available Scholarships</h2>
+            <h2 class="text-2xl font-bold text-darkgreen mb-4">Available Scholarships</h2>
             <div
                 class="max-h-[500px] overflow-y-auto bg-gray-100 p-4 rounded-lg shadow-inner border border-gray-300">
                 {#each filteredScholarships as scholarship}
-                    <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer border-2 border-transparent hover:border-blue-200 transform hover:scale-[1.02] mb-4">
-                        <h3 class="text-xl font-semibold text-blue-900">{scholarship.scholarship_name}</h3>
+                    <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer border-2 border-transparent hover:border-green-200 transform hover:scale-[1.02] mb-4">
+                        <h3 class="text-xl font-semibold text-darkgreen">{scholarship.scholarship_name}</h3>
                         <div class="mt-2 text-gray-600">{scholarship.university}</div>
                         <div class="mt-4">
                             <button
-                                class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition"
+                                class="bg-midgreen text-white px-4 py-2 rounded-lg shadow hover:bg-green-700 transition"
                                 on:click={() => handleDropDown(scholarship.id)}>
                                 {#if DropDown[scholarship.id]}
                                     Hide Details
@@ -252,8 +252,8 @@
                                 <p><b>University:</b> {scholarship.university}</p>
                                 <br>
                                 <div class="relative">
-                                  <div class="w-60 py-3 bg-blue-600 text-white rounded-lg font-medium 
-                                    hover:bg-blue-700 transform hover:scale-105 active:scale-95 
+                                  <div class="w-60 py-3 bg-midgreen text-white rounded-lg font-medium 
+                                    hover:bg-green-700 transform hover:scale-105 active:scale-95 
                                     transition-all duration-200 ease-in-out text-center"
                                         on:click={() => { ProgramCollectionHandler(scholarship);  post_scholarship(scholarship);}}>
                                         
