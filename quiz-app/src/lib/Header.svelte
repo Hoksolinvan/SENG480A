@@ -32,9 +32,9 @@
 <header class="header">
 	<div class="header-container">
 		
-		/* <a href="/" class="logo"> <span style="display:flex; flex-direction:row;">
+		<!-- <a href="/" class="logo"> <span style="display:flex; flex-direction:row;">
 			<img src="/Updated_Logo.png" style="width:50px; height:50px; left:50px;">&nbsp;EasyPath</span>
-		</a> */
+		</a> --!>
 
 		<a href="/" class="logo">
 			<img src="/EASYPATH.png">
