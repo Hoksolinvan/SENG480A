@@ -101,8 +101,9 @@
 
 	h1 {
 		font-size: 2.5rem;
-		/* color: #5603ad; Updated h1 color */
-		color: rgb(30 58 138);
+		/* color: #5603ad; Updated h1 color 
+		color: rgb(30 58 138);*/
+		color: #194C13;
 		margin-bottom: 1rem;
 		font-family: 'Poppins', sans-serif;
 	}
@@ -135,8 +136,9 @@
 	label {
 		margin-bottom: 0.5rem;
 		font-weight: bold;
-		/* color: #8367c7; Updated label color */
-		color: rgb(30 58 138);
+		/* color: #8367c7; Updated label color 
+		color: rgb(30 58 138);*/
+		color: #194C13;
 		text-align: left; /* Left-align form labels */
 		display: block; /* Ensures the label takes full width */
 	}
@@ -161,7 +163,8 @@
 
 	button {
 		padding: 0.75rem;
-		background-color: rgb(30 58 138); /* #5603ad; /* Updated button color */
+		/* background-color: rgb(30 58 138); /* #5603ad; /* Updated button color */
+		background-color: #194C13;
 		color: white;
 		border: none;
 		cursor: pointer;
