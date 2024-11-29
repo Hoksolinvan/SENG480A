@@ -169,7 +169,7 @@
 	/* My Programs Button Styling */
 	.my-programs {
 		/* background: linear-gradient(45deg, #218838, #6ddb87); */ /* Green gradient */
-		background: linear-gradient(45deg, #1d4ed8, #93c5fd);
+		background: linear-gradient(45deg, #2563eb, #93c5fd);
 		color: white;
 		padding: 0.5rem 1rem;
 		border-radius: 20px;
