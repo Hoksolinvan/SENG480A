@@ -6,15 +6,15 @@
                 <div class="option-container">
                         <h2 style="font-weight: bold;">Monthly Plan</h2>
                         <p>Pay at the begining of each calendar month. Perfect if you just need that final little assistance.</p>
-                        <h2>CAD 5.99 per month</h2>
+                        <h2>CAD 13.99 per month</h2>
                         <button>Choose Plan</button>
                 </div>
                 <div class="option-container">
                         <h2 style="font-weight: bold;">Yearly Plan</h2>
-                        <p>Pay once for 12-months access. Save the hassles and 15% cheaper than subscribing to
+                        <p>Pay once for 12-months access. Save the hassles and 76% cheaper than subscribing to
                                 the monthly plan in the same amount of time!
                         </p>
-                        <h2>CAD 49.99 per year</h2>
+                        <h2>CAD 39.99 per year</h2>
                         <button>Choose Plan</button>
                 </div>
         </div>
@@ -26,7 +26,7 @@
 		text-align: center;
 		margin-bottom: 1rem;
 		font-weight: bold;
-		color: rgb(30 58 138);
+		color: #194c13;
 		font-family: 'Poppins', sans-serif;
 	}
 
@@ -34,7 +34,7 @@
 		font-size: 1.5rem; /* Bigger h1 size */
 		text-align: center;
 		margin-bottom: 1rem;
-		color: rgb(30 58 138);
+		color: #194c13;
 		font-family: 'Poppins', sans-serif;
 	}
 
@@ -58,7 +58,7 @@
 
         button {
 		padding: 0.75rem;
-		background-color: rgb(30 58 138);
+		background-color: #194c13;
 		color: white;
 		border: none;
 		cursor: pointer;
@@ -68,7 +68,7 @@
 	}
 
 	button:hover {
-		background-color: #0056b3;
+		background-color: #15803d;
 		transform: translateY(-2px);
 	}
 </style>
