@@ -21,8 +21,7 @@
 		padding: 1rem;
 		/* background-image: linear-gradient(to right, white, #f8f9fa, white); */
 		/*  color: #8367c7;		a bit difficult to see this color, I made it a bit lighter */ 
-		/* color: #f8f9fa; */
-		color: #319013;
+		color: #f8f9fa; 
 		font-family: 'Poppins', sans-serif;
 	}
 </style>
