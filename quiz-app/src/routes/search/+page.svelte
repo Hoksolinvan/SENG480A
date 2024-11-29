@@ -283,10 +283,10 @@
                 <h3 class="text-xl font-semibold text-darkgreen">{program.name}</h3>
                 <div class="text-gray-600 mt-2">{program.university}</div>
                 <div class="mt-2 flex items-center gap-4">
-                  <span class="text-sm bg-green-100 text-midgreen px-3 py-1 rounded-full">
+                  <span class="text-sm bg-green-50 text-midgreen px-3 py-1 rounded-full">
                     {program.location}
                   </span>
-                  <span class="text-sm bg-green-100 text-midgreen px-3 py-1 rounded-full">
+                  <span class="text-sm bg-green-50 text-midgreen px-3 py-1 rounded-full">
                     {program.degreeType}
                   </span>
                 </div>
