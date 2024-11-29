@@ -54,7 +54,8 @@ h1 {
   font-size: 2.5rem;
   /* color: #5603ad; */
   /* color: #007bff; */
-  color: rgb(30 58 138);
+  /* color: rgb(30 58 138); */
+  color: #194C13;
   margin-bottom: 1rem;
   font-family: 'Poppins', sans-serif;
 }
@@ -68,8 +69,9 @@ h1 {
 
 .section h2 {
   font-size: 1.8rem;
-  /* color: #8367c7; */
-  color: #007bff;
+  /* color: #8367c7; 
+  color: #007bff;*/
+  color: #52cc26;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 1rem;
 }
@@ -87,8 +89,9 @@ h1 {
 }
 
 .values-list li strong {
-  /* color: #5603ad; */
-  color: #1e3a8a;
+  /* color: #5603ad;
+  color: #1e3a8a; */
+  color: #194C13;
 }
 
 /* Hover effect for values list */
