@@ -59,6 +59,8 @@ function createSavedProgramsStore() {
 		else if (program.name.includes('Science')) category = 'Science';
 		else if (program.name.includes('Business')) category = 'Business';
 		else if (program.name.includes('Arts')) category = 'Arts';
+		// ad-hoc bug fix for demo
+		else if (program.name.includes('Commerce')) category = 'Commerce';
 		else if (program.category) category = program.category;
 
 		const prerequisites = prerequisiteDictionary[category] || prerequisiteDictionary.default;
