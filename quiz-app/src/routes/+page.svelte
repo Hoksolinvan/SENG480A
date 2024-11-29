@@ -33,22 +33,22 @@
 
 <main class="min-h-screen bg-gray-50">
   <!-- Hero Section -->
-  <div class="min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-blue-50 to-white">
+  <div class="min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-green-50 to-white">
     <div class="grid md:grid-cols-2 gap-12 max-w-7xl w-full px-6">
       <!-- Text Content -->
       <div class="flex flex-col justify-center space-y-6">
-        <h1 class="text-5xl font-bold text-blue-900 leading-tight animate-fade-in">
+        <h1 class="text-5xl font-bold text-darkgreen leading-tight animate-fade-in">
           Plan Your Post-Secondary Path
         </h1>
-        <h2 class="text-2xl text-blue-600 font-medium animate-fade-in-delayed">
+        <h2 class="text-2xl text-midgreen font-medium animate-fade-in-delayed">
           Reduce the stress of post-secondary planning with an all in one tool
         </h2>
         <p class="text-gray-600 text-lg">
           Search programs, track deadlines, and manage scholarship opportunities to make informed decisions about your academic future
         </p>
         <button 
-          class="w-fit px-8 py-4 bg-blue-900 text-white rounded-lg shadow-lg 
-                 hover:bg-blue-800 transform hover:scale-105 transition-all
+          class="w-fit px-8 py-4 bg-darkgreen text-white rounded-lg shadow-lg 
+                 hover:bg-green-800 transform hover:scale-105 transition-all
                  duration-300 text-lg font-semibold"
           on:click={navigateToSearch} 
         >
@@ -71,42 +71,42 @@
   <!-- Features Section -->
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-blue-900 text-center mb-12">What EasyPath Offers</h2>
+      <h2 class="text-3xl font-bold text-darkgreen text-center mb-12">What EasyPath Offers</h2>
       <div class="grid md:grid-cols-4 gap-8">
-        <div class="p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300 relative">
-          <div class="text-blue-600 text-4xl mb-4">⏰</div>
-          <h3 class="text-xl font-semibold text-blue-900 mb-2">Deadline Tracking</h3>
+        <div class="p-6 bg-green-50 rounded-xl hover:bg-green-100 transition-colors duration-300 relative">
+          <div class="text-midgreen text-4xl mb-4">⏰</div>
+          <h3 class="text-xl font-semibold text-darkgreen mb-2">Deadline Tracking</h3>
           <p class="text-gray-600">Never miss an application deadline with our reminder system.</p>
-          <div class="absolute top-0 left-0 w-full h-full bg-blue-100 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <div class="absolute top-0 left-0 w-full h-full bg-green-100 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <img src="/deadlines.webp" alt="Deadline Tracking" class="w-40 h-40" />
           </div>
         </div>
 
-        <div class="p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300 relative">
-          <div class="text-blue-600 text-4xl mb-4">📊</div>
-          <h3 class="text-xl font-semibold text-blue-900 mb-2">Easy Comparison</h3>
+        <div class="p-6 bg-green-50 rounded-xl hover:bg-green-100 transition-colors duration-300 relative">
+          <div class="text-midgreen text-4xl mb-4">📊</div>
+          <h3 class="text-xl font-semibold text-darkgreen mb-2">Easy Comparison</h3>
           <p class="text-gray-600">Compare different programs side by side to make informed decisions.</p>
-          <div class="absolute top-0 left-0 w-full h-full bg-blue-100 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <div class="absolute top-0 left-0 w-full h-full bg-green-100 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <img src="/program.webp" alt="Program Comparison" class="w-40 h-40" />
           </div>
         </div>
 
-        <div class="p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300 relative">
-          <div class="text-blue-600 text-4xl mb-4">🔍</div>
-          <h3 class="text-xl font-semibold text-blue-900 mb-2">Smart Search</h3>
+        <div class="p-6 bg-green-50 rounded-xl hover:bg-green-100 transition-colors duration-300 relative">
+          <div class="text-midgreen text-4xl mb-4">🔍</div>
+          <h3 class="text-xl font-semibold text-darkgreen mb-2">Smart Search</h3>
           <p class="text-gray-600">Find programs that match your interests and criteria with our advanced filtering system.</p>
-          <div class="absolute top-0 left-0 w-full h-full bg-blue-100 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <div class="absolute top-0 left-0 w-full h-full bg-green-100 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <img src="/searchpic.webp
             " alt="Smart Search" class="w-40 h-40" />
           </div>
         </div>
 
 
-        <div class="p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300 relative">
-          <div class="text-blue-600 text-4xl mb-4">🎓</div>
-          <h3 class="text-xl font-semibold text-blue-900 mb-2">Scholarship Catalog</h3>
+        <div class="p-6 bg-green-50 rounded-xl hover:bg-green-100 transition-colors duration-300 relative">
+          <div class="text-midgreen text-4xl mb-4">🎓</div>
+          <h3 class="text-xl font-semibold text-darkgreen mb-2">Scholarship Catalog</h3>
           <p class="text-gray-600">Explore the scholarships available in our database.</p>
-          <div class="absolute top-0 left-0 w-full h-full bg-blue-100 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <div class="absolute top-0 left-0 w-full h-full bg-green-100 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <img src="/scholarships.webp
             " alt="Smart Search" class="w-40 h-40" />
           </div>
@@ -119,19 +119,19 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section class="py-20 bg-blue-50">
+  <section class="py-20 bg-green-50">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-blue-900 text-center mb-12">What Students Say About EasyPath</h2>
+      <h2 class="text-3xl font-bold text-darkgreen text-center mb-12">What Students Say About EasyPath</h2>
       <div class="grid md:grid-cols-3 gap-8">
         {#each testimonials as testimonial}
-          <div class="bg-gradient-to-br from-blue-100 to-white p-8 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 relative">
+          <div class="bg-gradient-to-br from-green-100 to-white p-8 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 relative">
             <img 
               src={testimonial.image} 
               alt={testimonial.name}
               class="w-20 h-20 rounded-full mb-4 object-cover float-left mr-4"
             />
             <p class="text-gray-600 italic mb-6 pl-2">{testimonial.quote}</p>
-            <p class="text-blue-900 font-semibold text-right mt-8">{testimonial.name}</p>
+            <p class="text-darkgreen font-semibold text-right mt-8">{testimonial.name}</p>
           </div>
         {/each}
       </div>
@@ -139,13 +139,13 @@
   </section>
 
   <!-- Call to Action Section -->
-  <section class="py-20 bg-blue-900 text-white">
+  <section class="py-20 bg-darkgreen text-white">
     <div class="max-w-4xl mx-auto text-center px-6">
       <h2 class="text-3xl font-bold mb-6">Ready to Plan Your Path to Success?</h2>
-      <p class="text-lg mb-8 text-blue-100">Take control of your academic journey with our personalized planning and program search tool</p>
+      <p class="text-lg mb-8 text-green-100">Take control of your academic journey with our personalized planning and program search tool</p>
       <button 
-        class="px-8 py-4 bg-white text-blue-900 rounded-lg shadow-lg 
-               hover:bg-blue-50 transform hover:scale-105 transition-all
+        class="px-8 py-4 bg-white text-darkgreen rounded-lg shadow-lg 
+               hover:bg-green-50 transform hover:scale-105 transition-all
                duration-300 text-lg font-semibold"
         on:click={navigateToSearch}
       >
