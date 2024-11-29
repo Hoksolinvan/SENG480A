@@ -35,6 +35,8 @@ Milestone 1 presentation: https://github.com/Hoksolinvan/SENG480A/blob/main/Pres
 
 Milestone 2 presentation: https://github.com/Hoksolinvan/SENG480A/blob/main/Presentations/Milestone%202%20(1).pdf
 
+Milestone 3 presentation: https://github.com/Hoksolinvan/SENG480A/blob/main/Presentations/Milestone%203%20Presentation.pdf
+
 ## Copyright
 
 License information: Copy-righted. All rights reserved by the developers of EasyPath. 
