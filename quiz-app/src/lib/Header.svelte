@@ -37,7 +37,7 @@
 		</a> -->
 
 		<a href="/" class="logo">
-			<img src="/EASYPATH.png" style="height:80px;">
+			<img src="/EASYPATH.png" style="height:70px;">
 		</a>
 		
 		<nav class="nav">
