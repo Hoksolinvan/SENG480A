@@ -40,8 +40,8 @@
 
 <div class="container mx-auto px-4 py-8 max-w-5xl">
   <button 
-    class="w-fit px-4 py-2 bg-blue-900 text-white rounded-lg shadow-sm 
-    hover:bg-blue-800 transform hover:scale-105 transition-all
+    class="w-fit px-4 py-2 bg-darkgreen text-white rounded-lg shadow-sm 
+    hover:bg-green-800 transform hover:scale-105 transition-all
     duration-300text-sm font-medium border border-gray-200 mb-4"
     onclick="window.location.href = './dashboard';"
   >
