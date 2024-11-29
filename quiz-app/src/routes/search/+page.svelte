@@ -55,7 +55,7 @@
 
 <div class="min-h-screen bg-gray-50" in:fade={{ duration: 300 }}>
   <!-- Hero Search Section -->
-  <div class="bg-gradient-to-br from-blue-900 to-blue-500 py-16">
+  <div class="bg-gradient-to-br from-green-900 to-green-500 py-16">
     <div class="max-w-7xl mx-auto px-4" in:fly={{ y: 20, duration: 600 }}>
       <h1 class="text-4xl font-bold text-white text-center mb-8">
         Search Programs
@@ -276,17 +276,17 @@
               <div 
                 in:fly={{ y: 20, duration: 300 }}
                 class="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all
-                       cursor-pointer border-2 border-transparent hover:border-blue-200
+                       cursor-pointer border-2 border-transparent hover:border-green-200
                        transform hover:scale-[1.02]"
                 on:click={() => handleProgramSelect(program)}
               >
-                <h3 class="text-xl font-semibold text-blue-900">{program.name}</h3>
+                <h3 class="text-xl font-semibold text-darkgreen">{program.name}</h3>
                 <div class="text-gray-600 mt-2">{program.university}</div>
                 <div class="mt-2 flex items-center gap-4">
-                  <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
+                  <span class="text-sm bg-green-100 text-midgreen px-3 py-1 rounded-full">
                     {program.location}
                   </span>
-                  <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
+                  <span class="text-sm bg-green-100 text-midgreen px-3 py-1 rounded-full">
                     {program.degreeType}
                   </span>
                 </div>
@@ -302,7 +302,7 @@
           class="bg-white rounded-xl shadow-md p-6 h-fit sticky top-4"
           in:fly={{ x: 20, duration: 300 }}
         >
-          <h2 class="text-2xl font-semibold text-blue-900 mb-6">Program Details</h2>
+          <h2 class="text-2xl font-semibold text-darkgreen mb-6">Program Details</h2>
           <img 
             src={selectedProgram.url}
             alt={selectedProgram.university}
@@ -310,20 +310,20 @@
                    transform hover:scale-[1.02] transition-transform duration-300"
           />
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold text-blue-800">
+            <h3 class="text-xl font-semibold text-midgreen">
               {selectedProgram.name}
             </h3>
             <p class="text-gray-600">{selectedProgram.university}</p>
             <div class="grid grid-cols-2 gap-4">
-              <div class="p-3 bg-blue-50 rounded-lg">
+              <div class="p-3 bg-green-50 rounded-lg">
                 <div class="text-sm text-gray-600">Location</div>
                 <div class="font-medium">{selectedProgram.location}</div>
               </div>
-              <div class="p-3 bg-blue-50 rounded-lg">
+              <div class="p-3 bg-green-50 rounded-lg">
                 <div class="text-sm text-gray-600">Degree Type</div>
                 <div class="font-medium">{selectedProgram.degreeType}</div>
               </div>
-              <div class="p-3 bg-blue-50 rounded-lg col-span-2">
+              <div class="p-3 bg-green-50 rounded-lg col-span-2">
                 <div class="text-sm text-gray-600">Application Deadline</div>
                 <div class="font-medium">{selectedProgram.deadline}</div>
               </div>
@@ -332,8 +332,8 @@
             <div class="relative">
               <button 
                   on:click={saveProgram}
-                  class="w-full py-3 bg-blue-600 text-white rounded-lg font-medium 
-                         hover:bg-blue-700 transform hover:scale-105 active:scale-95 
+                  class="w-full py-3 bg-midgreen text-white rounded-lg font-medium 
+                         hover:bg-green-700 transform hover:scale-105 active:scale-95 
                          transition-all duration-200 ease-in-out
                          {showSaveMessage ? 'animate-bounce' : ''}"
               >
