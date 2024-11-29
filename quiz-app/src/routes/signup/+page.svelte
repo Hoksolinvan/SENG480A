@@ -169,8 +169,9 @@
 		font-size: 2.5rem; /* Bigger h1 size */
 		text-align: center;
 		margin-bottom: 1rem;
-		/* color: #007bff; */
-		color: rgb(30 58 138);
+		/* color: #007bff; 
+		color: rgb(30 58 138); */
+		color: #194C13;
 		font-family: 'Poppins', sans-serif;
 	}
 
@@ -212,8 +213,9 @@
 	label {
 		margin-bottom: 0.5rem;
 		font-weight: bold;
-		/* color: #007bff; */
-		color: rgb(30 58 138);
+		/* color: #007bff; 
+		color: rgb(30 58 138); */
+		color: #194C13;
 		display: block;
 	}
 
@@ -236,7 +238,8 @@
 
 	button {
 		padding: 0.75rem;
-		background-color: rgb(30 58 138);
+		/* background-color: rgb(30 58 138); */
+		background-color: #194C13;
 		color: white;
 		border: none;
 		cursor: pointer;
@@ -245,7 +248,8 @@
 	}
 
 	button:hover {
-		background-color: #0056b3;
+		/* background-color: #0056b3; */
+		background-color: #319013;
 		transform: translateY(-2px);
 	}
 
