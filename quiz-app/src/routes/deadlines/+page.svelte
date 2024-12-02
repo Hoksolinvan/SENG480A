@@ -62,7 +62,18 @@
     }
 
 
-    async function sendReminder() {
+   
+
+
+
+    confirmationMessage = `Reminder set for ${formatDate(reminderDate)}!`;
+    setTimeout(() => (confirmationMessage = ''), 5000);
+
+    sendReminder();
+  }
+
+
+  async function sendReminder() {
 		try {
 			const request = await fetch('https://seng480a-production.up.railway.app/send-email', {
 				method: 'POST',
@@ -88,12 +99,6 @@
 	}
 
 
-
-
-
-    confirmationMessage = `Reminder set for ${formatDate(reminderDate)}!`;
-    setTimeout(() => (confirmationMessage = ''), 5000);
-  }
 </script>
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -180,11 +185,13 @@
                 bind:value={email}
                 placeholder="your.email@example.com"
                 class="block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
+                
               />
               <select
                 bind:value={notificationPreference}
                 class="block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
-              >
+              
+                >
                 <option value="2weeks">2 weeks before</option>
                 <option value="1week">1 week before</option>
                 <option value="3days">3 days before</option>
