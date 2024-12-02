@@ -102,17 +102,17 @@ app.get('/webscrape', async (req, res) => {
            subject: "Welcome to Easypath – Your Academic Journey Planner",
            textContent:
            `
-           Dear Student,
+         Dear Student,
 
-           Thank you for choosing Easypath to assist you in planning your academic future! We are dedicated to helping you stay organized, meet deadlines, and confidently explore your major options.
-           Our platform simplifies the process, allowing you to focus on what matters most: finding your path. Whether you're interested in social sciences, engineering, or business, we’ve got the tools to help you succeed.
-           At Easypath, we believe every student deserves equal access to the resources they need, and we're here to empower you with simple, powerful planning tools.
+         Thank you for choosing Easypath to assist you in planning your academic future! We are dedicated to helping you stay organized, meet deadlines, confidently explore your scholarships options, and hit your academic goals!
+         Our platform simplifies the process, allowing you to focus on what matters most: finding your path. Whether you're interested in social sciences, engineering, or business, we’ve got the tools to help you succeed.
+         At Easypath, we believe every student deserves equal access to the resources they need, and we're here to empower you with simple, powerful planning tools.
+         Best of luck on your journey!
+         Warm regards,
 
-           Best of luck on your journey!
 
-           Warm regards,
-           The Easypath Team
-           This is an automated email. Please do not reply.
+         The Easypath Team
+         This is an automated email. Please do not reply.
 
            `,
            
