@@ -47,6 +47,8 @@
       return;
     }
 
+    sendReminder();
+
     const reminderDate = new Date(selectedProgram.deadline);
     
     switch (notificationPreference) {
@@ -65,11 +67,12 @@
    
 
 
+    
+
 
     confirmationMessage = `Reminder set for ${formatDate(reminderDate)}!`;
     setTimeout(() => (confirmationMessage = ''), 5000);
 
-    sendReminder();
   }
 
 
