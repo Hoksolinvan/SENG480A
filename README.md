@@ -15,9 +15,8 @@ We are a team of five:
 - Umit Akirmak (uakirmak@uvic.ca)
 - Hoksolinvan Chhun (chhunhoksolinvan.prof@gmail.com)
 - Harry Lam (theduonglam@uvic.ca)
-
-<img width="1074" alt="Screenshot 2024-12-04 at 11 55 45 AM" src="https://github.com/user-attachments/assets/821827d6-e1b7-48fa-9a5d-795357ab22aa">
-
+  
+<img width="1071" alt="Screenshot 2024-12-04 at 11 57 11 AM" src="https://github.com/user-attachments/assets/2aad7a48-89f3-43ca-af11-7d480f768431">
 
 ## App Access
 
