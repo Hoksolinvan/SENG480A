@@ -15,11 +15,15 @@ We are a team of five:
 - Harry Lam (theduonglam@uvic.ca)
 
 ## App Access
-Link to project: https://seng480a.netlify.app
 
-Link to project (alternative): https://seng-480-a.vercel.app/
+Use and Installation: click the link below and start right away! There is no need to install anything additional.
+We recommend using the primary link for the most up-to-date and reliable version of the app. The alternative link is provided as a fallback option.
 
-Use and Installation: click the link and start right away! There is no need to install anything additional.
+**Primary Link:** https://seng-480-a.vercel.app/
+This is the main deployment and is updated with latest changes. 
+
+**Alternative Link:** https://seng480a.netlify.app
+This serves as a backup deployment. While it generally reflects recent updates, there may be occasional delays or issues with recent pushes not compiling correctly.
 
 ## Github Repository and other Documentations
 
