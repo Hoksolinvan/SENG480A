@@ -16,7 +16,7 @@ We are a team of five:
 
 ## App Access
 
-Use and Installation: click the link below and start right away! There is no need to install anything additional.
+**Use and Installation:** Click the link below to access our app. No additional installation is required.
 We recommend using the primary link for the most up-to-date and reliable version of the app. The alternative link is provided as a fallback option.
 
 **Primary Link:** https://seng-480-a.vercel.app/
