@@ -4,6 +4,8 @@ We provide Canadian high school students and their parents with an all-in-one pl
 
 Our app is designed to be your go-to planning assistant for navigating the difficulties of post-secondary applications. We are here to simplify the planning process and make you feel confident with your plan.
 
+<img width="1323" alt="EasyPath" src="https://github.com/user-attachments/assets/456b8b15-642f-49a5-b02e-18e90a77dae2">
+
 ## Team:
 We are a team of diverse UVic students passionate about making a positive impact on young Canadians. Whether you're interested in social sciences, engineering, or business, we want to reduce the stress of the planning process, as we were all there once!
 
@@ -13,6 +15,9 @@ We are a team of five:
 - Umit Akirmak (uakirmak@uvic.ca)
 - Hoksolinvan Chhun (chhunhoksolinvan.prof@gmail.com)
 - Harry Lam (theduonglam@uvic.ca)
+
+<img width="1074" alt="Screenshot 2024-12-04 at 11 55 45 AM" src="https://github.com/user-attachments/assets/821827d6-e1b7-48fa-9a5d-795357ab22aa">
+
 
 ## App Access
 
