@@ -34,7 +34,7 @@ We are a team of five:
 
 Link to project's github repository: https://github.com/Hoksolinvan/SENG480A
 
-Link to project's github Wiki: https://github.com/Hoksolinvan/SENG480A/wiki
+Link to project's github Wiki (Technical Documentation Located Here): https://github.com/Hoksolinvan/SENG480A/wiki
 
 ## Presentations
 
