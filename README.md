@@ -6,11 +6,16 @@ Our app is designed to be your go-to planning assistant for navigating the diffi
 
 <img width="1323" alt="EasyPath" src="https://github.com/user-attachments/assets/456b8b15-642f-49a5-b02e-18e90a77dae2">
 
-## Github Repository and other Documentations
+## App Access
 
-Link to project's github repository: https://github.com/Hoksolinvan/SENG480A
+**Use and Installation:** Click the link below to access our app. No additional installation is required.
+We recommend using the primary link for the most up-to-date and reliable version of the app. The alternative link is provided as a fallback option.
 
-Link to project's github Wiki: https://github.com/Hoksolinvan/SENG480A/wiki
+**Primary Link:** https://seng-480-a.vercel.app/
+This is the main deployment and is updated with latest changes. 
+
+**Alternative Link:** https://seng480a.netlify.app
+This serves as a backup deployment. While it generally reflects recent updates, there may be occasional delays or issues with recent pushes not compiling correctly.
 
 
 ## Team:
@@ -25,17 +30,11 @@ We are a team of five:
   
 <img width="1071" alt="Screenshot 2024-12-04 at 11 57 11 AM" src="https://github.com/user-attachments/assets/2aad7a48-89f3-43ca-af11-7d480f768431">
 
-## App Access
+## Github Repository and other Documentations
 
-**Use and Installation:** Click the link below to access our app. No additional installation is required.
-We recommend using the primary link for the most up-to-date and reliable version of the app. The alternative link is provided as a fallback option.
+Link to project's github repository: https://github.com/Hoksolinvan/SENG480A
 
-**Primary Link:** https://seng-480-a.vercel.app/
-This is the main deployment and is updated with latest changes. 
-
-**Alternative Link:** https://seng480a.netlify.app
-This serves as a backup deployment. While it generally reflects recent updates, there may be occasional delays or issues with recent pushes not compiling correctly.
-
+Link to project's github Wiki: https://github.com/Hoksolinvan/SENG480A/wiki
 
 ## Presentations
 
