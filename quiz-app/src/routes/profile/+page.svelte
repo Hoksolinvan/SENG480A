@@ -49,6 +49,7 @@
                     <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
                         <!-- Profile Picture -->
                         <img 
+                            <!-- The image used here  was AI generated -->
                             src="s2.png"
                             alt="Profile"
                             class="w-32 h-32 rounded-xl object-cover shadow-sm border-2 border-gray-50"
