@@ -1,3 +1,4 @@
+//node packages import
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 2000;
@@ -10,6 +11,7 @@ const bcrypt = require('bcrypt');
 const {Updater}= require('./scraper.cjs');
 
 
+//brevo sdk initialization
 const defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications["api-key"];
 apiKey.apiKey = process.env.BREVOAPI;
@@ -20,37 +22,39 @@ apiKey.apiKey = process.env.BREVOAPI;
 app.use(cors());
 app.use(express.json()); // This middleware is required to parse JSON data in POST requests
 
+//required root endpoint
 app.get('/', (req, res) => {
    res.send('Hello World!');
 });
 
+
+//redundant API feature
 // Endpoint to handle quiz result submission
-app.post('/quiz_result', async (req, res) => {
-   const { answers } = req.body;
-   if (!answers) {
-      return res.status(400).json({ error: 'Not enough answers provided :(' });
-   }
+// app.post('/quiz_result', async (req, res) => {
+//    const { answers } = req.body;
+//    if (!answers) {
+//       return res.status(400).json({ error: 'Not enough answers provided :(' });
+//    }
 
-   try {
-      // Insert the answers into the database
-      await clientDB.none('INSERT INTO quiz_results (answer1, answer2) VALUES ($1, $2)', [answers[0], answers[1]]);
-      res.status(200).json({ message: 'Quiz results successfully saved'});
-   } catch (error) {
-      console.error('Error saving quiz results:', error.message);
-      res.status(500).json({ error: 'Error saving quiz results' });
-   }
-});
+//    try {
+//       // Insert the answers into the database
+//       await clientDB.none('INSERT INTO quiz_results (answer1, answer2) VALUES ($1, $2)', [answers[0], answers[1]]);
+//       res.status(200).json({ message: 'Quiz results successfully saved'});
+//    } catch (error) {
+//       console.error('Error saving quiz results:', error.message);
+//       res.status(500).json({ error: 'Error saving quiz results' });
+//    }
+// });
 
 
-//Endpoint to handle Forms Requests
+//Endpoint to handle Contact forms Requests
+
 app.post('/Forms',async (req,res) =>{
    const {Forms} = req.body;
    if(!Forms){
       return res.status(400).json({error: 'Something Went Wrong'});
 
    }
-  
-
    try{
       //Insert the Submission Forms information into the database
       await clientDB.none('INSERT INTO forms (name,email,message) VALUES ($1, $2, $3)',[Forms[0],Forms[1],Forms[2]]);
@@ -61,30 +65,28 @@ app.post('/Forms',async (req,res) =>{
       res.status(500).json({error: 'Error saving Form details'});
    }
 
-
-
-
 })
 
 
+//redundant webscrape API feature
+// app.get('/webscrape', async (req, res) => {
 
-app.get('/webscrape', async (req, res) => {
+//    try {
 
-   try {
+//    const data = await Updater();
+//      const rows = await clientDB.one('SELECT * FROM deadlines')
+//      const resultArray = [rows.sfu, rows.ubc, rows.uvic, rows.ufv, rows.bcit, rows.tru, rows.ecuad, rows.capilano]
+//      res.status(200).json(resultArray);
+//    }
+//     catch (error) {
+//      console.error('Error obtaining web-scrape details: ', error.message);
+//      res.status(500).json({ error: 'Error obtaining web-scrape data', error_message: error.message });
+//    }
 
-   const data = await Updater();
-     const rows = await clientDB.one('SELECT * FROM deadlines')
-     const resultArray = [rows.sfu, rows.ubc, rows.uvic, rows.ufv, rows.bcit, rows.tru, rows.ecuad, rows.capilano]
-     res.status(200).json(resultArray);
-   }
-    catch (error) {
-     console.error('Error obtaining web-scrape details: ', error.message);
-     res.status(500).json({ error: 'Error obtaining web-scrape data', error_message: error.message });
-   }
-
- });
+//  });
 
 
+//Brevo SDK API feature
  app.post('/send-email', async (req,res) => {
    const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
    const sender = {
@@ -129,40 +131,45 @@ app.get('/webscrape', async (req, res) => {
 });
 
 
+// moved to future implementation
+// app.post("/registration", async (req,res) => {
 
-app.post("/registration", async (req,res) => {
+//    async function hasher(){
 
-   async function hasher(){
+//       try{
 
-      try{
-
-         const hashedPassword = await bcrypt.hash(req.body.password,10);
-         return hashedPassword;
-
-
-      }
-      catch(error){
-         console.error("Failed");
-      }
-
-   }
+//          const hashedPassword = await bcrypt.hash(req.body.password,10);
+//          return hashedPassword;
 
 
-   try{
+//       }
+//       catch(error){
+//          console.error("Failed");
+//       }
 
-      let hashedpassowrd = await hasher();
-
-
-      await clientDB.none('INSERT INTO accounts (email,hash_password) VALUES ($1, $2)',[req.body.email,hashedpassowrd]);
-      res.status(200).send("");
-   }
-   catch(error){
-      console.error("registration failed");
-      res.status(500).send("Registration failed");
-   }
+//    }
 
 
-});
+//    try{
+
+//       let hashedpassowrd = await hasher();
+
+
+//       await clientDB.none('INSERT INTO accounts (email,hash_password) VALUES ($1, $2)',[req.body.email,hashedpassowrd]);
+//       res.status(200).send("");
+//    }
+//    catch(error){
+//       console.error("registration failed");
+//       res.status(500).send("Registration failed");
+//    }
+
+
+// });
+
+
+
+
+//scholarship API handling
 
 
 app.get("/temp_scholarships", async (req,res) => {
@@ -227,10 +234,6 @@ app.get("/scholarships", async (req,res) => {
 
 
 });
-
-
-
-
 
 
 

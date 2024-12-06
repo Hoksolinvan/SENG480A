@@ -1,6 +1,5 @@
 <script>
     import { savedPrograms } from '$lib/savedScholarships';
-    import { onMount } from 'svelte';
 
     let scholarships =[];
     let searchQuery = '';
@@ -34,12 +33,7 @@
 
 	};
 
-  onMount(() => {
-    // Temporary measure for demo:
-		// check if localstorage has expathUsername
-		// as the item only exists when a user is logged in
-		pf = localStorage.getItem('ezpathUsername');
-  });
+  
 
     // Toggle DropDown
     const handleDropDown = (id) => {
@@ -52,7 +46,9 @@
     // Add selected scholarship to programCollection
     const ProgramCollectionHandler = (scholarship_param) => {
         if (!programCollection.includes(scholarship_param)) { 
+
             programCollection = [...programCollection, scholarship_param];
+
         }
 
         showSaveMessage = true;
@@ -121,6 +117,7 @@
 
     
 
+  //Van's comment (I needed to help to figure out how to check if a state was dropped down so I used AI for this)
     function initializeDropdownStates(data) {
         DropDown = data.reduce((acc, scholarship) => {
             acc[scholarship.id] = false; 
@@ -130,6 +127,7 @@
 
    
 
+    //Van's comment (I needed help with how to dynamically filter the various scholarships queried from the server-side database so I used AI for this part)
     $: filteredScholarships = scholarshipsData.filter(scholarship => {
   const matchesQuery = searchQuery
     ? scholarship.university.toLowerCase().includes(searchQuery.toLowerCase())
