@@ -1,5 +1,6 @@
 <script>
   import { goto } from '$app/navigation';
+  import { onMount } from 'svelte';
 
   const testimonials = [
     {
@@ -29,9 +30,42 @@
   function navigateToDashboard() {
     goto('/dashboard');
   }
+
+  let isHidden=false;
+
+
+  function openPopup() {
+    isHidden = false; // Show popup
+    console.log(isHidden);
+  }
+
+  function closePopup() {
+    isHidden=true;
+    console.log(isHidden);
+  }
+
+
+onMount(() => {
+  openPopup();
+});
+
 </script>
 
 <main class="min-h-screen bg-gray-50">
+
+  <!--Temporary popup-->
+  <div id="popup" class:hidden={isHidden}>
+    <div class="popup">
+    <div class="popup-content">
+      <h2>Welcome!</h2>
+      <p>Lorem Ipsum Atsum</p>
+      <button on:click={closePopup} class="bg-blue-600 hover:bg-blue-700">Close</button>
+
+    </div>
+  </div>
+  </div>
+
+
   <!-- Hero Section -->
   <div class="min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-green-50 to-white">
     <div class="grid md:grid-cols-2 gap-12 max-w-7xl w-full px-6">
@@ -193,4 +227,47 @@
   .font-hand {
     font-family: 'Satisfy', cursive;
   }
+
+
+
+  .hidden {
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  
+}
+
+.popup-content h2 {
+  margin: 0 0 10px;
+}
+
+.popup-content button {
+  
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
 </style>
