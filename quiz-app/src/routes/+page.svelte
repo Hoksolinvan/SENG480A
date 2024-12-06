@@ -57,8 +57,36 @@ onMount(() => {
   <div id="popup" class:hidden={isHidden}>
     <div class="popup">
     <div class="popup-content">
-      <h2>Welcome!</h2>
-      <p>Lorem Ipsum Atsum</p>
+      <span><strong>BETA TESTING: </strong>Step-by-Step Instructions to Get Started </span>
+      <br>
+      <br>
+
+      <div style="text-align: left;">
+      <p>1. <strong>Log in for Full Access:</strong></p>
+        <ul style="text-indent: 15px;">
+          <li>Click the profile icon located in the top-right corner of the app.
+          </li>
+        </ul>
+      <br>
+      <p>2. On the Login page, use the <strong>pre-filled username and password</strong> to log in.</p>
+      <ul style="text-indent: 15px;">
+       
+        <li>The login process is quick and easy!</li>
+        <li><i>Note: </i>The <strong>sign-up functionality is currently unavailable</strong> as we’re still working on it.</li>
+
+      </ul>
+      <br>
+
+      <p>3. <strong>Start Searching for Programs or Scholarships</strong></p>
+      <ul style="text-indent: 15px;">
+        <li>Navigate to the <strong>search page</strong> for programs or scholarships.</li>
+        <li>Type your desired <strong>keywords</strong> in the search bar and press <strong>Enter.</strong></li>
+        <li><i>Note:</i>The app currently supports two programs at the University of Victoria: <strong>Computer Science</strong> and <strong>Commerce</strong>.</li>
+      </ul>
+      <br>
+      <br>
+      <p>Enjoy exploring and discovering opportunities for your university admissions and career planning journey! If you have feedback, we’d love to hear from you.</p>
+      </div>
       <button on:click={closePopup} class="bg-blue-600 hover:bg-blue-700">Close</button>
 
     </div>
@@ -252,7 +280,7 @@ onMount(() => {
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  width: 300px;
+  width: 1000px;
   
 }
 
