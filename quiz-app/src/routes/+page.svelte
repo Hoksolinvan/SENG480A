@@ -6,18 +6,21 @@
     {
       name: "Emma Carter",
       role: "High School Senior",
+      // The image used here  was AI generated 
       image: "./s2.png",
       quote: "EasyPath helped me find programs I never knew about. Amazing!"
     },
     {
       name: "John Patel",
       role: "Grade 12 Student",
+      // The image used here  was AI generated 
       image: "./s1.png",
       quote: "All my application deadlines in one place. No more stress!"
     },
     {
       name: "Marcus Brown",
       role: "Future Arts Major",
+      // The image used here  was AI generated 
       image: "./s3.png",
       quote: "EasyPath's reminders kept me organized and focused. Loved it!"
     }
@@ -120,6 +123,7 @@ onMount(() => {
       </div>
       <!-- Image -->
       <div class="flex items-center justify-center">
+        <!-- The image used here  was AI generated -->
         <img 
           src="/hero-img.webp" 
           alt="Educational growth" 
@@ -140,6 +144,7 @@ onMount(() => {
           <h3 class="text-xl font-semibold text-darkgreen mb-2">Deadline Tracking</h3>
           <p class="text-gray-600">Never miss an application deadline with our reminder system.</p>
           <div class="absolute top-0 left-0 w-full h-full bg-green-100 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <!-- The image used here  was AI generated -->
             <img src="/deadlines.webp" alt="Deadline Tracking" class="w-40 h-40" />
           </div>
         </div>
@@ -149,6 +154,7 @@ onMount(() => {
           <h3 class="text-xl font-semibold text-darkgreen mb-2">Easy Comparison</h3>
           <p class="text-gray-600">Compare different programs side by side to make informed decisions.</p>
           <div class="absolute top-0 left-0 w-full h-full bg-green-100 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <!-- The image used here  was AI generated -->
             <img src="/program.webp" alt="Program Comparison" class="w-40 h-40" />
           </div>
         </div>
@@ -158,6 +164,7 @@ onMount(() => {
           <h3 class="text-xl font-semibold text-darkgreen mb-2">Smart Search</h3>
           <p class="text-gray-600">Find programs that match your interests and criteria with our advanced filtering system.</p>
           <div class="absolute top-0 left-0 w-full h-full bg-green-100 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <!-- The image used here  was AI generated -->
             <img src="/searchpic.webp
             " alt="Smart Search" class="w-40 h-40" />
           </div>
@@ -169,6 +176,7 @@ onMount(() => {
           <h3 class="text-xl font-semibold text-darkgreen mb-2">Scholarship Catalog</h3>
           <p class="text-gray-600">Explore the scholarships available in our database.</p>
           <div class="absolute top-0 left-0 w-full h-full bg-green-100 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <!-- The image used here  was AI generated -->
             <img src="/scholarships.webp
             " alt="Smart Search" class="w-40 h-40" />
           </div>

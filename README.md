@@ -53,3 +53,13 @@ License information: Copy-righted. All rights reserved by the developers of Easy
 
 -- Built for a class project in the Startup Programming class, Fall 2024, University of Victoria.
 
+
+## AI-Usage
+
+Throughout the project, AI tools were utilized for tasks such as:
+- Image generation
+- Mock Data generation
+- Coding Assistance
+- Learning & Research
+
+
