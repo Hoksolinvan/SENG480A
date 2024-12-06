@@ -6,6 +6,13 @@ Our app is designed to be your go-to planning assistant for navigating the diffi
 
 <img width="1323" alt="EasyPath" src="https://github.com/user-attachments/assets/456b8b15-642f-49a5-b02e-18e90a77dae2">
 
+## Github Repository and other Documentations
+
+Link to project's github repository: https://github.com/Hoksolinvan/SENG480A
+
+Link to project's github Wiki: https://github.com/Hoksolinvan/SENG480A/wiki
+
+
 ## Team:
 We are a team of diverse UVic students passionate about making a positive impact on young Canadians. Whether you're interested in social sciences, engineering, or business, we want to reduce the stress of the planning process, as we were all there once!
 
@@ -29,11 +36,6 @@ This is the main deployment and is updated with latest changes.
 **Alternative Link:** https://seng480a.netlify.app
 This serves as a backup deployment. While it generally reflects recent updates, there may be occasional delays or issues with recent pushes not compiling correctly.
 
-## Github Repository and other Documentations
-
-Link to project's github repository: https://github.com/Hoksolinvan/SENG480A
-
-Link to project's github Wiki: https://github.com/Hoksolinvan/SENG480A/wiki
 
 ## Presentations
 
