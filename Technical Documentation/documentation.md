@@ -41,3 +41,5 @@ https://github.com/Hoksolinvan/SENG480A/wiki/Technical-Documentation
 - Functional account registration
 - Back-end testing using *Postman*
 - Front-end testing manually thus far, to be automated in the future
+
+
