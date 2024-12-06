@@ -60,6 +60,6 @@ Throughout the project, AI tools were utilized for tasks such as:
 - Image generation
 - Mock Data generation
 - Coding Assistance
-- Learning
+- Learning & Research
 
 
