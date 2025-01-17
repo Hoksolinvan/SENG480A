@@ -1,6 +1,7 @@
 <script>
 	import profileDetailList from "../profile/profileList";
 	import { onMount } from 'svelte';
+	import {signUp} from '../../../backend/server2';
 
 	let Email = "";
 	let Password = "";
@@ -18,44 +19,16 @@
 		}
         });
 
-	// Van's test code
-	// function handleSubmit(){
-	// 	console.log("hello");
-	// }
-
-	/*async function registration(Form){
-
-		try {
-			const request = await fetch('https://seng480a-production.up.railway.app/registration', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					Forms: Form
-				}),
-			});
-
-			if (request.ok) {
-				const result = await request.json();
-				console.log('Form results were successfully posted: ', result);
-			} else {
-				console.error('Error Submitting Form', request.statusText);
-        console.error(error);
-			}
-		} catch (error) {
-			console.log("Failed to submit Form\n");
-			console.log(error);
-      
-		}
-	}*/
-
+	
 
 	function handleSubmit() {
 		Email = document.getElementById("email").value;
 		Password = document.getElementById("password").value;
 		Confirm_pwd = document.getElementById("confirm-pwd").value;
 		// Agree = document.getElementById("agree").value;
+
+
+
 
 		if (Password != Confirm_pwd) {
 			// Notify the user that password and the confirming password are not the same
@@ -75,6 +48,9 @@
 
 			
 			post_Regis();
+
+			//firebase signup functionality
+			signUp(Email,Password);
 
 			if(localStorage.getItem("regisPassed")=="true"){
 				// document.getElementById("Thankyou_Message").classList.remove("hidden");
