@@ -41,6 +41,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"firebase": "^9.0.0",
 		"aws-amplify": "^6.6.4",
 		"axios": "^1.7.7",
 		"brevo": "^1.0.0",
