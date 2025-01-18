@@ -13,7 +13,7 @@ import 'dotenv/config'
 // For Firebase JS SDK v7.20.0 and latera, measurementId is optional
 const firebaseConfig = {
   apiKey: process.env.APIKEY,
-  authDomain: processs.env.AUTHDOMAIN,
+  authDomain: process.env.AUTHDOMAIN,
   projectId: process.env.PROJECTID,
   storageBucket: process.env.STORAGEBUCKET,
   messagingSenderId: process.env.MESSAGINGSENDERAPP,
