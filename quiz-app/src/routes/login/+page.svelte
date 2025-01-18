@@ -76,7 +76,7 @@ const auth = getAuth(app);
 			// Testing code. Remove when actual functionality has been implemented
 			document.getElementById("login-fail").textContent = "Log in successful. You will be redirected to your Profile page soon.";
 			document.getElementById("login-fail").style.color = "green";
-			window.location.href = "./profile";
+			// window.location.href = "./profile";
 			// End of testing code
 			localStorage.removeItem("loginPassed");
 
