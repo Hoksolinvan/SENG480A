@@ -1,51 +1,12 @@
 <script>
 	import { onMount } from 'svelte';
-	// import {signIn} from '../../../backend/server2';
+	 import {signIn} from '../../../backend/server2';
 	// let Email = "";
 	// let Password = "";
 
 
 
-	import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import 'dotenv/config';
-
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and latera, measurementId is optional
-const firebaseConfig = {
-  apiKey: process.env.APIKEY,
-  authDomain: process.env.AUTHDOMAIN,
-  projectId: process.env.PROJECTID,
-  storageBucket: process.env.STORAGEBUCKET,
-  messagingSenderId: process.env.MESSAGINGSENDERAPP,
-  appId: process.env.APPID,
-  measurementId: process.env.MEASUREMENTID
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-
-
- const signIn = async( email, password) => {
-    try{
-        const userCredential = await signInWithEmailAndPassword(auth,email,password);
-        console.log('login successful');
-        return 1;
-    }
-    catch(error){
-        console.error('Error for signing in');
-        return 0;
-    }
-
-
-};
-
+	
 	// default pre-filled values for dummy account log-in
 	// to be deleted in product soft-release
 	let Email = "demo@easypath.ca";
