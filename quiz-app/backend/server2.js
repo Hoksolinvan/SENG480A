@@ -3,7 +3,9 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
-import 'dotenv/config';
+import dotenv from 'dotenv/config';
+
+dotenv.config();
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -43,9 +45,11 @@ export const signIn = async( email, password) => {
     try{
         const userCredential = await signInWithEmailAndPassword(auth,email,password);
         console.log('login successful');
+        return 1;
     }
     catch(error){
         console.error('Error for signing in');
+        return 0;
     }
 
 
