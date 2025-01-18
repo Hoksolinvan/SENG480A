@@ -9,8 +9,7 @@
 	import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-
-import 'dotenv/config'
+import 'dotenv/config';
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -20,7 +19,7 @@ import 'dotenv/config'
 // For Firebase JS SDK v7.20.0 and latera, measurementId is optional
 const firebaseConfig = {
   apiKey: process.env.APIKEY,
-  authDomain: processs.env.AUTHDOMAIN,
+  authDomain: process.env.AUTHDOMAIN,
   projectId: process.env.PROJECTID,
   storageBucket: process.env.STORAGEBUCKET,
   messagingSenderId: process.env.MESSAGINGSENDERAPP,
