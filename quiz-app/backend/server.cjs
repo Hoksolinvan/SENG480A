@@ -9,6 +9,31 @@ const SibApiV3Sdk = require('sib-api-v3-sdk');
 const clientDB= require('./config.cjs');
 const bcrypt = require('bcrypt');
 const {Updater}= require('./scraper.cjs');
+import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+
+import 'dotenv/config'
+
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and latera, measurementId is optional
+const firebaseConfig = {
+  apiKey: process.env.APIKEY,
+  authDomain: process.env.AUTHDOMAIN,
+  projectId: process.env.PROJECTID,
+  storageBucket: process.env.STORAGEBUCKET,
+  messagingSenderId: process.env.MESSAGINGSENDERAPP,
+  appId: process.env.APPID,
+  measurementId: process.env.MEASUREMENTID
+};
+
+// Initialize Firebase
+const appFirebase = initializeApp(firebaseConfig);
+const auth = getAuth(appFirebase);
+
 
 
 //brevo sdk initialization
@@ -16,6 +41,34 @@ const defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications["api-key"];
 apiKey.apiKey = process.env.BREVOAPI;
 
+
+const signUp = async (email, password) => {
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      console.log('User signed up:', userCredential.user);
+
+      return 1;
+    } catch (error) {
+      console.error('Error during sign up:', error.message);
+
+      return 0;
+    }
+  };
+
+
+const signIn = async( email, password) => {
+    try{
+        const userCredential = await signInWithEmailAndPassword(auth,email,password);
+        console.log('login successful');
+        return 1;
+    }
+    catch(error){
+        console.error('Error for signing in');
+        return 0;
+    }
+
+
+};
 
 
 // Middleware to enable CORS and parse JSON request bodies
@@ -46,6 +99,42 @@ app.get('/', (req, res) => {
 //    }
 // });
 
+
+
+app.get('/firebase_login', async (req,res) => {
+
+   const {Forms} = req.body;
+   if(!Forms){
+      return res.status(400).json({});
+   }
+   else{
+      let return_val = signIn(Forms.email,Forms.password);
+      if(return_val){
+         return res.status(200);
+      }
+      else{
+         return res.status(400);
+      }
+   }
+});
+
+
+app.get('/firebase_signup',async (req,res) =>{
+
+   const {Forms} = req.body;
+   if(!Forms){
+      return res.status(400).json({});
+   }
+   else{
+      let return_val = signUp(Forms.email,Forms.password);
+      if(return_val){
+         return res.status(200);
+      }
+      else{
+         return res.status(400);
+      }
+   }
+})
 
 //Endpoint to handle Contact forms Requests
 

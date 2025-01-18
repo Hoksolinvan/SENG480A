@@ -3,11 +3,6 @@
 	// import {signIn} from 'server2.js';
 
 	
-
-
-
-
-	
 	// default pre-filled values for dummy account log-in
 	// to be deleted in product soft-release
 	let Email = "demo@easypath.ca";
@@ -68,8 +63,24 @@
 			localStorage.setItem("loginFailed", "true");
 		}
 
-		// let x = signIn("demo@easypath.ca","password");
-		// console.log(x);
+		const response = await fetch('https://seng480a-production.up.railway.app/firebase_login', {
+    method: 'GET', // Use 'POST' if you want to send a body
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      Forms: {
+        email: Email,
+        password: Password,
+      },
+    }),
+  });
+
+  if (response.ok) {
+    console.log('Login successful');
+  } else {
+    console.log('Login failed');
+  }
 
 	}
 
