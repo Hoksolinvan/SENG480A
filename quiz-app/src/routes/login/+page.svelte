@@ -58,9 +58,10 @@ const auth = getAuth(app);
 		// check if localstorage has expathUsername
 		// as the item only exists when a user is logged in
 		// if yes then redirect to profile page
-		if (localStorage.getItem('ezpathUsername')){
-			window.location.href = "./profile";
-		}
+		// if (localStorage.getItem('ezpathUsername')){
+		// 	window.location.href = "./profile";
+		// }
+		console.log('hello');
         });
 
 	function handleSubmit() {
