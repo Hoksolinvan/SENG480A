@@ -7,7 +7,6 @@
 
 
 	import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import 'dotenv/config';
 
@@ -58,10 +57,9 @@ const auth = getAuth(app);
 		// check if localstorage has expathUsername
 		// as the item only exists when a user is logged in
 		// if yes then redirect to profile page
-		// if (localStorage.getItem('ezpathUsername')){
-		// 	window.location.href = "./profile";
-		// }
-		console.log('hello');
+		if (localStorage.getItem('ezpathUsername')){
+			window.location.href = "./profile";
+		}
         });
 
 	function handleSubmit() {
@@ -76,7 +74,7 @@ const auth = getAuth(app);
 			// Testing code. Remove when actual functionality has been implemented
 			document.getElementById("login-fail").textContent = "Log in successful. You will be redirected to your Profile page soon.";
 			document.getElementById("login-fail").style.color = "green";
-			// window.location.href = "./profile";
+			window.location.href = "./profile";
 			// End of testing code
 			localStorage.removeItem("loginPassed");
 
