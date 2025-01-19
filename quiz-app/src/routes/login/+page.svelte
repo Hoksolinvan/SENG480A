@@ -66,10 +66,12 @@
 		}
 
 		try{
+			const request = await axios.post("https://easypath-backend-production.up.railway.app/firebase_login", {
+  email: Email,
+  password: Password,
+});
 
-			const request = await axios.get("easypath-backend-production.up.railway.app/firebase_login", {email:Email, password:Password});
-
-			console.log(request.data);
+console.log(request.data);
 		}
 		catch (error){
 			console.log(request.data);
