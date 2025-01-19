@@ -5,7 +5,7 @@
 	"main":"server.cjs",
 		"scripts": {
 		"dev": "vite dev",
-		"build": "build server.cjs",
+		"build": "node server.cjs",
 		"preview": "vite preview",
 		"test": "playwright test",
 		"lint": "prettier --check . && eslint .",
