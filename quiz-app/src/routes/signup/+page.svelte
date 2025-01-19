@@ -1,6 +1,8 @@
 <script>
 	import profileDetailList from "../profile/profileList";
 	import { onMount } from 'svelte';
+	import axios from 'axios';
+
 
 	let Email = "";
 	let Password = "";
@@ -98,11 +100,18 @@
 	}
 
 	async function post_Regis() {
+
+
 		if (profileDetailList.filter(pf => pf.email.includes(Email))){
 			localStorage.setItem("regisFailed", "true");
 		}
 		else{
 			localStorage.setItem("regisPassed", "true");
+
+			const response = await axios.post('https://www.easypath-backend-production.up.railway.app/firebase_signup',{Forms: {
+        email: Email,
+        password: Password,
+      }});
 		}
 	}
 </script>
