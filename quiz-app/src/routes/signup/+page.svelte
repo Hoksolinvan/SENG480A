@@ -109,8 +109,8 @@
 			localStorage.setItem("regisPassed", "true");
 
 			const response = await axios.post('https://www.easypath-backend-production.up.railway.app/firebase_signup',{Forms: {
-        email: Email,
-        password: Password,
+        "email": Email,
+        "password": Password,
       }});
 		}
 	}
