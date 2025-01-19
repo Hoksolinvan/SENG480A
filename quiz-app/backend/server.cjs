@@ -11,15 +11,9 @@ const bcrypt = require('bcrypt');
 const {Updater}= require('./scraper.cjs');
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import 'dotenv/config';
 
-import 'dotenv/config'
 
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and latera, measurementId is optional
 const firebaseConfig = {
   apiKey: process.env.APIKEY,
   authDomain: process.env.AUTHDOMAIN,
@@ -34,13 +28,10 @@ const firebaseConfig = {
 const appFirebase = initializeApp(firebaseConfig);
 const auth = getAuth(appFirebase);
 
-
-
 //brevo sdk initialization
 const defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications["api-key"];
 apiKey.apiKey = process.env.BREVOAPI;
-
 
 const signUp = async (email, password) => {
     try {
@@ -55,7 +46,6 @@ const signUp = async (email, password) => {
     }
   };
 
-
 const signIn = async( email, password) => {
     try{
         const userCredential = await signInWithEmailAndPassword(auth,email,password);
@@ -66,7 +56,6 @@ const signIn = async( email, password) => {
         console.error('Error for signing in');
         return 0;
     }
-
 
 };
 
@@ -81,32 +70,12 @@ app.get('/', (req, res) => {
 });
 
 
-//redundant API feature
-// Endpoint to handle quiz result submission
-// app.post('/quiz_result', async (req, res) => {
-//    const { answers } = req.body;
-//    if (!answers) {
-//       return res.status(400).json({ error: 'Not enough answers provided :(' });
-//    }
-
-//    try {
-//       // Insert the answers into the database
-//       await clientDB.none('INSERT INTO quiz_results (answer1, answer2) VALUES ($1, $2)', [answers[0], answers[1]]);
-//       res.status(200).json({ message: 'Quiz results successfully saved'});
-//    } catch (error) {
-//       console.error('Error saving quiz results:', error.message);
-//       res.status(500).json({ error: 'Error saving quiz results' });
-//    }
-// });
-
-
-
 app.get('/firebase_login', async (req,res) => {
 
    const {Forms} = req.body;
    if(!Forms){
       return res.status(400).json({});
-      
+
    }
    else{
       let return_val = signIn(Forms.email,Forms.password);
@@ -155,25 +124,7 @@ app.post('/Forms',async (req,res) =>{
       res.status(500).json({error: 'Error saving Form details'});
    }
 
-})
-
-
-//redundant webscrape API feature
-// app.get('/webscrape', async (req, res) => {
-
-//    try {
-
-//    const data = await Updater();
-//      const rows = await clientDB.one('SELECT * FROM deadlines')
-//      const resultArray = [rows.sfu, rows.ubc, rows.uvic, rows.ufv, rows.bcit, rows.tru, rows.ecuad, rows.capilano]
-//      res.status(200).json(resultArray);
-//    }
-//     catch (error) {
-//      console.error('Error obtaining web-scrape details: ', error.message);
-//      res.status(500).json({ error: 'Error obtaining web-scrape data', error_message: error.message });
-//    }
-
-//  });
+});
 
 
 //Brevo SDK API feature
@@ -219,44 +170,6 @@ app.post('/Forms',async (req,res) =>{
    }
 
 });
-
-
-// moved to future implementation
-// app.post("/registration", async (req,res) => {
-
-//    async function hasher(){
-
-//       try{
-
-//          const hashedPassword = await bcrypt.hash(req.body.password,10);
-//          return hashedPassword;
-
-
-//       }
-//       catch(error){
-//          console.error("Failed");
-//       }
-
-//    }
-
-
-//    try{
-
-//       let hashedpassowrd = await hasher();
-
-
-//       await clientDB.none('INSERT INTO accounts (email,hash_password) VALUES ($1, $2)',[req.body.email,hashedpassowrd]);
-//       res.status(200).send("");
-//    }
-//    catch(error){
-//       console.error("registration failed");
-//       res.status(500).send("Registration failed");
-//    }
-
-
-// });
-
-
 
 
 //scholarship API handling

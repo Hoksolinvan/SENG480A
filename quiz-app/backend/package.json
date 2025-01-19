@@ -2,7 +2,8 @@
 	"name": "quiz-app",
 	"version": "0.0.1",
 	"private": true,
-	"scripts": {
+	"main":"server.cjs",
+		"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
