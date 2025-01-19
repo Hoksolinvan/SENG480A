@@ -46,7 +46,7 @@ const signUp = async (email, password) => {
     }
   };
 
-const signIn = async( email, password) => {
+const signIn = async(email, password) => {
     try{
         const userCredential = await signInWithEmailAndPassword(auth,email,password);
         console.log('login successful');
