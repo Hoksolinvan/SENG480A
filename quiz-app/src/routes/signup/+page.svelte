@@ -59,7 +59,7 @@
 		Confirm_pwd = document.getElementById("confirm-pwd").value;
 		// Agree = document.getElementById("agree").value;
 
-		const response = await axios.post('https://www.easypath-backend-production.up.railway.app/firebase_signup',{Forms: {
+		const response = await axios.post('https://easypath-backend-production.up.railway.app/firebase_signup',{Forms: {
         "email": Email,
         "password": Password,
       }});
