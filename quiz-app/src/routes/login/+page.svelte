@@ -30,30 +30,30 @@
 		// Form = [Email, Password];
 		post_Login();
 
-		if(localStorage.getItem("loginPassed")=="true"){
-			// Enter code to load Profile page here
-			// Testing code. Remove when actual functionality has been implemented
-			document.getElementById("login-fail").textContent = "Log in successful. You will be redirected to your Profile page soon.";
-			document.getElementById("login-fail").style.color = "green";
-			window.location.href = "./profile";
-			// End of testing code
-			localStorage.removeItem("loginPassed");
+		// if(localStorage.getItem("loginPassed")=="true"){
+		// 	// Enter code to load Profile page here
+		// 	// Testing code. Remove when actual functionality has been implemented
+		// 	document.getElementById("login-fail").textContent = "Log in successful. You will be redirected to your Profile page soon.";
+		// 	document.getElementById("login-fail").style.color = "green";
+		// 	window.location.href = "./profile";
+		// 	// End of testing code
+		// 	localStorage.removeItem("loginPassed");
 
-			// simple, hard-coded user log-in validation and set up 
-			localStorage.setItem("ezpathUsername", JSON.stringify(Email));
-		}
-		else if(localStorage.getItem("loginFailed")=="true"){
-			document.getElementById("login-fail").textContent = "Incorrect email address or password. Please check and try again.";
-			document.getElementById("email").style.borderColor = "red";
-			document.getElementById("password").style.borderColor = "red";
-			document.getElementById("email").style.borderWidth = "2px";
-			document.getElementById("password").style.borderWidth = "2px";
-			document.getElementById("email").style.backgroundColor = "#e6e6e6";
-			document.getElementById("password").style.backgroundColor = "#e6e6e6";
-			Email = "";
-			Password = "";
-			localStorage.removeItem("loginFailed");
-		}
+		// 	// simple, hard-coded user log-in validation and set up 
+		// 	localStorage.setItem("ezpathUsername", JSON.stringify(Email));
+		// }
+		// else if(localStorage.getItem("loginFailed")=="true"){
+		// 	document.getElementById("login-fail").textContent = "Incorrect email address or password. Please check and try again.";
+		// 	document.getElementById("email").style.borderColor = "red";
+		// 	document.getElementById("password").style.borderColor = "red";
+		// 	document.getElementById("email").style.borderWidth = "2px";
+		// 	document.getElementById("password").style.borderWidth = "2px";
+		// 	document.getElementById("email").style.backgroundColor = "#e6e6e6";
+		// 	document.getElementById("password").style.backgroundColor = "#e6e6e6";
+		// 	Email = "";
+		// 	Password = "";
+		// 	localStorage.removeItem("loginFailed");
+		// }
 	}
 
 	async function post_Login() {
