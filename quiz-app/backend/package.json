@@ -3,7 +3,9 @@
 	"version": "0.0.1",
 	"private": true,
 	"main":"server.cjs",
-	
+	"scripts": {
+    "build": "node server.cjs" // Replace with your server entry point file
+  },
 	"devDependencies": {
 		"@aws-amplify/backend": "^1.3.2",
 		"@aws-amplify/backend-cli": "^1.2.9",
