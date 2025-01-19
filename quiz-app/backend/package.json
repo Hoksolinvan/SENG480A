@@ -3,17 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"main":"server.cjs",
-		"scripts": {
-		"start":"node server.cjs",
-		"dev": "vite dev",
-		"build": "node server.cjs",
-		"preview": "vite preview",
-		"test": "playwright test",
-		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write .",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d dist"
-	},
+	
 	"devDependencies": {
 		"@aws-amplify/backend": "^1.3.2",
 		"@aws-amplify/backend-cli": "^1.2.9",
