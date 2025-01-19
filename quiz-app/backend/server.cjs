@@ -106,6 +106,7 @@ app.get('/firebase_login', async (req,res) => {
    const {Forms} = req.body;
    if(!Forms){
       return res.status(400).json({});
+      
    }
    else{
       let return_val = signIn(Forms.email,Forms.password);
