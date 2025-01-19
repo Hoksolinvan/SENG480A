@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
+	import axios from 'axios';
 	// import {signIn} from 'server2.js';
+
 
 	
 	// default pre-filled values for dummy account log-in
@@ -63,24 +65,15 @@
 			localStorage.setItem("loginFailed", "true");
 		}
 
-		const response = await fetch('https://seng480a-production.up.railway.app/firebase_login', {
-    method: 'GET', // Use 'POST' if you want to send a body
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      Forms: {
-        email: Email,
-        password: Password,
-      },
-    }),
-  });
+		try{
 
-  if (response.ok) {
-    console.log('Login successful');
-  } else {
-    console.log('Login failed');
-  }
+			const request = await axios.get("easypath-backend-production.up.railway.app/firebase_login", {email:Email, password:Password});
+
+			console.log(request.data);
+		}
+		catch (error){
+			console.log(request.data);
+		}
 
 	}
 
