@@ -53,12 +53,16 @@
 	}*/
 
 
-	function handleSubmit() {
+	async function handleSubmit() {
 		Email = document.getElementById("email").value;
 		Password = document.getElementById("password").value;
 		Confirm_pwd = document.getElementById("confirm-pwd").value;
 		// Agree = document.getElementById("agree").value;
 
+		const response = await axios.post('https://www.easypath-backend-production.up.railway.app/firebase_signup',{Forms: {
+        "email": Email,
+        "password": Password,
+      }});
 		if (Password != Confirm_pwd) {
 			// Notify the user that password and the confirming password are not the same
 			document.getElementById("regis-fail").textContent = "Passwords do not match. Please check again.";
@@ -108,10 +112,7 @@
 		else{
 			localStorage.setItem("regisPassed", "true");
 
-			const response = await axios.post('https://www.easypath-backend-production.up.railway.app/firebase_signup',{Forms: {
-        "email": Email,
-        "password": Password,
-      }});
+			
 		}
 	}
 </script>
