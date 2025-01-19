@@ -4,6 +4,7 @@
 	"private": true,
 	"main":"server.cjs",
 		"scripts": {
+		"start":"node server.cjs",
 		"dev": "vite dev",
 		"build": "node server.cjs",
 		"preview": "vite preview",
