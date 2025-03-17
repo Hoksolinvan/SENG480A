@@ -47,30 +47,35 @@
 				<li><a href="/contact" class="nav-link">CONTACT</a></li> -->
 				<li><a href="/search" class="nav-link"><b>SEARCH</b></a></li>
 				<li><a href="/scholarships" class="nav-link"><b>SCHOLARSHIPS</b></a></li> 
+				<li><a href="/dashboard" class="nav-button my-programs">MY PATH</a></li>
 				
+
+				<!-- START of commented out profile section -->
+
+				<!-- 
 				{#if pf != null}
 				<li><a href="/dashboard" class="nav-button my-programs">MY PATH</a></li>
 				{/if}
 
 				<li>
 					<img src="/FontAwesome-User-icon.png" class="profile {current_toggle ? "active":" "}" style="width:30px; height:30px" on:click={toggleDisplay}>
-				  
+				   -->
 					<!-- Dropdown menu box -->
-					{#if current_toggle}
+					<!-- {#if current_toggle}
 					  <div class="dropdown-menu">
 						{#if pf === null}
 						  <div><a href="/login"><b>Log In</b></a></div>
 						  <div><a href="/signup"><b>Sign Up</b></a></div>
 						{:else}
-						  
+						   -->
 							<!-- Profile and Settings links -->
 							<!-- <div><a href="/dashboard"><b>My Dashboard</b></a></div>
 							<div><a href="/saved"><b>My Programs</b></a></div> -->
-							<div><a href="/profile"><b>Edit Profile</b></a></div>
+							<!-- <div><a href="/profile"><b>Edit Profile</b></a></div>
 							<div><a href="#"><b>Settings</b></a></div>
-				  
+				   -->
 							<!-- Log out link -->
-							<div>
+							<!-- <div>
 
 							  <a href="#" on:click={() => { 
 								localStorage.removeItem('ezpathUsername'); 
@@ -87,9 +92,13 @@
 
 				{#if navigationStack.length > 1}
 				<li>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:30px; height:30px" class="profile" on:click={handleBack}><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M11.5 280.6l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2zm256 0l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2z"/></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:30px; height:30px" class="profile" on:click={handleBack}> -->
+					<!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+					<!-- <path d="M11.5 280.6l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2zm256 0l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2z"/></svg>
 				</li>
-				{/if}
+				{/if}  -->
+
+				<!-- END of commented out profile section -->
 			</ul>
 		</nav>  
 	</div>
