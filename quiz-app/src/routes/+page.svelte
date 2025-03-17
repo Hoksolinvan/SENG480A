@@ -6,21 +6,21 @@
     {
       name: "Emma Carter",
       role: "High School Senior",
-      // The image used here  was AI generated 
+      // The image used here  was AI generated
       image: "./s2.png",
       quote: "EasyPath helped me find programs I never knew about. Amazing!"
     },
     {
       name: "John Patel",
       role: "Grade 12 Student",
-      // The image used here  was AI generated 
+      // The image used here  was AI generated
       image: "./s1.png",
       quote: "All my application deadlines in one place. No more stress!"
     },
     {
       name: "Marcus Brown",
       role: "Future Arts Major",
-      // The image used here  was AI generated 
+      // The image used here  was AI generated
       image: "./s3.png",
       quote: "EasyPath's reminders kept me organized and focused. Loved it!"
     }
@@ -36,7 +36,8 @@
 
   let isHidden=false;
 
-
+  // Commented out pop-up related functions
+/*
   function openPopup() {
     isHidden = false; // Show popup
     console.log(isHidden);
@@ -46,7 +47,7 @@
     isHidden=true;
     console.log(isHidden);
   }
-
+*/
 
 onMount(() => {
   openPopup();
@@ -57,6 +58,8 @@ onMount(() => {
 <main class="min-h-screen bg-gray-50">
 
   <!--Temporary popup-->
+  <!-- Commented out for time being -->
+   <!--  
   <div id="popup" class:hidden={isHidden}>
     <div class="popup">
     <div class="popup-content">
@@ -73,7 +76,7 @@ onMount(() => {
       <br>
       <p>2. On the Login page, use the <strong>pre-filled username and password</strong> to log in.</p>
       <ul style="text-indent: 15px;">
-       
+
         <li>The login process is quick and easy!</li>
         <li><i>Note: </i>The <strong>sign-up functionality is currently unavailable</strong> as we’re still working on it.</li>
 
@@ -95,6 +98,7 @@ onMount(() => {
     </div>
   </div>
   </div>
+  -->
 
 
   <!-- Hero Section -->
@@ -111,23 +115,23 @@ onMount(() => {
         <p class="text-gray-600 text-lg">
           Search programs, track deadlines, and manage scholarship opportunities to make informed decisions about your academic future
         </p>
-        <button 
-          class="w-fit px-8 py-4 bg-blue-600 text-white rounded-lg shadow-lg 
+        <button
+          class="w-fit px-8 py-4 bg-blue-600 text-white rounded-lg shadow-lg
                  hover:bg-blue-700 transform hover:scale-105 transition-all
                  duration-300 text-lg font-semibold"
-          on:click={navigateToSearch} 
+          on:click={navigateToSearch}
         >
           Get Started
         </button>
-        
+
       </div>
       <!-- Image -->
       <div class="flex items-center justify-center">
         <!-- The image used here  was AI generated -->
-        <img 
-          src="/hero-img.webp" 
-          alt="Educational growth" 
-          class="w-4/5 rounded-full shadow-2xl transform hover:scale-105 
+        <img
+          src="/hero-img.webp"
+          alt="Educational growth"
+          class="w-4/5 rounded-full shadow-2xl transform hover:scale-105
                  transition-all duration-500 animate-float"
         />
       </div>
@@ -184,7 +188,7 @@ onMount(() => {
       </div>
 
 
-      
+
     </div>
   </section>
 
@@ -195,8 +199,8 @@ onMount(() => {
       <div class="grid md:grid-cols-3 gap-8">
         {#each testimonials as testimonial}
           <div class="bg-gradient-to-br from-green-100 to-white p-8 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 relative">
-            <img 
-              src={testimonial.image} 
+            <img
+              src={testimonial.image}
               alt={testimonial.name}
               class="w-20 h-20 rounded-full mb-4 object-cover float-left mr-4"
             />
@@ -213,8 +217,8 @@ onMount(() => {
     <div class="max-w-4xl mx-auto text-center px-6">
       <h2 class="text-3xl font-bold mb-6">Ready to Plan Your Path to Success?</h2>
       <p class="text-lg mb-8 text-green-100">Take control of your academic journey with our personalized planning and program search tool</p>
-      <button 
-        class="px-8 py-4 bg-white text-darkgreen rounded-lg shadow-lg 
+      <button
+        class="px-8 py-4 bg-white text-darkgreen rounded-lg shadow-lg
                hover:bg-green-50 transform hover:scale-105 transition-all
                duration-300 text-lg font-semibold"
         on:click={navigateToSearch}
@@ -289,7 +293,7 @@ onMount(() => {
   border-radius: 8px;
   text-align: center;
   width: 1000px;
-  
+
 }
 
 .popup-content h2 {
@@ -297,7 +301,7 @@ onMount(() => {
 }
 
 .popup-content button {
-  
+
   color: white;
   border: none;
   padding: 10px 20px;
