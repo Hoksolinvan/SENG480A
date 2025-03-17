@@ -1,6 +1,8 @@
 <script>
 	import profileDetailList from "../profile/profileList";
 	import { onMount } from 'svelte';
+	import axios from 'axios';
+
 
 	let Email = "";
 	let Password = "";
@@ -51,12 +53,16 @@
 	}*/
 
 
-	function handleSubmit() {
+	async function handleSubmit() {
 		Email = document.getElementById("email").value;
 		Password = document.getElementById("password").value;
 		Confirm_pwd = document.getElementById("confirm-pwd").value;
 		// Agree = document.getElementById("agree").value;
 
+		const response = await axios.post('https://easypath-backend-production.up.railway.app/firebase_signup',{Forms: {
+        "email": Email,
+        "password": Password,
+      }});
 		if (Password != Confirm_pwd) {
 			// Notify the user that password and the confirming password are not the same
 			document.getElementById("regis-fail").textContent = "Passwords do not match. Please check again.";
@@ -98,11 +104,15 @@
 	}
 
 	async function post_Regis() {
+
+
 		if (profileDetailList.filter(pf => pf.email.includes(Email))){
 			localStorage.setItem("regisFailed", "true");
 		}
 		else{
 			localStorage.setItem("regisPassed", "true");
+
+			
 		}
 	}
 </script>

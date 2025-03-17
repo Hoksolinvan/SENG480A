@@ -1,5 +1,6 @@
 <script>
     import { savedPrograms } from '$lib/savedScholarships';
+    import axios from 'axios';
 
     let scholarships =[];
     let searchQuery = '';

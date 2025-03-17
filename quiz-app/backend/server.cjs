@@ -9,13 +9,55 @@ const SibApiV3Sdk = require('sib-api-v3-sdk');
 const clientDB= require('./config.cjs');
 const bcrypt = require('bcrypt');
 const {Updater}= require('./scraper.cjs');
+import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import 'dotenv/config';
 
+
+const firebaseConfig = {
+  apiKey: process.env.APIKEY,
+  authDomain: process.env.AUTHDOMAIN,
+  projectId: process.env.PROJECTID,
+  storageBucket: process.env.STORAGEBUCKET,
+  messagingSenderId: process.env.MESSAGINGSENDERAPP,
+  appId: process.env.APPID,
+  measurementId: process.env.MEASUREMENTID
+};
+
+// Initialize Firebase
+const appFirebase = initializeApp(firebaseConfig);
+const auth = getAuth(appFirebase);
 
 //brevo sdk initialization
 const defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications["api-key"];
 apiKey.apiKey = process.env.BREVOAPI;
 
+const signUp = async (email, password) => {
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      console.log('User signed up:', userCredential.user);
+
+      return 1;
+    } catch (error) {
+      console.error('Error during sign up:', error.message);
+
+      return 0;
+    }
+  };
+
+const signIn = async(email, password) => {
+    try{
+        const userCredential = await signInWithEmailAndPassword(auth,email,password);
+        console.log('login successful');
+        return 1;
+    }
+    catch(error){
+        console.error('Error for signing in');
+        return 0;
+    }
+
+};
 
 
 // Middleware to enable CORS and parse JSON request bodies
@@ -28,24 +70,41 @@ app.get('/', (req, res) => {
 });
 
 
-//redundant API feature
-// Endpoint to handle quiz result submission
-// app.post('/quiz_result', async (req, res) => {
-//    const { answers } = req.body;
-//    if (!answers) {
-//       return res.status(400).json({ error: 'Not enough answers provided :(' });
-//    }
+app.get('/firebase_login', async (req,res) => {
 
-//    try {
-//       // Insert the answers into the database
-//       await clientDB.none('INSERT INTO quiz_results (answer1, answer2) VALUES ($1, $2)', [answers[0], answers[1]]);
-//       res.status(200).json({ message: 'Quiz results successfully saved'});
-//    } catch (error) {
-//       console.error('Error saving quiz results:', error.message);
-//       res.status(500).json({ error: 'Error saving quiz results' });
-//    }
-// });
+   const {Forms} = req.body;
+   if(!Forms){
+      return res.status(400).json({});
 
+   }
+   else{
+      let return_val = signIn(Forms.email,Forms.password);
+      if(return_val){
+         return res.status(200);
+      }
+      else{
+         return res.status(400);
+      }
+   }
+});
+
+
+app.get('/firebase_signup',async (req,res) =>{
+
+   const {Forms} = req.body;
+   if(!Forms){
+      return res.status(400).json({});
+   }
+   else{
+      let return_val = signUp(Forms.email,Forms.password);
+      if(return_val){
+         return res.status(200);
+      }
+      else{
+         return res.status(400);
+      }
+   }
+})
 
 //Endpoint to handle Contact forms Requests
 
@@ -65,25 +124,7 @@ app.post('/Forms',async (req,res) =>{
       res.status(500).json({error: 'Error saving Form details'});
    }
 
-})
-
-
-//redundant webscrape API feature
-// app.get('/webscrape', async (req, res) => {
-
-//    try {
-
-//    const data = await Updater();
-//      const rows = await clientDB.one('SELECT * FROM deadlines')
-//      const resultArray = [rows.sfu, rows.ubc, rows.uvic, rows.ufv, rows.bcit, rows.tru, rows.ecuad, rows.capilano]
-//      res.status(200).json(resultArray);
-//    }
-//     catch (error) {
-//      console.error('Error obtaining web-scrape details: ', error.message);
-//      res.status(500).json({ error: 'Error obtaining web-scrape data', error_message: error.message });
-//    }
-
-//  });
+});
 
 
 //Brevo SDK API feature
@@ -129,44 +170,6 @@ app.post('/Forms',async (req,res) =>{
    }
 
 });
-
-
-// moved to future implementation
-// app.post("/registration", async (req,res) => {
-
-//    async function hasher(){
-
-//       try{
-
-//          const hashedPassword = await bcrypt.hash(req.body.password,10);
-//          return hashedPassword;
-
-
-//       }
-//       catch(error){
-//          console.error("Failed");
-//       }
-
-//    }
-
-
-//    try{
-
-//       let hashedpassowrd = await hasher();
-
-
-//       await clientDB.none('INSERT INTO accounts (email,hash_password) VALUES ($1, $2)',[req.body.email,hashedpassowrd]);
-//       res.status(200).send("");
-//    }
-//    catch(error){
-//       console.error("registration failed");
-//       res.status(500).send("Registration failed");
-//    }
-
-
-// });
-
-
 
 
 //scholarship API handling

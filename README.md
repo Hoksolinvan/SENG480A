@@ -1,6 +1,6 @@
 ## Project: EasyPath
 
-We provide Canadian high school students and their parents with an all-in-one platform to organize and plan post-secondary paths. We help students and parents search and compare programs, stay on top of deadlines and program requirements, and discover scholarship opportunities. Our mission is simple: we want to help reduce the stress of applying for post-secondary.
+We provide Canadian high school students and their parents with an all-in-one platform to organize and plan post-secondary paths. We help students and parents search and compare programs, stay on top of deadlines and program requirements, and discover scholarship opportunities. Our mission is simple: we want to help reduce the stress of applying for post-secondary
 
 Our app is designed to be your go-to planning assistant for navigating the difficulties of post-secondary applications. We are here to simplify the planning process and make you feel confident with your plan.
 
