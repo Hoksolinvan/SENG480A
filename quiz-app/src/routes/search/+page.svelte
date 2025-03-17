@@ -41,9 +41,16 @@
   async function saveProgram() {
     if (selectedProgram) {
         // only saves program when user is logged in
+        // temporarily commented out as profiles are being commented out for time being
+        /*
         if (pf) {
           savedPrograms.add(selectedProgram);
         }
+        */
+
+        // temporary measure, delete when the section right above in commented in
+        savedPrograms.add(selectedProgram);
+
         showSaveMessage = true;
         setTimeout(() => {
             showSaveMessage = false;
