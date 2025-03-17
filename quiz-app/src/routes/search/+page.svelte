@@ -339,8 +339,22 @@
               >
                   Save Program
               </button>
-              
+
               {#if showSaveMessage}
+                    <div 
+                    class="absolute -top-12 left-0 right-0 text-center p-2 bg-green-100 
+                          text-green-700 rounded-lg transform transition-all duration-300 
+                          animate-fade-in-down"
+                    in:fly={{ y: -20, duration: 300 }}
+                    out:fade
+                    >
+                      Program saved successfully!
+                    </div>
+              {/if}
+              
+              <!-- Prevent unlogged-in users from saving programs -->
+              <!-- Commented out while developing functional account system -->
+              <!-- {#if showSaveMessage}
                   {#if pf}
                     <div 
                     class="absolute -top-12 left-0 right-0 text-center p-2 bg-green-100 
@@ -362,7 +376,7 @@
                       You need to <a href="./login" class="text-blue-700">log in</a> first!
                     </div>
                   {/if}
-              {/if}
+              {/if} -->
           </div>
           </div>
         </div>
