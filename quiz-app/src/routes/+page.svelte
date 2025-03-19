@@ -36,8 +36,6 @@
 
   let isHidden=false;
 
-  // Commented out pop-up related functions
-/*
   function openPopup() {
     isHidden = false; // Show popup
     console.log(isHidden);
@@ -47,7 +45,7 @@
     isHidden=true;
     console.log(isHidden);
   }
-*/
+
 
 onMount(() => {
   openPopup();
@@ -57,16 +55,14 @@ onMount(() => {
 
 <main class="min-h-screen bg-gray-50">
 
-  <!--Temporary popup-->
-  <!-- Commented out for time being -->
-   <!--  
+
   <div id="popup" class:hidden={isHidden}>
     <div class="popup">
     <div class="popup-content">
       <span><strong>BETA TESTING: </strong>Step-by-Step Instructions to Get Started </span>
       <br>
       <br>
-
+      <!--
       <div style="text-align: left;">
       <p>1. <strong>Log in for Full Access:</strong></p>
         <ul style="text-indent: 15px;">
@@ -84,6 +80,8 @@ onMount(() => {
       <br>
 
       <p>3. <strong>Start Searching for Programs or Scholarships</strong></p>
+    -->
+      <p><strong>Start Searching for Programs or Scholarships</strong></p>
       <ul style="text-indent: 15px;">
         <li>Navigate to the <strong>search page</strong> for programs or scholarships.</li>
         <li>Type your desired <strong>keywords</strong> in the search bar and press <strong>Enter.</strong></li>
@@ -95,10 +93,10 @@ onMount(() => {
       </div>
       <button on:click={closePopup} class="bg-blue-600 hover:bg-blue-700">Close</button>
 
-    </div>
+    <!-- </div> -->
   </div>
   </div>
-  -->
+  
 
 
   <!-- Hero Section -->
