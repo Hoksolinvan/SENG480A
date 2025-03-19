@@ -62,8 +62,8 @@ onMount(() => {
       <span><strong>BETA TESTING: </strong>Step-by-Step Instructions to Get Started </span>
       <br>
       <br>
-      <!--
       <div style="text-align: left;">
+      <!--
       <p>1. <strong>Log in for Full Access:</strong></p>
         <ul style="text-indent: 15px;">
           <li>Click the profile icon located in the top-right corner of the app.
@@ -93,7 +93,7 @@ onMount(() => {
       </div>
       <button on:click={closePopup} class="bg-blue-600 hover:bg-blue-700">Close</button>
 
-    <!-- </div> -->
+    </div>
   </div>
   </div>
   
