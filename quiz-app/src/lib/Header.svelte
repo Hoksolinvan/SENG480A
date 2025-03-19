@@ -46,7 +46,7 @@
 				<!-- commented out for minimalistic view
 				<li><a href="/contact" class="nav-link">CONTACT</a></li> -->
 				<li><a href="/search" class="nav-link"><b>SEARCH</b></a></li>
-				<li><a href="/scholarships" class="nav-link"><b>SCHOLARSHIPS</b></a></li> 
+				<!-- <li><a href="/scholarships" class="nav-link"><b>SCHOLARSHIPS</b></a></li>  -->
 				<li><a href="/dashboard" class="nav-button my-programs">MY PATH</a></li>
 				
 
