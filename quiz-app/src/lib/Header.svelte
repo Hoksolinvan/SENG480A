@@ -23,8 +23,8 @@
 </script>
 
 <head>
-	<!-- For triple-bar menu icon -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- For drop-down show more icon -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- For brand font -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap">
 </head>
@@ -42,13 +42,29 @@
 		
 		<nav class="nav">
 			<ul>
-				<li><a href="/about" class="nav-link"><b>ABOUT US</b></a></li>
+				<!-- <li><a href="/about" class="nav-link"><b>ABOUT US</b></a></li> -->
 				<!-- commented out for minimalistic view
-				<li><a href="/contact" class="nav-link">CONTACT</a></li> -->
-				<li><a href="/search" class="nav-link"><b>SEARCH</b></a></li>
+				<li><a href="/contact" class="nav-link">CONTACT</a></li>
+				<li><a href="/search" class="nav-link"><b>SEARCH</b></a></li> -->
 				<!-- <li><a href="/scholarships" class="nav-link"><b>SCHOLARSHIPS</b></a></li>  -->
-				<li><a href="/dashboard" class="nav-button my-programs">MY PATH</a></li>
+
+				<li>
+					<a href="" class="nav-link {current_toggle ? "active":" "}" on:click={toggleDisplay}>
+						<b>SEARCH</b>
+						<!-- Enabling the icon breaks the button's text's position -->
+						<!-- <i class="material-icons" style="width:30px; height:30px">expand_more</i> -->
+					</a>
 				
+					<!-- Dropdown menu box -->
+					{#if current_toggle}
+					  <div class="dropdown-menu">
+						<div><a href="/search"><b>PROGRAMS</b></a></div>
+						<div><a href="/scholarships"><b>SCHOLARSHIPS</b></a></div>
+					  </div>
+					{/if}
+				</li>
+
+				<li><a href="/dashboard" class="nav-button my-programs">MY PATH</a></li>
 
 				<!-- START of commented out profile section -->
 
